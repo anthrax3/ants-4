@@ -1,14 +1,18 @@
 from ants import WorkerAnt
 from random import randint
+from pygame import display
+from display import Entity
+from constants import WHITE
 
-class Cell(object):
+class Cell(Entity):
 	"""Data containers for each location in World"""
-	def __init__(self, food, home_scent, food_scent, obstacle, ant):
-		self.obstacle = obstacle
-		self.food = food
-		self.home_scent = home_scent
-		self.food_scent = food_scent
-		self.ant = ant
+	def __init__(self, world, i, j, cell_size):
+		self.obstacle = False
+		self.food = 0
+		self.home_scent = 0
+		self.food_scent = 0
+		self.ant = None
+		super(Cell, self).__init__(world, (i, j), [cell_size]*2, world.images["grass"])
 
 	def add_food(self, amt):
 		self.food += amt
@@ -26,13 +30,18 @@ class Cell(object):
 		return bool(self.food)
 		
 
-class World(object):
-	"""Encapsulation of all ojects"""
-	def __init__(self, width, height, settings):
+class World():
+	"""Encapsulation of all objects"""
+	def __init__(self, width, height, cell_size, images, settings):
 		self.width = width
 		self.height = height
+		self.cell_size = cell_size
+		self.images = images
 		self.settings = settings
-		self.cells = [[Cell(0, 0, 0, False, None) for i in xrange(height)] for j in xrange(width)]
+
+		self.canvas = display.set_mode((self.width*self.cell_size, self.height*self.cell_size))
+
+		self.cells = [[Cell(self, i, j, self.cell_size) for j in xrange(height)] for i in xrange(width)]
 
 		self.counter = 0
 
@@ -51,4 +60,16 @@ class World(object):
 		for i in xrange(self.settings["no_of_ants"]):
 			direction = randint(0,7)
 			location = [randint(1,self.width), randint(1,self.height)]
-			self.ants[i] = WorkerAnt(self, None, direction, location)
+			self.ants[i] = WorkerAnt(self, self.images["ant"], direction, location)
+
+	def render(self):
+		self.canvas.fill(WHITE)
+
+		for cells in self.cells:
+			for cell in cells:
+				cell.render()
+
+		for ant in self.ants.values():
+			ant.render()
+
+		display.update((0, 0), (self.width*self.cell_size, self.height*self.cell_size))

@@ -1,6 +1,6 @@
-from random import randint
+from random import randint, choice
 
-class TaskManager(object):
+class TaskManager():
 	"""Decides and performs all actions of an Ant"""
 	def __init__(self):
 		self.tasks = {}
@@ -59,4 +59,7 @@ class Explore(Task):
 		elif ahead.is_obstacle():
 			ant.turn(randint(1,3)-2)
 		else:
-			ant.move()
+			if randint(1,8)==1:
+				ant.turn(choice([-1,1]))
+			else:
+				ant.move()

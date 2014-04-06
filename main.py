@@ -1,4 +1,5 @@
-from world import World
+from controller import Simulation
 
 if __name__ == '__main__':
-	world = World(10,10,{"no_of_ants":3})
+	simulation = Simulation()
+	simulation.run()
