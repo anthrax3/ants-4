@@ -1,5 +1,5 @@
 from constants import DIRECTIONS
-from task_manager import TaskManager, Explore
+from task_manager import TaskManager, Explore, TakeFood
 from display import Entity
 
 class Ant(Entity):
@@ -26,10 +26,30 @@ class Ant(Entity):
 	def render(self):
 		super(Ant, self).render(self.direction)
 
+	def here(self):
+		return self.world[self.location]
+
+	def behind(self):
+		return self.world[self.neighbour(self.direction + 4)]
+
+	def ahead(self):
+		return self.world[self.neighbour(self.direction)]
+
+	def ahead_left(self):
+		return self.world[self.neighbour(self.direction - 1)]
+
+	def ahead_right(self):
+		return self.world[self.neighbour(self.direction + 1)]
+
+	def __nonzero__(self):
+		return True
+
+
 class WorkerAnt(Ant):
 	"""WorkerAnt"""
 	def __init__(self, world, image, direction, location):
 		Ant.__init__(self, world, image, direction, location)
 		self.task_manager = TaskManager()
 		self.task_manager.add_task(Explore(self))
+		self.task_manager.add_task(TakeFood(self))
 		self.task_manager.set_active_task("explore")

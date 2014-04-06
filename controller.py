@@ -13,9 +13,11 @@ class Simulation():
 
 		self.add_image("ant", "ant.png")
 		self.add_image("grass", "grass.png")
+		self.add_image("food", "food.png")
 
 		self.settings = {
-		"no_of_ants": 10
+		"no_of_ants": 10,
+		"evaporation_rate": .1
 		}
 
 		self.world = World(80, 60, 10, self.images, self.settings)

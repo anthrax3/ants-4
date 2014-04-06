@@ -26,7 +26,7 @@ class Task(object):
 	def __init__(self, name, ant):
 		self.name = name
 		self.ant = ant
-		self.next_task = None
+		self.new_task = None
 
 	def start_task(self):
 		pass
@@ -39,8 +39,8 @@ class Task(object):
 
 	def get_new_task(self):
 		"""Get and reset new task"""
-		new_task = self.next_task
-		self.next_task = None
+		new_task = self.new_task
+		self.new_task = None
 		return new_task
 
 class Explore(Task):
@@ -51,15 +51,39 @@ class Explore(Task):
 	def perform_task(self):
 		ant = self.ant
 		world = ant.world
-		ahead = world[ant.neighbour(ant.direction)]
-		ahead_left = world[ant.neighbour(ant.direction - 1)]
-		ahead_right = world[ant.neighbour(ant.direction + 1)]
-		if any(cell.is_food() for cell in [ahead, ahead_right, ahead_left]):
-			raise NotImplementedError
-		elif ahead.is_obstacle():
+		if ant.ahead().is_food():
+			self.new_task = "take food"
+		elif ant.ahead_left().is_food():
+			ant.turn(1)
+			self.new_task = "take food"
+		elif ant.ahead_left().is_food():
+			ant.turn(-1)
+			self.new_task = "take food"
+		elif ant.ahead().is_obstacle() or ant.ahead().has_ant():
 			ant.turn(randint(1,3)-2)
 		else:
 			if randint(1,8)==1:
 				ant.turn(choice([-1,1]))
 			else:
 				ant.move()
+				ant.behind().ant = None
+				ant.behind().add_home_scent(1)
+				ant.here().ant = ant
+
+class TakeFood(Task):
+	"""Gathering Food Task"""
+	def __init__(self, ant):
+		super(TakeFood, self).__init__("take food", ant)
+
+	def perform_task(self):
+		ant = self.ant
+		world = ant.world
+		food = ant.ahead().get_food(1)
+		if food:
+			ant.turn(4)
+			self.new_task = "explore"
+		else:
+			self.new_task = "explore"
+
+	def end_task(self):
+		pass#self.ant.turn(choice([-1, 1]))
