@@ -14,10 +14,16 @@ class Simulation():
 		self.add_image("ant", "ant.png")
 		self.add_image("grass", "grass.png")
 		self.add_image("food", "food.png")
+		self.add_image("home", "home.png")
+		self.add_image("obstacle", "obstacle.png")
+		self.add_image("home_scent", "home_scent.png")
+		self.add_image("food_scent", "food_scent.png")
+		self.add_image("cell", "cell.png")
 
 		self.settings = {
 		"no_of_ants": 10,
-		"evaporation_rate": .1
+		"evaporation_rate": .1,
+		"home_size": 10
 		}
 
 		self.world = World(80, 60, 10, self.images, self.settings)

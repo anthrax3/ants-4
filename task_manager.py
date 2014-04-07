@@ -61,13 +61,16 @@ class Explore(Task):
 			self.new_task = "take food"
 		elif ant.ahead().is_obstacle() or ant.ahead().has_ant():
 			ant.turn(randint(1,3)-2)
+		elif ant.ahead().is_home():
+			ant.turn(4)
 		else:
 			if randint(1,8)==1:
 				ant.turn(choice([-1,1]))
 			else:
 				ant.move()
 				ant.behind().ant = None
-				ant.behind().add_home_scent(1)
+				if not any([ant.behind().is_obstacle(), ant.behind().is_food(), ant.behind().is_home()]):
+					ant.behind().add_home_scent(1)
 				ant.here().ant = ant
 
 class TakeFood(Task):

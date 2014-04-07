@@ -13,7 +13,8 @@ class Cell(Entity):
 		self.home_scent = 0
 		self.food_scent = 0
 		self.ant = None
-		super(Cell, self).__init__(world, (i, j), [cell_size]*2, world.images["grass"])
+		self.home = False
+		super(Cell, self).__init__(world, (i, j), [cell_size]*2, world.images["cell"])
 
 	def add_food(self, amt):
 		self.food += amt
@@ -36,20 +37,44 @@ class Cell(Entity):
 	def is_obstacle(self):
 		return bool(self.obstacle)
 
+	def is_home(self):
+		return bool(self.home)
+
 	def is_food(self):
 		return bool(self.food)
 
 	def has_ant(self):
 		return bool(self.ant)
 
+	def make_home(self):
+		self.home = True
+
+	def make_obstacle(self):
+		self.obstacle = True
+
 	def render(self):
 		if self.is_food():
-			self.image = self.world.images["food"]
+			index = 3
 		elif self.is_obstacle():
-			raise NotImplementedError
+			index = 2
+		elif self.is_home():
+			index = 1
 		else:
-			self.image = self.world.images["grass"]
-		super(Cell, self).render()
+			index = 0
+
+		self.image.set_alpha(255)
+
+		super(Cell, self).render(index)
+
+		if self.home_scent > 0:
+			index = 4
+			self.image.set_alpha(self.home_scent*32)
+		elif self.food_scent > 0:
+			index = 5
+			self.image.set_alpha(self.food_scent)
+
+		super(Cell, self).render(index)
+
 		
 
 class World():
@@ -62,6 +87,7 @@ class World():
 		self.settings = settings
 
 		self.canvas = display.set_mode((self.width*self.cell_size, self.height*self.cell_size))
+		self.convert_images()
 
 		self.cells = [[Cell(self, i, j, self.cell_size) for j in xrange(height)] for i in xrange(width)]
 
@@ -69,11 +95,17 @@ class World():
 
 		self.ants = {}
 		self.spawn_ants()
-		self.spawn_foodsource()
+		for i in xrange(10):
+			self.spawn_foodsource()
+		self.create_home()
 
 	def __getitem__(self, location):
 		x, y = location
 		return self.cells[x][y]
+
+	def convert_images(self):
+		for name in self.images:
+			self.images[name] = self.images[name].convert()
 
 	def advance(self):
 		for i in self.ants:
@@ -91,6 +123,13 @@ class World():
 			dx = randint(-3,3)
 			dy = choice([-1,1])*randint(0, int(sqrt(9-dx**2)))
 			self.cells[(x+dx)%self.width][(y+dy)%self.height].add_food(1)
+
+	def create_home(self):
+		n = self.settings["home_size"]
+		x, y = self.width/2 -5, self.height/2 -5
+		for i in xrange(n):
+			for j in xrange(n):
+				self.cells[x+i-1][y+j-1].make_home()
 
 	def render(self):
 		self.canvas.fill(WHITE)
