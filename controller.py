@@ -21,8 +21,8 @@ class Simulation():
 		self.add_image("cell", "cell.png")
 
 		self.settings = {
-		"no_of_ants": 10,
-		"evaporation_rate": .1,
+		"no_of_ants": 50,
+		"evaporation_rate": .95,
 		"home_size": 10
 		}
 

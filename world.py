@@ -46,11 +46,22 @@ class Cell(Entity):
 	def has_ant(self):
 		return bool(self.ant)
 
+	def has_food(self):
+		return True if self.food > 0 else False
+
 	def make_home(self):
 		self.home = True
 
 	def make_obstacle(self):
 		self.obstacle = True
+
+	def evaporate_scent(self, rate):
+		self.food_scent *= rate
+		self.home_scent *= rate
+		if self.food_scent < .3:
+			self.food_scent = 0
+		if self.home_scent < .3:
+			self.home_scent = 0
 
 	def render(self):
 		if self.is_food():
@@ -68,14 +79,13 @@ class Cell(Entity):
 
 		if self.home_scent > 0:
 			index = 4
-			self.image.set_alpha(self.home_scent*32)
-		elif self.food_scent > 0:
+			self.image.set_alpha(self.home_scent)
+		super(Cell, self).render(index)
+		
+		if self.food_scent > 0:
 			index = 5
 			self.image.set_alpha(self.food_scent)
-
 		super(Cell, self).render(index)
-
-		
 
 class World():
 	"""Encapsulation of all objects"""
@@ -95,7 +105,7 @@ class World():
 
 		self.ants = {}
 		self.spawn_ants()
-		for i in xrange(10):
+		for i in xrange(1):
 			self.spawn_foodsource()
 		self.create_home()
 
@@ -111,15 +121,18 @@ class World():
 		for i in self.ants:
 			self.ants[i].task_manager.make_decision()
 
+		self.evaporate_scent()
+
 	def spawn_ants(self):
 		for i in xrange(self.settings["no_of_ants"]):
 			direction = randint(0,7)
 			location = [randint(1,self.width), randint(1,self.height)]
+			location = [self.width/2-10, self.height/2-10]
 			self.ants[i] = WorkerAnt(self, self.images["ant"], direction, location)
 
 	def spawn_foodsource(self):
 		x, y = randint(0,self.width-1), randint(0,self.height-1)
-		for i in xrange(randint(20, 50)):
+		for i in xrange(randint(2000, 5000)):
 			dx = randint(-3,3)
 			dy = choice([-1,1])*randint(0, int(sqrt(9-dx**2)))
 			self.cells[(x+dx)%self.width][(y+dy)%self.height].add_food(1)
@@ -142,3 +155,8 @@ class World():
 			ant.render()
 
 		display.update((0, 0), (self.width*self.cell_size, self.height*self.cell_size))
+
+	def evaporate_scent(self):
+		for cells in self.cells:
+			for cell in cells:
+				cell.evaporate_scent(self.settings["evaporation_rate"])
