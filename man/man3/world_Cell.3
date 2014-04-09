@@ -1,0 +1,200 @@
+.TH "world.Cell" 3 "Wed Apr 9 2014" "Ant Colony" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+world.Cell \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBdisplay\&.Entity\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP"
+.br
+.ti -1c
+.RI "def \fBadd_food\fP"
+.br
+.ti -1c
+.RI "def \fBadd_home_scent\fP"
+.br
+.ti -1c
+.RI "def \fBadd_food_scent\fP"
+.br
+.ti -1c
+.RI "def \fBget_food\fP"
+.br
+.ti -1c
+.RI "def \fBis_obstacle\fP"
+.br
+.ti -1c
+.RI "def \fBis_home\fP"
+.br
+.ti -1c
+.RI "def \fBis_food\fP"
+.br
+.ti -1c
+.RI "def \fBhas_ant\fP"
+.br
+.ti -1c
+.RI "def \fBhas_food\fP"
+.br
+.ti -1c
+.RI "def \fBmake_home\fP"
+.br
+.ti -1c
+.RI "def \fBmake_obstacle\fP"
+.br
+.ti -1c
+.RI "def \fBevaporate_scent\fP"
+.br
+.ti -1c
+.RI "def \fBrender\fP"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBobstacle\fP"
+.br
+.ti -1c
+.RI "\fBfood\fP"
+.br
+.ti -1c
+.RI "\fBhome_scent\fP"
+.br
+.ti -1c
+.RI "\fBfood_scent\fP"
+.br
+.ti -1c
+.RI "\fBant\fP"
+.br
+.ti -1c
+.RI "\fBhome\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Data containers for each location in World
+.fi
+.PP
+ 
+.PP
+Definition at line 8 of file world\&.py\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def world\&.Cell\&.__init__ (self, world, i, j, cell_size)"
+
+.PP
+Definition at line 10 of file world\&.py\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "def world\&.Cell\&.add_food (self, amt)"
+
+.PP
+Definition at line 19 of file world\&.py\&.
+.SS "def world\&.Cell\&.add_food_scent (self, amt)"
+
+.PP
+Definition at line 25 of file world\&.py\&.
+.SS "def world\&.Cell\&.add_home_scent (self, amt)"
+
+.PP
+Definition at line 22 of file world\&.py\&.
+.SS "def world\&.Cell\&.evaporate_scent (self, rate)"
+
+.PP
+.nf
+Evaporates scent ( decay law )
+.fi
+.PP
+ 
+.PP
+Definition at line 59 of file world\&.py\&.
+.SS "def world\&.Cell\&.get_food (self, amt)"
+
+.PP
+.nf
+Get "amt" amount of food if available else returns whatever food is available
+.fi
+.PP
+ 
+.PP
+Definition at line 28 of file world\&.py\&.
+.SS "def world\&.Cell\&.has_ant (self)"
+
+.PP
+Definition at line 47 of file world\&.py\&.
+.SS "def world\&.Cell\&.has_food (self)"
+
+.PP
+Definition at line 50 of file world\&.py\&.
+.SS "def world\&.Cell\&.is_food (self)"
+
+.PP
+Definition at line 44 of file world\&.py\&.
+.SS "def world\&.Cell\&.is_home (self)"
+
+.PP
+Definition at line 41 of file world\&.py\&.
+.SS "def world\&.Cell\&.is_obstacle (self)"
+
+.PP
+Definition at line 38 of file world\&.py\&.
+.SS "def world\&.Cell\&.make_home (self)"
+
+.PP
+Definition at line 53 of file world\&.py\&.
+.SS "def world\&.Cell\&.make_obstacle (self)"
+
+.PP
+Definition at line 56 of file world\&.py\&.
+.SS "def world\&.Cell\&.render (self)"
+
+.PP
+.nf
+Changes "index" to render the cell according to what it represents 
+(home, food, etc) and calls the super class
+Also renders scent levels with transparency depending on its strength
+
+.fi
+.PP
+ 
+.PP
+Definition at line 68 of file world\&.py\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "world\&.Cell\&.ant"
+
+.PP
+Definition at line 15 of file world\&.py\&.
+.SS "world\&.Cell\&.food"
+
+.PP
+Definition at line 12 of file world\&.py\&.
+.SS "world\&.Cell\&.food_scent"
+
+.PP
+Definition at line 14 of file world\&.py\&.
+.SS "world\&.Cell\&.home"
+
+.PP
+Definition at line 16 of file world\&.py\&.
+.SS "world\&.Cell\&.home_scent"
+
+.PP
+Definition at line 13 of file world\&.py\&.
+.SS "world\&.Cell\&.obstacle"
+
+.PP
+Definition at line 11 of file world\&.py\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ant Colony from the source code\&.

@@ -1,0 +1,260 @@
+\hypertarget{classworld_1_1World}{\section{world.\+World Class Reference}
+\label{classworld_1_1World}\index{world.\+World@{world.\+World}}
+}
+
+
+Collaboration diagram for world.\+World\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classworld_1_1World__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classworld_1_1World_a4351253668240be9d3a0d5bc2f1aa18f}{\+\_\+\+\_\+init\+\_\+\+\_\+}
+\item 
+def \hyperlink{classworld_1_1World_ad12e75d551845a567951b885d204153d}{\+\_\+\+\_\+getitem\+\_\+\+\_\+}
+\item 
+def \hyperlink{classworld_1_1World_add7ffc7d3af488f4ed006a401b842ca1}{convert\+\_\+images}
+\item 
+def \hyperlink{classworld_1_1World_a254dbfa03188d38b7e822c1a2e20a568}{advance}
+\item 
+def \hyperlink{classworld_1_1World_aaf7c311b1dbcac59ccff5e0319e14692}{spawn\+\_\+ants}
+\item 
+def \hyperlink{classworld_1_1World_af83c041eb0a9fee93eae12bb24038b0a}{spawn\+\_\+foodsource}
+\item 
+def \hyperlink{classworld_1_1World_a1dd90d1ccaa88b5e9bfdceed9dd65de6}{create\+\_\+home}
+\item 
+def \hyperlink{classworld_1_1World_a40aafbcc96e8592e314cf08068aba5f5}{render}
+\item 
+def \hyperlink{classworld_1_1World_a45f0825ea2f6b659d376fbc859aa208a}{evaporate\+\_\+scent}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classworld_1_1World_a5ace9de2d4cd40bbb013db9712f4ef34}{width}
+\item 
+\hyperlink{classworld_1_1World_acfdba03fac144372fcc56922a1a339a2}{height}
+\item 
+\hyperlink{classworld_1_1World_ae1d7a76e88da46ba689ac807d6a9a961}{cell\+\_\+size}
+\item 
+\hyperlink{classworld_1_1World_a9388f4c8146cbf9983f4a42c3015b61a}{images}
+\item 
+\hyperlink{classworld_1_1World_a41e0f9d00bb365408abee5a084bdce24}{settings}
+\item 
+\hyperlink{classworld_1_1World_a6b3bb67973002c5018e11031462c31eb}{canvas}
+\item 
+\hyperlink{classworld_1_1World_a2314ff704272429f24c5d1f731ce7e8d}{cells}
+\item 
+\hyperlink{classworld_1_1World_a93d8708ed00be71dfd78cb42767529ce}{counter}
+\item 
+\hyperlink{classworld_1_1World_aff3d808329d4220a8bd5e917c151c14a}{ants}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Encapsulation of all objects in the simulation\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{world_8py_source_l00096}{96} of file \hyperlink{world_8py_source}{world.\+py}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classworld_1_1World_a4351253668240be9d3a0d5bc2f1aa18f}{\index{world\+::\+World@{world\+::\+World}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!world\+::\+World@{world\+::\+World}}
+\subsubsection[{\+\_\+\+\_\+init\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+World.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{width, }
+\item[{}]{height, }
+\item[{}]{cell\+\_\+size, }
+\item[{}]{images, }
+\item[{}]{settings}
+\end{DoxyParamCaption}
+)}}\label{classworld_1_1World_a4351253668240be9d3a0d5bc2f1aa18f}
+\begin{DoxyVerb}- Initialise the screen
+- Fill screen with "Cells"
+- Convert images to pygame format
+- Spawn ants, food sources, obstacles, ant home, etc
+\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{world_8py_source_l00098}{98} of file \hyperlink{world_8py_source}{world.\+py}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classworld_1_1World_ad12e75d551845a567951b885d204153d}{\index{world\+::\+World@{world\+::\+World}!\+\_\+\+\_\+getitem\+\_\+\+\_\+@{\+\_\+\+\_\+getitem\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+getitem\+\_\+\+\_\+@{\+\_\+\+\_\+getitem\+\_\+\+\_\+}!world\+::\+World@{world\+::\+World}}
+\subsubsection[{\+\_\+\+\_\+getitem\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+World.\+\_\+\+\_\+getitem\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{location}
+\end{DoxyParamCaption}
+)}}\label{classworld_1_1World_ad12e75d551845a567951b885d204153d}
+\begin{DoxyVerb}Returns the cell at the location\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{world_8py_source_l00124}{124} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1World_a254dbfa03188d38b7e822c1a2e20a568}{\index{world\+::\+World@{world\+::\+World}!advance@{advance}}
+\index{advance@{advance}!world\+::\+World@{world\+::\+World}}
+\subsubsection[{advance}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+World.\+advance (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classworld_1_1World_a254dbfa03188d38b7e822c1a2e20a568}
+\begin{DoxyVerb}Advance the simulation by one step
+    - Update te ants
+    - Evaporate all scents
+\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{world_8py_source_l00134}{134} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1World_add7ffc7d3af488f4ed006a401b842ca1}{\index{world\+::\+World@{world\+::\+World}!convert\+\_\+images@{convert\+\_\+images}}
+\index{convert\+\_\+images@{convert\+\_\+images}!world\+::\+World@{world\+::\+World}}
+\subsubsection[{convert\+\_\+images}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+World.\+convert\+\_\+images (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classworld_1_1World_add7ffc7d3af488f4ed006a401b842ca1}
+\begin{DoxyVerb}Convert images to pygame optimised format\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{world_8py_source_l00129}{129} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1World_a1dd90d1ccaa88b5e9bfdceed9dd65de6}{\index{world\+::\+World@{world\+::\+World}!create\+\_\+home@{create\+\_\+home}}
+\index{create\+\_\+home@{create\+\_\+home}!world\+::\+World@{world\+::\+World}}
+\subsubsection[{create\+\_\+home}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+World.\+create\+\_\+home (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classworld_1_1World_a1dd90d1ccaa88b5e9bfdceed9dd65de6}
+\begin{DoxyVerb}Create a nest for ants\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{world_8py_source_l00160}{160} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1World_a45f0825ea2f6b659d376fbc859aa208a}{\index{world\+::\+World@{world\+::\+World}!evaporate\+\_\+scent@{evaporate\+\_\+scent}}
+\index{evaporate\+\_\+scent@{evaporate\+\_\+scent}!world\+::\+World@{world\+::\+World}}
+\subsubsection[{evaporate\+\_\+scent}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+World.\+evaporate\+\_\+scent (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classworld_1_1World_a45f0825ea2f6b659d376fbc859aa208a}
+\begin{DoxyVerb}Evaporates all scent ( uses decay law ) at a rate defined in settings\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{world_8py_source_l00181}{181} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1World_a40aafbcc96e8592e314cf08068aba5f5}{\index{world\+::\+World@{world\+::\+World}!render@{render}}
+\index{render@{render}!world\+::\+World@{world\+::\+World}}
+\subsubsection[{render}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+World.\+render (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classworld_1_1World_a40aafbcc96e8592e314cf08068aba5f5}
+\begin{DoxyVerb}Draws the world on the screen\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{world_8py_source_l00168}{168} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1World_aaf7c311b1dbcac59ccff5e0319e14692}{\index{world\+::\+World@{world\+::\+World}!spawn\+\_\+ants@{spawn\+\_\+ants}}
+\index{spawn\+\_\+ants@{spawn\+\_\+ants}!world\+::\+World@{world\+::\+World}}
+\subsubsection[{spawn\+\_\+ants}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+World.\+spawn\+\_\+ants (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classworld_1_1World_aaf7c311b1dbcac59ccff5e0319e14692}
+\begin{DoxyVerb}Spawns ants\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{world_8py_source_l00144}{144} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1World_af83c041eb0a9fee93eae12bb24038b0a}{\index{world\+::\+World@{world\+::\+World}!spawn\+\_\+foodsource@{spawn\+\_\+foodsource}}
+\index{spawn\+\_\+foodsource@{spawn\+\_\+foodsource}!world\+::\+World@{world\+::\+World}}
+\subsubsection[{spawn\+\_\+foodsource}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+World.\+spawn\+\_\+foodsource (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classworld_1_1World_af83c041eb0a9fee93eae12bb24038b0a}
+\begin{DoxyVerb}Spawns food sources\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{world_8py_source_l00152}{152} of file \hyperlink{world_8py_source}{world.\+py}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classworld_1_1World_aff3d808329d4220a8bd5e917c151c14a}{\index{world\+::\+World@{world\+::\+World}!ants@{ants}}
+\index{ants@{ants}!world\+::\+World@{world\+::\+World}}
+\subsubsection[{ants}]{\setlength{\rightskip}{0pt plus 5cm}world.\+World.\+ants}}\label{classworld_1_1World_aff3d808329d4220a8bd5e917c151c14a}
+
+
+Definition at line \hyperlink{world_8py_source_l00118}{118} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1World_a6b3bb67973002c5018e11031462c31eb}{\index{world\+::\+World@{world\+::\+World}!canvas@{canvas}}
+\index{canvas@{canvas}!world\+::\+World@{world\+::\+World}}
+\subsubsection[{canvas}]{\setlength{\rightskip}{0pt plus 5cm}world.\+World.\+canvas}}\label{classworld_1_1World_a6b3bb67973002c5018e11031462c31eb}
+
+
+Definition at line \hyperlink{world_8py_source_l00111}{111} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1World_ae1d7a76e88da46ba689ac807d6a9a961}{\index{world\+::\+World@{world\+::\+World}!cell\+\_\+size@{cell\+\_\+size}}
+\index{cell\+\_\+size@{cell\+\_\+size}!world\+::\+World@{world\+::\+World}}
+\subsubsection[{cell\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}world.\+World.\+cell\+\_\+size}}\label{classworld_1_1World_ae1d7a76e88da46ba689ac807d6a9a961}
+
+
+Definition at line \hyperlink{world_8py_source_l00107}{107} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1World_a2314ff704272429f24c5d1f731ce7e8d}{\index{world\+::\+World@{world\+::\+World}!cells@{cells}}
+\index{cells@{cells}!world\+::\+World@{world\+::\+World}}
+\subsubsection[{cells}]{\setlength{\rightskip}{0pt plus 5cm}world.\+World.\+cells}}\label{classworld_1_1World_a2314ff704272429f24c5d1f731ce7e8d}
+
+
+Definition at line \hyperlink{world_8py_source_l00114}{114} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1World_a93d8708ed00be71dfd78cb42767529ce}{\index{world\+::\+World@{world\+::\+World}!counter@{counter}}
+\index{counter@{counter}!world\+::\+World@{world\+::\+World}}
+\subsubsection[{counter}]{\setlength{\rightskip}{0pt plus 5cm}world.\+World.\+counter}}\label{classworld_1_1World_a93d8708ed00be71dfd78cb42767529ce}
+
+
+Definition at line \hyperlink{world_8py_source_l00116}{116} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1World_acfdba03fac144372fcc56922a1a339a2}{\index{world\+::\+World@{world\+::\+World}!height@{height}}
+\index{height@{height}!world\+::\+World@{world\+::\+World}}
+\subsubsection[{height}]{\setlength{\rightskip}{0pt plus 5cm}world.\+World.\+height}}\label{classworld_1_1World_acfdba03fac144372fcc56922a1a339a2}
+
+
+Definition at line \hyperlink{world_8py_source_l00106}{106} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1World_a9388f4c8146cbf9983f4a42c3015b61a}{\index{world\+::\+World@{world\+::\+World}!images@{images}}
+\index{images@{images}!world\+::\+World@{world\+::\+World}}
+\subsubsection[{images}]{\setlength{\rightskip}{0pt plus 5cm}world.\+World.\+images}}\label{classworld_1_1World_a9388f4c8146cbf9983f4a42c3015b61a}
+
+
+Definition at line \hyperlink{world_8py_source_l00108}{108} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1World_a41e0f9d00bb365408abee5a084bdce24}{\index{world\+::\+World@{world\+::\+World}!settings@{settings}}
+\index{settings@{settings}!world\+::\+World@{world\+::\+World}}
+\subsubsection[{settings}]{\setlength{\rightskip}{0pt plus 5cm}world.\+World.\+settings}}\label{classworld_1_1World_a41e0f9d00bb365408abee5a084bdce24}
+
+
+Definition at line \hyperlink{world_8py_source_l00109}{109} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1World_a5ace9de2d4cd40bbb013db9712f4ef34}{\index{world\+::\+World@{world\+::\+World}!width@{width}}
+\index{width@{width}!world\+::\+World@{world\+::\+World}}
+\subsubsection[{width}]{\setlength{\rightskip}{0pt plus 5cm}world.\+World.\+width}}\label{classworld_1_1World_a5ace9de2d4cd40bbb013db9712f4ef34}
+
+
+Definition at line \hyperlink{world_8py_source_l00105}{105} of file \hyperlink{world_8py_source}{world.\+py}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{world_8py}{world.\+py}\end{DoxyCompactItemize}

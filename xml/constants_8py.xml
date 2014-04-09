@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="constants_8py" kind="file">
+    <compoundname>constants.py</compoundname>
+    <innernamespace refid="namespaceconstants">constants</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespaceconstants_1ac910045b50610ec197515a3635d8d037" refkind="member"><highlight class="normal">DIRECTIONS<sp/>=<sp/>((1,0),<sp/>(1,1),<sp/>(0,1),<sp/>(-1,1),</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"><sp/><sp/><sp/><sp/>(-1,0),<sp/>(-1,-1),<sp/>(0,-1),<sp/>(1,-1))</highlight></codeline>
+<codeline lineno="3" refid="namespaceconstants_1aa1f49ae50d4547cd3b9f4801d04f5830" refkind="member"><highlight class="normal">WIDTH<sp/>=<sp/>80</highlight></codeline>
+<codeline lineno="4" refid="namespaceconstants_1a581305cb095bf2d8826a12abef66a15e" refkind="member"><highlight class="normal">HEIGHT<sp/>=<sp/>60</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">WHITE<sp/>=<sp/>(255,255,255)</highlight></codeline>
+    </programlisting>
+    <location file="/home/acer/Ubuntu One/eclipse/ants/constants.py"/>
+  </compounddef>
+</doxygen>

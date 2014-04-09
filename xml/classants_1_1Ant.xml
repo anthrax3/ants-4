@@ -1,0 +1,509 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classants_1_1Ant" kind="class" prot="public">
+    <compoundname>ants::Ant</compoundname>
+    <basecompoundref refid="classdisplay_1_1Entity" prot="public" virt="non-virtual">display.Entity</basecompoundref>
+    <derivedcompoundref refid="classants_1_1QueenAnt" prot="public" virt="non-virtual">ants.QueenAnt</derivedcompoundref>
+    <derivedcompoundref refid="classants_1_1WorkerAnt" prot="public" virt="non-virtual">ants.WorkerAnt</derivedcompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classants_1_1Ant_1a55f64c7cafb3806bdcfda42586adbff5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ants.Ant::world</definition>
+        <argsstring></argsstring>
+        <name>world</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="10" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classants_1_1Ant_1adf5f970b6b5e8472f42275114eeac779" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ants.Ant::image</definition>
+        <argsstring></argsstring>
+        <name>image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="11" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classants_1_1Ant_1ae26b7ffd236a83d8d5c96ec6ec07b4bb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ants.Ant::direction</definition>
+        <argsstring></argsstring>
+        <name>direction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="12" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classants_1_1Ant_1ae7de139b6f5bdb8d4ab42755c405ef5d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ants.Ant::location</definition>
+        <argsstring></argsstring>
+        <name>location</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="13" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classants_1_1Ant_1afcfbbf8bd338401378d25c512204eb91" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ants.Ant::food</definition>
+        <argsstring></argsstring>
+        <name>food</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="14" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classants_1_1Ant_1ad7fb2ac4566880fdacfd7bf7f4ec1109" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ants.Ant::food_scent_strength</definition>
+        <argsstring></argsstring>
+        <name>food_scent_strength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="15" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classants_1_1Ant_1a7885f0124adf5b10fd6fa5e8ac47edb9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ants.Ant::home_scent_strength</definition>
+        <argsstring></argsstring>
+        <name>home_scent_strength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="16" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classants_1_1Ant_1a80e2218dcfabbd9ef4d83638dd20d943" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ants.Ant::task_manager</definition>
+        <argsstring></argsstring>
+        <name>task_manager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="18" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classants_1_1Ant_1a0fa15b6ba2860b445d390c07bc11d4e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.__init__</definition>
+        <argsstring></argsstring>
+        <name>__init__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="8" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="8" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a2ddd97dadaa5d24c459b0117dc6e1190" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.neighbour</definition>
+        <argsstring></argsstring>
+        <name>neighbour</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns location of neighbouring cell in a direction 
+relative to the ant direction</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="20" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="20" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a0067159f23e5e9e4b3564d48c1564f11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.move</definition>
+        <argsstring></argsstring>
+        <name>move</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Move the ant by a unit,
+Leave a scent trail,
+remove the ant from its old cell, and
+update the current cell ant with itself
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="27" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="27" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a3a636b900b6fdbed032e3a635495a4c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.random_move</definition>
+        <argsstring></argsstring>
+        <name>random_move</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Ant makes a move forward or turns randomly</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="41" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="41" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a216ebc2ce2dfeb88d6bbc714bc50ecb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.reduce_home_scent</definition>
+        <argsstring></argsstring>
+        <name>reduce_home_scent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Reduce home scent by &apos;amt&apos;</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="48" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="48" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a285d1e406b6d2cc67779e873e879feb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.reduce_food_scent</definition>
+        <argsstring></argsstring>
+        <name>reduce_food_scent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Reduce food scent by &apos;amt&apos;</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="53" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="53" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a445ec1d1f8e4cb539c4f66fafa129131" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.turn</definition>
+        <argsstring></argsstring>
+        <name>turn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Changes direction n times</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="58" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a95585d833c74c56155a0d79394d511cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.render</definition>
+        <argsstring></argsstring>
+        <name>render</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Render itself</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="62" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="62" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a2e60480b7534b107e12d7f23fd06d5f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.here</definition>
+        <argsstring></argsstring>
+        <name>here</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>The cell it is standing on</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="69" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="69" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a192f8411faa05c48db8db99d033f5d15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.behind</definition>
+        <argsstring></argsstring>
+        <name>behind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>The cell just behind</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="73" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="73" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1ac2c8f048d99cd48a5829ddf7ff4a708a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.ahead</definition>
+        <argsstring></argsstring>
+        <name>ahead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>The cell just ahead</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="77" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="77" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a2dbb07eefeecbc51d257f81fb0ba1c71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.ahead_left</definition>
+        <argsstring></argsstring>
+        <name>ahead_left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>The cell just ahead-left</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="81" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="81" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1ad7a5311d831e8bcc07061e6a12edad8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.ahead_right</definition>
+        <argsstring></argsstring>
+        <name>ahead_right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>The cell just ahead-right</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="85" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1af9af7f8a5c766021ef0f68171d09abca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.locate_food_nearby</definition>
+        <argsstring></argsstring>
+        <name>locate_food_nearby</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Locate all sources nearby and return any one randomly
+return None if no food source is found</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="89" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="89" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a5795d0898e3d0d020a0a0a626a5ef7b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.locate_home_nearby</definition>
+        <argsstring></argsstring>
+        <name>locate_home_nearby</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Locate home cell nearby and return any one randomly
+return None if not found</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="105" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="105" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a81a141f3417ddb32b8d1abbd95bbc477" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.locate_home_scent_nearby</definition>
+        <argsstring></argsstring>
+        <name>locate_home_scent_nearby</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Scan the 5 directions near the direction of the ant for home scent and
+return one random direction
+return None if not found
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="121" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="121" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a97ffad1c0e634f38585e7913908e9524" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.locate_food_scent_nearby</definition>
+        <argsstring></argsstring>
+        <name>locate_food_scent_nearby</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Scan the 5 directions near the direction of the ant for food scent and
+return one random direction
+return None if not found
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="140" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="140" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a164a2a76f1779462fe81e8f169a92a93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.rank_by_food_scent</definition>
+        <argsstring></argsstring>
+        <name>rank_by_food_scent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Scan the 5 directions near the direction of the ant for food scent and
+return the direction with the strongest scent
+return None if not found
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="159" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="159" bodyend="172"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a6f3e3bd98a5f382098cdc1c02e1e2fd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.rank_by_home_scent</definition>
+        <argsstring></argsstring>
+        <name>rank_by_home_scent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Scan the 5 directions near the direction of the ant for home scent and
+return the direction with the strongest scent
+return None if not found
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="173" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="173" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1ae85884312b4aa10f965b84535bed37fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.drop_food</definition>
+        <argsstring></argsstring>
+        <name>drop_food</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Set food to zero
+Update the food values of the home cell it reached
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="187" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="187" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a41de1c29941a444dab25a88cbc3a881d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.has_food</definition>
+        <argsstring></argsstring>
+        <name>has_food</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="194" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="194" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a9e4bf6309b80ab33bd628f6e7d78d013" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.__nonzero__</definition>
+        <argsstring></argsstring>
+        <name>__nonzero__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="197" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="197" bodyend="200"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>A virtual base class for Ants</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="87">
+        <label>ants.WorkerAnt</label>
+        <link refid="classants_1_1WorkerAnt"/>
+        <childnode refid="83" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>ants.QueenAnt</label>
+        <link refid="classants_1_1QueenAnt"/>
+        <childnode refid="83" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="85">
+        <label>object</label>
+      </node>
+      <node id="84">
+        <label>display.Entity</label>
+        <link refid="classdisplay_1_1Entity"/>
+        <childnode refid="85" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="83">
+        <label>ants.Ant</label>
+        <link refid="classants_1_1Ant"/>
+        <childnode refid="84" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="90">
+        <label>object</label>
+      </node>
+      <node id="89">
+        <label>display.Entity</label>
+        <link refid="classdisplay_1_1Entity"/>
+        <childnode refid="90" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>ants.Ant</label>
+        <link refid="classants_1_1Ant"/>
+        <childnode refid="89" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="6" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="6" bodyend="201"/>
+    <listofallmembers>
+      <member refid="classants_1_1Ant_1a0fa15b6ba2860b445d390c07bc11d4e2" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>__init__</name></member>
+      <member refid="classants_1_1Ant_1a9e4bf6309b80ab33bd628f6e7d78d013" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>__nonzero__</name></member>
+      <member refid="classants_1_1Ant_1ac2c8f048d99cd48a5829ddf7ff4a708a" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>ahead</name></member>
+      <member refid="classants_1_1Ant_1a2dbb07eefeecbc51d257f81fb0ba1c71" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>ahead_left</name></member>
+      <member refid="classants_1_1Ant_1ad7a5311d831e8bcc07061e6a12edad8c" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>ahead_right</name></member>
+      <member refid="classants_1_1Ant_1a192f8411faa05c48db8db99d033f5d15" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>behind</name></member>
+      <member refid="classants_1_1Ant_1ae26b7ffd236a83d8d5c96ec6ec07b4bb" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>direction</name></member>
+      <member refid="classants_1_1Ant_1ae85884312b4aa10f965b84535bed37fc" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>drop_food</name></member>
+      <member refid="classants_1_1Ant_1afcfbbf8bd338401378d25c512204eb91" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>food</name></member>
+      <member refid="classants_1_1Ant_1ad7fb2ac4566880fdacfd7bf7f4ec1109" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>food_scent_strength</name></member>
+      <member refid="classants_1_1Ant_1a41de1c29941a444dab25a88cbc3a881d" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>has_food</name></member>
+      <member refid="classants_1_1Ant_1a2e60480b7534b107e12d7f23fd06d5f1" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>here</name></member>
+      <member refid="classants_1_1Ant_1a7885f0124adf5b10fd6fa5e8ac47edb9" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>home_scent_strength</name></member>
+      <member refid="classants_1_1Ant_1adf5f970b6b5e8472f42275114eeac779" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>image</name></member>
+      <member refid="classants_1_1Ant_1af9af7f8a5c766021ef0f68171d09abca" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>locate_food_nearby</name></member>
+      <member refid="classants_1_1Ant_1a97ffad1c0e634f38585e7913908e9524" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>locate_food_scent_nearby</name></member>
+      <member refid="classants_1_1Ant_1a5795d0898e3d0d020a0a0a626a5ef7b0" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>locate_home_nearby</name></member>
+      <member refid="classants_1_1Ant_1a81a141f3417ddb32b8d1abbd95bbc477" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>locate_home_scent_nearby</name></member>
+      <member refid="classants_1_1Ant_1ae7de139b6f5bdb8d4ab42755c405ef5d" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>location</name></member>
+      <member refid="classants_1_1Ant_1a0067159f23e5e9e4b3564d48c1564f11" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>move</name></member>
+      <member refid="classants_1_1Ant_1a2ddd97dadaa5d24c459b0117dc6e1190" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>neighbour</name></member>
+      <member refid="classants_1_1Ant_1a3a636b900b6fdbed032e3a635495a4c4" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>random_move</name></member>
+      <member refid="classants_1_1Ant_1a164a2a76f1779462fe81e8f169a92a93" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>rank_by_food_scent</name></member>
+      <member refid="classants_1_1Ant_1a6f3e3bd98a5f382098cdc1c02e1e2fd0" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>rank_by_home_scent</name></member>
+      <member refid="classants_1_1Ant_1a285d1e406b6d2cc67779e873e879feb0" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>reduce_food_scent</name></member>
+      <member refid="classants_1_1Ant_1a216ebc2ce2dfeb88d6bbc714bc50ecb5" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>reduce_home_scent</name></member>
+      <member refid="classants_1_1Ant_1a95585d833c74c56155a0d79394d511cc" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>render</name></member>
+      <member refid="classdisplay_1_1Entity_1abbea5f77f08ce3347010d9c452440737" prot="public" virt="non-virtual" ambiguityscope="display::Entity."><scope>ants::Ant</scope><name>render</name></member>
+      <member refid="classdisplay_1_1Entity_1aa56fd9b8bb6c9510f24ea13be8c6a218" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>size</name></member>
+      <member refid="classants_1_1Ant_1a80e2218dcfabbd9ef4d83638dd20d943" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>task_manager</name></member>
+      <member refid="classants_1_1Ant_1a445ec1d1f8e4cb539c4f66fafa129131" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>turn</name></member>
+      <member refid="classants_1_1Ant_1a55f64c7cafb3806bdcfda42586adbff5" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>world</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

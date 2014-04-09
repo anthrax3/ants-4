@@ -1,0 +1,193 @@
+\hypertarget{world_8py_source}{\section{world.\+py}
+}
+
+\begin{DoxyCode}
+\hypertarget{world_8py_source_l00001}{}\hyperlink{namespaceworld}{00001} \textcolor{keyword}{from} ants \textcolor{keyword}{import} WorkerAnt
+00002 \textcolor{keyword}{from} random \textcolor{keyword}{import} randint, choice
+00003 \textcolor{keyword}{from} pygame \textcolor{keyword}{import} display
+00004 \textcolor{keyword}{from} display \textcolor{keyword}{import} Entity
+00005 \textcolor{keyword}{from} constants \textcolor{keyword}{import} WHITE
+00006 \textcolor{keyword}{from} math \textcolor{keyword}{import} sqrt
+00007 
+\hypertarget{world_8py_source_l00008}{}\hyperlink{classworld_1_1Cell}{00008} \textcolor{keyword}{class }\hyperlink{classworld_1_1Cell}{Cell}(\hyperlink{classdisplay_1_1Entity}{Entity}):
+00009     \textcolor{stringliteral}{"""Data containers for each location in World"""}
+\hypertarget{world_8py_source_l00010}{}\hyperlink{classworld_1_1Cell_a3dd387b6af13f7450acb97fb40c13a0e}{00010}     \textcolor{keyword}{def }\hyperlink{classworld_1_1Cell_a3dd387b6af13f7450acb97fb40c13a0e}{\_\_init\_\_}(self, world, i, j, cell\_size):
+\hypertarget{world_8py_source_l00011}{}\hyperlink{classworld_1_1Cell_aeaf17388b8c9000fe612ab043418825c}{00011}         self.\hyperlink{classworld_1_1Cell_aeaf17388b8c9000fe612ab043418825c}{obstacle} = \textcolor{keyword}{False}
+\hypertarget{world_8py_source_l00012}{}\hyperlink{classworld_1_1Cell_a401fde7236825c1843dad8764c2fb4a8}{00012}         self.\hyperlink{classworld_1_1Cell_a401fde7236825c1843dad8764c2fb4a8}{food} = 0
+\hypertarget{world_8py_source_l00013}{}\hyperlink{classworld_1_1Cell_a0ef4adaadea1ccdcd1b61c70e242aa4a}{00013}         self.\hyperlink{classworld_1_1Cell_a0ef4adaadea1ccdcd1b61c70e242aa4a}{home\_scent} = 0
+\hypertarget{world_8py_source_l00014}{}\hyperlink{classworld_1_1Cell_acec0cb9d8a7eb92bedf71dc57641efbe}{00014}         self.\hyperlink{classworld_1_1Cell_acec0cb9d8a7eb92bedf71dc57641efbe}{food\_scent} = 0
+\hypertarget{world_8py_source_l00015}{}\hyperlink{classworld_1_1Cell_abfd9b278ac86f77970b7766a7c2e3231}{00015}         self.\hyperlink{classworld_1_1Cell_abfd9b278ac86f77970b7766a7c2e3231}{ant} = \textcolor{keywordtype}{None}
+\hypertarget{world_8py_source_l00016}{}\hyperlink{classworld_1_1Cell_a9baf3378be8090bf1faf1b19b9aa5fd3}{00016}         self.\hyperlink{classworld_1_1Cell_a9baf3378be8090bf1faf1b19b9aa5fd3}{home} = \textcolor{keyword}{False}
+00017         super(Cell, self).\hyperlink{classworld_1_1Cell_a3dd387b6af13f7450acb97fb40c13a0e}{\_\_init\_\_}(world, (i, j), [cell\_size]*2, world.images[\textcolor{stringliteral}{"cell"}])
+00018 
+\hypertarget{world_8py_source_l00019}{}\hyperlink{classworld_1_1Cell_a3d9725f56b584acd9f75728f364975b0}{00019}     \textcolor{keyword}{def }\hyperlink{classworld_1_1Cell_a3d9725f56b584acd9f75728f364975b0}{add\_food}(self, amt):
+00020         self.\hyperlink{classworld_1_1Cell_a401fde7236825c1843dad8764c2fb4a8}{food} += amt
+00021 
+\hypertarget{world_8py_source_l00022}{}\hyperlink{classworld_1_1Cell_a52af74786918c6c3f4d1d0b0f44aecb8}{00022}     \textcolor{keyword}{def }\hyperlink{classworld_1_1Cell_a52af74786918c6c3f4d1d0b0f44aecb8}{add\_home\_scent}(self, amt):
+00023         self.\hyperlink{classworld_1_1Cell_a0ef4adaadea1ccdcd1b61c70e242aa4a}{home\_scent} += amt
+00024 
+\hypertarget{world_8py_source_l00025}{}\hyperlink{classworld_1_1Cell_a773c26b2353ffaede745ee726d2e256d}{00025}     \textcolor{keyword}{def }\hyperlink{classworld_1_1Cell_a773c26b2353ffaede745ee726d2e256d}{add\_food\_scent}(self, amt):
+00026         self.\hyperlink{classworld_1_1Cell_acec0cb9d8a7eb92bedf71dc57641efbe}{food\_scent} += amt
+00027 
+\hypertarget{world_8py_source_l00028}{}\hyperlink{classworld_1_1Cell_ace4b7ca65667e6dcecb3c43e850c3568}{00028}     \textcolor{keyword}{def }\hyperlink{classworld_1_1Cell_ace4b7ca65667e6dcecb3c43e850c3568}{get\_food}(self, amt):
+00029         \textcolor{stringliteral}{"""Get "amt" amount of food if available else returns whatever food is available"""}
+00030         \textcolor{keywordflow}{if} self.\hyperlink{classworld_1_1Cell_a401fde7236825c1843dad8764c2fb4a8}{food} < amt:
+00031             food = self.\hyperlink{classworld_1_1Cell_a401fde7236825c1843dad8764c2fb4a8}{food}
+00032             self.\hyperlink{classworld_1_1Cell_a401fde7236825c1843dad8764c2fb4a8}{food} = 0
+00033             \textcolor{keywordflow}{return} food
+00034         \textcolor{keywordflow}{else}:
+00035             self.\hyperlink{classworld_1_1Cell_a401fde7236825c1843dad8764c2fb4a8}{food} -= amt
+00036             \textcolor{keywordflow}{return} amt
+00037 
+\hypertarget{world_8py_source_l00038}{}\hyperlink{classworld_1_1Cell_a890e2dc899a32ef86c131a98879e9023}{00038}     \textcolor{keyword}{def }\hyperlink{classworld_1_1Cell_a890e2dc899a32ef86c131a98879e9023}{is\_obstacle}(self):
+00039         \textcolor{keywordflow}{return} bool(self.\hyperlink{classworld_1_1Cell_aeaf17388b8c9000fe612ab043418825c}{obstacle})
+00040 
+\hypertarget{world_8py_source_l00041}{}\hyperlink{classworld_1_1Cell_a441597e0ea2cff7fce907a12fd8216fa}{00041}     \textcolor{keyword}{def }\hyperlink{classworld_1_1Cell_a441597e0ea2cff7fce907a12fd8216fa}{is\_home}(self):
+00042         \textcolor{keywordflow}{return} bool(self.\hyperlink{classworld_1_1Cell_a9baf3378be8090bf1faf1b19b9aa5fd3}{home})
+00043 
+\hypertarget{world_8py_source_l00044}{}\hyperlink{classworld_1_1Cell_a90eabca5d79eef89b2ae4f677a88a93b}{00044}     \textcolor{keyword}{def }\hyperlink{classworld_1_1Cell_a90eabca5d79eef89b2ae4f677a88a93b}{is\_food}(self):
+00045         \textcolor{keywordflow}{return} bool(self.\hyperlink{classworld_1_1Cell_a401fde7236825c1843dad8764c2fb4a8}{food})
+00046 
+\hypertarget{world_8py_source_l00047}{}\hyperlink{classworld_1_1Cell_a98e3cac3c42374693afe0aded7a1e06c}{00047}     \textcolor{keyword}{def }\hyperlink{classworld_1_1Cell_a98e3cac3c42374693afe0aded7a1e06c}{has\_ant}(self):
+00048         \textcolor{keywordflow}{return} bool(self.\hyperlink{classworld_1_1Cell_abfd9b278ac86f77970b7766a7c2e3231}{ant})
+00049 
+\hypertarget{world_8py_source_l00050}{}\hyperlink{classworld_1_1Cell_a1097df1a6fe0131898377358017fe7bc}{00050}     \textcolor{keyword}{def }\hyperlink{classworld_1_1Cell_a1097df1a6fe0131898377358017fe7bc}{has\_food}(self):
+00051         \textcolor{keywordflow}{return} \textcolor{keyword}{True} \textcolor{keywordflow}{if} self.\hyperlink{classworld_1_1Cell_a401fde7236825c1843dad8764c2fb4a8}{food} > 0 \textcolor{keywordflow}{else} \textcolor{keyword}{False}
+00052 
+\hypertarget{world_8py_source_l00053}{}\hyperlink{classworld_1_1Cell_adb830df07e437189375efa6c9ad4981e}{00053}     \textcolor{keyword}{def }\hyperlink{classworld_1_1Cell_adb830df07e437189375efa6c9ad4981e}{make\_home}(self):
+00054         self.\hyperlink{classworld_1_1Cell_a9baf3378be8090bf1faf1b19b9aa5fd3}{home} = \textcolor{keyword}{True}
+00055 
+\hypertarget{world_8py_source_l00056}{}\hyperlink{classworld_1_1Cell_a63164a3e74888a97b07ee8e06c633c2a}{00056}     \textcolor{keyword}{def }\hyperlink{classworld_1_1Cell_a63164a3e74888a97b07ee8e06c633c2a}{make\_obstacle}(self):
+00057         self.\hyperlink{classworld_1_1Cell_aeaf17388b8c9000fe612ab043418825c}{obstacle} = \textcolor{keyword}{True}
+00058 
+\hypertarget{world_8py_source_l00059}{}\hyperlink{classworld_1_1Cell_add0fb2c9e6c963d012cf7e65008b8947}{00059}     \textcolor{keyword}{def }\hyperlink{classworld_1_1Cell_add0fb2c9e6c963d012cf7e65008b8947}{evaporate\_scent}(self, rate):
+00060         \textcolor{stringliteral}{"""Evaporates scent ( decay law )"""}
+00061         self.\hyperlink{classworld_1_1Cell_acec0cb9d8a7eb92bedf71dc57641efbe}{food\_scent} *= rate
+00062         self.\hyperlink{classworld_1_1Cell_a0ef4adaadea1ccdcd1b61c70e242aa4a}{home\_scent} *= rate
+00063         \textcolor{keywordflow}{if} self.\hyperlink{classworld_1_1Cell_acec0cb9d8a7eb92bedf71dc57641efbe}{food\_scent} < .3:
+00064             self.\hyperlink{classworld_1_1Cell_acec0cb9d8a7eb92bedf71dc57641efbe}{food\_scent} = 0
+00065         \textcolor{keywordflow}{if} self.\hyperlink{classworld_1_1Cell_a0ef4adaadea1ccdcd1b61c70e242aa4a}{home\_scent} < .3:
+00066             self.\hyperlink{classworld_1_1Cell_a0ef4adaadea1ccdcd1b61c70e242aa4a}{home\_scent} = 0
+00067 
+\hypertarget{world_8py_source_l00068}{}\hyperlink{classworld_1_1Cell_a11f263897c7a04ae900af84d30a30c56}{00068}     \textcolor{keyword}{def }\hyperlink{classworld_1_1Cell_a11f263897c7a04ae900af84d30a30c56}{render}(self):
+00069         \textcolor{stringliteral}{"""Changes "index" to render the cell according to what it represents }
+00070 \textcolor{stringliteral}{        (home, food, etc) and calls the super class}
+00071 \textcolor{stringliteral}{        Also renders scent levels with transparency depending on its strength}
+00072 \textcolor{stringliteral}{        """}
+00073         \textcolor{keywordflow}{if} self.\hyperlink{classworld_1_1Cell_a90eabca5d79eef89b2ae4f677a88a93b}{is\_food}():
+00074             index = 3
+00075         \textcolor{keywordflow}{elif} self.\hyperlink{classworld_1_1Cell_a890e2dc899a32ef86c131a98879e9023}{is\_obstacle}():
+00076             index = 2
+00077         \textcolor{keywordflow}{elif} self.\hyperlink{classworld_1_1Cell_a441597e0ea2cff7fce907a12fd8216fa}{is\_home}():
+00078             index = 1
+00079         \textcolor{keywordflow}{else}:
+00080             index = 0
+00081 
+00082         self.image.set\_alpha(255)
+00083 
+00084         super(Cell, self).\hyperlink{classworld_1_1Cell_a11f263897c7a04ae900af84d30a30c56}{render}(index)
+00085 
+00086         \textcolor{keywordflow}{if} self.\hyperlink{classworld_1_1Cell_a0ef4adaadea1ccdcd1b61c70e242aa4a}{home\_scent} > 0:
+00087             index = 4
+00088             self.image.set\_alpha(self.\hyperlink{classworld_1_1Cell_a0ef4adaadea1ccdcd1b61c70e242aa4a}{home\_scent})
+00089         super(Cell, self).\hyperlink{classworld_1_1Cell_a11f263897c7a04ae900af84d30a30c56}{render}(index)
+00090         
+00091         \textcolor{keywordflow}{if} self.\hyperlink{classworld_1_1Cell_acec0cb9d8a7eb92bedf71dc57641efbe}{food\_scent} > 0:
+00092             index = 5
+00093             self.image.set\_alpha(self.\hyperlink{classworld_1_1Cell_acec0cb9d8a7eb92bedf71dc57641efbe}{food\_scent})
+00094         super(Cell, self).\hyperlink{classworld_1_1Cell_a11f263897c7a04ae900af84d30a30c56}{render}(index)
+00095 
+\hypertarget{world_8py_source_l00096}{}\hyperlink{classworld_1_1World}{00096} \textcolor{keyword}{class }\hyperlink{classworld_1_1World}{World}():
+00097     \textcolor{stringliteral}{"""Encapsulation of all objects in the simulation"""}
+\hypertarget{world_8py_source_l00098}{}\hyperlink{classworld_1_1World_a4351253668240be9d3a0d5bc2f1aa18f}{00098}     \textcolor{keyword}{def }\hyperlink{classworld_1_1World_a4351253668240be9d3a0d5bc2f1aa18f}{\_\_init\_\_}(self, width, height, cell\_size, images, settings):
+00099         \textcolor{stringliteral}{"""}
+00100 \textcolor{stringliteral}{        - Initialise the screen}
+00101 \textcolor{stringliteral}{        - Fill screen with "Cells"}
+00102 \textcolor{stringliteral}{        - Convert images to pygame format}
+00103 \textcolor{stringliteral}{        - Spawn ants, food sources, obstacles, ant home, etc}
+00104 \textcolor{stringliteral}{        """}
+\hypertarget{world_8py_source_l00105}{}\hyperlink{classworld_1_1World_a5ace9de2d4cd40bbb013db9712f4ef34}{00105}         self.\hyperlink{classworld_1_1World_a5ace9de2d4cd40bbb013db9712f4ef34}{width} = width
+\hypertarget{world_8py_source_l00106}{}\hyperlink{classworld_1_1World_acfdba03fac144372fcc56922a1a339a2}{00106}         self.\hyperlink{classworld_1_1World_acfdba03fac144372fcc56922a1a339a2}{height} = height
+\hypertarget{world_8py_source_l00107}{}\hyperlink{classworld_1_1World_ae1d7a76e88da46ba689ac807d6a9a961}{00107}         self.\hyperlink{classworld_1_1World_ae1d7a76e88da46ba689ac807d6a9a961}{cell\_size} = cell\_size
+\hypertarget{world_8py_source_l00108}{}\hyperlink{classworld_1_1World_a9388f4c8146cbf9983f4a42c3015b61a}{00108}         self.\hyperlink{classworld_1_1World_a9388f4c8146cbf9983f4a42c3015b61a}{images} = images
+\hypertarget{world_8py_source_l00109}{}\hyperlink{classworld_1_1World_a41e0f9d00bb365408abee5a084bdce24}{00109}         self.\hyperlink{classworld_1_1World_a41e0f9d00bb365408abee5a084bdce24}{settings} = settings
+00110 
+\hypertarget{world_8py_source_l00111}{}\hyperlink{classworld_1_1World_a6b3bb67973002c5018e11031462c31eb}{00111}         self.\hyperlink{classworld_1_1World_a6b3bb67973002c5018e11031462c31eb}{canvas} = display.set\_mode((self.\hyperlink{classworld_1_1World_a5ace9de2d4cd40bbb013db9712f4ef34}{width}*self.\hyperlink{classworld_1_1World_ae1d7a76e88da46ba689ac807d6a9a961}{cell\_size}, self.
+      \hyperlink{classworld_1_1World_acfdba03fac144372fcc56922a1a339a2}{height}*self.\hyperlink{classworld_1_1World_ae1d7a76e88da46ba689ac807d6a9a961}{cell\_size}))
+00112         self.\hyperlink{classworld_1_1World_add7ffc7d3af488f4ed006a401b842ca1}{convert\_images}()
+00113 
+\hypertarget{world_8py_source_l00114}{}\hyperlink{classworld_1_1World_a2314ff704272429f24c5d1f731ce7e8d}{00114}         self.\hyperlink{classworld_1_1World_a2314ff704272429f24c5d1f731ce7e8d}{cells} = [[\hyperlink{classworld_1_1Cell}{Cell}(self, i, j, self.\hyperlink{classworld_1_1World_ae1d7a76e88da46ba689ac807d6a9a961}{cell\_size}) \textcolor{keywordflow}{for} j \textcolor{keywordflow}{in} xrange(height)] \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in}
+       xrange(width)]
+00115 
+\hypertarget{world_8py_source_l00116}{}\hyperlink{classworld_1_1World_a93d8708ed00be71dfd78cb42767529ce}{00116}         self.\hyperlink{classworld_1_1World_a93d8708ed00be71dfd78cb42767529ce}{counter} = 0
+00117 
+\hypertarget{world_8py_source_l00118}{}\hyperlink{classworld_1_1World_aff3d808329d4220a8bd5e917c151c14a}{00118}         self.\hyperlink{classworld_1_1World_aff3d808329d4220a8bd5e917c151c14a}{ants} = \{\}
+00119         self.\hyperlink{classworld_1_1World_aaf7c311b1dbcac59ccff5e0319e14692}{spawn\_ants}()
+00120         \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(1):
+00121             self.\hyperlink{classworld_1_1World_af83c041eb0a9fee93eae12bb24038b0a}{spawn\_foodsource}()
+00122         self.\hyperlink{classworld_1_1World_a1dd90d1ccaa88b5e9bfdceed9dd65de6}{create\_home}()
+00123 
+\hypertarget{world_8py_source_l00124}{}\hyperlink{classworld_1_1World_ad12e75d551845a567951b885d204153d}{00124}     \textcolor{keyword}{def }\hyperlink{classworld_1_1World_ad12e75d551845a567951b885d204153d}{\_\_getitem\_\_}(self, location):
+00125         \textcolor{stringliteral}{"""Returns the cell at the location"""}
+00126         x, y = location
+00127         \textcolor{keywordflow}{return} self.\hyperlink{classworld_1_1World_a2314ff704272429f24c5d1f731ce7e8d}{cells}[x][y]
+00128 
+\hypertarget{world_8py_source_l00129}{}\hyperlink{classworld_1_1World_add7ffc7d3af488f4ed006a401b842ca1}{00129}     \textcolor{keyword}{def }\hyperlink{classworld_1_1World_add7ffc7d3af488f4ed006a401b842ca1}{convert\_images}(self):
+00130         \textcolor{stringliteral}{"""Convert images to pygame optimised format"""}
+00131         \textcolor{keywordflow}{for} name \textcolor{keywordflow}{in} self.\hyperlink{classworld_1_1World_a9388f4c8146cbf9983f4a42c3015b61a}{images}:
+00132             self.\hyperlink{classworld_1_1World_a9388f4c8146cbf9983f4a42c3015b61a}{images}[name] = self.\hyperlink{classworld_1_1World_a9388f4c8146cbf9983f4a42c3015b61a}{images}[name].convert()
+00133 
+\hypertarget{world_8py_source_l00134}{}\hyperlink{classworld_1_1World_a254dbfa03188d38b7e822c1a2e20a568}{00134}     \textcolor{keyword}{def }\hyperlink{classworld_1_1World_a254dbfa03188d38b7e822c1a2e20a568}{advance}(self):
+00135         \textcolor{stringliteral}{"""Advance the simulation by one step}
+00136 \textcolor{stringliteral}{            - Update te ants}
+00137 \textcolor{stringliteral}{            - Evaporate all scents}
+00138 \textcolor{stringliteral}{        """}
+00139         \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} self.\hyperlink{classworld_1_1World_aff3d808329d4220a8bd5e917c151c14a}{ants}:
+00140             self.\hyperlink{classworld_1_1World_aff3d808329d4220a8bd5e917c151c14a}{ants}[i].task\_manager.make\_decision()
+00141 
+00142         self.\hyperlink{classworld_1_1World_a45f0825ea2f6b659d376fbc859aa208a}{evaporate\_scent}()
+00143 
+\hypertarget{world_8py_source_l00144}{}\hyperlink{classworld_1_1World_aaf7c311b1dbcac59ccff5e0319e14692}{00144}     \textcolor{keyword}{def }\hyperlink{classworld_1_1World_aaf7c311b1dbcac59ccff5e0319e14692}{spawn\_ants}(self):
+00145         \textcolor{stringliteral}{"""Spawns ants"""}
+00146         \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(self.\hyperlink{classworld_1_1World_a41e0f9d00bb365408abee5a084bdce24}{settings}[\textcolor{stringliteral}{"no\_of\_ants"}]):
+00147             direction = randint(0,7)
+00148             location = [randint(1,self.\hyperlink{classworld_1_1World_a5ace9de2d4cd40bbb013db9712f4ef34}{width}), randint(1,self.\hyperlink{classworld_1_1World_acfdba03fac144372fcc56922a1a339a2}{height})]
+00149             location = [self.\hyperlink{classworld_1_1World_a5ace9de2d4cd40bbb013db9712f4ef34}{width}/2-10, self.\hyperlink{classworld_1_1World_acfdba03fac144372fcc56922a1a339a2}{height}/2-10]
+00150             self.\hyperlink{classworld_1_1World_aff3d808329d4220a8bd5e917c151c14a}{ants}[i] = \hyperlink{classants_1_1WorkerAnt}{WorkerAnt}(self, self.\hyperlink{classworld_1_1World_a9388f4c8146cbf9983f4a42c3015b61a}{images}[\textcolor{stringliteral}{"ant"}], direction, location)
+00151 
+\hypertarget{world_8py_source_l00152}{}\hyperlink{classworld_1_1World_af83c041eb0a9fee93eae12bb24038b0a}{00152}     \textcolor{keyword}{def }\hyperlink{classworld_1_1World_af83c041eb0a9fee93eae12bb24038b0a}{spawn\_foodsource}(self):
+00153         \textcolor{stringliteral}{"""Spawns food sources"""}
+00154         x, y = randint(0,self.\hyperlink{classworld_1_1World_a5ace9de2d4cd40bbb013db9712f4ef34}{width}-1), randint(0,self.\hyperlink{classworld_1_1World_acfdba03fac144372fcc56922a1a339a2}{height}-1)
+00155         \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(randint(2000, 5000)):
+00156             dx = randint(-3,3)
+00157             dy = choice([-1,1])*randint(0, int(sqrt(9-dx**2)))
+00158             self.\hyperlink{classworld_1_1World_a2314ff704272429f24c5d1f731ce7e8d}{cells}[(x+dx)%self.\hyperlink{classworld_1_1World_a5ace9de2d4cd40bbb013db9712f4ef34}{width}][(y+dy)%self.\hyperlink{classworld_1_1World_acfdba03fac144372fcc56922a1a339a2}{height}].add\_food(1)
+00159 
+\hypertarget{world_8py_source_l00160}{}\hyperlink{classworld_1_1World_a1dd90d1ccaa88b5e9bfdceed9dd65de6}{00160}     \textcolor{keyword}{def }\hyperlink{classworld_1_1World_a1dd90d1ccaa88b5e9bfdceed9dd65de6}{create\_home}(self):
+00161         \textcolor{stringliteral}{"""Create a nest for ants"""}
+00162         n = self.\hyperlink{classworld_1_1World_a41e0f9d00bb365408abee5a084bdce24}{settings}[\textcolor{stringliteral}{"home\_size"}]
+00163         x, y = self.\hyperlink{classworld_1_1World_a5ace9de2d4cd40bbb013db9712f4ef34}{width}/2 -5, self.\hyperlink{classworld_1_1World_acfdba03fac144372fcc56922a1a339a2}{height}/2 -5
+00164         \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(n):
+00165             \textcolor{keywordflow}{for} j \textcolor{keywordflow}{in} xrange(n):
+00166                 self.\hyperlink{classworld_1_1World_a2314ff704272429f24c5d1f731ce7e8d}{cells}[x+i-1][y+j-1].make\_home()
+00167 
+\hypertarget{world_8py_source_l00168}{}\hyperlink{classworld_1_1World_a40aafbcc96e8592e314cf08068aba5f5}{00168}     \textcolor{keyword}{def }\hyperlink{classworld_1_1World_a40aafbcc96e8592e314cf08068aba5f5}{render}(self):
+00169         \textcolor{stringliteral}{"""Draws the world on the screen"""}
+00170         self.canvas.fill(WHITE)
+00171 
+00172         \textcolor{keywordflow}{for} cells \textcolor{keywordflow}{in} self.\hyperlink{classworld_1_1World_a2314ff704272429f24c5d1f731ce7e8d}{cells}:
+00173             \textcolor{keywordflow}{for} cell \textcolor{keywordflow}{in} cells:
+00174                 cell.render()
+00175 
+00176         \textcolor{keywordflow}{for} ant \textcolor{keywordflow}{in} self.ants.values():
+00177             ant.render()
+00178 
+00179         display.update((0, 0), (self.\hyperlink{classworld_1_1World_a5ace9de2d4cd40bbb013db9712f4ef34}{width}*self.\hyperlink{classworld_1_1World_ae1d7a76e88da46ba689ac807d6a9a961}{cell\_size}, self.
+      \hyperlink{classworld_1_1World_acfdba03fac144372fcc56922a1a339a2}{height}*self.\hyperlink{classworld_1_1World_ae1d7a76e88da46ba689ac807d6a9a961}{cell\_size}))
+00180 
+\hypertarget{world_8py_source_l00181}{}\hyperlink{classworld_1_1World_a45f0825ea2f6b659d376fbc859aa208a}{00181}     \textcolor{keyword}{def }\hyperlink{classworld_1_1World_a45f0825ea2f6b659d376fbc859aa208a}{evaporate\_scent}(self):
+00182         \textcolor{stringliteral}{"""Evaporates all scent ( uses decay law ) at a rate defined in settings"""}
+00183         \textcolor{keywordflow}{for} cells \textcolor{keywordflow}{in} self.\hyperlink{classworld_1_1World_a2314ff704272429f24c5d1f731ce7e8d}{cells}:
+00184             \textcolor{keywordflow}{for} cell \textcolor{keywordflow}{in} cells:
+00185                 cell.evaporate\_scent(self.\hyperlink{classworld_1_1World_a41e0f9d00bb365408abee5a084bdce24}{settings}[\textcolor{stringliteral}{"evaporation\_rate"}])
+\end{DoxyCode}

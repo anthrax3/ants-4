@@ -1,0 +1,148 @@
+.TH "controller.Simulation" 3 "Wed Apr 9 2014" "Ant Colony" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+controller.Simulation \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP"
+.br
+.ti -1c
+.RI "def \fBadd_image\fP"
+.br
+.ti -1c
+.RI "def \fBrun\fP"
+.br
+.ti -1c
+.RI "def \fBmain_loop\fP"
+.br
+.ti -1c
+.RI "def \fBhandle_events\fP"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBclock\fP"
+.br
+.ti -1c
+.RI "\fBframerate\fP"
+.br
+.ti -1c
+.RI "\fBimages\fP"
+.br
+.ti -1c
+.RI "\fBquit\fP"
+.br
+.ti -1c
+.RI "\fBsettings\fP"
+.br
+.ti -1c
+.RI "\fBworld\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Controls the simulation
+
+    - Runs the main loop
+    - Detects mouse, keyboard and other events
+    - Loads the necessary images
+    - Controls the framerate of the smiulation
+
+.fi
+.PP
+ 
+.PP
+Definition at line 5 of file controller\&.py\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def controller\&.Simulation\&.__init__ (self)"
+
+.PP
+Definition at line 13 of file controller\&.py\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "def controller\&.Simulation\&.add_image (self, name, path)"
+
+.PP
+.nf
+Loads an image
+.fi
+.PP
+ 
+.PP
+Definition at line 37 of file controller\&.py\&.
+.SS "def controller\&.Simulation\&.handle_events (self)"
+
+.PP
+.nf
+Handles all keyboard, mouse and events like QUIT, etc
+.fi
+.PP
+ 
+.PP
+Definition at line 59 of file controller\&.py\&.
+.SS "def controller\&.Simulation\&.main_loop (self)"
+
+.PP
+.nf
+Updates the simulation
+    - Draws the world and update it
+    - Handles all user events
+    - Controls frame rate
+
+.fi
+.PP
+ 
+.PP
+Definition at line 46 of file controller\&.py\&.
+.SS "def controller\&.Simulation\&.run (self)"
+
+.PP
+.nf
+Runs the main loop till the user quits
+.fi
+.PP
+ 
+.PP
+Definition at line 41 of file controller\&.py\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "controller\&.Simulation\&.clock"
+
+.PP
+Definition at line 14 of file controller\&.py\&.
+.SS "controller\&.Simulation\&.framerate"
+
+.PP
+Definition at line 15 of file controller\&.py\&.
+.SS "controller\&.Simulation\&.images"
+
+.PP
+Definition at line 16 of file controller\&.py\&.
+.SS "controller\&.Simulation\&.quit"
+
+.PP
+Definition at line 18 of file controller\&.py\&.
+.SS "controller\&.Simulation\&.settings"
+
+.PP
+Definition at line 29 of file controller\&.py\&.
+.SS "controller\&.Simulation\&.world"
+
+.PP
+Definition at line 35 of file controller\&.py\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ant Colony from the source code\&.

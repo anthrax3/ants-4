@@ -1,0 +1,5 @@
+<map id="ants.Ant" name="ants.Ant">
+<area shape="rect" id="node7" href="$classants_1_1QueenAnt.html" title="{ants.QueenAnt\n||+ __init__()\l}" alt="" coords="5,771,115,856"/>
+<area shape="rect" id="node9" href="$classants_1_1WorkerAnt.html" title="{ants.WorkerAnt\n||+ __init__()\l}" alt="" coords="139,771,251,856"/>
+<area shape="rect" id="node2" href="$classdisplay_1_1Entity.html" title="{display.Entity\n|+ world\l+ location\l+ size\l+ image\l|+ __init__()\l+ render()\l}" alt="" coords="76,139,177,293"/>
+</map>

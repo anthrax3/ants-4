@@ -1,0 +1,121 @@
+.TH "task_manager.Task" 3 "Wed Apr 9 2014" "Ant Colony" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+task_manager.Task \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits object\&.
+.PP
+Inherited by \fBtask_manager\&.DropFood\fP, \fBtask_manager\&.Explore\fP, \fBtask_manager\&.FollowFoodTrail\fP, \fBtask_manager\&.FollowHomeTrail\fP, and \fBtask_manager\&.TakeFood\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP"
+.br
+.ti -1c
+.RI "def \fBstart_task\fP"
+.br
+.ti -1c
+.RI "def \fBperform_task\fP"
+.br
+.ti -1c
+.RI "def \fBend_task\fP"
+.br
+.ti -1c
+.RI "def \fBget_new_task\fP"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBname\fP"
+.br
+.ti -1c
+.RI "\fBant\fP"
+.br
+.ti -1c
+.RI "\fBnew_task\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Base class for a Task
+.fi
+.PP
+ 
+.PP
+Definition at line 31 of file task_manager\&.py\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def task_manager\&.Task\&.__init__ (self, name, ant)"
+
+.PP
+Definition at line 33 of file task_manager\&.py\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "def task_manager\&.Task\&.end_task (self)"
+
+.PP
+.nf
+Actions at the end of a new task
+.fi
+.PP
+ 
+.PP
+Definition at line 46 of file task_manager\&.py\&.
+.SS "def task_manager\&.Task\&.get_new_task (self)"
+
+.PP
+.nf
+Returns and resets new task
+.fi
+.PP
+ 
+.PP
+Definition at line 50 of file task_manager\&.py\&.
+.SS "def task_manager\&.Task\&.perform_task (self)"
+
+.PP
+.nf
+Actions done for a task
+.fi
+.PP
+ 
+.PP
+Definition at line 42 of file task_manager\&.py\&.
+.SS "def task_manager\&.Task\&.start_task (self)"
+
+.PP
+.nf
+Actions at the beginning of a new task
+.fi
+.PP
+ 
+.PP
+Definition at line 38 of file task_manager\&.py\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "task_manager\&.Task\&.ant"
+
+.PP
+Definition at line 35 of file task_manager\&.py\&.
+.SS "task_manager\&.Task\&.name"
+
+.PP
+Definition at line 34 of file task_manager\&.py\&.
+.SS "task_manager\&.Task\&.new_task"
+
+.PP
+Definition at line 36 of file task_manager\&.py\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ant Colony from the source code\&.

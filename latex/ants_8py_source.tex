@@ -1,0 +1,241 @@
+\hypertarget{ants_8py_source}{\section{ants.\+py}
+}
+
+\begin{DoxyCode}
+\hypertarget{ants_8py_source_l00001}{}\hyperlink{namespaceants}{00001} \textcolor{keyword}{from} constants \textcolor{keyword}{import} DIRECTIONS
+00002 \textcolor{keyword}{from} task\_manager \textcolor{keyword}{import} TaskManager, Explore, TakeFood, FollowHomeTrail, FollowFoodTrail, DropFood
+00003 \textcolor{keyword}{from} display \textcolor{keyword}{import} Entity
+00004 \textcolor{keyword}{from} random \textcolor{keyword}{import} choice, randint
+00005 
+\hypertarget{ants_8py_source_l00006}{}\hyperlink{classants_1_1Ant}{00006} \textcolor{keyword}{class }\hyperlink{classants_1_1Ant}{Ant}(\hyperlink{classdisplay_1_1Entity}{Entity}):
+00007     \textcolor{stringliteral}{"""A virtual base class for Ants"""}
+\hypertarget{ants_8py_source_l00008}{}\hyperlink{classants_1_1Ant_a0fa15b6ba2860b445d390c07bc11d4e2}{00008}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_a0fa15b6ba2860b445d390c07bc11d4e2}{\_\_init\_\_}(self, world, image, direction, location):
+00009         super(Ant, self).\hyperlink{classants_1_1Ant_a0fa15b6ba2860b445d390c07bc11d4e2}{\_\_init\_\_}(world, location, [world.cell\_size]*2, image)
+\hypertarget{ants_8py_source_l00010}{}\hyperlink{classants_1_1Ant_a55f64c7cafb3806bdcfda42586adbff5}{00010}         self.\hyperlink{classants_1_1Ant_a55f64c7cafb3806bdcfda42586adbff5}{world} = world
+\hypertarget{ants_8py_source_l00011}{}\hyperlink{classants_1_1Ant_adf5f970b6b5e8472f42275114eeac779}{00011}         self.\hyperlink{classants_1_1Ant_adf5f970b6b5e8472f42275114eeac779}{image} = image
+\hypertarget{ants_8py_source_l00012}{}\hyperlink{classants_1_1Ant_ae26b7ffd236a83d8d5c96ec6ec07b4bb}{00012}         self.\hyperlink{classants_1_1Ant_ae26b7ffd236a83d8d5c96ec6ec07b4bb}{direction} = direction
+\hypertarget{ants_8py_source_l00013}{}\hyperlink{classants_1_1Ant_ae7de139b6f5bdb8d4ab42755c405ef5d}{00013}         self.\hyperlink{classants_1_1Ant_ae7de139b6f5bdb8d4ab42755c405ef5d}{location} = location
+\hypertarget{ants_8py_source_l00014}{}\hyperlink{classants_1_1Ant_afcfbbf8bd338401378d25c512204eb91}{00014}         self.\hyperlink{classants_1_1Ant_afcfbbf8bd338401378d25c512204eb91}{food} = 0
+\hypertarget{ants_8py_source_l00015}{}\hyperlink{classants_1_1Ant_ad7fb2ac4566880fdacfd7bf7f4ec1109}{00015}         self.\hyperlink{classants_1_1Ant_ad7fb2ac4566880fdacfd7bf7f4ec1109}{food\_scent\_strength} = 0
+\hypertarget{ants_8py_source_l00016}{}\hyperlink{classants_1_1Ant_a7885f0124adf5b10fd6fa5e8ac47edb9}{00016}         self.\hyperlink{classants_1_1Ant_a7885f0124adf5b10fd6fa5e8ac47edb9}{home\_scent\_strength} = 0
+00017 
+\hypertarget{ants_8py_source_l00018}{}\hyperlink{classants_1_1Ant_a80e2218dcfabbd9ef4d83638dd20d943}{00018}         self.\hyperlink{classants_1_1Ant_a80e2218dcfabbd9ef4d83638dd20d943}{task\_manager} = \hyperlink{classtask__manager_1_1TaskManager}{TaskManager}()
+00019 
+\hypertarget{ants_8py_source_l00020}{}\hyperlink{classants_1_1Ant_a2ddd97dadaa5d24c459b0117dc6e1190}{00020}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_a2ddd97dadaa5d24c459b0117dc6e1190}{neighbour}(self, direction):
+00021         \textcolor{stringliteral}{"""Returns location of neighbouring cell in a direction }
+00022 \textcolor{stringliteral}{        relative to the ant direction"""}
+00023         x, y = self.\hyperlink{classants_1_1Ant_ae7de139b6f5bdb8d4ab42755c405ef5d}{location}
+00024         dx, dy = DIRECTIONS[(self.\hyperlink{classants_1_1Ant_ae26b7ffd236a83d8d5c96ec6ec07b4bb}{direction} + direction)%8]
+00025         \textcolor{keywordflow}{return} (x+dx)%self.world.width, (y+dy)%self.world.height
+00026 
+\hypertarget{ants_8py_source_l00027}{}\hyperlink{classants_1_1Ant_a0067159f23e5e9e4b3564d48c1564f11}{00027}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_a0067159f23e5e9e4b3564d48c1564f11}{move}(self):
+00028         \textcolor{stringliteral}{"""Move the ant by a unit,}
+00029 \textcolor{stringliteral}{        Leave a scent trail,}
+00030 \textcolor{stringliteral}{        remove the ant from its old cell, and}
+00031 \textcolor{stringliteral}{        update the current cell ant with itself}
+00032 \textcolor{stringliteral}{        """}
+00033         new\_location = self.\hyperlink{classants_1_1Ant_a2ddd97dadaa5d24c459b0117dc6e1190}{neighbour}(0)       
+00034         self.\hyperlink{classants_1_1Ant_ae7de139b6f5bdb8d4ab42755c405ef5d}{location} = new\_location
+00035         self.\hyperlink{classants_1_1Ant_a192f8411faa05c48db8db99d033f5d15}{behind}().ant = \textcolor{keywordtype}{None}
+00036         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} self.\hyperlink{classants_1_1Ant_a192f8411faa05c48db8db99d033f5d15}{behind}().is\_obstacle():
+00037             self.\hyperlink{classants_1_1Ant_a192f8411faa05c48db8db99d033f5d15}{behind}().add\_home\_scent(self.\hyperlink{classants_1_1Ant_a7885f0124adf5b10fd6fa5e8ac47edb9}{home\_scent\_strength})
+00038             self.\hyperlink{classants_1_1Ant_a192f8411faa05c48db8db99d033f5d15}{behind}().add\_food\_scent(self.\hyperlink{classants_1_1Ant_ad7fb2ac4566880fdacfd7bf7f4ec1109}{food\_scent\_strength}) 
+00039         self.\hyperlink{classants_1_1Ant_a2e60480b7534b107e12d7f23fd06d5f1}{here}().ant = self
+00040 
+\hypertarget{ants_8py_source_l00041}{}\hyperlink{classants_1_1Ant_a3a636b900b6fdbed032e3a635495a4c4}{00041}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_a3a636b900b6fdbed032e3a635495a4c4}{random\_move}(self):
+00042         \textcolor{stringliteral}{"""Ant makes a move forward or turns randomly"""}
+00043         \textcolor{keywordflow}{if} randint(1,8) == 1:
+00044             self.\hyperlink{classants_1_1Ant_a445ec1d1f8e4cb539c4f66fafa129131}{turn}( choice([-1, 1]) )
+00045         \textcolor{keywordflow}{else}:
+00046             self.\hyperlink{classants_1_1Ant_a0067159f23e5e9e4b3564d48c1564f11}{move}()
+00047 
+\hypertarget{ants_8py_source_l00048}{}\hyperlink{classants_1_1Ant_a216ebc2ce2dfeb88d6bbc714bc50ecb5}{00048}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_a216ebc2ce2dfeb88d6bbc714bc50ecb5}{reduce\_home\_scent}(self, amt=1):
+00049         \textcolor{stringliteral}{"""Reduce home scent by 'amt'"""}
+00050         self.\hyperlink{classants_1_1Ant_a7885f0124adf5b10fd6fa5e8ac47edb9}{home\_scent\_strength} = max(0, self.
+      \hyperlink{classants_1_1Ant_a7885f0124adf5b10fd6fa5e8ac47edb9}{home\_scent\_strength}-amt)
+00051         \textcolor{keywordflow}{return} self
+00052 
+\hypertarget{ants_8py_source_l00053}{}\hyperlink{classants_1_1Ant_a285d1e406b6d2cc67779e873e879feb0}{00053}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_a285d1e406b6d2cc67779e873e879feb0}{reduce\_food\_scent}(self, amt=1):
+00054         \textcolor{stringliteral}{"""Reduce food scent by 'amt'"""}
+00055         self.\hyperlink{classants_1_1Ant_ad7fb2ac4566880fdacfd7bf7f4ec1109}{food\_scent\_strength} = max(0, self.
+      \hyperlink{classants_1_1Ant_ad7fb2ac4566880fdacfd7bf7f4ec1109}{food\_scent\_strength}-amt)
+00056         \textcolor{keywordflow}{return} self
+00057 
+\hypertarget{ants_8py_source_l00058}{}\hyperlink{classants_1_1Ant_a445ec1d1f8e4cb539c4f66fafa129131}{00058}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_a445ec1d1f8e4cb539c4f66fafa129131}{turn}(self, n):
+00059         \textcolor{stringliteral}{"""Changes direction n times"""}
+00060         self.\hyperlink{classants_1_1Ant_ae26b7ffd236a83d8d5c96ec6ec07b4bb}{direction} = (self.\hyperlink{classants_1_1Ant_ae26b7ffd236a83d8d5c96ec6ec07b4bb}{direction} + n) % 8
+00061 
+\hypertarget{ants_8py_source_l00062}{}\hyperlink{classants_1_1Ant_a95585d833c74c56155a0d79394d511cc}{00062}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_a95585d833c74c56155a0d79394d511cc}{render}(self):
+00063         \textcolor{stringliteral}{"""Render itself"""}
+00064         \textcolor{keywordflow}{if} self.\hyperlink{classants_1_1Ant_a41de1c29941a444dab25a88cbc3a881d}{has\_food}():
+00065             super(Ant, self).\hyperlink{classants_1_1Ant_a95585d833c74c56155a0d79394d511cc}{render}(8)
+00066         \textcolor{keywordflow}{else}:
+00067             super(Ant, self).\hyperlink{classants_1_1Ant_a95585d833c74c56155a0d79394d511cc}{render}(self.\hyperlink{classants_1_1Ant_ae26b7ffd236a83d8d5c96ec6ec07b4bb}{direction})
+00068 
+\hypertarget{ants_8py_source_l00069}{}\hyperlink{classants_1_1Ant_a2e60480b7534b107e12d7f23fd06d5f1}{00069}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_a2e60480b7534b107e12d7f23fd06d5f1}{here}(self):
+00070         \textcolor{stringliteral}{"""The cell it is standing on"""}
+00071         \textcolor{keywordflow}{return} self.\hyperlink{classants_1_1Ant_a55f64c7cafb3806bdcfda42586adbff5}{world}[self.\hyperlink{classants_1_1Ant_ae7de139b6f5bdb8d4ab42755c405ef5d}{location}]
+00072 
+\hypertarget{ants_8py_source_l00073}{}\hyperlink{classants_1_1Ant_a192f8411faa05c48db8db99d033f5d15}{00073}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_a192f8411faa05c48db8db99d033f5d15}{behind}(self):
+00074         \textcolor{stringliteral}{"""The cell just behind"""}
+00075         \textcolor{keywordflow}{return} self.\hyperlink{classants_1_1Ant_a55f64c7cafb3806bdcfda42586adbff5}{world}[self.\hyperlink{classants_1_1Ant_a2ddd97dadaa5d24c459b0117dc6e1190}{neighbour}(4)]
+00076 
+\hypertarget{ants_8py_source_l00077}{}\hyperlink{classants_1_1Ant_ac2c8f048d99cd48a5829ddf7ff4a708a}{00077}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_ac2c8f048d99cd48a5829ddf7ff4a708a}{ahead}(self):
+00078         \textcolor{stringliteral}{"""The cell just ahead"""}
+00079         \textcolor{keywordflow}{return} self.\hyperlink{classants_1_1Ant_a55f64c7cafb3806bdcfda42586adbff5}{world}[self.\hyperlink{classants_1_1Ant_a2ddd97dadaa5d24c459b0117dc6e1190}{neighbour}(0)]
+00080 
+\hypertarget{ants_8py_source_l00081}{}\hyperlink{classants_1_1Ant_a2dbb07eefeecbc51d257f81fb0ba1c71}{00081}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_a2dbb07eefeecbc51d257f81fb0ba1c71}{ahead\_left}(self):
+00082         \textcolor{stringliteral}{"""The cell just ahead-left"""}
+00083         \textcolor{keywordflow}{return} self.\hyperlink{classants_1_1Ant_a55f64c7cafb3806bdcfda42586adbff5}{world}[self.\hyperlink{classants_1_1Ant_a2ddd97dadaa5d24c459b0117dc6e1190}{neighbour}(-1)]
+00084 
+\hypertarget{ants_8py_source_l00085}{}\hyperlink{classants_1_1Ant_ad7a5311d831e8bcc07061e6a12edad8c}{00085}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_ad7a5311d831e8bcc07061e6a12edad8c}{ahead\_right}(self):
+00086         \textcolor{stringliteral}{"""The cell just ahead-right"""}
+00087         \textcolor{keywordflow}{return} self.\hyperlink{classants_1_1Ant_a55f64c7cafb3806bdcfda42586adbff5}{world}[self.\hyperlink{classants_1_1Ant_a2ddd97dadaa5d24c459b0117dc6e1190}{neighbour}(1)]
+00088 
+\hypertarget{ants_8py_source_l00089}{}\hyperlink{classants_1_1Ant_af9af7f8a5c766021ef0f68171d09abca}{00089}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_af9af7f8a5c766021ef0f68171d09abca}{locate\_food\_nearby}(self):
+00090         \textcolor{stringliteral}{"""Locate all sources nearby and return any one randomly}
+00091 \textcolor{stringliteral}{        return None if no food source is found"""}
+00092         directions = []
+00093         \textcolor{keywordflow}{if} self.\hyperlink{classants_1_1Ant_ac2c8f048d99cd48a5829ddf7ff4a708a}{ahead}().\hyperlink{classants_1_1Ant_a41de1c29941a444dab25a88cbc3a881d}{has\_food}():
+00094             directions.append(0)
+00095         \textcolor{keywordflow}{else}:
+00096             \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(1, 8):
+00097                 \textcolor{keywordflow}{if} self.\hyperlink{classants_1_1Ant_a55f64c7cafb3806bdcfda42586adbff5}{world}[self.\hyperlink{classants_1_1Ant_a2ddd97dadaa5d24c459b0117dc6e1190}{neighbour}(i)].\hyperlink{classants_1_1Ant_a41de1c29941a444dab25a88cbc3a881d}{has\_food}():
+00098                     directions.append(i) 
+00099 
+00100         \textcolor{keywordflow}{if} directions:
+00101             \textcolor{keywordflow}{return} choice(directions)
+00102         \textcolor{keywordflow}{else}:
+00103             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+00104 
+\hypertarget{ants_8py_source_l00105}{}\hyperlink{classants_1_1Ant_a5795d0898e3d0d020a0a0a626a5ef7b0}{00105}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_a5795d0898e3d0d020a0a0a626a5ef7b0}{locate\_home\_nearby}(self):
+00106         \textcolor{stringliteral}{"""Locate home cell nearby and return any one randomly}
+00107 \textcolor{stringliteral}{        return None if not found"""}
+00108         directions = []
+00109         \textcolor{keywordflow}{if} self.\hyperlink{classants_1_1Ant_ac2c8f048d99cd48a5829ddf7ff4a708a}{ahead}().is\_food():
+00110             directions.append(0)
+00111         \textcolor{keywordflow}{else}:
+00112             \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(1, 8):
+00113                 \textcolor{keywordflow}{if} self.\hyperlink{classants_1_1Ant_a55f64c7cafb3806bdcfda42586adbff5}{world}[self.\hyperlink{classants_1_1Ant_a2ddd97dadaa5d24c459b0117dc6e1190}{neighbour}(i)].is\_home():
+00114                     directions.append(i) 
+00115 
+00116         \textcolor{keywordflow}{if} directions:
+00117             \textcolor{keywordflow}{return} choice(directions)
+00118         \textcolor{keywordflow}{else}:
+00119             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+00120 
+\hypertarget{ants_8py_source_l00121}{}\hyperlink{classants_1_1Ant_a81a141f3417ddb32b8d1abbd95bbc477}{00121}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_a81a141f3417ddb32b8d1abbd95bbc477}{locate\_home\_scent\_nearby}(self):
+00122         \textcolor{stringliteral}{"""Scan the 5 directions near the direction of the ant for home scent and}
+00123 \textcolor{stringliteral}{        return one random direction}
+00124 \textcolor{stringliteral}{        return None if not found}
+00125 \textcolor{stringliteral}{        """}
+00126         directions = []
+00127         \textcolor{keywordflow}{if} self.\hyperlink{classants_1_1Ant_ac2c8f048d99cd48a5829ddf7ff4a708a}{ahead}().home\_scent > 0:
+00128             directions.append(0)
+00129         \textcolor{keywordflow}{else}:
+00130             \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(-2, 3):
+00131                 \textcolor{keywordflow}{if} self.\hyperlink{classants_1_1Ant_a55f64c7cafb3806bdcfda42586adbff5}{world}[self.\hyperlink{classants_1_1Ant_a2ddd97dadaa5d24c459b0117dc6e1190}{neighbour}(i)].home\_scent > 0:
+00132                     \textcolor{keywordflow}{for} x \textcolor{keywordflow}{in} xrange(1,11-5*abs(i)):
+00133                         directions.append(i) 
+00134 
+00135         \textcolor{keywordflow}{if} directions:
+00136             \textcolor{keywordflow}{return} choice(directions)
+00137         \textcolor{keywordflow}{else}:
+00138             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+00139 
+\hypertarget{ants_8py_source_l00140}{}\hyperlink{classants_1_1Ant_a97ffad1c0e634f38585e7913908e9524}{00140}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_a97ffad1c0e634f38585e7913908e9524}{locate\_food\_scent\_nearby}(self):
+00141         \textcolor{stringliteral}{"""Scan the 5 directions near the direction of the ant for food scent and}
+00142 \textcolor{stringliteral}{        return one random direction}
+00143 \textcolor{stringliteral}{        return None if not found}
+00144 \textcolor{stringliteral}{        """}
+00145         directions = []
+00146         \textcolor{keywordflow}{if} self.\hyperlink{classants_1_1Ant_ac2c8f048d99cd48a5829ddf7ff4a708a}{ahead}().food\_scent > 0:
+00147             directions.append(0)
+00148         \textcolor{keywordflow}{else}:
+00149             \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} xrange(-2, 3):
+00150                 \textcolor{keywordflow}{if} self.\hyperlink{classants_1_1Ant_a55f64c7cafb3806bdcfda42586adbff5}{world}[self.\hyperlink{classants_1_1Ant_a2ddd97dadaa5d24c459b0117dc6e1190}{neighbour}(i)].food\_scent > 0:
+00151                     \textcolor{keywordflow}{for} x \textcolor{keywordflow}{in} xrange(1,11-5*abs(i)):
+00152                         directions.append(i) 
+00153 
+00154         \textcolor{keywordflow}{if} directions:
+00155             \textcolor{keywordflow}{return} choice(directions)
+00156         \textcolor{keywordflow}{else}:
+00157             \textcolor{keywordflow}{return} \textcolor{keywordtype}{None}
+00158 
+\hypertarget{ants_8py_source_l00159}{}\hyperlink{classants_1_1Ant_a164a2a76f1779462fe81e8f169a92a93}{00159}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_a164a2a76f1779462fe81e8f169a92a93}{rank\_by\_food\_scent}(self):
+00160         \textcolor{stringliteral}{"""Scan the 5 directions near the direction of the ant for food scent and}
+00161 \textcolor{stringliteral}{        return the direction with the strongest scent}
+00162 \textcolor{stringliteral}{        return None if not found}
+00163 \textcolor{stringliteral}{        """}
+00164         best\_direction = 0
+00165         best\_direction\_scent = 0
+00166         \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} [0, -1, 1, -1, 2]:
+00167             cell = self.\hyperlink{classants_1_1Ant_a55f64c7cafb3806bdcfda42586adbff5}{world}[self.\hyperlink{classants_1_1Ant_a2ddd97dadaa5d24c459b0117dc6e1190}{neighbour}(i)]
+00168             \textcolor{keywordflow}{if} cell.food\_scent > best\_direction\_scent:
+00169                 best\_direction = i
+00170                 best\_direction\_scent = cell.food\_scent
+00171         \textcolor{keywordflow}{return} best\_direction
+00172 
+\hypertarget{ants_8py_source_l00173}{}\hyperlink{classants_1_1Ant_a6f3e3bd98a5f382098cdc1c02e1e2fd0}{00173}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_a6f3e3bd98a5f382098cdc1c02e1e2fd0}{rank\_by\_home\_scent}(self):
+00174         \textcolor{stringliteral}{"""Scan the 5 directions near the direction of the ant for home scent and}
+00175 \textcolor{stringliteral}{        return the direction with the strongest scent}
+00176 \textcolor{stringliteral}{        return None if not found}
+00177 \textcolor{stringliteral}{        """}
+00178         best\_direction = 0
+00179         best\_direction\_scent = 0
+00180         \textcolor{keywordflow}{for} i \textcolor{keywordflow}{in} [0, -1, 1, -1, 2]:
+00181             cell = self.\hyperlink{classants_1_1Ant_a55f64c7cafb3806bdcfda42586adbff5}{world}[self.\hyperlink{classants_1_1Ant_a2ddd97dadaa5d24c459b0117dc6e1190}{neighbour}(i)]
+00182             \textcolor{keywordflow}{if} cell.home\_scent > best\_direction\_scent:
+00183                 best\_direction = i
+00184                 best\_direction\_scent = cell.home\_scent
+00185         \textcolor{keywordflow}{return} best\_direction
+00186 
+\hypertarget{ants_8py_source_l00187}{}\hyperlink{classants_1_1Ant_ae85884312b4aa10f965b84535bed37fc}{00187}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_ae85884312b4aa10f965b84535bed37fc}{drop\_food}(self):
+00188         \textcolor{stringliteral}{"""}
+00189 \textcolor{stringliteral}{        Set food to zero}
+00190 \textcolor{stringliteral}{        Update the food values of the home cell it reached}
+00191 \textcolor{stringliteral}{        """}
+00192         self.\hyperlink{classants_1_1Ant_afcfbbf8bd338401378d25c512204eb91}{food} = 0
+00193 
+\hypertarget{ants_8py_source_l00194}{}\hyperlink{classants_1_1Ant_a41de1c29941a444dab25a88cbc3a881d}{00194}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_a41de1c29941a444dab25a88cbc3a881d}{has\_food}(self):
+00195         \textcolor{keywordflow}{return} bool(self.\hyperlink{classants_1_1Ant_afcfbbf8bd338401378d25c512204eb91}{food})
+00196 
+\hypertarget{ants_8py_source_l00197}{}\hyperlink{classants_1_1Ant_a9e4bf6309b80ab33bd628f6e7d78d013}{00197}     \textcolor{keyword}{def }\hyperlink{classants_1_1Ant_a9e4bf6309b80ab33bd628f6e7d78d013}{\_\_nonzero\_\_}(self):
+00198         \textcolor{keywordflow}{return} \textcolor{keyword}{True}
+00199 
+00200 
+\hypertarget{ants_8py_source_l00201}{}\hyperlink{classants_1_1WorkerAnt}{00201} \textcolor{keyword}{class }\hyperlink{classants_1_1WorkerAnt}{WorkerAnt}(\hyperlink{classants_1_1Ant}{Ant}):
+00202     \textcolor{stringliteral}{"""Ants that explores for foodsource and collects food"""}
+\hypertarget{ants_8py_source_l00203}{}\hyperlink{classants_1_1WorkerAnt_a82e7d37f66c81e029cad6038d6515056}{00203}     \textcolor{keyword}{def }\hyperlink{classants_1_1WorkerAnt_a82e7d37f66c81e029cad6038d6515056}{\_\_init\_\_}(self, world, image, direction, location):
+00204         \textcolor{stringliteral}{"""}
+00205 \textcolor{stringliteral}{        Tasks assigned:}
+00206 \textcolor{stringliteral}{            - Explore}
+00207 \textcolor{stringliteral}{            - TakeFood}
+00208 \textcolor{stringliteral}{            - DropFood}
+00209 \textcolor{stringliteral}{            - FollowFoodTrail}
+00210 \textcolor{stringliteral}{            - FollowHomeTrail}
+00211 \textcolor{stringliteral}{        Default task:}
+00212 \textcolor{stringliteral}{            - Explore}
+00213 \textcolor{stringliteral}{        """}
+00214         Ant.\_\_init\_\_(self, world, image, direction, location)
+00215         self.task\_manager.add\_task(\hyperlink{classtask__manager_1_1Explore}{Explore}(self))
+00216         self.task\_manager.add\_task(\hyperlink{classtask__manager_1_1TakeFood}{TakeFood}(self))
+00217         self.task\_manager.add\_task(\hyperlink{classtask__manager_1_1DropFood}{DropFood}(self))
+00218         self.task\_manager.add\_task(\hyperlink{classtask__manager_1_1FollowFoodTrail}{FollowFoodTrail}(self))
+00219         self.task\_manager.add\_task(\hyperlink{classtask__manager_1_1FollowHomeTrail}{FollowHomeTrail}(self))
+00220         self.task\_manager.set\_active\_task(\textcolor{stringliteral}{"explore"})
+00221 
+00222 
+\hypertarget{ants_8py_source_l00223}{}\hyperlink{classants_1_1QueenAnt}{00223} \textcolor{keyword}{class }\hyperlink{classants_1_1QueenAnt}{QueenAnt}(\hyperlink{classants_1_1Ant}{Ant}):
+00224     \textcolor{stringliteral}{"""Ants that produces offsprings and populates the colony"""}
+\hypertarget{ants_8py_source_l00225}{}\hyperlink{classants_1_1QueenAnt_aea3ff8fa90122567905806f675eb9472}{00225}     \textcolor{keyword}{def }\hyperlink{classants_1_1QueenAnt_aea3ff8fa90122567905806f675eb9472}{\_\_init\_\_}(self, world, image, direction, location):
+00226         \textcolor{stringliteral}{"""}
+00227 \textcolor{stringliteral}{        Tasks assigned:}
+00228 \textcolor{stringliteral}{            - HaveFood}
+00229 \textcolor{stringliteral}{            - Produce offsprings}
+00230 \textcolor{stringliteral}{        Default task:}
+00231 \textcolor{stringliteral}{            - Have Food}
+00232 \textcolor{stringliteral}{        """}
+00233         Ant.\_\_init\_\_(self, world, image, direction, location)
+00234         \textcolor{keywordflow}{raise} NotImplementedError
+\end{DoxyCode}

@@ -1,0 +1,100 @@
+.TH "task_manager.TaskManager" 3 "Wed Apr 9 2014" "Ant Colony" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+task_manager.TaskManager \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP"
+.br
+.ti -1c
+.RI "def \fBadd_task\fP"
+.br
+.ti -1c
+.RI "def \fBmake_decision\fP"
+.br
+.ti -1c
+.RI "def \fBset_active_task\fP"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBtasks\fP"
+.br
+.ti -1c
+.RI "\fBactive_task\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Decides and performs all actions of an Ant
+.fi
+.PP
+ 
+.PP
+Definition at line 3 of file task_manager\&.py\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def task_manager\&.TaskManager\&.__init__ (self)"
+
+.PP
+Definition at line 5 of file task_manager\&.py\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "def task_manager\&.TaskManager\&.add_task (self, task)"
+
+.PP
+.nf
+Adds a new task
+.fi
+.PP
+ 
+.PP
+Definition at line 9 of file task_manager\&.py\&.
+.SS "def task_manager\&.TaskManager\&.make_decision (self)"
+
+.PP
+.nf
+Performs the active task
+Checks for new task
+If new task is present end the current task and
+start the new task
+.fi
+.PP
+ 
+.PP
+Definition at line 13 of file task_manager\&.py\&.
+.SS "def task_manager\&.TaskManager\&.set_active_task (self, task_name)"
+
+.PP
+.nf
+Sets the active task
+.fi
+.PP
+ 
+.PP
+Definition at line 27 of file task_manager\&.py\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "task_manager\&.TaskManager\&.active_task"
+
+.PP
+Definition at line 7 of file task_manager\&.py\&.
+.SS "task_manager\&.TaskManager\&.tasks"
+
+.PP
+Definition at line 6 of file task_manager\&.py\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ant Colony from the source code\&.

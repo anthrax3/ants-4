@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classants_1_1QueenAnt" kind="class" prot="public">
+    <compoundname>ants::QueenAnt</compoundname>
+    <basecompoundref refid="classants_1_1Ant" prot="public" virt="non-virtual">ants.Ant</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classants_1_1QueenAnt_1aea3ff8fa90122567905806f675eb9472" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.QueenAnt.__init__</definition>
+        <argsstring></argsstring>
+        <name>__init__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Tasks assigned:
+    - HaveFood
+    - Produce offsprings
+Default task:
+    - Have Food
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="225" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="225" bodyend="234"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Ants that produces offsprings and populates the colony</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="129">
+        <label>ants.QueenAnt</label>
+        <link refid="classants_1_1QueenAnt"/>
+        <childnode refid="130" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="132">
+        <label>object</label>
+      </node>
+      <node id="131">
+        <label>display.Entity</label>
+        <link refid="classdisplay_1_1Entity"/>
+        <childnode refid="132" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>ants.Ant</label>
+        <link refid="classants_1_1Ant"/>
+        <childnode refid="131" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="133">
+        <label>ants.QueenAnt</label>
+        <link refid="classants_1_1QueenAnt"/>
+        <childnode refid="134" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="136">
+        <label>object</label>
+      </node>
+      <node id="135">
+        <label>display.Entity</label>
+        <link refid="classdisplay_1_1Entity"/>
+        <childnode refid="136" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="134">
+        <label>ants.Ant</label>
+        <link refid="classants_1_1Ant"/>
+        <childnode refid="135" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="223" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="223" bodyend="234"/>
+    <listofallmembers>
+      <member refid="classants_1_1QueenAnt_1aea3ff8fa90122567905806f675eb9472" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>__init__</name></member>
+      <member refid="classants_1_1Ant_1a9e4bf6309b80ab33bd628f6e7d78d013" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>__nonzero__</name></member>
+      <member refid="classants_1_1Ant_1ac2c8f048d99cd48a5829ddf7ff4a708a" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>ahead</name></member>
+      <member refid="classants_1_1Ant_1a2dbb07eefeecbc51d257f81fb0ba1c71" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>ahead_left</name></member>
+      <member refid="classants_1_1Ant_1ad7a5311d831e8bcc07061e6a12edad8c" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>ahead_right</name></member>
+      <member refid="classants_1_1Ant_1a192f8411faa05c48db8db99d033f5d15" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>behind</name></member>
+      <member refid="classants_1_1Ant_1ae26b7ffd236a83d8d5c96ec6ec07b4bb" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>direction</name></member>
+      <member refid="classants_1_1Ant_1ae85884312b4aa10f965b84535bed37fc" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>drop_food</name></member>
+      <member refid="classants_1_1Ant_1afcfbbf8bd338401378d25c512204eb91" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>food</name></member>
+      <member refid="classants_1_1Ant_1ad7fb2ac4566880fdacfd7bf7f4ec1109" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>food_scent_strength</name></member>
+      <member refid="classants_1_1Ant_1a41de1c29941a444dab25a88cbc3a881d" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>has_food</name></member>
+      <member refid="classants_1_1Ant_1a2e60480b7534b107e12d7f23fd06d5f1" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>here</name></member>
+      <member refid="classants_1_1Ant_1a7885f0124adf5b10fd6fa5e8ac47edb9" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>home_scent_strength</name></member>
+      <member refid="classants_1_1Ant_1adf5f970b6b5e8472f42275114eeac779" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>image</name></member>
+      <member refid="classants_1_1Ant_1af9af7f8a5c766021ef0f68171d09abca" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>locate_food_nearby</name></member>
+      <member refid="classants_1_1Ant_1a97ffad1c0e634f38585e7913908e9524" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>locate_food_scent_nearby</name></member>
+      <member refid="classants_1_1Ant_1a5795d0898e3d0d020a0a0a626a5ef7b0" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>locate_home_nearby</name></member>
+      <member refid="classants_1_1Ant_1a81a141f3417ddb32b8d1abbd95bbc477" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>locate_home_scent_nearby</name></member>
+      <member refid="classants_1_1Ant_1ae7de139b6f5bdb8d4ab42755c405ef5d" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>location</name></member>
+      <member refid="classants_1_1Ant_1a0067159f23e5e9e4b3564d48c1564f11" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>move</name></member>
+      <member refid="classants_1_1Ant_1a2ddd97dadaa5d24c459b0117dc6e1190" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>neighbour</name></member>
+      <member refid="classants_1_1Ant_1a3a636b900b6fdbed032e3a635495a4c4" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>random_move</name></member>
+      <member refid="classants_1_1Ant_1a164a2a76f1779462fe81e8f169a92a93" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>rank_by_food_scent</name></member>
+      <member refid="classants_1_1Ant_1a6f3e3bd98a5f382098cdc1c02e1e2fd0" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>rank_by_home_scent</name></member>
+      <member refid="classants_1_1Ant_1a285d1e406b6d2cc67779e873e879feb0" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>reduce_food_scent</name></member>
+      <member refid="classants_1_1Ant_1a216ebc2ce2dfeb88d6bbc714bc50ecb5" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>reduce_home_scent</name></member>
+      <member refid="classants_1_1Ant_1a95585d833c74c56155a0d79394d511cc" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>render</name></member>
+      <member refid="classdisplay_1_1Entity_1abbea5f77f08ce3347010d9c452440737" prot="public" virt="non-virtual" ambiguityscope="display::Entity."><scope>ants::QueenAnt</scope><name>render</name></member>
+      <member refid="classdisplay_1_1Entity_1aa56fd9b8bb6c9510f24ea13be8c6a218" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>size</name></member>
+      <member refid="classants_1_1Ant_1a80e2218dcfabbd9ef4d83638dd20d943" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>task_manager</name></member>
+      <member refid="classants_1_1Ant_1a445ec1d1f8e4cb539c4f66fafa129131" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>turn</name></member>
+      <member refid="classants_1_1Ant_1a55f64c7cafb3806bdcfda42586adbff5" prot="public" virt="non-virtual"><scope>ants::QueenAnt</scope><name>world</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,224 @@
+.TH "world.World" 3 "Wed Apr 9 2014" "Ant Colony" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+world.World \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP"
+.br
+.ti -1c
+.RI "def \fB__getitem__\fP"
+.br
+.ti -1c
+.RI "def \fBconvert_images\fP"
+.br
+.ti -1c
+.RI "def \fBadvance\fP"
+.br
+.ti -1c
+.RI "def \fBspawn_ants\fP"
+.br
+.ti -1c
+.RI "def \fBspawn_foodsource\fP"
+.br
+.ti -1c
+.RI "def \fBcreate_home\fP"
+.br
+.ti -1c
+.RI "def \fBrender\fP"
+.br
+.ti -1c
+.RI "def \fBevaporate_scent\fP"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBwidth\fP"
+.br
+.ti -1c
+.RI "\fBheight\fP"
+.br
+.ti -1c
+.RI "\fBcell_size\fP"
+.br
+.ti -1c
+.RI "\fBimages\fP"
+.br
+.ti -1c
+.RI "\fBsettings\fP"
+.br
+.ti -1c
+.RI "\fBcanvas\fP"
+.br
+.ti -1c
+.RI "\fBcells\fP"
+.br
+.ti -1c
+.RI "\fBcounter\fP"
+.br
+.ti -1c
+.RI "\fBants\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Encapsulation of all objects in the simulation
+.fi
+.PP
+ 
+.PP
+Definition at line 96 of file world\&.py\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def world\&.World\&.__init__ (self, width, height, cell_size, images, settings)"
+
+.PP
+.nf
+- Initialise the screen
+- Fill screen with "Cells"
+- Convert images to pygame format
+- Spawn ants, food sources, obstacles, ant home, etc
+
+.fi
+.PP
+ 
+.PP
+Definition at line 98 of file world\&.py\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "def world\&.World\&.__getitem__ (self, location)"
+
+.PP
+.nf
+Returns the cell at the location
+.fi
+.PP
+ 
+.PP
+Definition at line 124 of file world\&.py\&.
+.SS "def world\&.World\&.advance (self)"
+
+.PP
+.nf
+Advance the simulation by one step
+    - Update te ants
+    - Evaporate all scents
+
+.fi
+.PP
+ 
+.PP
+Definition at line 134 of file world\&.py\&.
+.SS "def world\&.World\&.convert_images (self)"
+
+.PP
+.nf
+Convert images to pygame optimised format
+.fi
+.PP
+ 
+.PP
+Definition at line 129 of file world\&.py\&.
+.SS "def world\&.World\&.create_home (self)"
+
+.PP
+.nf
+Create a nest for ants
+.fi
+.PP
+ 
+.PP
+Definition at line 160 of file world\&.py\&.
+.SS "def world\&.World\&.evaporate_scent (self)"
+
+.PP
+.nf
+Evaporates all scent ( uses decay law ) at a rate defined in settings
+.fi
+.PP
+ 
+.PP
+Definition at line 181 of file world\&.py\&.
+.SS "def world\&.World\&.render (self)"
+
+.PP
+.nf
+Draws the world on the screen
+.fi
+.PP
+ 
+.PP
+Definition at line 168 of file world\&.py\&.
+.SS "def world\&.World\&.spawn_ants (self)"
+
+.PP
+.nf
+Spawns ants
+.fi
+.PP
+ 
+.PP
+Definition at line 144 of file world\&.py\&.
+.SS "def world\&.World\&.spawn_foodsource (self)"
+
+.PP
+.nf
+Spawns food sources
+.fi
+.PP
+ 
+.PP
+Definition at line 152 of file world\&.py\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "world\&.World\&.ants"
+
+.PP
+Definition at line 118 of file world\&.py\&.
+.SS "world\&.World\&.canvas"
+
+.PP
+Definition at line 111 of file world\&.py\&.
+.SS "world\&.World\&.cell_size"
+
+.PP
+Definition at line 107 of file world\&.py\&.
+.SS "world\&.World\&.cells"
+
+.PP
+Definition at line 114 of file world\&.py\&.
+.SS "world\&.World\&.counter"
+
+.PP
+Definition at line 116 of file world\&.py\&.
+.SS "world\&.World\&.height"
+
+.PP
+Definition at line 106 of file world\&.py\&.
+.SS "world\&.World\&.images"
+
+.PP
+Definition at line 108 of file world\&.py\&.
+.SS "world\&.World\&.settings"
+
+.PP
+Definition at line 109 of file world\&.py\&.
+.SS "world\&.World\&.width"
+
+.PP
+Definition at line 105 of file world\&.py\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ant Colony from the source code\&.

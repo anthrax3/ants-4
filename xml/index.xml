@@ -1,0 +1,185 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
+  <compound refid="classants_1_1Ant" kind="class"><name>ants::Ant</name>
+    <member refid="classants_1_1Ant_1a55f64c7cafb3806bdcfda42586adbff5" kind="variable"><name>world</name></member>
+    <member refid="classants_1_1Ant_1adf5f970b6b5e8472f42275114eeac779" kind="variable"><name>image</name></member>
+    <member refid="classants_1_1Ant_1ae26b7ffd236a83d8d5c96ec6ec07b4bb" kind="variable"><name>direction</name></member>
+    <member refid="classants_1_1Ant_1ae7de139b6f5bdb8d4ab42755c405ef5d" kind="variable"><name>location</name></member>
+    <member refid="classants_1_1Ant_1afcfbbf8bd338401378d25c512204eb91" kind="variable"><name>food</name></member>
+    <member refid="classants_1_1Ant_1ad7fb2ac4566880fdacfd7bf7f4ec1109" kind="variable"><name>food_scent_strength</name></member>
+    <member refid="classants_1_1Ant_1a7885f0124adf5b10fd6fa5e8ac47edb9" kind="variable"><name>home_scent_strength</name></member>
+    <member refid="classants_1_1Ant_1a80e2218dcfabbd9ef4d83638dd20d943" kind="variable"><name>task_manager</name></member>
+    <member refid="classants_1_1Ant_1a0fa15b6ba2860b445d390c07bc11d4e2" kind="function"><name>__init__</name></member>
+    <member refid="classants_1_1Ant_1a2ddd97dadaa5d24c459b0117dc6e1190" kind="function"><name>neighbour</name></member>
+    <member refid="classants_1_1Ant_1a0067159f23e5e9e4b3564d48c1564f11" kind="function"><name>move</name></member>
+    <member refid="classants_1_1Ant_1a3a636b900b6fdbed032e3a635495a4c4" kind="function"><name>random_move</name></member>
+    <member refid="classants_1_1Ant_1a216ebc2ce2dfeb88d6bbc714bc50ecb5" kind="function"><name>reduce_home_scent</name></member>
+    <member refid="classants_1_1Ant_1a285d1e406b6d2cc67779e873e879feb0" kind="function"><name>reduce_food_scent</name></member>
+    <member refid="classants_1_1Ant_1a445ec1d1f8e4cb539c4f66fafa129131" kind="function"><name>turn</name></member>
+    <member refid="classants_1_1Ant_1a95585d833c74c56155a0d79394d511cc" kind="function"><name>render</name></member>
+    <member refid="classants_1_1Ant_1a2e60480b7534b107e12d7f23fd06d5f1" kind="function"><name>here</name></member>
+    <member refid="classants_1_1Ant_1a192f8411faa05c48db8db99d033f5d15" kind="function"><name>behind</name></member>
+    <member refid="classants_1_1Ant_1ac2c8f048d99cd48a5829ddf7ff4a708a" kind="function"><name>ahead</name></member>
+    <member refid="classants_1_1Ant_1a2dbb07eefeecbc51d257f81fb0ba1c71" kind="function"><name>ahead_left</name></member>
+    <member refid="classants_1_1Ant_1ad7a5311d831e8bcc07061e6a12edad8c" kind="function"><name>ahead_right</name></member>
+    <member refid="classants_1_1Ant_1af9af7f8a5c766021ef0f68171d09abca" kind="function"><name>locate_food_nearby</name></member>
+    <member refid="classants_1_1Ant_1a5795d0898e3d0d020a0a0a626a5ef7b0" kind="function"><name>locate_home_nearby</name></member>
+    <member refid="classants_1_1Ant_1a81a141f3417ddb32b8d1abbd95bbc477" kind="function"><name>locate_home_scent_nearby</name></member>
+    <member refid="classants_1_1Ant_1a97ffad1c0e634f38585e7913908e9524" kind="function"><name>locate_food_scent_nearby</name></member>
+    <member refid="classants_1_1Ant_1a164a2a76f1779462fe81e8f169a92a93" kind="function"><name>rank_by_food_scent</name></member>
+    <member refid="classants_1_1Ant_1a6f3e3bd98a5f382098cdc1c02e1e2fd0" kind="function"><name>rank_by_home_scent</name></member>
+    <member refid="classants_1_1Ant_1ae85884312b4aa10f965b84535bed37fc" kind="function"><name>drop_food</name></member>
+    <member refid="classants_1_1Ant_1a41de1c29941a444dab25a88cbc3a881d" kind="function"><name>has_food</name></member>
+    <member refid="classants_1_1Ant_1a9e4bf6309b80ab33bd628f6e7d78d013" kind="function"><name>__nonzero__</name></member>
+  </compound>
+  <compound refid="classworld_1_1Cell" kind="class"><name>world::Cell</name>
+    <member refid="classworld_1_1Cell_1aeaf17388b8c9000fe612ab043418825c" kind="variable"><name>obstacle</name></member>
+    <member refid="classworld_1_1Cell_1a401fde7236825c1843dad8764c2fb4a8" kind="variable"><name>food</name></member>
+    <member refid="classworld_1_1Cell_1a0ef4adaadea1ccdcd1b61c70e242aa4a" kind="variable"><name>home_scent</name></member>
+    <member refid="classworld_1_1Cell_1acec0cb9d8a7eb92bedf71dc57641efbe" kind="variable"><name>food_scent</name></member>
+    <member refid="classworld_1_1Cell_1abfd9b278ac86f77970b7766a7c2e3231" kind="variable"><name>ant</name></member>
+    <member refid="classworld_1_1Cell_1a9baf3378be8090bf1faf1b19b9aa5fd3" kind="variable"><name>home</name></member>
+    <member refid="classworld_1_1Cell_1a3dd387b6af13f7450acb97fb40c13a0e" kind="function"><name>__init__</name></member>
+    <member refid="classworld_1_1Cell_1a3d9725f56b584acd9f75728f364975b0" kind="function"><name>add_food</name></member>
+    <member refid="classworld_1_1Cell_1a52af74786918c6c3f4d1d0b0f44aecb8" kind="function"><name>add_home_scent</name></member>
+    <member refid="classworld_1_1Cell_1a773c26b2353ffaede745ee726d2e256d" kind="function"><name>add_food_scent</name></member>
+    <member refid="classworld_1_1Cell_1ace4b7ca65667e6dcecb3c43e850c3568" kind="function"><name>get_food</name></member>
+    <member refid="classworld_1_1Cell_1a890e2dc899a32ef86c131a98879e9023" kind="function"><name>is_obstacle</name></member>
+    <member refid="classworld_1_1Cell_1a441597e0ea2cff7fce907a12fd8216fa" kind="function"><name>is_home</name></member>
+    <member refid="classworld_1_1Cell_1a90eabca5d79eef89b2ae4f677a88a93b" kind="function"><name>is_food</name></member>
+    <member refid="classworld_1_1Cell_1a98e3cac3c42374693afe0aded7a1e06c" kind="function"><name>has_ant</name></member>
+    <member refid="classworld_1_1Cell_1a1097df1a6fe0131898377358017fe7bc" kind="function"><name>has_food</name></member>
+    <member refid="classworld_1_1Cell_1adb830df07e437189375efa6c9ad4981e" kind="function"><name>make_home</name></member>
+    <member refid="classworld_1_1Cell_1a63164a3e74888a97b07ee8e06c633c2a" kind="function"><name>make_obstacle</name></member>
+    <member refid="classworld_1_1Cell_1add0fb2c9e6c963d012cf7e65008b8947" kind="function"><name>evaporate_scent</name></member>
+    <member refid="classworld_1_1Cell_1a11f263897c7a04ae900af84d30a30c56" kind="function"><name>render</name></member>
+  </compound>
+  <compound refid="classtask__manager_1_1DropFood" kind="class"><name>task_manager::DropFood</name>
+    <member refid="classtask__manager_1_1DropFood_1a9c3891af721254b73254732f0cb18f59" kind="variable"><name>new_task</name></member>
+    <member refid="classtask__manager_1_1DropFood_1a0f759e307357de441edd8465313ca4e8" kind="function"><name>__init__</name></member>
+    <member refid="classtask__manager_1_1DropFood_1a82661a2394895191b28bb7ac1aeb5bf4" kind="function"><name>perform_task</name></member>
+    <member refid="classtask__manager_1_1DropFood_1aedccf366d55d4b081239ff27b72d896d" kind="function"><name>end_task</name></member>
+  </compound>
+  <compound refid="classdisplay_1_1Entity" kind="class"><name>display::Entity</name>
+    <member refid="classdisplay_1_1Entity_1ad7e3284bfb984c309b35d5a077bd5b21" kind="variable"><name>world</name></member>
+    <member refid="classdisplay_1_1Entity_1ae2a1114b0c54ef7eb43c2bd6cd097258" kind="variable"><name>location</name></member>
+    <member refid="classdisplay_1_1Entity_1aa56fd9b8bb6c9510f24ea13be8c6a218" kind="variable"><name>size</name></member>
+    <member refid="classdisplay_1_1Entity_1a244569c285ad924e6200d4c1c8b4639c" kind="variable"><name>image</name></member>
+    <member refid="classdisplay_1_1Entity_1a10294b5b8a8fa95f95f29aaf521efd56" kind="function"><name>__init__</name></member>
+    <member refid="classdisplay_1_1Entity_1abbea5f77f08ce3347010d9c452440737" kind="function"><name>render</name></member>
+  </compound>
+  <compound refid="classtask__manager_1_1Explore" kind="class"><name>task_manager::Explore</name>
+    <member refid="classtask__manager_1_1Explore_1ab1f83ac00c442f8eedd1403a59e74060" kind="variable"><name>new_task</name></member>
+    <member refid="classtask__manager_1_1Explore_1ae95cc7a4676c07732fcf0faed752959c" kind="function"><name>__init__</name></member>
+    <member refid="classtask__manager_1_1Explore_1a8ba5647950e170022bec93bc73c4a8de" kind="function"><name>perform_task</name></member>
+  </compound>
+  <compound refid="classtask__manager_1_1FollowFoodTrail" kind="class"><name>task_manager::FollowFoodTrail</name>
+    <member refid="classtask__manager_1_1FollowFoodTrail_1aefc8c49492622a4e4fa61279fd52ed12" kind="variable"><name>new_task</name></member>
+    <member refid="classtask__manager_1_1FollowFoodTrail_1a6af05bfd09141281c9943c8f01a0896b" kind="function"><name>__init__</name></member>
+    <member refid="classtask__manager_1_1FollowFoodTrail_1a68013dbb3ab9d25676217de4d22c48eb" kind="function"><name>start_task</name></member>
+    <member refid="classtask__manager_1_1FollowFoodTrail_1aa805a2a4e9a76ba7afa252ca5efbd121" kind="function"><name>perform_task</name></member>
+  </compound>
+  <compound refid="classtask__manager_1_1FollowHomeTrail" kind="class"><name>task_manager::FollowHomeTrail</name>
+    <member refid="classtask__manager_1_1FollowHomeTrail_1aae7878e14c1b1aeeac617e2e03074705" kind="variable"><name>new_task</name></member>
+    <member refid="classtask__manager_1_1FollowHomeTrail_1a644c02e687f8a412a39e81628742f3b5" kind="function"><name>__init__</name></member>
+    <member refid="classtask__manager_1_1FollowHomeTrail_1a0ffd4aabfafcfead05a02e149e5fab91" kind="function"><name>start_task</name></member>
+    <member refid="classtask__manager_1_1FollowHomeTrail_1ae4386ef7470e20e3f42fab9fc65b70cb" kind="function"><name>perform_task</name></member>
+  </compound>
+  <compound refid="classants_1_1QueenAnt" kind="class"><name>ants::QueenAnt</name>
+    <member refid="classants_1_1QueenAnt_1aea3ff8fa90122567905806f675eb9472" kind="function"><name>__init__</name></member>
+  </compound>
+  <compound refid="classcontroller_1_1Simulation" kind="class"><name>controller::Simulation</name>
+    <member refid="classcontroller_1_1Simulation_1a21dd9474d46d4afa868c0bd60cea128b" kind="variable"><name>clock</name></member>
+    <member refid="classcontroller_1_1Simulation_1a2bc2a4bb3e974bc7b73be75b49701d9f" kind="variable"><name>framerate</name></member>
+    <member refid="classcontroller_1_1Simulation_1af13461f42bfe6ca017f59e13e57c354e" kind="variable"><name>images</name></member>
+    <member refid="classcontroller_1_1Simulation_1a35d0ffc695295c3b509bd5bc2bdbac9b" kind="variable"><name>quit</name></member>
+    <member refid="classcontroller_1_1Simulation_1a5d368ffc3eee12c8c36839ee5bce3644" kind="variable"><name>settings</name></member>
+    <member refid="classcontroller_1_1Simulation_1a2ba0c3cf1949a98dd920f6097953c1f5" kind="variable"><name>world</name></member>
+    <member refid="classcontroller_1_1Simulation_1a0d3a98e6f630a62f18aa5c0c35846381" kind="function"><name>__init__</name></member>
+    <member refid="classcontroller_1_1Simulation_1a91674f018c921725aa36ec25396a7304" kind="function"><name>add_image</name></member>
+    <member refid="classcontroller_1_1Simulation_1a4cbf2928d3f930f4b8cad9c0e64c2524" kind="function"><name>run</name></member>
+    <member refid="classcontroller_1_1Simulation_1ad86d932f45e2b80ec5336da7c6e6e085" kind="function"><name>main_loop</name></member>
+    <member refid="classcontroller_1_1Simulation_1ad3eb13a30931a88958e3c0c7b5b545a5" kind="function"><name>handle_events</name></member>
+  </compound>
+  <compound refid="classtask__manager_1_1TakeFood" kind="class"><name>task_manager::TakeFood</name>
+    <member refid="classtask__manager_1_1TakeFood_1a592252f7a2b882cf283c9da9cbab07a2" kind="variable"><name>new_task</name></member>
+    <member refid="classtask__manager_1_1TakeFood_1a4c5cc2bb37fc196bc5cb34f56fa62a29" kind="function"><name>__init__</name></member>
+    <member refid="classtask__manager_1_1TakeFood_1af42eebb5d9ee945cafd05908d478bab3" kind="function"><name>perform_task</name></member>
+    <member refid="classtask__manager_1_1TakeFood_1a01c78eece0496ccd7c7badde7ce848b4" kind="function"><name>end_task</name></member>
+  </compound>
+  <compound refid="classtask__manager_1_1Task" kind="class"><name>task_manager::Task</name>
+    <member refid="classtask__manager_1_1Task_1a1a12769253144bf3a864cdff907b9fb6" kind="variable"><name>name</name></member>
+    <member refid="classtask__manager_1_1Task_1ac43e25887825a1bb6e3d4a5a049968be" kind="variable"><name>ant</name></member>
+    <member refid="classtask__manager_1_1Task_1af16658f4c3c447e24f73ed3d1803e058" kind="variable"><name>new_task</name></member>
+    <member refid="classtask__manager_1_1Task_1aab0d2d2ec0b4b3e87969d843a101e118" kind="function"><name>__init__</name></member>
+    <member refid="classtask__manager_1_1Task_1aacfcc36829c22c789f31edaf60ef1cc4" kind="function"><name>start_task</name></member>
+    <member refid="classtask__manager_1_1Task_1a20da98293fb7cae0c80cc0caa864c025" kind="function"><name>perform_task</name></member>
+    <member refid="classtask__manager_1_1Task_1a9422ddc4ca06f29aed2bbd53bfde8da4" kind="function"><name>end_task</name></member>
+    <member refid="classtask__manager_1_1Task_1ab46cf79945b53ec633f6f52b37c7a5cb" kind="function"><name>get_new_task</name></member>
+  </compound>
+  <compound refid="classtask__manager_1_1TaskManager" kind="class"><name>task_manager::TaskManager</name>
+    <member refid="classtask__manager_1_1TaskManager_1a13e69f2bbcef1d7ca03e92235cf9772e" kind="variable"><name>tasks</name></member>
+    <member refid="classtask__manager_1_1TaskManager_1a3389ea690b2ade9bfe1efa5ad079b777" kind="variable"><name>active_task</name></member>
+    <member refid="classtask__manager_1_1TaskManager_1a750d99ccae60977d027c156d607a245d" kind="function"><name>__init__</name></member>
+    <member refid="classtask__manager_1_1TaskManager_1a4cedc030cbfa126c93c7050896111283" kind="function"><name>add_task</name></member>
+    <member refid="classtask__manager_1_1TaskManager_1a623b3d93407140ddd95753251f850f0b" kind="function"><name>make_decision</name></member>
+    <member refid="classtask__manager_1_1TaskManager_1ae6fddee07733c42fb3e8e29b3e45af8c" kind="function"><name>set_active_task</name></member>
+  </compound>
+  <compound refid="classants_1_1WorkerAnt" kind="class"><name>ants::WorkerAnt</name>
+    <member refid="classants_1_1WorkerAnt_1a82e7d37f66c81e029cad6038d6515056" kind="function"><name>__init__</name></member>
+  </compound>
+  <compound refid="classworld_1_1World" kind="class"><name>world::World</name>
+    <member refid="classworld_1_1World_1a5ace9de2d4cd40bbb013db9712f4ef34" kind="variable"><name>width</name></member>
+    <member refid="classworld_1_1World_1acfdba03fac144372fcc56922a1a339a2" kind="variable"><name>height</name></member>
+    <member refid="classworld_1_1World_1ae1d7a76e88da46ba689ac807d6a9a961" kind="variable"><name>cell_size</name></member>
+    <member refid="classworld_1_1World_1a9388f4c8146cbf9983f4a42c3015b61a" kind="variable"><name>images</name></member>
+    <member refid="classworld_1_1World_1a41e0f9d00bb365408abee5a084bdce24" kind="variable"><name>settings</name></member>
+    <member refid="classworld_1_1World_1a6b3bb67973002c5018e11031462c31eb" kind="variable"><name>canvas</name></member>
+    <member refid="classworld_1_1World_1a2314ff704272429f24c5d1f731ce7e8d" kind="variable"><name>cells</name></member>
+    <member refid="classworld_1_1World_1a93d8708ed00be71dfd78cb42767529ce" kind="variable"><name>counter</name></member>
+    <member refid="classworld_1_1World_1aff3d808329d4220a8bd5e917c151c14a" kind="variable"><name>ants</name></member>
+    <member refid="classworld_1_1World_1a4351253668240be9d3a0d5bc2f1aa18f" kind="function"><name>__init__</name></member>
+    <member refid="classworld_1_1World_1ad12e75d551845a567951b885d204153d" kind="function"><name>__getitem__</name></member>
+    <member refid="classworld_1_1World_1add7ffc7d3af488f4ed006a401b842ca1" kind="function"><name>convert_images</name></member>
+    <member refid="classworld_1_1World_1a254dbfa03188d38b7e822c1a2e20a568" kind="function"><name>advance</name></member>
+    <member refid="classworld_1_1World_1aaf7c311b1dbcac59ccff5e0319e14692" kind="function"><name>spawn_ants</name></member>
+    <member refid="classworld_1_1World_1af83c041eb0a9fee93eae12bb24038b0a" kind="function"><name>spawn_foodsource</name></member>
+    <member refid="classworld_1_1World_1a1dd90d1ccaa88b5e9bfdceed9dd65de6" kind="function"><name>create_home</name></member>
+    <member refid="classworld_1_1World_1a40aafbcc96e8592e314cf08068aba5f5" kind="function"><name>render</name></member>
+    <member refid="classworld_1_1World_1a45f0825ea2f6b659d376fbc859aa208a" kind="function"><name>evaporate_scent</name></member>
+  </compound>
+  <compound refid="namespaceants" kind="namespace"><name>ants</name>
+  </compound>
+  <compound refid="namespaceconstants" kind="namespace"><name>constants</name>
+    <member refid="namespaceconstants_1ac910045b50610ec197515a3635d8d037" kind="variable"><name>DIRECTIONS</name></member>
+    <member refid="namespaceconstants_1aa1f49ae50d4547cd3b9f4801d04f5830" kind="variable"><name>WIDTH</name></member>
+    <member refid="namespaceconstants_1a581305cb095bf2d8826a12abef66a15e" kind="variable"><name>HEIGHT</name></member>
+  </compound>
+  <compound refid="namespacecontroller" kind="namespace"><name>controller</name>
+  </compound>
+  <compound refid="namespacedisplay" kind="namespace"><name>display</name>
+  </compound>
+  <compound refid="namespacemain" kind="namespace"><name>main</name>
+    <member refid="namespacemain_1a587e23faee5ea0116a33678f99304c82" kind="variable"><name>simulation</name></member>
+  </compound>
+  <compound refid="namespacepygame_1_1constants" kind="namespace"><name>pygame::constants</name>
+  </compound>
+  <compound refid="namespacetask__manager" kind="namespace"><name>task_manager</name>
+  </compound>
+  <compound refid="namespaceworld" kind="namespace"><name>world</name>
+  </compound>
+  <compound refid="ants_8py" kind="file"><name>ants.py</name>
+  </compound>
+  <compound refid="constants_8py" kind="file"><name>constants.py</name>
+  </compound>
+  <compound refid="controller_8py" kind="file"><name>controller.py</name>
+  </compound>
+  <compound refid="display_8py" kind="file"><name>display.py</name>
+  </compound>
+  <compound refid="main_8py" kind="file"><name>main.py</name>
+  </compound>
+  <compound refid="task__manager_8py" kind="file"><name>task_manager.py</name>
+  </compound>
+  <compound refid="world_8py" kind="file"><name>world.py</name>
+  </compound>
+</doxygenindex>

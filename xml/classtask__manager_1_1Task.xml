@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classtask__manager_1_1Task" kind="class" prot="public">
+    <compoundname>task_manager::Task</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">object</basecompoundref>
+    <derivedcompoundref refid="classtask__manager_1_1DropFood" prot="public" virt="non-virtual">task_manager.DropFood</derivedcompoundref>
+    <derivedcompoundref refid="classtask__manager_1_1Explore" prot="public" virt="non-virtual">task_manager.Explore</derivedcompoundref>
+    <derivedcompoundref refid="classtask__manager_1_1FollowFoodTrail" prot="public" virt="non-virtual">task_manager.FollowFoodTrail</derivedcompoundref>
+    <derivedcompoundref refid="classtask__manager_1_1FollowHomeTrail" prot="public" virt="non-virtual">task_manager.FollowHomeTrail</derivedcompoundref>
+    <derivedcompoundref refid="classtask__manager_1_1TakeFood" prot="public" virt="non-virtual">task_manager.TakeFood</derivedcompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classtask__manager_1_1Task_1a1a12769253144bf3a864cdff907b9fb6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>task_manager.Task::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="34" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtask__manager_1_1Task_1ac43e25887825a1bb6e3d4a5a049968be" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>task_manager.Task::ant</definition>
+        <argsstring></argsstring>
+        <name>ant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="35" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classtask__manager_1_1Task_1af16658f4c3c447e24f73ed3d1803e058" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>task_manager.Task::new_task</definition>
+        <argsstring></argsstring>
+        <name>new_task</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="36" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtask__manager_1_1Task_1aab0d2d2ec0b4b3e87969d843a101e118" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def task_manager.Task.__init__</definition>
+        <argsstring></argsstring>
+        <name>__init__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="33" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="33" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classtask__manager_1_1Task_1aacfcc36829c22c789f31edaf60ef1cc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def task_manager.Task.start_task</definition>
+        <argsstring></argsstring>
+        <name>start_task</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Actions at the beginning of a new task</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="38" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classtask__manager_1_1Task_1a20da98293fb7cae0c80cc0caa864c025" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def task_manager.Task.perform_task</definition>
+        <argsstring></argsstring>
+        <name>perform_task</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Actions done for a task</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="42" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="42" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classtask__manager_1_1Task_1a9422ddc4ca06f29aed2bbd53bfde8da4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def task_manager.Task.end_task</definition>
+        <argsstring></argsstring>
+        <name>end_task</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Actions at the end of a new task</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="46" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classtask__manager_1_1Task_1ab46cf79945b53ec633f6f52b37c7a5cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def task_manager.Task.get_new_task</definition>
+        <argsstring></argsstring>
+        <name>get_new_task</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns and resets new task</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="50" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="50" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Base class for a Task</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="151">
+        <label>task_manager.TakeFood</label>
+        <link refid="classtask__manager_1_1TakeFood"/>
+        <childnode refid="145" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="148">
+        <label>task_manager.Explore</label>
+        <link refid="classtask__manager_1_1Explore"/>
+        <childnode refid="145" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="149">
+        <label>task_manager.FollowFoodTrail</label>
+        <link refid="classtask__manager_1_1FollowFoodTrail"/>
+        <childnode refid="145" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="147">
+        <label>task_manager.DropFood</label>
+        <link refid="classtask__manager_1_1DropFood"/>
+        <childnode refid="145" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="146">
+        <label>object</label>
+      </node>
+      <node id="150">
+        <label>task_manager.FollowHomeTrail</label>
+        <link refid="classtask__manager_1_1FollowHomeTrail"/>
+        <childnode refid="145" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="145">
+        <label>task_manager.Task</label>
+        <link refid="classtask__manager_1_1Task"/>
+        <childnode refid="146" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="153">
+        <label>object</label>
+      </node>
+      <node id="152">
+        <label>task_manager.Task</label>
+        <link refid="classtask__manager_1_1Task"/>
+        <childnode refid="153" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="31" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="31" bodyend="56"/>
+    <listofallmembers>
+      <member refid="classtask__manager_1_1Task_1aab0d2d2ec0b4b3e87969d843a101e118" prot="public" virt="non-virtual"><scope>task_manager::Task</scope><name>__init__</name></member>
+      <member refid="classtask__manager_1_1Task_1ac43e25887825a1bb6e3d4a5a049968be" prot="public" virt="non-virtual"><scope>task_manager::Task</scope><name>ant</name></member>
+      <member refid="classtask__manager_1_1Task_1a9422ddc4ca06f29aed2bbd53bfde8da4" prot="public" virt="non-virtual"><scope>task_manager::Task</scope><name>end_task</name></member>
+      <member refid="classtask__manager_1_1Task_1ab46cf79945b53ec633f6f52b37c7a5cb" prot="public" virt="non-virtual"><scope>task_manager::Task</scope><name>get_new_task</name></member>
+      <member refid="classtask__manager_1_1Task_1a1a12769253144bf3a864cdff907b9fb6" prot="public" virt="non-virtual"><scope>task_manager::Task</scope><name>name</name></member>
+      <member refid="classtask__manager_1_1Task_1af16658f4c3c447e24f73ed3d1803e058" prot="public" virt="non-virtual"><scope>task_manager::Task</scope><name>new_task</name></member>
+      <member refid="classtask__manager_1_1Task_1a20da98293fb7cae0c80cc0caa864c025" prot="public" virt="non-virtual"><scope>task_manager::Task</scope><name>perform_task</name></member>
+      <member refid="classtask__manager_1_1Task_1aacfcc36829c22c789f31edaf60ef1cc4" prot="public" virt="non-virtual"><scope>task_manager::Task</scope><name>start_task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

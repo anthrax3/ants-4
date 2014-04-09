@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classtask__manager_1_1FollowFoodTrail" kind="class" prot="public">
+    <compoundname>task_manager::FollowFoodTrail</compoundname>
+    <basecompoundref refid="classtask__manager_1_1Task" prot="public" virt="non-virtual">task_manager.Task</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classtask__manager_1_1FollowFoodTrail_1aefc8c49492622a4e4fa61279fd52ed12" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>task_manager.FollowFoodTrail::new_task</definition>
+        <argsstring></argsstring>
+        <name>new_task</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="172" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtask__manager_1_1FollowFoodTrail_1a6af05bfd09141281c9943c8f01a0896b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def task_manager.FollowFoodTrail.__init__</definition>
+        <argsstring></argsstring>
+        <name>__init__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="155" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="155" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="classtask__manager_1_1FollowFoodTrail_1a68013dbb3ab9d25676217de4d22c48eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def task_manager.FollowFoodTrail.start_task</definition>
+        <argsstring></argsstring>
+        <name>start_task</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="158" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="158" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="classtask__manager_1_1FollowFoodTrail_1aa805a2a4e9a76ba7afa252ca5efbd121" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def task_manager.FollowFoodTrail.perform_task</definition>
+        <argsstring></argsstring>
+        <name>perform_task</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>if food is found take food_scent_strength
+otherwise rank cells based on scent and follow it
+if scent trail is lost, return to explore mode
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="161" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="161" bodyend="182"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>docstring for FollowFoodTrail</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="117">
+        <label>task_manager.FollowFoodTrail</label>
+        <link refid="classtask__manager_1_1FollowFoodTrail"/>
+        <childnode refid="118" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="119">
+        <label>object</label>
+      </node>
+      <node id="118">
+        <label>task_manager.Task</label>
+        <link refid="classtask__manager_1_1Task"/>
+        <childnode refid="119" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="120">
+        <label>task_manager.FollowFoodTrail</label>
+        <link refid="classtask__manager_1_1FollowFoodTrail"/>
+        <childnode refid="121" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="122">
+        <label>object</label>
+      </node>
+      <node id="121">
+        <label>task_manager.Task</label>
+        <link refid="classtask__manager_1_1Task"/>
+        <childnode refid="122" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="153" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="153" bodyend="183"/>
+    <listofallmembers>
+      <member refid="classtask__manager_1_1FollowFoodTrail_1a6af05bfd09141281c9943c8f01a0896b" prot="public" virt="non-virtual"><scope>task_manager::FollowFoodTrail</scope><name>__init__</name></member>
+      <member refid="classtask__manager_1_1Task_1aab0d2d2ec0b4b3e87969d843a101e118" prot="public" virt="non-virtual" ambiguityscope="task_manager::Task."><scope>task_manager::FollowFoodTrail</scope><name>__init__</name></member>
+      <member refid="classtask__manager_1_1Task_1ac43e25887825a1bb6e3d4a5a049968be" prot="public" virt="non-virtual"><scope>task_manager::FollowFoodTrail</scope><name>ant</name></member>
+      <member refid="classtask__manager_1_1Task_1a9422ddc4ca06f29aed2bbd53bfde8da4" prot="public" virt="non-virtual"><scope>task_manager::FollowFoodTrail</scope><name>end_task</name></member>
+      <member refid="classtask__manager_1_1Task_1ab46cf79945b53ec633f6f52b37c7a5cb" prot="public" virt="non-virtual"><scope>task_manager::FollowFoodTrail</scope><name>get_new_task</name></member>
+      <member refid="classtask__manager_1_1Task_1a1a12769253144bf3a864cdff907b9fb6" prot="public" virt="non-virtual"><scope>task_manager::FollowFoodTrail</scope><name>name</name></member>
+      <member refid="classtask__manager_1_1FollowFoodTrail_1aefc8c49492622a4e4fa61279fd52ed12" prot="public" virt="non-virtual"><scope>task_manager::FollowFoodTrail</scope><name>new_task</name></member>
+      <member refid="classtask__manager_1_1FollowFoodTrail_1aa805a2a4e9a76ba7afa252ca5efbd121" prot="public" virt="non-virtual"><scope>task_manager::FollowFoodTrail</scope><name>perform_task</name></member>
+      <member refid="classtask__manager_1_1FollowFoodTrail_1a68013dbb3ab9d25676217de4d22c48eb" prot="public" virt="non-virtual"><scope>task_manager::FollowFoodTrail</scope><name>start_task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

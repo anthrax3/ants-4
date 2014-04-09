@@ -1,0 +1,28 @@
+\begin{theindex}
+
+  \item {ants}, \hyperpage{9}
+
+  \indexspace
+
+  \item {constants}, \hyperpage{9}
+  \item {controller}, \hyperpage{10}
+
+  \indexspace
+
+  \item {display}, \hyperpage{10}
+
+  \indexspace
+
+  \item {main}, \hyperpage{10}
+    \subitem {simulation}, \hyperpage{10}
+
+  \indexspace
+
+  \item {simulation}
+    \subitem {main}, \hyperpage{10}
+
+  \indexspace
+
+  \item {world}, \hyperpage{10}
+
+\end{theindex}

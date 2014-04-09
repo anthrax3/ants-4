@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classtask__manager_1_1TakeFood" kind="class" prot="public">
+    <compoundname>task_manager::TakeFood</compoundname>
+    <basecompoundref refid="classtask__manager_1_1Task" prot="public" virt="non-virtual">task_manager.Task</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classtask__manager_1_1TakeFood_1a592252f7a2b882cf283c9da9cbab07a2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>task_manager.TakeFood::new_task</definition>
+        <argsstring></argsstring>
+        <name>new_task</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="115" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtask__manager_1_1TakeFood_1a4c5cc2bb37fc196bc5cb34f56fa62a29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def task_manager.TakeFood.__init__</definition>
+        <argsstring></argsstring>
+        <name>__init__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="105" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="105" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classtask__manager_1_1TakeFood_1af42eebb5d9ee945cafd05908d478bab3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def task_manager.TakeFood.perform_task</definition>
+        <argsstring></argsstring>
+        <name>perform_task</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Take food if available otherwise return to explore mode</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="108" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="108" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classtask__manager_1_1TakeFood_1a01c78eece0496ccd7c7badde7ce848b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def task_manager.TakeFood.end_task</definition>
+        <argsstring></argsstring>
+        <name>end_task</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Increase food_scent_strength
+and reduce home_scent_strength</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="119" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="119" bodyend="125"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Gathering Food Task</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="139">
+        <label>task_manager.TakeFood</label>
+        <link refid="classtask__manager_1_1TakeFood"/>
+        <childnode refid="140" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="141">
+        <label>object</label>
+      </node>
+      <node id="140">
+        <label>task_manager.Task</label>
+        <link refid="classtask__manager_1_1Task"/>
+        <childnode refid="141" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="142">
+        <label>task_manager.TakeFood</label>
+        <link refid="classtask__manager_1_1TakeFood"/>
+        <childnode refid="143" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="144">
+        <label>object</label>
+      </node>
+      <node id="143">
+        <label>task_manager.Task</label>
+        <link refid="classtask__manager_1_1Task"/>
+        <childnode refid="144" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="103" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="103" bodyend="126"/>
+    <listofallmembers>
+      <member refid="classtask__manager_1_1TakeFood_1a4c5cc2bb37fc196bc5cb34f56fa62a29" prot="public" virt="non-virtual"><scope>task_manager::TakeFood</scope><name>__init__</name></member>
+      <member refid="classtask__manager_1_1Task_1aab0d2d2ec0b4b3e87969d843a101e118" prot="public" virt="non-virtual" ambiguityscope="task_manager::Task."><scope>task_manager::TakeFood</scope><name>__init__</name></member>
+      <member refid="classtask__manager_1_1Task_1ac43e25887825a1bb6e3d4a5a049968be" prot="public" virt="non-virtual"><scope>task_manager::TakeFood</scope><name>ant</name></member>
+      <member refid="classtask__manager_1_1TakeFood_1a01c78eece0496ccd7c7badde7ce848b4" prot="public" virt="non-virtual"><scope>task_manager::TakeFood</scope><name>end_task</name></member>
+      <member refid="classtask__manager_1_1Task_1ab46cf79945b53ec633f6f52b37c7a5cb" prot="public" virt="non-virtual"><scope>task_manager::TakeFood</scope><name>get_new_task</name></member>
+      <member refid="classtask__manager_1_1Task_1a1a12769253144bf3a864cdff907b9fb6" prot="public" virt="non-virtual"><scope>task_manager::TakeFood</scope><name>name</name></member>
+      <member refid="classtask__manager_1_1TakeFood_1a592252f7a2b882cf283c9da9cbab07a2" prot="public" virt="non-virtual"><scope>task_manager::TakeFood</scope><name>new_task</name></member>
+      <member refid="classtask__manager_1_1TakeFood_1af42eebb5d9ee945cafd05908d478bab3" prot="public" virt="non-virtual"><scope>task_manager::TakeFood</scope><name>perform_task</name></member>
+      <member refid="classtask__manager_1_1Task_1aacfcc36829c22c789f31edaf60ef1cc4" prot="public" virt="non-virtual"><scope>task_manager::TakeFood</scope><name>start_task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespacetask__manager" kind="namespace">
+    <compoundname>task_manager</compoundname>
+    <innerclass refid="classtask__manager_1_1TaskManager" prot="public">task_manager::TaskManager</innerclass>
+    <innerclass refid="classtask__manager_1_1Task" prot="public">task_manager::Task</innerclass>
+    <innerclass refid="classtask__manager_1_1Explore" prot="public">task_manager::Explore</innerclass>
+    <innerclass refid="classtask__manager_1_1TakeFood" prot="public">task_manager::TakeFood</innerclass>
+    <innerclass refid="classtask__manager_1_1DropFood" prot="public">task_manager::DropFood</innerclass>
+    <innerclass refid="classtask__manager_1_1FollowFoodTrail" prot="public">task_manager::FollowFoodTrail</innerclass>
+    <innerclass refid="classtask__manager_1_1FollowHomeTrail" prot="public">task_manager::FollowHomeTrail</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

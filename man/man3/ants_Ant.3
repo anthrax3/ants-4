@@ -1,0 +1,386 @@
+.TH "ants.Ant" 3 "Wed Apr 9 2014" "Ant Colony" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ants.Ant \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBdisplay\&.Entity\fP\&.
+.PP
+Inherited by \fBants\&.QueenAnt\fP, and \fBants\&.WorkerAnt\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP"
+.br
+.ti -1c
+.RI "def \fBneighbour\fP"
+.br
+.ti -1c
+.RI "def \fBmove\fP"
+.br
+.ti -1c
+.RI "def \fBrandom_move\fP"
+.br
+.ti -1c
+.RI "def \fBreduce_home_scent\fP"
+.br
+.ti -1c
+.RI "def \fBreduce_food_scent\fP"
+.br
+.ti -1c
+.RI "def \fBturn\fP"
+.br
+.ti -1c
+.RI "def \fBrender\fP"
+.br
+.ti -1c
+.RI "def \fBhere\fP"
+.br
+.ti -1c
+.RI "def \fBbehind\fP"
+.br
+.ti -1c
+.RI "def \fBahead\fP"
+.br
+.ti -1c
+.RI "def \fBahead_left\fP"
+.br
+.ti -1c
+.RI "def \fBahead_right\fP"
+.br
+.ti -1c
+.RI "def \fBlocate_food_nearby\fP"
+.br
+.ti -1c
+.RI "def \fBlocate_home_nearby\fP"
+.br
+.ti -1c
+.RI "def \fBlocate_home_scent_nearby\fP"
+.br
+.ti -1c
+.RI "def \fBlocate_food_scent_nearby\fP"
+.br
+.ti -1c
+.RI "def \fBrank_by_food_scent\fP"
+.br
+.ti -1c
+.RI "def \fBrank_by_home_scent\fP"
+.br
+.ti -1c
+.RI "def \fBdrop_food\fP"
+.br
+.ti -1c
+.RI "def \fBhas_food\fP"
+.br
+.ti -1c
+.RI "def \fB__nonzero__\fP"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBworld\fP"
+.br
+.ti -1c
+.RI "\fBimage\fP"
+.br
+.ti -1c
+.RI "\fBdirection\fP"
+.br
+.ti -1c
+.RI "\fBlocation\fP"
+.br
+.ti -1c
+.RI "\fBfood\fP"
+.br
+.ti -1c
+.RI "\fBfood_scent_strength\fP"
+.br
+.ti -1c
+.RI "\fBhome_scent_strength\fP"
+.br
+.ti -1c
+.RI "\fBtask_manager\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+A virtual base class for Ants
+.fi
+.PP
+ 
+.PP
+Definition at line 6 of file ants\&.py\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def ants\&.Ant\&.__init__ (self, world, image, direction, location)"
+
+.PP
+Definition at line 8 of file ants\&.py\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "def ants\&.Ant\&.__nonzero__ (self)"
+
+.PP
+Definition at line 197 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.ahead (self)"
+
+.PP
+.nf
+The cell just ahead
+.fi
+.PP
+ 
+.PP
+Definition at line 77 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.ahead_left (self)"
+
+.PP
+.nf
+The cell just ahead-left
+.fi
+.PP
+ 
+.PP
+Definition at line 81 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.ahead_right (self)"
+
+.PP
+.nf
+The cell just ahead-right
+.fi
+.PP
+ 
+.PP
+Definition at line 85 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.behind (self)"
+
+.PP
+.nf
+The cell just behind
+.fi
+.PP
+ 
+.PP
+Definition at line 73 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.drop_food (self)"
+
+.PP
+.nf
+Set food to zero
+Update the food values of the home cell it reached
+
+.fi
+.PP
+ 
+.PP
+Definition at line 187 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.has_food (self)"
+
+.PP
+Definition at line 194 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.here (self)"
+
+.PP
+.nf
+The cell it is standing on
+.fi
+.PP
+ 
+.PP
+Definition at line 69 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.locate_food_nearby (self)"
+
+.PP
+.nf
+Locate all sources nearby and return any one randomly
+return None if no food source is found
+.fi
+.PP
+ 
+.PP
+Definition at line 89 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.locate_food_scent_nearby (self)"
+
+.PP
+.nf
+Scan the 5 directions near the direction of the ant for food scent and
+return one random direction
+return None if not found
+
+.fi
+.PP
+ 
+.PP
+Definition at line 140 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.locate_home_nearby (self)"
+
+.PP
+.nf
+Locate home cell nearby and return any one randomly
+return None if not found
+.fi
+.PP
+ 
+.PP
+Definition at line 105 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.locate_home_scent_nearby (self)"
+
+.PP
+.nf
+Scan the 5 directions near the direction of the ant for home scent and
+return one random direction
+return None if not found
+
+.fi
+.PP
+ 
+.PP
+Definition at line 121 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.move (self)"
+
+.PP
+.nf
+Move the ant by a unit,
+Leave a scent trail,
+remove the ant from its old cell, and
+update the current cell ant with itself
+
+.fi
+.PP
+ 
+.PP
+Definition at line 27 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.neighbour (self, direction)"
+
+.PP
+.nf
+Returns location of neighbouring cell in a direction 
+relative to the ant direction
+.fi
+.PP
+ 
+.PP
+Definition at line 20 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.random_move (self)"
+
+.PP
+.nf
+Ant makes a move forward or turns randomly
+.fi
+.PP
+ 
+.PP
+Definition at line 41 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.rank_by_food_scent (self)"
+
+.PP
+.nf
+Scan the 5 directions near the direction of the ant for food scent and
+return the direction with the strongest scent
+return None if not found
+
+.fi
+.PP
+ 
+.PP
+Definition at line 159 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.rank_by_home_scent (self)"
+
+.PP
+.nf
+Scan the 5 directions near the direction of the ant for home scent and
+return the direction with the strongest scent
+return None if not found
+
+.fi
+.PP
+ 
+.PP
+Definition at line 173 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.reduce_food_scent (self, amt = \fC1\fP)"
+
+.PP
+.nf
+Reduce food scent by 'amt'
+.fi
+.PP
+ 
+.PP
+Definition at line 53 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.reduce_home_scent (self, amt = \fC1\fP)"
+
+.PP
+.nf
+Reduce home scent by 'amt'
+.fi
+.PP
+ 
+.PP
+Definition at line 48 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.render (self)"
+
+.PP
+.nf
+Render itself
+.fi
+.PP
+ 
+.PP
+Definition at line 62 of file ants\&.py\&.
+.SS "def ants\&.Ant\&.turn (self, n)"
+
+.PP
+.nf
+Changes direction n times
+.fi
+.PP
+ 
+.PP
+Definition at line 58 of file ants\&.py\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "ants\&.Ant\&.direction"
+
+.PP
+Definition at line 12 of file ants\&.py\&.
+.SS "ants\&.Ant\&.food"
+
+.PP
+Definition at line 14 of file ants\&.py\&.
+.SS "ants\&.Ant\&.food_scent_strength"
+
+.PP
+Definition at line 15 of file ants\&.py\&.
+.SS "ants\&.Ant\&.home_scent_strength"
+
+.PP
+Definition at line 16 of file ants\&.py\&.
+.SS "ants\&.Ant\&.image"
+
+.PP
+Definition at line 11 of file ants\&.py\&.
+.SS "ants\&.Ant\&.location"
+
+.PP
+Definition at line 13 of file ants\&.py\&.
+.SS "ants\&.Ant\&.task_manager"
+
+.PP
+Definition at line 18 of file ants\&.py\&.
+.SS "ants\&.Ant\&.world"
+
+.PP
+Definition at line 10 of file ants\&.py\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ant Colony from the source code\&.

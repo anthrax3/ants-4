@@ -1,0 +1,7 @@
+<map id="task_manager.Task" name="task_manager.Task">
+<area shape="rect" id="node5" href="$classtask__manager_1_1DropFood.html" title="{task_manager.DropFood\n|+ new_task\l|+ __init__()\l+ perform_task()\l+ end_task()\l}" alt="" coords="5,376,171,496"/>
+<area shape="rect" id="node7" href="$classtask__manager_1_1Explore.html" title="{task_manager.Explore\n|+ new_task\l|+ __init__()\l+ perform_task()\l}" alt="" coords="195,385,347,487"/>
+<area shape="rect" id="node9" href="$classtask__manager_1_1FollowFoodTrail.html" title="{task_manager.FollowFoodTrail\n|+ new_task\l|+ __init__()\l+ start_task()\l+ perform_task()\l}" alt="" coords="371,376,571,496"/>
+<area shape="rect" id="node11" href="$classtask__manager_1_1FollowHomeTrail.html" title="{task_manager.FollowHomeTrail\n|+ new_task\l|+ __init__()\l+ start_task()\l+ perform_task()\l}" alt="" coords="595,376,800,496"/>
+<area shape="rect" id="node13" href="$classtask__manager_1_1TakeFood.html" title="{task_manager.TakeFood\n|+ new_task\l|+ __init__()\l+ perform_task()\l+ end_task()\l}" alt="" coords="824,376,989,496"/>
+</map>

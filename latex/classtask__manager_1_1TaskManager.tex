@@ -1,0 +1,118 @@
+\hypertarget{classtask__manager_1_1TaskManager}{\section{task\+\_\+manager.\+Task\+Manager Class Reference}
+\label{classtask__manager_1_1TaskManager}\index{task\+\_\+manager.\+Task\+Manager@{task\+\_\+manager.\+Task\+Manager}}
+}
+
+
+Collaboration diagram for task\+\_\+manager.\+Task\+Manager\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{classtask__manager_1_1TaskManager__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{classtask__manager_1_1TaskManager_a750d99ccae60977d027c156d607a245d}{\+\_\+\+\_\+init\+\_\+\+\_\+}
+\item 
+def \hyperlink{classtask__manager_1_1TaskManager_a4cedc030cbfa126c93c7050896111283}{add\+\_\+task}
+\item 
+def \hyperlink{classtask__manager_1_1TaskManager_a623b3d93407140ddd95753251f850f0b}{make\+\_\+decision}
+\item 
+def \hyperlink{classtask__manager_1_1TaskManager_ae6fddee07733c42fb3e8e29b3e45af8c}{set\+\_\+active\+\_\+task}
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classtask__manager_1_1TaskManager_a13e69f2bbcef1d7ca03e92235cf9772e}{tasks}
+\item 
+\hyperlink{classtask__manager_1_1TaskManager_a3389ea690b2ade9bfe1efa5ad079b777}{active\+\_\+task}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyVerb}Decides and performs all actions of an Ant\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{task__manager_8py_source_l00003}{3} of file \hyperlink{task__manager_8py_source}{task\+\_\+manager.\+py}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classtask__manager_1_1TaskManager_a750d99ccae60977d027c156d607a245d}{\index{task\+\_\+manager\+::\+Task\+Manager@{task\+\_\+manager\+::\+Task\+Manager}!\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}}
+\index{\+\_\+\+\_\+init\+\_\+\+\_\+@{\+\_\+\+\_\+init\+\_\+\+\_\+}!task\+\_\+manager\+::\+Task\+Manager@{task\+\_\+manager\+::\+Task\+Manager}}
+\subsubsection[{\+\_\+\+\_\+init\+\_\+\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}def task\+\_\+manager.\+Task\+Manager.\+\_\+\+\_\+init\+\_\+\+\_\+ (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classtask__manager_1_1TaskManager_a750d99ccae60977d027c156d607a245d}
+
+
+Definition at line \hyperlink{task__manager_8py_source_l00005}{5} of file \hyperlink{task__manager_8py_source}{task\+\_\+manager.\+py}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classtask__manager_1_1TaskManager_a4cedc030cbfa126c93c7050896111283}{\index{task\+\_\+manager\+::\+Task\+Manager@{task\+\_\+manager\+::\+Task\+Manager}!add\+\_\+task@{add\+\_\+task}}
+\index{add\+\_\+task@{add\+\_\+task}!task\+\_\+manager\+::\+Task\+Manager@{task\+\_\+manager\+::\+Task\+Manager}}
+\subsubsection[{add\+\_\+task}]{\setlength{\rightskip}{0pt plus 5cm}def task\+\_\+manager.\+Task\+Manager.\+add\+\_\+task (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{task}
+\end{DoxyParamCaption}
+)}}\label{classtask__manager_1_1TaskManager_a4cedc030cbfa126c93c7050896111283}
+\begin{DoxyVerb}Adds a new task\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{task__manager_8py_source_l00009}{9} of file \hyperlink{task__manager_8py_source}{task\+\_\+manager.\+py}.
+
+\hypertarget{classtask__manager_1_1TaskManager_a623b3d93407140ddd95753251f850f0b}{\index{task\+\_\+manager\+::\+Task\+Manager@{task\+\_\+manager\+::\+Task\+Manager}!make\+\_\+decision@{make\+\_\+decision}}
+\index{make\+\_\+decision@{make\+\_\+decision}!task\+\_\+manager\+::\+Task\+Manager@{task\+\_\+manager\+::\+Task\+Manager}}
+\subsubsection[{make\+\_\+decision}]{\setlength{\rightskip}{0pt plus 5cm}def task\+\_\+manager.\+Task\+Manager.\+make\+\_\+decision (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classtask__manager_1_1TaskManager_a623b3d93407140ddd95753251f850f0b}
+\begin{DoxyVerb}Performs the active task
+Checks for new task
+If new task is present end the current task and
+start the new task\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{task__manager_8py_source_l00013}{13} of file \hyperlink{task__manager_8py_source}{task\+\_\+manager.\+py}.
+
+\hypertarget{classtask__manager_1_1TaskManager_ae6fddee07733c42fb3e8e29b3e45af8c}{\index{task\+\_\+manager\+::\+Task\+Manager@{task\+\_\+manager\+::\+Task\+Manager}!set\+\_\+active\+\_\+task@{set\+\_\+active\+\_\+task}}
+\index{set\+\_\+active\+\_\+task@{set\+\_\+active\+\_\+task}!task\+\_\+manager\+::\+Task\+Manager@{task\+\_\+manager\+::\+Task\+Manager}}
+\subsubsection[{set\+\_\+active\+\_\+task}]{\setlength{\rightskip}{0pt plus 5cm}def task\+\_\+manager.\+Task\+Manager.\+set\+\_\+active\+\_\+task (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{task\+\_\+name}
+\end{DoxyParamCaption}
+)}}\label{classtask__manager_1_1TaskManager_ae6fddee07733c42fb3e8e29b3e45af8c}
+\begin{DoxyVerb}Sets the active task\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{task__manager_8py_source_l00027}{27} of file \hyperlink{task__manager_8py_source}{task\+\_\+manager.\+py}.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classtask__manager_1_1TaskManager_a3389ea690b2ade9bfe1efa5ad079b777}{\index{task\+\_\+manager\+::\+Task\+Manager@{task\+\_\+manager\+::\+Task\+Manager}!active\+\_\+task@{active\+\_\+task}}
+\index{active\+\_\+task@{active\+\_\+task}!task\+\_\+manager\+::\+Task\+Manager@{task\+\_\+manager\+::\+Task\+Manager}}
+\subsubsection[{active\+\_\+task}]{\setlength{\rightskip}{0pt plus 5cm}task\+\_\+manager.\+Task\+Manager.\+active\+\_\+task}}\label{classtask__manager_1_1TaskManager_a3389ea690b2ade9bfe1efa5ad079b777}
+
+
+Definition at line \hyperlink{task__manager_8py_source_l00007}{7} of file \hyperlink{task__manager_8py_source}{task\+\_\+manager.\+py}.
+
+\hypertarget{classtask__manager_1_1TaskManager_a13e69f2bbcef1d7ca03e92235cf9772e}{\index{task\+\_\+manager\+::\+Task\+Manager@{task\+\_\+manager\+::\+Task\+Manager}!tasks@{tasks}}
+\index{tasks@{tasks}!task\+\_\+manager\+::\+Task\+Manager@{task\+\_\+manager\+::\+Task\+Manager}}
+\subsubsection[{tasks}]{\setlength{\rightskip}{0pt plus 5cm}task\+\_\+manager.\+Task\+Manager.\+tasks}}\label{classtask__manager_1_1TaskManager_a13e69f2bbcef1d7ca03e92235cf9772e}
+
+
+Definition at line \hyperlink{task__manager_8py_source_l00006}{6} of file \hyperlink{task__manager_8py_source}{task\+\_\+manager.\+py}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{task__manager_8py}{task\+\_\+manager.\+py}\end{DoxyCompactItemize}

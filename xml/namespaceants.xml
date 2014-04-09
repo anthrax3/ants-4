@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespaceants" kind="namespace">
+    <compoundname>ants</compoundname>
+    <innerclass refid="classants_1_1Ant" prot="public">ants::Ant</innerclass>
+    <innerclass refid="classants_1_1WorkerAnt" prot="public">ants::WorkerAnt</innerclass>
+    <innerclass refid="classants_1_1QueenAnt" prot="public">ants::QueenAnt</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

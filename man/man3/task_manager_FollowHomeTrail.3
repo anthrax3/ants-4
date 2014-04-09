@@ -1,0 +1,76 @@
+.TH "task_manager.FollowHomeTrail" 3 "Wed Apr 9 2014" "Ant Colony" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+task_manager.FollowHomeTrail \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBtask_manager\&.Task\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP"
+.br
+.ti -1c
+.RI "def \fBstart_task\fP"
+.br
+.ti -1c
+.RI "def \fBperform_task\fP"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBnew_task\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+docstring for FollowFoodTrail
+.fi
+.PP
+ 
+.PP
+Definition at line 183 of file task_manager\&.py\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def task_manager\&.FollowHomeTrail\&.__init__ (self, ant)"
+
+.PP
+Definition at line 185 of file task_manager\&.py\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "def task_manager\&.FollowHomeTrail\&.perform_task (self)"
+
+.PP
+.nf
+    If home is reached drop the food_scent_strength
+    If trail is lost return to explore mode
+    else rank the cell by home scent strength and follow itself
+
+.fi
+.PP
+ 
+.PP
+Definition at line 191 of file task_manager\&.py\&.
+.SS "def task_manager\&.FollowHomeTrail\&.start_task (self)"
+
+.PP
+Definition at line 188 of file task_manager\&.py\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "task_manager\&.FollowHomeTrail\&.new_task"
+
+.PP
+Definition at line 203 of file task_manager\&.py\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ant Colony from the source code\&.

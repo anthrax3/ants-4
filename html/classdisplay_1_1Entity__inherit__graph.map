@@ -1,0 +1,6 @@
+<map id="display.Entity" name="display.Entity">
+<area shape="rect" id="node5" href="$classants_1_1Ant.html" title="{ants.Ant\n|+ world\l+ image\l+ direction\l+ location\l+ food\l+ food_scent_strength\l+ home_scent_strength\l+ task_manager\l|+ __init__()\l+ neighbour()\l+ move()\l+ random_move()\l+ reduce_home_scent()\l+ reduce_food_scent()\l+ turn()\l+ render()\l+ here()\l+ behind()\land 12 more...\l}" alt="" coords="48,350,205,730"/>
+<area shape="rect" id="node11" href="$classworld_1_1Cell.html" title="{world.Cell\n|+ obstacle\l+ food\l+ home_scent\l+ food_scent\l+ ant\l+ home\l|+ __init__()\l+ add_food()\l+ add_home_scent()\l+ add_food_scent()\l+ get_food()\l+ is_obstacle()\l+ is_home()\l+ is_food()\l+ has_ant()\l+ has_food()\l+ make_home()\l+ make_obstacle()\l+ evaporate_scent()\l+ render()\l}" alt="" coords="229,341,371,739"/>
+<area shape="rect" id="node7" href="$classants_1_1QueenAnt.html" title="{ants.QueenAnt\n||+ __init__()\l}" alt="" coords="5,787,115,872"/>
+<area shape="rect" id="node9" href="$classants_1_1WorkerAnt.html" title="{ants.WorkerAnt\n||+ __init__()\l}" alt="" coords="139,787,251,872"/>
+</map>

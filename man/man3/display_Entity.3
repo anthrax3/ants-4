@@ -1,0 +1,91 @@
+.TH "display.Entity" 3 "Wed Apr 9 2014" "Ant Colony" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+display.Entity \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits object\&.
+.PP
+Inherited by \fBants\&.Ant\fP, and \fBworld\&.Cell\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP"
+.br
+.ti -1c
+.RI "def \fBrender\fP"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBworld\fP"
+.br
+.ti -1c
+.RI "\fBlocation\fP"
+.br
+.ti -1c
+.RI "\fBsize\fP"
+.br
+.ti -1c
+.RI "\fBimage\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Base class for all drawable objects
+.fi
+.PP
+ 
+.PP
+Definition at line 1 of file display\&.py\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def display\&.Entity\&.__init__ (self, world, location, size, image)"
+
+.PP
+Definition at line 3 of file display\&.py\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "def display\&.Entity\&.render (self, index = \fC0\fP)"
+
+.PP
+.nf
+Draw the object into the screen
+    - selects the portion of the image to draw from the "index" argument
+
+.fi
+.PP
+ 
+.PP
+Definition at line 9 of file display\&.py\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "display\&.Entity\&.image"
+
+.PP
+Definition at line 7 of file display\&.py\&.
+.SS "display\&.Entity\&.location"
+
+.PP
+Definition at line 5 of file display\&.py\&.
+.SS "display\&.Entity\&.size"
+
+.PP
+Definition at line 6 of file display\&.py\&.
+.SS "display\&.Entity\&.world"
+
+.PP
+Definition at line 4 of file display\&.py\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ant Colony from the source code\&.

@@ -1,0 +1,13 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node3" href="$classdisplay_1_1Entity.html" title="display.Entity" alt="" coords="131,85,232,115"/>
+<area shape="rect" id="node13" href="$classtask__manager_1_1Task.html" title="task_manager.Task" alt="" coords="113,219,249,248"/>
+<area shape="rect" id="node5" href="$classants_1_1Ant.html" title="ants.Ant" alt="" coords="368,32,437,61"/>
+<area shape="rect" id="node11" href="$classworld_1_1Cell.html" title="world.Cell" alt="" coords="363,85,443,115"/>
+<area shape="rect" id="node7" href="$classants_1_1QueenAnt.html" title="ants.QueenAnt" alt="" coords="557,5,667,35"/>
+<area shape="rect" id="node9" href="$classants_1_1WorkerAnt.html" title="ants.WorkerAnt" alt="" coords="556,59,668,88"/>
+<area shape="rect" id="node15" href="$classtask__manager_1_1DropFood.html" title="task_manager.DropFood" alt="" coords="320,139,485,168"/>
+<area shape="rect" id="node17" href="$classtask__manager_1_1Explore.html" title="task_manager.Explore" alt="" coords="327,192,479,221"/>
+<area shape="rect" id="node19" href="$classtask__manager_1_1FollowFoodTrail.html" title="task_manager.FollowFoodTrail" alt="" coords="303,245,503,275"/>
+<area shape="rect" id="node21" href="$classtask__manager_1_1FollowHomeTrail.html" title="task_manager.FollowHomeTrail" alt="" coords="300,299,505,328"/>
+<area shape="rect" id="node23" href="$classtask__manager_1_1TakeFood.html" title="task_manager.TakeFood" alt="" coords="320,352,485,381"/>
+</map>

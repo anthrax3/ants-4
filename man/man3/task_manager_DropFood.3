@@ -1,0 +1,82 @@
+.TH "task_manager.DropFood" 3 "Wed Apr 9 2014" "Ant Colony" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+task_manager.DropFood \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBtask_manager\&.Task\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "def \fB__init__\fP"
+.br
+.ti -1c
+.RI "def \fBperform_task\fP"
+.br
+.ti -1c
+.RI "def \fBend_task\fP"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBnew_task\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.PP
+.nf
+Drop Food Task
+.fi
+.PP
+ 
+.PP
+Definition at line 126 of file task_manager\&.py\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "def task_manager\&.DropFood\&.__init__ (self, ant)"
+
+.PP
+Definition at line 128 of file task_manager\&.py\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "def task_manager\&.DropFood\&.end_task (self)"
+
+.PP
+.nf
+Increase home scent strength and reduce food scent strength
+
+.fi
+.PP
+ 
+.PP
+Definition at line 146 of file task_manager\&.py\&.
+.SS "def task_manager\&.DropFood\&.perform_task (self)"
+
+.PP
+.nf
+If ant reaches home drop the food inside the home
+otherwise follow a home trail
+
+.fi
+.PP
+ 
+.PP
+Definition at line 131 of file task_manager\&.py\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "task_manager\&.DropFood\&.new_task"
+
+.PP
+Definition at line 142 of file task_manager\&.py\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ant Colony from the source code\&.
