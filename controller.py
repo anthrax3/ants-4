@@ -3,7 +3,13 @@ from pygame.constants import *
 from world import World
 
 class Simulation():
-	"""Controls the simulation"""
+	"""Controls the simulation
+
+		- Runs the main loop
+		- Detects mouse, keyboard and other events
+		- Loads the necessary images
+		- Controls the framerate of the smiulation
+	"""
 	def __init__(self):
 		self.clock = time.Clock()
 		self.framerate = 60
@@ -29,13 +35,20 @@ class Simulation():
 		self.world = World(80, 60, 10, self.images, self.settings)
 
 	def add_image(self, name, path):
+		"""	Loads an image"""
 		self.images[name] = image.load('images/' + path)		
 
 	def run(self):
+		"""Runs the main loop till the user quits"""
 		while self.quit is False:
 			self.main_loop()
 
 	def main_loop(self):
+		"""Updates the simulation
+			- Draws the world and update it
+			- Handles all user events
+			- Controls frame rate
+		"""
 		self.world.render()
 		self.world.advance()
 
@@ -44,6 +57,7 @@ class Simulation():
 		self.clock.tick(self.framerate)
 
 	def handle_events(self):
+		"""Handles all keyboard, mouse and events like QUIT, etc"""
 		keys = key.get_pressed()
 		if keys[K_q] or keys[K_ESCAPE]:
 			self.quit = True  

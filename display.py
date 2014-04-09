@@ -7,6 +7,9 @@ class Entity(object):
 		self.image = image
 
 	def render(self, index=0):
+		"""Draw the object into the screen
+			- selects the portion of the image to draw from the "index" argument
+		"""
 		x, y = self.location
 		x *= self.world.cell_size
 		y *= self.world.cell_size

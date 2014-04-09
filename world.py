@@ -26,6 +26,7 @@ class Cell(Entity):
 		self.food_scent += amt
 
 	def get_food(self, amt):
+		"""Get "amt" amount of food if available else returns whatever food is available"""
 		if self.food < amt:
 			food = self.food
 			self.food = 0
@@ -56,6 +57,7 @@ class Cell(Entity):
 		self.obstacle = True
 
 	def evaporate_scent(self, rate):
+		"""Evaporates scent ( decay law )"""
 		self.food_scent *= rate
 		self.home_scent *= rate
 		if self.food_scent < .3:
@@ -64,6 +66,10 @@ class Cell(Entity):
 			self.home_scent = 0
 
 	def render(self):
+		"""Changes "index" to render the cell according to what it represents 
+		(home, food, etc) and calls the super class
+		Also renders scent levels with transparency depending on its strength
+		"""
 		if self.is_food():
 			index = 3
 		elif self.is_obstacle():
@@ -88,8 +94,14 @@ class Cell(Entity):
 		super(Cell, self).render(index)
 
 class World():
-	"""Encapsulation of all objects"""
+	"""Encapsulation of all objects in the simulation"""
 	def __init__(self, width, height, cell_size, images, settings):
+		"""
+		- Initialise the screen
+		- Fill screen with "Cells"
+		- Convert images to pygame format
+		- Spawn ants, food sources, obstacles, ant home, etc
+		"""
 		self.width = width
 		self.height = height
 		self.cell_size = cell_size
@@ -110,20 +122,27 @@ class World():
 		self.create_home()
 
 	def __getitem__(self, location):
+		"""Returns the cell at the location"""
 		x, y = location
 		return self.cells[x][y]
 
 	def convert_images(self):
+		"""Convert images to pygame optimised format"""
 		for name in self.images:
 			self.images[name] = self.images[name].convert()
 
 	def advance(self):
+		"""Advance the simulation by one step
+			- Update te ants
+			- Evaporate all scents
+		"""
 		for i in self.ants:
 			self.ants[i].task_manager.make_decision()
 
 		self.evaporate_scent()
 
 	def spawn_ants(self):
+		"""Spawns ants"""
 		for i in xrange(self.settings["no_of_ants"]):
 			direction = randint(0,7)
 			location = [randint(1,self.width), randint(1,self.height)]
@@ -131,6 +150,7 @@ class World():
 			self.ants[i] = WorkerAnt(self, self.images["ant"], direction, location)
 
 	def spawn_foodsource(self):
+		"""Spawns food sources"""
 		x, y = randint(0,self.width-1), randint(0,self.height-1)
 		for i in xrange(randint(2000, 5000)):
 			dx = randint(-3,3)
@@ -138,6 +158,7 @@ class World():
 			self.cells[(x+dx)%self.width][(y+dy)%self.height].add_food(1)
 
 	def create_home(self):
+		"""Create a nest for ants"""
 		n = self.settings["home_size"]
 		x, y = self.width/2 -5, self.height/2 -5
 		for i in xrange(n):
@@ -145,6 +166,7 @@ class World():
 				self.cells[x+i-1][y+j-1].make_home()
 
 	def render(self):
+		"""Draws the world on the screen"""
 		self.canvas.fill(WHITE)
 
 		for cells in self.cells:
@@ -157,6 +179,7 @@ class World():
 		display.update((0, 0), (self.width*self.cell_size, self.height*self.cell_size))
 
 	def evaporate_scent(self):
+		"""Evaporates all scent ( uses decay law ) at a rate defined in settings"""
 		for cells in self.cells:
 			for cell in cells:
 				cell.evaporate_scent(self.settings["evaporation_rate"])
