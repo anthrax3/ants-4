@@ -93,8 +93,8 @@ class Explore(Task):
 			elif ant.ahead().is_home():
 				ant.turn(4)
 				ant.home_scent_strength = 40
-			elif ant.ahead().food_scent > 1 and ant.food <= 0:
-				ant.move()
+			elif food_scent_nearby:
+				ant.turn(food_scent_nearby)
 				self.new_task = "follow food trail"
 			else:
 				ant.random_move()

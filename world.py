@@ -54,7 +54,13 @@ class Cell(Entity):
 		self.home = True
 
 	def make_obstacle(self):
-		self.obstacle = True
+		if not self.is_home() and not self.has_ant() and not self.is_food():
+			self.obstacle = True
+			self.food_scent = 0
+			self.home_scent = 0
+
+	def remove_obstacle(self):
+		self.obstacle = False
 
 	def evaporate_scent(self, rate):
 		"""Evaporates scent ( decay law )"""
@@ -95,18 +101,18 @@ class Cell(Entity):
 
 class World():
 	"""Encapsulation of all objects in the simulation"""
-	def __init__(self, width, height, cell_size, images, settings):
+	def __init__(self, width, height, images, settings):
 		"""
 		- Initialise the screen
 		- Fill screen with "Cells"
 		- Convert images to pygame format
 		- Spawn ants, food sources, obstacles, ant home, etc
 		"""
+		self.settings = settings
 		self.width = width
 		self.height = height
-		self.cell_size = cell_size
+		self.cell_size = settings["cell_size"]
 		self.images = images
-		self.settings = settings
 
 		self.canvas = display.set_mode((self.width*self.cell_size, self.height*self.cell_size))
 		self.convert_images()
@@ -117,7 +123,8 @@ class World():
 
 		self.ants = {}
 		self.spawn_ants()
-		for i in xrange(1):
+		self.create_walls()
+		for i in xrange(4):
 			self.spawn_foodsource()
 		self.create_home()
 
@@ -164,6 +171,15 @@ class World():
 		for i in xrange(n):
 			for j in xrange(n):
 				self.cells[x+i-1][y+j-1].make_home()
+
+	def create_walls(self):
+		for i in xrange(self.width):
+			self[(i, 0)].make_obstacle()
+			self[(i, self.height-1)].make_obstacle()
+
+		for j in xrange(self.height):
+			self[(0, j)].make_obstacle()
+			self[(self.width-1, j)].make_obstacle()
 
 	def render(self):
 		"""Draws the world on the screen"""
