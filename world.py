@@ -21,11 +21,17 @@ class Cell(Entity):
 		return self
 
 	def add_home_scent(self, amt):
-		self.home_scent += amt
+		if not self.is_obstacle():
+			self.home_scent += amt
+		else:
+			self.home_scent = 0
 		return self
 
 	def add_food_scent(self, amt):
-		self.food_scent += amt
+		if not self.is_obstacle():
+			self.food_scent += amt
+		else:
+			self.food_scent = 0
 		return self
 
 	def get_food(self, amt):
@@ -55,6 +61,7 @@ class Cell(Entity):
 
 	def make_home(self):
 		self.home = True
+		return self
 
 	def make_obstacle(self):
 		if not self.is_home() and not self.has_ant() and not self.is_food():

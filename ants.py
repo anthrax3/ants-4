@@ -31,13 +31,17 @@ class Ant(Entity):
 		update the current cell ant with itself
 		"""
 		new_location = self.neighbour(0)		
-		self.location = new_location
-		self.behind().ant = None
-		if not self.behind().is_obstacle():
-			self.behind().add_home_scent(self.home_scent_strength).add_food_scent(self.food_scent_strength)
-		for cell in self.here().nearby():
-			cell.add_home_scent(self.home_scent_strength/1.).add_food_scent(self.food_scent_strength/1.)
-		self.here().ant = self
+		if self.world[new_location].is_obstacle():
+			self.turn(choice([-1, 1]))
+		else:
+			self.location = new_location
+			self.behind().ant = None
+			if not self.behind().is_obstacle():
+				self.behind().add_home_scent(self.home_scent_strength).add_food_scent(self.food_scent_strength)
+			for cell in self.here().nearby():
+				cell.add_home_scent(self.home_scent_strength/1.).add_food_scent(self.food_scent_strength/1.)
+			self.here().ant = self
+		return self
 
 	def random_move(self):
 		"""Ant makes a move forward or turns randomly"""
@@ -166,6 +170,8 @@ class Ant(Entity):
 		best_direction_scent = 0
 		for i in [0, -1, 1, -1, 2]:
 			cell = self.world[self.neighbour(i)]
+			if cell.has_ant() or cell.is_obstacle():
+				continue
 			I = max(1, abs(i))
 			if cell.food_scent*1./I > best_direction_scent:
 				best_direction = i
@@ -181,11 +187,13 @@ class Ant(Entity):
 		best_direction_scent = 0
 		for i in [0, -1, 1, -1, 2]:
 			cell = self.world[self.neighbour(i)]
+			if cell.has_ant() or cell.is_obstacle():
+				continue
 			I = max(1, abs(i))
 			if cell.home_scent*1./I > best_direction_scent:
 				best_direction = i
 				best_direction_scent = cell.home_scent
-		return best_direction
+		return best_direction if best_direction_scent > .3 else None
 
 	def drop_food(self):
 		"""

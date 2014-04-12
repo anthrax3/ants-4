@@ -88,10 +88,8 @@ class Explore(Task):
 			if food_nearby != None:
 				ant.turn(food_nearby)
 				self.new_task = "take food"
-			elif ant.ahead().is_obstacle() or ant.ahead().has_ant():
-				ant.turn(randint(1,3)-2)
 			elif ant.ahead().is_home():
-				ant.turn(4)
+				ant.turn(choice([3, 4, 5]))
 				ant.home_scent_strength = 40
 			elif food_scent_nearby:
 				ant.turn(food_scent_nearby)
@@ -196,12 +194,19 @@ class FollowHomeTrail(Task):
 		"""
 		ant = self.ant
 		home_nearby = ant.locate_home_nearby()
-		if ant.ahead().is_obstacle() or ant.ahead().has_ant() or ant.ahead().is_food():
+		if ant.ahead().is_obstacle() or ant.ahead().has_ant():
 			ant.turn(choice([-1, 1]))
+		elif ant.ahead().is_food():
+			ant.turn(4)
+			self.ant.food_scent_strength = 40
 		elif home_nearby != None:
 			ant.turn(home_nearby)
 			self.new_task = "drop food"
 		else:
-			ant.turn(ant.rank_by_home_scent())
-			ant.move()
+			new_direction = ant.rank_by_home_scent()
+			if new_direction:
+				ant.turn(new_direction)
+				ant.move()
+			else:
+				ant.random_move()
 		ant.reduce_food_scent(1).reduce_home_scent(1)
