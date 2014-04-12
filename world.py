@@ -2,7 +2,7 @@ from ants import WorkerAnt
 from random import randint, choice
 from pygame import display
 from display import Entity
-from constants import WHITE
+from constants import WHITE, DIRECTIONS
 from math import sqrt
 
 class Cell(Entity):
@@ -18,12 +18,15 @@ class Cell(Entity):
 
 	def add_food(self, amt):
 		self.food += amt
+		return self
 
 	def add_home_scent(self, amt):
 		self.home_scent += amt
+		return self
 
 	def add_food_scent(self, amt):
 		self.food_scent += amt
+		return self
 
 	def get_food(self, amt):
 		"""Get "amt" amount of food if available else returns whatever food is available"""
@@ -58,18 +61,34 @@ class Cell(Entity):
 			self.obstacle = True
 			self.food_scent = 0
 			self.home_scent = 0
+		return self
 
 	def remove_obstacle(self):
 		self.obstacle = False
+		return self
 
 	def evaporate_scent(self, rate):
 		"""Evaporates scent ( decay law )"""
-		self.food_scent *= rate
-		self.home_scent *= rate
+		food_scent_delta = self.food_scent * rate
+		home_scent_delta = self.home_scent * rate
+		# for cell in self.nearby():
+		# 	cell.add_food_scent(food_scent_delta/8.0)
+		# 	cell.add_home_scent(home_scent_delta/8.0)
+		self.home_scent -= home_scent_delta
+		self.food_scent -= food_scent_delta
 		if self.food_scent < .3:
 			self.food_scent = 0
 		if self.home_scent < .3:
 			self.home_scent = 0
+		return self
+
+	def nearby(self):
+		x, y = self.location
+		cells = []
+		for dx, dy in DIRECTIONS:
+			X, Y = (x+dx)%self.world.width, (y+dy)%self.world.height
+			cells.append(self.world[(X, Y)])
+		return cells
 
 	def render(self):
 		"""Changes "index" to render the cell according to what it represents 
@@ -98,6 +117,7 @@ class Cell(Entity):
 			index = 5
 			self.image.set_alpha(self.food_scent)
 		super(Cell, self).render(index)
+		return self
 
 class World():
 	"""Encapsulation of all objects in the simulation"""
@@ -147,6 +167,7 @@ class World():
 			self.ants[i].task_manager.make_decision()
 
 		self.evaporate_scent()
+		return self
 
 	def spawn_ants(self):
 		"""Spawns ants"""
@@ -193,9 +214,11 @@ class World():
 			ant.render()
 
 		display.update((0, 0), (self.width*self.cell_size, self.height*self.cell_size))
+		return self
 
 	def evaporate_scent(self):
 		"""Evaporates all scent ( uses decay law ) at a rate defined in settings"""
 		for cells in self.cells:
 			for cell in cells:
 				cell.evaporate_scent(self.settings["evaporation_rate"])
+		return self

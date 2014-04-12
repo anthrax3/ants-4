@@ -29,7 +29,7 @@ class Simulation():
 
 		self.settings = {
 		"no_of_ants": 50,
-		"evaporation_rate": .95,
+		"evaporation_rate": .03,
 		"home_size": 10,
 		"cell_size": 10
 		}

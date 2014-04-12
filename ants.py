@@ -34,8 +34,9 @@ class Ant(Entity):
 		self.location = new_location
 		self.behind().ant = None
 		if not self.behind().is_obstacle():
-			self.behind().add_home_scent(self.home_scent_strength)
-			self.behind().add_food_scent(self.food_scent_strength) 
+			self.behind().add_home_scent(self.home_scent_strength).add_food_scent(self.food_scent_strength)
+		for cell in self.here().nearby():
+			cell.add_home_scent(self.home_scent_strength/1.).add_food_scent(self.food_scent_strength/1.)
 		self.here().ant = self
 
 	def random_move(self):
@@ -165,7 +166,8 @@ class Ant(Entity):
 		best_direction_scent = 0
 		for i in [0, -1, 1, -1, 2]:
 			cell = self.world[self.neighbour(i)]
-			if cell.food_scent > best_direction_scent:
+			I = max(1, abs(i))
+			if cell.food_scent*1./I > best_direction_scent:
 				best_direction = i
 				best_direction_scent = cell.food_scent
 		return best_direction
@@ -179,7 +181,8 @@ class Ant(Entity):
 		best_direction_scent = 0
 		for i in [0, -1, 1, -1, 2]:
 			cell = self.world[self.neighbour(i)]
-			if cell.home_scent > best_direction_scent:
+			I = max(1, abs(i))
+			if cell.home_scent*1./I > best_direction_scent:
 				best_direction = i
 				best_direction_scent = cell.home_scent
 		return best_direction
