@@ -2,7 +2,7 @@ from ants import WorkerAnt
 from random import randint, choice
 from pygame import display
 from display import Entity
-from constants import WHITE, DIRECTIONS
+from constants import GREEN, DIRECTIONS
 from math import sqrt
 
 class Cell(Entity):
@@ -102,28 +102,21 @@ class Cell(Entity):
 		(home, food, etc) and calls the super class
 		Also renders scent levels with transparency depending on its strength
 		"""
-		if self.is_food():
-			index = 3
-		elif self.is_obstacle():
-			index = 2
-		elif self.is_home():
-			index = 1
-		else:
-			index = 0
-
 		self.image.set_alpha(255)
-
-		super(Cell, self).render(index)
+		if self.is_food():
+			super(Cell, self).render(3)
+		elif self.is_obstacle():
+			super(Cell, self).render(2)
+		elif self.is_home():
+			super(Cell, self).render(1)
 
 		if self.home_scent > 0:
-			index = 4
 			self.image.set_alpha(self.home_scent)
-		super(Cell, self).render(index)
+			super(Cell, self).render(4)
 		
 		if self.food_scent > 0:
-			index = 5
 			self.image.set_alpha(self.food_scent)
-		super(Cell, self).render(index)
+			super(Cell, self).render(5)
 		return self
 
 class World():
@@ -211,7 +204,7 @@ class World():
 
 	def render(self):
 		"""Draws the world on the screen"""
-		self.canvas.fill(WHITE)
+		self.canvas.fill(GREEN)
 
 		for cells in self.cells:
 			for cell in cells:
