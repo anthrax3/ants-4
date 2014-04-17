@@ -85,7 +85,9 @@ class Explore(Task):
 		else:
 			food_nearby = ant.locate_food_nearby()
 			food_scent_nearby = ant.locate_food_scent_nearby()
-			if food_nearby != None:
+			if ant.here().is_home():
+				ant.move()
+			elif food_nearby != None:
 				ant.turn(food_nearby)
 				self.new_task = "take food"
 			elif ant.ahead().is_home():
@@ -135,9 +137,10 @@ class DropFood(Task):
 		home_nearby = ant.locate_home_nearby()
 		if home_nearby !=None:
 			ant.turn(home_nearby)
-			ant.drop_food()
-			ant.turn(4)
-			self.new_task = "explore"
+			ant.move()
+			if randint(1,10) == 1:
+				ant.drop_food()
+				self.new_task = "explore"
 		else:
 			self.new_task = "follow home trail"
 
@@ -164,7 +167,7 @@ class FollowFoodTrail(Task):
 		"""
 		ant = self.ant
 		food_nearby = ant.locate_food_nearby()
-		food_scent_nearby = ant.locate_food_scent_nearby()
+		# food_scent_nearby = ant.locate_food_scent_nearby()
 		if food_nearby != None:
 			ant.turn(food_nearby)
 			self.new_task = "take food"
@@ -210,3 +213,56 @@ class FollowHomeTrail(Task):
 			else:
 				ant.random_move()
 		ant.reduce_food_scent(1).reduce_home_scent(1)
+
+
+
+class ExploreNest(Task):
+	"""Explore inside nest"""
+	def __init__(self, ant):
+		super(ExploreNest, self).__init__("explore nest", ant)
+
+	def start_task(self):
+		self.ant.home_scent_strength = 1
+		self.ant.food_scent_strength = 0
+
+	def perform_task(self):
+		"""
+		Travel along the walls of the nest
+		"""
+		ant = self.ant
+		home_nearby = ant.locate_home_nearby()
+		if not home_nearby:
+			self.new_task = "return home"
+		elif not ant.ahead().is_home():
+			ant.turn(choice([-1, 1]))
+		else:
+			ant.move()
+
+class ReturnHome(Task):
+	"""Return home if outside"""
+	def __init__(self, ant):
+		super(ReturnHome, self).__init__("return home", ant)		
+
+	def start_task(self):
+		self.ant.home_scent_strength = 0
+		self.ant.food_scent_strength = 0
+
+	def perform_task(self):
+		"""
+		Follow home trail and return home
+		"""
+		ant = self.ant
+		home_nearby = ant.locate_home_nearby()
+		if ant.ahead().is_obstacle() or ant.ahead().is_food() or ant.ahead().has_ant():
+			ant.turn(choice([-1, 1]))
+		elif home_nearby != None:
+			ant.turn(home_nearby)
+			ant.move()
+			self.new_task = "explore nest"
+		else:
+			new_direction = ant.rank_by_home_scent()
+			if new_direction:
+				ant.turn(new_direction)
+				ant.move()
+			else:
+				ant.random_move()

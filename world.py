@@ -1,4 +1,4 @@
-from ants import WorkerAnt
+from ants import WorkerAnt, SoldierAnt
 from random import randint, choice
 from pygame import display
 from display import Entity
@@ -51,7 +51,7 @@ class Cell(Entity):
 		return bool(self.home)
 
 	def is_food(self):
-		return bool(self.food)
+		return bool(self.food) and not self.is_home()
 
 	def has_ant(self):
 		return bool(self.ant)
@@ -107,6 +107,8 @@ class Cell(Entity):
 			super(Cell, self).render(3)
 		elif self.is_obstacle():
 			super(Cell, self).render(2)
+		elif self.has_food():
+			super(Cell, self).render(4)
 		elif self.is_home():
 			super(Cell, self).render(1)
 
@@ -142,7 +144,8 @@ class World():
 		self.counter = 0
 
 		self.ants = {}
-		self.spawn_ants()
+		self.spawn_worker_ants()
+		self.spawn_soldier_ants()
 		self.create_walls()
 		for i in xrange(4):
 			self.spawn_foodsource()
@@ -169,13 +172,23 @@ class World():
 		self.evaporate_scent()
 		return self
 
-	def spawn_ants(self):
+	def spawn_worker_ants(self):
 		"""Spawns ants"""
-		for i in xrange(self.settings["no_of_ants"]):
+		for i in xrange(self.counter, self.settings["no_of_ants"]):
 			direction = randint(0,7)
 			location = [randint(1,self.width), randint(1,self.height)]
 			location = [self.width/2-10, self.height/2-10]
 			self.ants[i] = WorkerAnt(self, self.images["ant"], direction, location)
+			self.counter += 1
+
+	def spawn_soldier_ants(self):
+		"""Spawns ants"""
+		for i in xrange(self.counter, self.settings["no_of_ants"]+5):
+			direction = randint(0,7)
+			location = [self.width/2, self.height/2]
+			location = [1, 1]
+			self.ants[i] = SoldierAnt(self, self.images["ant"], direction, location)
+			self.counter += 1
 
 	def spawn_foodsource(self):
 		"""Spawns food sources"""

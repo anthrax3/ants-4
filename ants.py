@@ -1,5 +1,6 @@
 from constants import DIRECTIONS
 from task_manager import TaskManager, Explore, TakeFood, FollowHomeTrail, FollowFoodTrail, DropFood
+from task_manager import ExploreNest, ReturnHome
 from display import Entity
 from random import choice, randint
 
@@ -31,7 +32,8 @@ class Ant(Entity):
 		update the current cell ant with itself
 		"""
 		new_location = self.neighbour(0)		
-		if self.world[new_location].is_obstacle():
+		new_cell = self.world[new_location]
+		if new_cell.is_obstacle() or new_cell.has_ant() or new_cell.is_food():
 			self.turn(choice([-1, 1]))
 		else:
 			self.location = new_location
@@ -95,11 +97,11 @@ class Ant(Entity):
 		"""Locate all sources nearby and return any one randomly
 		return None if no food source is found"""
 		directions = []
-		if self.ahead().has_food():
+		if self.ahead().is_food():
 			directions.append(0)
 		else:
 			for i in xrange(1, 8):
-				if self.world[self.neighbour(i)].has_food():
+				if self.world[self.neighbour(i)].is_food():
 					directions.append(i) 
 
 		if directions:
@@ -200,6 +202,7 @@ class Ant(Entity):
 		Set food to zero
 		Update the food values of the home cell it reached
 		"""
+		self.here().food += self.food
 		self.food = 0
 
 	def has_food(self):
@@ -240,6 +243,37 @@ class QueenAnt(Ant):
 			- Produce offsprings
 		Default task:
 			- Have Food
+		"""
+		Ant.__init__(self, world, image, direction, location)
+		raise NotImplementedError
+
+
+class SoldierAnt(Ant):
+	"""Ants that produces offsprings and populates the colony"""
+	def __init__(self, world, image, direction, location):
+		"""
+		Tasks assigned:
+			- Explore nest
+			- attack enemy ants
+			- return home
+		Default task:
+			- Explore nest
+		"""
+		Ant.__init__(self, world, image, direction, location)
+		self.task_manager.add_task(ExploreNest(self))
+		self.task_manager.add_task(ReturnHome(self))
+		self.task_manager.set_active_task("explore nest")
+
+class EnemyAnt(Ant):
+	"""Ants that produces offsprings and populates the colony"""
+	def __init__(self, world, image, direction, location):
+		"""
+		Tasks assigned:
+			- Find nest
+			- Steal food
+			- Escape from soldier ants
+		Default task:
+			- find nest
 		"""
 		Ant.__init__(self, world, image, direction, location)
 		raise NotImplementedError
