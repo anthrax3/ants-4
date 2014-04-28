@@ -178,6 +178,7 @@ class World():
 			direction = randint(0,7)
 			location = [randint(1,self.width), randint(1,self.height)]
 			location = [self.width/2-10, self.height/2-10]
+			location = [1, 1]
 			self.ants[i] = WorkerAnt(self, self.images["ant"], direction, location)
 			self.counter += 1
 
@@ -202,6 +203,7 @@ class World():
 		"""Create a nest for ants"""
 		n = self.settings["home_size"]
 		x, y = self.width/2 -5, self.height/2 -5
+		x, y = 1, 1
 		for i in xrange(n):
 			for j in xrange(n):
 				self.cells[x+i-1][y+j-1].make_home()

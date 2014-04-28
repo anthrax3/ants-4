@@ -28,13 +28,13 @@ class Simulation():
 		self.add_image("cell", "cell.png")
 
 		self.settings = {
-		"no_of_ants": 50,
+		"no_of_ants": 150,
 		"evaporation_rate": .03,
 		"home_size": 10,
 		"cell_size": 10
 		}
 
-		self.world = World(80, 60, self.images, self.settings)
+		self.world = World(130, 70, self.images, self.settings)
 
 	def add_image(self, name, path):
 		"""	Loads an image"""

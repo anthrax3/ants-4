@@ -1,6 +1,7 @@
 from constants import DIRECTIONS
 from task_manager import TaskManager, Explore, TakeFood, FollowHomeTrail, FollowFoodTrail, DropFood
 from task_manager import ExploreNest, ReturnHome
+from task_manager import FindNest, RaidNest, Escape
 from display import Entity
 from random import choice, randint
 
@@ -54,12 +55,12 @@ class Ant(Entity):
 
 	def reduce_home_scent(self, amt=1):
 		"""Reduce home scent by 'amt'"""
-		self.home_scent_strength = max(0, self.home_scent_strength-amt)
+		self.home_scent_strength = max(0, self.home_scent_strength*.98)
 		return self
 
 	def reduce_food_scent(self, amt=1):
 		"""Reduce food scent by 'amt'"""
-		self.food_scent_strength = max(0, self.food_scent_strength-amt)
+		self.food_scent_strength = max(0, self.food_scent_strength*.98)
 		return self
 
 	def turn(self, n):
@@ -276,4 +277,7 @@ class EnemyAnt(Ant):
 			- find nest
 		"""
 		Ant.__init__(self, world, image, direction, location)
-		raise NotImplementedError
+		self.task_manager.add_task(FindNest(self))
+		self.task_manager.add_task(RaidNest(self))
+		self.task_manager.add_task(Escape(self))
+		self.task_manager.set_active_task("find nest")

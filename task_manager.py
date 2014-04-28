@@ -128,6 +128,10 @@ class DropFood(Task):
 	def __init__(self, ant):
 		super(DropFood, self).__init__("drop food", ant)
 
+	def start_task(self):
+		self.ant.food_scent_strength = 0
+		self.ant.home_scent_strength = 40
+
 	def perform_task(self):
 		"""
 		If ant reaches home drop the food inside the home
@@ -173,7 +177,7 @@ class FollowFoodTrail(Task):
 			self.new_task = "take food"
 		elif ant.ahead().is_obstacle() or ant.ahead().has_ant():
 			ant.turn(randint(1,3)-2)
-		elif ant.ahead().is_home():
+		elif ant.ahead().is_home() and not ant.here().is_home():
 			ant.turn(4)
 			ant.home_scent_strength = 40
 		else:
@@ -266,3 +270,61 @@ class ReturnHome(Task):
 				ant.move()
 			else:
 				ant.random_move()
+
+class FindNest(Task):
+	"""Enemy spider finding nest"""
+	def __init__(self, ant):
+		super(FindNest, self).__init__("find nest", ant)
+
+	def perform_task(self):
+		"""
+		Find the ant nest
+		"""
+		ant = self.ant
+		home_nearby = ant.locate_home_nearby()
+		if ant.ahead().is_obstacle() or ant.ahead().is_food() or ant.ahead().has_ant():
+			ant.turn(choice([-1, 1]))
+		elif home_nearby != None:
+			ant.turn(home_nearby)
+			ant.move()
+			self.new_task = "raid nest"
+		else:
+			ant.random_move()
+
+class RaidNest(Task):
+	"""Steal food from the nest"""
+	def __init__(self, ant):
+		super(RaidNest, self).__init__("raid nest", ant)
+
+	def perform_task(self):
+		"""
+		get food from nest
+		"""
+		ant = self.ant
+		home_nearby = ant.locate_home_nearby()
+		if ant.here().is_home() and ant.here().has_food():
+			ant.food = ant.here().get_food(1)
+			ant.new_task = "escape"
+		elif home_nearby != None:
+			ant.turn(home_nearby)
+			ant.move()
+		else:
+			self.new_task = "find home"	
+
+	def end_task(self):
+		self.ant.turn(4)	
+
+class Escape(Task):
+	"""enemy ant escape"""
+	def __init__(self, ant):
+		super(Escape, self).__init__("escape", ant)
+
+	def perform_task(self):
+		"""
+		Escape from nest
+		"""
+		ant = self.ant
+		if ant.here().is_home():
+			ant.move()
+		else:
+			ant.random_move()
