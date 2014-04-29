@@ -85,15 +85,15 @@ class Explore(Task):
 		else:
 			food_nearby = ant.locate_food_nearby()
 			food_scent_nearby = ant.locate_food_scent_nearby()
-			if ant.here().is_home():
+			if ant.here().is_own_home(ant.get_nest_id()):
 				ant.move()
 			elif food_nearby != None:
 				ant.turn(food_nearby)
 				self.new_task = "take food"
-			elif ant.ahead().is_home():
+			elif ant.ahead().is_own_home(ant.get_nest_id()):
 				ant.turn(choice([3, 4, 5]))
 				ant.home_scent_strength = 40
-			elif food_scent_nearby:
+			elif food_scent_nearby != None:
 				ant.turn(food_scent_nearby)
 				self.new_task = "follow food trail"
 			else:
@@ -177,7 +177,7 @@ class FollowFoodTrail(Task):
 			self.new_task = "take food"
 		elif ant.ahead().is_obstacle() or ant.ahead().has_ant():
 			ant.turn(randint(1,3)-2)
-		elif ant.ahead().is_home() and not ant.here().is_home():
+		elif ant.ahead().is_own_home(ant.get_nest_id()) and not ant.here().is_own_home(ant.get_nest_id()):
 			ant.turn(4)
 			ant.home_scent_strength = 40
 		else:
@@ -203,7 +203,7 @@ class FollowHomeTrail(Task):
 		home_nearby = ant.locate_home_nearby()
 		if ant.ahead().is_obstacle() or ant.ahead().has_ant():
 			ant.turn(choice([-1, 1]))
-		elif ant.ahead().is_food():
+		elif ant.ahead().is_food(ant.get_nest_id()):
 			ant.turn(4)
 			self.ant.food_scent_strength = 40
 		elif home_nearby != None:
@@ -237,7 +237,7 @@ class ExploreNest(Task):
 		home_nearby = ant.locate_home_nearby()
 		if not home_nearby:
 			self.new_task = "return home"
-		elif not ant.ahead().is_home():
+		elif not ant.ahead().is_own_home(ant.get_nest_id()):
 			ant.turn(choice([-1, 1]))
 		else:
 			ant.move()
@@ -257,7 +257,7 @@ class ReturnHome(Task):
 		"""
 		ant = self.ant
 		home_nearby = ant.locate_home_nearby()
-		if ant.ahead().is_obstacle() or ant.ahead().is_food() or ant.ahead().has_ant():
+		if ant.ahead().is_obstacle() or ant.ahead().is_food(ant.get_nest_id()) or ant.ahead().has_ant():
 			ant.turn(choice([-1, 1]))
 		elif home_nearby != None:
 			ant.turn(home_nearby)
@@ -282,7 +282,7 @@ class FindNest(Task):
 		"""
 		ant = self.ant
 		home_nearby = ant.locate_home_nearby()
-		if ant.ahead().is_obstacle() or ant.ahead().is_food() or ant.ahead().has_ant():
+		if ant.ahead().is_obstacle() or ant.ahead().is_food(ant.get_nest_id()) or ant.ahead().has_ant():
 			ant.turn(choice([-1, 1]))
 		elif home_nearby != None:
 			ant.turn(home_nearby)
@@ -302,7 +302,7 @@ class RaidNest(Task):
 		"""
 		ant = self.ant
 		home_nearby = ant.locate_home_nearby()
-		if ant.here().is_home() and ant.here().has_food():
+		if ant.here().is_own_home(ant.get_nest_id()) and ant.here().has_food():
 			ant.food = ant.here().get_food(1)
 			ant.new_task = "escape"
 		elif home_nearby != None:
@@ -324,7 +324,7 @@ class Escape(Task):
 		Escape from nest
 		"""
 		ant = self.ant
-		if ant.here().is_home():
+		if ant.here().is_own_home(ant.get_nest_id()):
 			ant.move()
 		else:
 			ant.random_move()

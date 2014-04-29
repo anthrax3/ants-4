@@ -7,10 +7,11 @@ from random import choice, randint
 
 class Ant(Entity):
 	"""A virtual base class for Ants"""
-	def __init__(self, world, image, direction, location):
+	def __init__(self, world, image, direction, location, nest_id):
 		super(Ant, self).__init__(world, location, [world.cell_size]*2, image)
 		self.world = world
 		self.image = image
+		self.nest_id = nest_id
 		self.direction = direction
 		self.location = location
 		self.food = 0
@@ -34,15 +35,15 @@ class Ant(Entity):
 		"""
 		new_location = self.neighbour(0)		
 		new_cell = self.world[new_location]
-		if new_cell.is_obstacle() or new_cell.has_ant() or new_cell.is_food():
+		if new_cell.is_obstacle() or new_cell.has_ant() or new_cell.is_food(self.get_nest_id()):
 			self.turn(choice([-1, 1]))
 		else:
 			self.location = new_location
 			self.behind().ant = None
 			if not self.behind().is_obstacle():
-				self.behind().add_home_scent(self.home_scent_strength).add_food_scent(self.food_scent_strength)
+				self.behind().add_home_scent(self.home_scent_strength, self.get_nest_id()).add_food_scent(self.food_scent_strength, self.get_nest_id())
 			for cell in self.here().nearby():
-				cell.add_home_scent(self.home_scent_strength/1.).add_food_scent(self.food_scent_strength/1.)
+				cell.add_home_scent(self.home_scent_strength/1., self.get_nest_id()).add_food_scent(self.food_scent_strength/1., self.get_nest_id())
 			self.here().ant = self
 		return self
 
@@ -72,7 +73,11 @@ class Ant(Entity):
 		if self.has_food():
 			super(Ant, self).render(8)
 		else:
-			super(Ant, self).render(self.direction)
+			# super(Ant, self).render(self.direction)
+			super(Ant, self).render(self.get_nest_id()*7)
+
+	def get_nest_id(self):
+		return self.nest_id
 
 	def here(self):
 		"""The cell it is standing on"""
@@ -98,11 +103,11 @@ class Ant(Entity):
 		"""Locate all sources nearby and return any one randomly
 		return None if no food source is found"""
 		directions = []
-		if self.ahead().is_food():
+		if self.ahead().is_food(self.get_nest_id):
 			directions.append(0)
 		else:
 			for i in xrange(1, 8):
-				if self.world[self.neighbour(i)].is_food():
+				if self.world[self.neighbour(i)].is_food(self.get_nest_id()):
 					directions.append(i) 
 
 		if directions:
@@ -114,11 +119,11 @@ class Ant(Entity):
 		"""Locate home cell nearby and return any one randomly
 		return None if not found"""
 		directions = []
-		if self.ahead().is_food():
+		if self.ahead().is_own_home(self.get_nest_id()):
 			directions.append(0)
 		else:
 			for i in xrange(1, 8):
-				if self.world[self.neighbour(i)].is_home():
+				if self.world[self.neighbour(i)].is_own_home(self.get_nest_id()):
 					directions.append(i) 
 
 		if directions:
@@ -132,11 +137,11 @@ class Ant(Entity):
 		return None if not found
 		"""
 		directions = []
-		if self.ahead().home_scent > 0:
+		if self.ahead().get_home_scent(self.get_nest_id()) > 0:
 			directions.append(0)
 		else:
 			for i in xrange(-2, 3):
-				if self.world[self.neighbour(i)].home_scent > 0:
+				if self.world[self.neighbour(i)].get_home_scent(self.get_nest_id()) > 0:
 					for x in xrange(1,11-5*abs(i)):
 						directions.append(i) 
 
@@ -151,11 +156,11 @@ class Ant(Entity):
 		return None if not found
 		"""
 		directions = []
-		if self.ahead().food_scent > 0:
+		if self.ahead().get_food_scent(self.get_nest_id()) > 0:
 			directions.append(0)
 		else:
 			for i in xrange(-2, 3):
-				if self.world[self.neighbour(i)].food_scent > 0:
+				if self.world[self.neighbour(i)].get_food_scent(self.get_nest_id()) > 0:
 					for x in xrange(1,11-5*abs(i)):
 						directions.append(i) 
 
@@ -176,9 +181,9 @@ class Ant(Entity):
 			if cell.has_ant() or cell.is_obstacle():
 				continue
 			I = max(1, abs(i))
-			if cell.food_scent*1./I > best_direction_scent:
+			if cell.get_food_scent(self.get_nest_id())*1./I > best_direction_scent:
 				best_direction = i
-				best_direction_scent = cell.food_scent
+				best_direction_scent = cell.get_food_scent(self.get_nest_id())
 		return best_direction
 
 	def rank_by_home_scent(self):
@@ -193,9 +198,9 @@ class Ant(Entity):
 			if cell.has_ant() or cell.is_obstacle():
 				continue
 			I = max(1, abs(i))
-			if cell.home_scent*1./I > best_direction_scent:
+			if cell.get_home_scent(self.get_nest_id())*1./I > best_direction_scent:
 				best_direction = i
-				best_direction_scent = cell.home_scent
+				best_direction_scent = cell.get_home_scent(self.get_nest_id())
 		return best_direction if best_direction_scent > .3 else None
 
 	def drop_food(self):
@@ -215,7 +220,7 @@ class Ant(Entity):
 
 class WorkerAnt(Ant):
 	"""Ants that explores for foodsource and collects food"""
-	def __init__(self, world, image, direction, location):
+	def __init__(self, world, image, direction, location, nest_id):
 		"""
 		Tasks assigned:
 			- Explore
@@ -226,7 +231,7 @@ class WorkerAnt(Ant):
 		Default task:
 			- Explore
 		"""
-		Ant.__init__(self, world, image, direction, location)
+		Ant.__init__(self, world, image, direction, location, nest_id)
 		self.task_manager.add_task(Explore(self))
 		self.task_manager.add_task(TakeFood(self))
 		self.task_manager.add_task(DropFood(self))
@@ -237,7 +242,7 @@ class WorkerAnt(Ant):
 
 class QueenAnt(Ant):
 	"""Ants that produces offsprings and populates the colony"""
-	def __init__(self, world, image, direction, location):
+	def __init__(self, world, image, direction, location, nest_id):
 		"""
 		Tasks assigned:
 			- HaveFood
@@ -245,13 +250,13 @@ class QueenAnt(Ant):
 		Default task:
 			- Have Food
 		"""
-		Ant.__init__(self, world, image, direction, location)
+		Ant.__init__(self, world, image, direction, location, nest_id)
 		raise NotImplementedError
 
 
 class SoldierAnt(Ant):
 	"""Ants that produces offsprings and populates the colony"""
-	def __init__(self, world, image, direction, location):
+	def __init__(self, world, image, direction, location, nest_id):
 		"""
 		Tasks assigned:
 			- Explore nest
@@ -260,14 +265,14 @@ class SoldierAnt(Ant):
 		Default task:
 			- Explore nest
 		"""
-		Ant.__init__(self, world, image, direction, location)
+		Ant.__init__(self, world, image, direction, location, nest_id)
 		self.task_manager.add_task(ExploreNest(self))
 		self.task_manager.add_task(ReturnHome(self))
 		self.task_manager.set_active_task("explore nest")
 
 class EnemyAnt(Ant):
 	"""Ants that produces offsprings and populates the colony"""
-	def __init__(self, world, image, direction, location):
+	def __init__(self, world, image, direction, location, nest_id):
 		"""
 		Tasks assigned:
 			- Find nest
@@ -276,7 +281,7 @@ class EnemyAnt(Ant):
 		Default task:
 			- find nest
 		"""
-		Ant.__init__(self, world, image, direction, location)
+		Ant.__init__(self, world, image, direction, location, nest_id)
 		self.task_manager.add_task(FindNest(self))
 		self.task_manager.add_task(RaidNest(self))
 		self.task_manager.add_task(Escape(self))

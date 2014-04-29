@@ -8,7 +8,7 @@ class Simulation():
 		- Runs the main loop
 		- Detects mouse, keyboard and other events
 		- Loads the necessary images
-		- Controls the framerate of the smiulation
+		- Controls the framerate of the simulation
 	"""
 	def __init__(self):
 		self.clock = time.Clock()

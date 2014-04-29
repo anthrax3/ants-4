@@ -14,6 +14,8 @@ class Entity(object):
 		x *= self.world.cell_size
 		y *= self.world.cell_size
 		w, h = self.size
+		# w *= self.world.cell_size
+		# h *= self.world.cell_size
 		position = (x, y)
 		patch_rect = (w*index, 0, w, h)
 		self.world.canvas.blit(self.image, position, patch_rect)

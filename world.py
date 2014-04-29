@@ -1,8 +1,8 @@
 from ants import WorkerAnt, SoldierAnt
 from random import randint, choice
-from pygame import display
+from pygame import display, Surface
 from display import Entity
-from constants import GREEN, DIRECTIONS
+from constants import GREEN, DIRECTIONS, YELLOW
 from math import sqrt
 
 class Cell(Entity):
@@ -10,28 +10,32 @@ class Cell(Entity):
 	def __init__(self, world, i, j, cell_size):
 		self.obstacle = False
 		self.food = 0
-		self.home_scent = 0
-		self.food_scent = 0
+		self.home_scent = {}
+		self.food_scent = {}
 		self.ant = None
-		self.home = False
+		self.home = -1
 		super(Cell, self).__init__(world, (i, j), [cell_size]*2, world.images["cell"])
 
 	def add_food(self, amt):
 		self.food += amt
 		return self
 
-	def add_home_scent(self, amt):
+	def add_home_scent(self, amt, id):
+		if not id in self.home_scent:
+			self.home_scent[id] = 0
 		if not self.is_obstacle():
-			self.home_scent += amt
+			self.home_scent[id] += amt
 		else:
-			self.home_scent = 0
+			self.home_scent[id] = 0
 		return self
 
-	def add_food_scent(self, amt):
+	def add_food_scent(self, amt, id):
+		if not id in self.food_scent:
+			self.food_scent[id] = 0
 		if not self.is_obstacle():
-			self.food_scent += amt
+			self.food_scent[id] += amt
 		else:
-			self.food_scent = 0
+			self.food_scent[id] = 0
 		return self
 
 	def get_food(self, amt):
@@ -44,14 +48,26 @@ class Cell(Entity):
 			self.food -= amt
 			return amt
 
+	def get_food_scent(self, id):
+		return self.food_scent[id] if id in self.food_scent else 0
+
+	def get_home_scent(self, id):
+		return self.home_scent[id] if id in self.home_scent else 0
+
 	def is_obstacle(self):
 		return bool(self.obstacle)
 
 	def is_home(self):
-		return bool(self.home)
+		return self.home != -1
 
-	def is_food(self):
-		return bool(self.food) and not self.is_home()
+	def is_own_home(self, id):
+		return self.home == id
+
+	def is_enemy_home(self, id):
+		return self.is_home() and not self.is_own_home(id)
+
+	def is_food(self, id):
+		return bool(self.food) and not self.is_own_home(id)
 
 	def has_ant(self):
 		return bool(self.ant)
@@ -59,15 +75,17 @@ class Cell(Entity):
 	def has_food(self):
 		return True if self.food > 0 else False
 
-	def make_home(self):
-		self.home = True
+	def make_home(self, id):
+		self.home = id
 		return self
 
 	def make_obstacle(self):
-		if not self.is_home() and not self.has_ant() and not self.is_food():
+		if not self.is_home() and not self.has_ant() and not self.has_food():
 			self.obstacle = True
-			self.food_scent = 0
-			self.home_scent = 0
+			for id in self.food_scent:
+				self.food_scent[id] = 0
+			for id in self.home_scent:
+				self.home_scent[id] = 0
 		return self
 
 	def remove_obstacle(self):
@@ -76,17 +94,16 @@ class Cell(Entity):
 
 	def evaporate_scent(self, rate):
 		"""Evaporates scent ( decay law )"""
-		food_scent_delta = self.food_scent * rate
-		home_scent_delta = self.home_scent * rate
-		# for cell in self.nearby():
-		# 	cell.add_food_scent(food_scent_delta/8.0)
-		# 	cell.add_home_scent(home_scent_delta/8.0)
-		self.home_scent -= home_scent_delta
-		self.food_scent -= food_scent_delta
-		if self.food_scent < .3:
-			self.food_scent = 0
-		if self.home_scent < .3:
-			self.home_scent = 0
+		for id in self.food_scent:
+			food_scent_delta = self.food_scent[id] * rate
+			self.food_scent[id] -= food_scent_delta
+			if self.food_scent < .3:
+				self.food_scent[id] = 0
+		for id in self.home_scent:
+			home_scent_delta = self.home_scent[id] * rate
+			self.home_scent[id] -= home_scent_delta
+			if self.home_scent[id] < .3:
+				self.home_scent[id] = 0
 		return self
 
 	def nearby(self):
@@ -97,29 +114,80 @@ class Cell(Entity):
 			cells.append(self.world[(X, Y)])
 		return cells
 
+	def get_max_home_scent(self):
+		scent = self.home_scent.values()
+		return max(scent) if scent else 0
+
+	def get_max_food_scent(self):
+		scent = self.food_scent.values()
+		return max(scent) if scent else 0
+
+	# def get_home_scent(self, id):
+	# 	return self.home_scent[id] if id in self.home_scent else 0
+
+	# def get_food_scent(self, id):
+	# 	return self.food_scent[id] if id in self.food_scent else 0
+
 	def render(self):
 		"""Changes "index" to render the cell according to what it represents 
 		(home, food, etc) and calls the super class
 		Also renders scent levels with transparency depending on its strength
 		"""
 		self.image.set_alpha(255)
-		if self.is_food():
+		if self.has_food():
 			super(Cell, self).render(3)
 		elif self.is_obstacle():
 			super(Cell, self).render(2)
 		elif self.has_food():
 			super(Cell, self).render(4)
-		elif self.is_home():
-			super(Cell, self).render(1)
+		# elif self.is_home():
+		# 	super(Cell, self).render(1)
 
-		if self.home_scent > 0:
-			self.image.set_alpha(self.home_scent)
+		max_home_scent = self.get_max_home_scent()
+		if max_home_scent > 0:
+			self.image.set_alpha(max_home_scent)
 			super(Cell, self).render(4)
 		
-		if self.food_scent > 0:
-			self.image.set_alpha(self.food_scent)
+		max_food_scent = self.get_max_food_scent()
+		if any(self.food_scent.values()):
+			self.image.set_alpha(max_food_scent)
 			super(Cell, self).render(5)
 		return self
+
+class Nest(Entity):
+	"""Encapsulates a colony of ants"""
+	def __init__(self, world, id, size, location, ant_count):
+		self.id = id
+		self.size = size
+		self.world = world
+		self.ant_count = ant_count
+		super(Nest, self).__init__(world, location, size, None)
+		self.image = Surface(self.size)
+		self.image.fill(YELLOW)
+		self.image.set_alpha(196)
+		self.spawn_ants()
+		self.mark_home()
+
+	def mark_home(self):
+		width, height = self.size
+		width /= self.world.settings["cell_size"]
+		height /= self.world.settings["cell_size"]
+		x, y = self.location
+		for i in range(width):
+			for j in range(height):
+				self.world[(x+i,y+j)].make_home(self.id)
+
+	def spawn_ants(self):
+		for ant in self.ant_count:
+			x, y = self.location
+			width, height = self.size
+			for i in range(self.ant_count[ant]):
+				direction = randint(1,8)
+				location = x+randint(0,width/self.world.settings["cell_size"]), y+randint(0,height/self.world.settings["cell_size"])
+				new_ant = ant(self.world, self.world.images["ant"], direction, location, self.id)
+				self.world.add_ant(new_ant)
+
+		
 
 class World():
 	"""Encapsulation of all objects in the simulation"""
@@ -144,17 +212,19 @@ class World():
 		self.counter = 0
 
 		self.ants = {}
-		self.spawn_worker_ants()
-		self.spawn_soldier_ants()
+		self.nests = {}
+		# self.spawn_worker_ants()
+		# self.spawn_soldier_ants()
 		self.create_walls()
 		for i in xrange(4):
 			self.spawn_foodsource()
-		self.create_home()
+		# self.create_home()
+		self.spawn_colonies(2)
 
 	def __getitem__(self, location):
 		"""Returns the cell at the location"""
 		x, y = location
-		return self.cells[x][y]
+		return self.cells[x%self.width][y%self.height]
 
 	def convert_images(self):
 		"""Convert images to pygame optimised format"""
@@ -172,24 +242,29 @@ class World():
 		self.evaporate_scent()
 		return self
 
-	def spawn_worker_ants(self):
-		"""Spawns ants"""
-		for i in xrange(self.counter, self.settings["no_of_ants"]):
-			direction = randint(0,7)
-			location = [randint(1,self.width), randint(1,self.height)]
-			location = [self.width/2-10, self.height/2-10]
-			location = [1, 1]
-			self.ants[i] = WorkerAnt(self, self.images["ant"], direction, location)
-			self.counter += 1
+	def add_ant(self, ant):
+		self.ants[self.counter] = ant
+		self.counter += 1
 
-	def spawn_soldier_ants(self):
-		"""Spawns ants"""
-		for i in xrange(self.counter, self.settings["no_of_ants"]+5):
-			direction = randint(0,7)
-			location = [self.width/2, self.height/2]
-			location = [1, 1]
-			self.ants[i] = SoldierAnt(self, self.images["ant"], direction, location)
-			self.counter += 1
+	"""no longer needed"""
+	# def spawn_worker_ants(self):
+	# 	"""Spawns ants"""
+	# 	for i in xrange(self.counter, self.settings["no_of_ants"]):
+	# 		direction = randint(0,7)
+	# 		location = [randint(1,self.width), randint(1,self.height)]
+	# 		location = [self.width/2-10, self.height/2-10]
+	# 		location = [1, 1]
+	# 		new_ant = WorkerAnt(self, self.images["ant"], direction, location)
+	# 		self.add_ant(new_ant)
+
+	# def spawn_soldier_ants(self):
+	# 	"""Spawns ants"""
+	# 	for i in xrange(self.counter, self.settings["no_of_ants"]+5):
+	# 		direction = randint(0,7)
+	# 		location = [self.width/2, self.height/2]
+	# 		location = [1, 1]
+	# 		new_ant = SoldierAnt(self, self.images["ant"], direction, location)
+	# 		self.add_ant(new_ant)
 
 	def spawn_foodsource(self):
 		"""Spawns food sources"""
@@ -199,14 +274,32 @@ class World():
 			dy = choice([-1,1])*randint(0, int(sqrt(9-dx**2)))
 			self.cells[(x+dx)%self.width][(y+dy)%self.height].add_food(1)
 
-	def create_home(self):
-		"""Create a nest for ants"""
-		n = self.settings["home_size"]
-		x, y = self.width/2 -5, self.height/2 -5
-		x, y = 1, 1
+	"""no longer needed"""
+	# def create_home(self):
+	# 	"""Create a nest for ants"""
+	# 	n = self.settings["home_size"]
+	# 	x, y = self.width/2 -5, self.height/2 -5
+	# 	x, y = 1, 1
+	# 	for i in xrange(n):
+	# 		for j in xrange(n):
+	# 			self.cells[x+i-1][y+j-1].make_home()
+
+	def spawn_colonies(self, n=1):
 		for i in xrange(n):
-			for j in xrange(n):
-				self.cells[x+i-1][y+j-1].make_home()
+			size = [self.settings["home_size"]*self.settings["cell_size"]]*2
+			location = (
+				randint(0, self.width - self.settings["home_size"]),
+				randint(0, self.height - self.settings["home_size"])
+				)
+			nest = Nest(self, i, size, location, self.get_ant_count())
+			self.nests[i] = nest
+
+	def get_ant_count(self):
+		"""Returns a list of no. of different types of ants"""
+		return { 
+			WorkerAnt: 100,
+			SoldierAnt: 5
+		}
 
 	def create_walls(self):
 		for i in xrange(self.width):
@@ -224,6 +317,9 @@ class World():
 		for cells in self.cells:
 			for cell in cells:
 				cell.render()
+
+		for nest in self.nests.values():
+			nest.render()
 
 		for ant in self.ants.values():
 			ant.render()
