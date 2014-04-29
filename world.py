@@ -248,7 +248,7 @@ class Nest(Entity):
 			for i in range(self.ant_count[ant]):
 				direction = randint(1,8)
 				location = x+randint(0,width/self.world.settings["cell_size"]), y+randint(0,height/self.world.settings["cell_size"])
-				new_ant = ant(self.world, self.world.images["ant"], direction, location, self.id)
+				new_ant = ant(self.world, self.world.images["ant"], direction, location, self)
 				self.world.add_ant(new_ant)
 
 		

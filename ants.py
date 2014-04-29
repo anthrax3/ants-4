@@ -9,11 +9,11 @@ class Ant(Entity):
 	"""
 	A virtual base class for Ants
 	"""
-	def __init__(self, world, image, direction, location, nest_id):
+	def __init__(self, world, image, direction, location, nest):
 		super(Ant, self).__init__(world, location, [world.cell_size]*2, image)
 		self.world = world
 		self.image = image
-		self.nest_id = nest_id
+		self.nest = nest
 		self.direction = direction
 		self.location = location
 		self.food = 0
@@ -96,7 +96,7 @@ class Ant(Entity):
 		"""
 		Returns the id of the nest it belongs to
 		"""
-		return self.nest_id
+		return self.nest.id
 
 	def here(self):
 		"""
@@ -145,6 +145,11 @@ class Ant(Entity):
 			return choice(directions)
 		else:
 			return None
+
+	## Returns true if the ant passed is an enemy
+	# @param ant The other ant
+	def is_enemy(self, ant):
+		self.get_nest_id() != ant.get_nest_id()
 
 	def locate_home_nearby(self):
 		"""
@@ -259,7 +264,7 @@ class WorkerAnt(Ant):
 	"""
 	Ants that explores for foodsource and collects food
 	"""
-	def __init__(self, world, image, direction, location, nest_id):
+	def __init__(self, world, image, direction, location, nest):
 		"""
 		Tasks assigned:
 			- Explore
@@ -270,7 +275,7 @@ class WorkerAnt(Ant):
 		Default task:
 			- Explore
 		"""
-		Ant.__init__(self, world, image, direction, location, nest_id)
+		Ant.__init__(self, world, image, direction, location, nest)
 		self.task_manager.add_task(Explore(self))
 		self.task_manager.add_task(TakeFood(self))
 		self.task_manager.add_task(DropFood(self))
@@ -283,7 +288,7 @@ class QueenAnt(Ant):
 	"""
 	Ants that produces offsprings and populates the colony
 	"""
-	def __init__(self, world, image, direction, location, nest_id):
+	def __init__(self, world, image, direction, location, nest):
 		"""
 		Tasks assigned:
 			- HaveFood
@@ -291,13 +296,13 @@ class QueenAnt(Ant):
 		Default task:
 			- Have Food
 		"""
-		Ant.__init__(self, world, image, direction, location, nest_id)
+		Ant.__init__(self, world, image, direction, location, nest)
 		raise NotImplementedError
 
 
 class SoldierAnt(Ant):
 	"""Ants that produces offsprings and populates the colony"""
-	def __init__(self, world, image, direction, location, nest_id):
+	def __init__(self, world, image, direction, location, nest):
 		"""
 		Tasks assigned:
 			- Explore nest
@@ -306,7 +311,7 @@ class SoldierAnt(Ant):
 		Default task:
 			- Explore nest
 		"""
-		Ant.__init__(self, world, image, direction, location, nest_id)
+		Ant.__init__(self, world, image, direction, location, nest)
 		self.task_manager.add_task(ExploreNest(self))
 		self.task_manager.add_task(ReturnHome(self))
 		self.task_manager.set_active_task("explore nest")
