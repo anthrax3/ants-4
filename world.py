@@ -18,13 +18,15 @@ class Cell(Entity):
 		self.home = -1
 		super(Cell, self).__init__(world, (i, j), [cell_size]*2, world.images["cell"])
 
+	## Adds food to the cell
+	# @param amt The amount of food to be added
 	def add_food(self, amt):
-		"""
-		adds food to the cell
-		"""
 		self.food += amt
 		return self
 
+	## Adds home scent to the cell
+	# @param amt The amount of scent to add
+	# @param id The id of the nest the ant belongs to
 	def add_home_scent(self, amt, id):
 		"""
 		adds home scent for the particular ant colony (depending on the id)
@@ -37,10 +39,10 @@ class Cell(Entity):
 			self.home_scent[id] = 0
 		return self
 
+	## Adds food scent to the cell
+	# @param amt The amount of scent to add
+	# @param id The id of the nest the ant belongs to
 	def add_food_scent(self, amt, id):
-		"""
-		adds foord scent for the particular ant colony (depending on the id)
-		"""
 		if not id in self.food_scent:
 			self.food_scent[id] = 0
 		if not self.is_obstacle():
@@ -49,10 +51,10 @@ class Cell(Entity):
 			self.food_scent[id] = 0
 		return self
 
+	## Gets food from the cell
+	# @param amt The amount of food taken
+	# Returns an amount of food if available
 	def get_food(self, amt):
-		"""
-		Get "amt" amount of food if available else returns whatever food is available
-		"""
 		if self.food < amt:
 			food = self.food
 			self.food = 0
@@ -61,12 +63,13 @@ class Cell(Entity):
 			self.food -= amt
 			return amt
 
+	## Get the amount of food scent in the cell
+	# @param id The id of the nest the ant belongs to
 	def get_food_scent(self, id):
-		"""
-		get food scent for the colony given by id
-		"""
 		return self.food_scent[id] if id in self.food_scent else 0
 
+	## Get the amount of home scent in the cell
+	# @param id The id of the nest the ant belongs to
 	def get_home_scent(self, id):
 		"""
 		get home scent for the colony given by id
@@ -86,24 +89,19 @@ class Cell(Entity):
 		"""
 		return self.home != -1
 
+	## Checks if the cell is home cell of the ant
+	# @param id The id of the nest the ant belongs to
 	def is_own_home(self, id):
-		"""
-		Returns wheather the cell is a home cell_size
-		and has the id of the particular ant's home
-		"""
 		return self.home == id
 
+	## Checks if the home cell is of the enemy ants
+	# @param id The id of the nest the ant belongs to
 	def is_enemy_home(self, id):
-		"""
-		Return wheather the cell is a home cell and does not belong to 
-		the ant
-		"""
 		return self.is_home() and not self.is_own_home(id)
 
+	## Checks if the cell has food (but should not be its own home)
+	# @param id The id of the nest the ant belongs to
 	def is_food(self, id):
-		"""
-		Returns true if the cell has food but is not in its own home
-		"""
 		return bool(self.food) and not self.is_own_home(id)
 
 	def has_ant(self):
@@ -118,10 +116,9 @@ class Cell(Entity):
 		"""
 		return True if self.food > 0 else False
 
+	## Convert the cell into a home cell
+	# @param id The id of the nest
 	def make_home(self, id):
-		"""
-		Convert the cell into a home cell of the nest with "id" 
-		"""
 		self.home = id
 		return self
 
@@ -144,10 +141,10 @@ class Cell(Entity):
 		self.obstacle = False
 		return self
 
+	## Evaporates the scent
+	# @param rate The rate at which evporation happens
+	# Follows the decay law
 	def evaporate_scent(self, rate):
-		"""
-		Evaporates scent ( decay law )
-		"""
 		for id in self.food_scent:
 			food_scent_delta = self.food_scent[id] * rate
 			self.food_scent[id] -= food_scent_delta
@@ -187,12 +184,6 @@ class Cell(Entity):
 		scent = self.food_scent.values()
 		return max(scent) if scent else 0
 
-	# def get_home_scent(self, id):
-	# 	return self.home_scent[id] if id in self.home_scent else 0
-
-	# def get_food_scent(self, id):
-	# 	return self.food_scent[id] if id in self.food_scent else 0
-
 	def render(self):
 		"""
 		Extends the base class method
@@ -207,8 +198,6 @@ class Cell(Entity):
 			super(Cell, self).render(2)
 		elif self.has_food():
 			super(Cell, self).render(4)
-		# elif self.is_home():
-		# 	super(Cell, self).render(1)
 
 		max_home_scent = self.get_max_home_scent()
 		if max_home_scent > 0:
