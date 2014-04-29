@@ -311,6 +311,7 @@ class World():
 			self.ants[i].task_manager.make_decision()
 
 		self.evaporate_scent()
+		self.remove_dead_ants()
 		return self
 
 	def add_ant(self, ant):
@@ -392,3 +393,13 @@ class World():
 			for cell in cells:
 				cell.evaporate_scent(self.settings["evaporation_rate"])
 		return self
+
+	def remove_dead_ants(self):
+		dead_ant_ids = []
+		for id in self.ants:
+			ant = self.ants[id]
+			if ant.is_dead():
+				dead_ant_ids.append(id)
+		for id in dead_ant_ids:
+			print "An ant from nest #%d is dead"%self.ants[id].get_nest_id()
+			del self.ants[id]

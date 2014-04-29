@@ -1,7 +1,6 @@
 from constants import DIRECTIONS
 from task_manager import TaskManager, Explore, TakeFood, FollowHomeTrail, FollowFoodTrail, DropFood
-from task_manager import ExploreNest, ReturnHome
-from task_manager import FindNest, RaidNest, Escape
+from task_manager import GuardNest, ReturnHome
 from display import Entity
 from random import choice, randint
 
@@ -17,6 +16,7 @@ class Ant(Entity):
 		self.direction = direction
 		self.location = location
 		self.food = 0
+		self.health = 1
 		self.food_scent_strength = 0
 		self.home_scent_strength = 0
 
@@ -51,6 +51,9 @@ class Ant(Entity):
 			for cell in self.here().nearby():
 				cell.add_home_scent(self.home_scent_strength/1., self.get_nest_id()).add_food_scent(self.food_scent_strength/1., self.get_nest_id())
 			self.here().ant = self
+		self.reduce_health(.001)
+		if self.health <= 0 and  self.has_food():
+			self.health += .1 if self.food >= .1 else self.food
 		return self
 
 	def random_move(self):
@@ -149,7 +152,7 @@ class Ant(Entity):
 	## Returns true if the ant passed is an enemy
 	# @param ant The other ant
 	def is_enemy(self, ant):
-		self.get_nest_id() != ant.get_nest_id()
+		return self.get_nest_id() != ant.get_nest_id()
 
 	def locate_home_nearby(self):
 		"""
@@ -253,8 +256,26 @@ class Ant(Entity):
 		self.here().food += self.food
 		self.food = 0
 
+	def take_food(self, amt):
+		self.food = amt*.9
+		self.health += amt*.1
+
 	def has_food(self):
+		"""
+		Checks if the ant has food_scent
+		"""
 		return bool(self.food)
+
+	## Reduces the health of the ant
+	# @param amt The amount of health to reduce
+	def reduce_health(self, amt):
+		self.health -= amt
+
+	def is_dead(self):
+		return True if self.health<0 else False
+
+	def is_alive(self):
+		return not self.is_dead()
 
 	def __nonzero__(self):
 		return True
@@ -305,13 +326,24 @@ class SoldierAnt(Ant):
 	def __init__(self, world, image, direction, location, nest):
 		"""
 		Tasks assigned:
-			- Explore nest
-			- attack enemy ants
-			- return home
+			- Guard nest
+			- Return home
 		Default task:
-			- Explore nest
+			- Guard nest
 		"""
 		Ant.__init__(self, world, image, direction, location, nest)
-		self.task_manager.add_task(ExploreNest(self))
+		self.task_manager.add_task(GuardNest(self))
 		self.task_manager.add_task(ReturnHome(self))
-		self.task_manager.set_active_task("explore nest")
+		self.task_manager.set_active_task("guard nest")
+
+	def get_enemy_ant_nearby(self):
+		"""
+		Returns one enemy ant nearby at random
+		"""
+		for cell in self.here().nearby():
+			if cell.has_ant() and self.is_enemy(cell.ant):
+				return cell.ant
+		return None
+
+	def attack(self, ant):
+		ant.reduce_health(.01)
