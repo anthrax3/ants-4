@@ -1,5 +1,7 @@
 class Entity(object):
-	"""Base class for all drawable objects"""
+	"""
+	Base class for all drawable objects
+	"""
 	def __init__(self, world, location, size, image):
 		self.world = world
 		self.location = location
@@ -7,7 +9,8 @@ class Entity(object):
 		self.image = image
 
 	def render(self, index=0):
-		"""Draw the object into the screen
+		"""
+		Draw the object into the screen
 			- selects the portion of the image to draw from the "index" argument
 		"""
 		x, y = self.location

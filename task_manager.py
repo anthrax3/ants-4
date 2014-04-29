@@ -1,20 +1,26 @@
 from random import randint, choice
 
 class TaskManager():
-	"""Decides and performs all actions of an Ant"""
+	"""
+	Decides and performs all actions of an Ant
+	"""
 	def __init__(self):
 		self.tasks = {}
 		self.active_task = None
 
 	def add_task(self, task):
-		"""Adds a new task"""
+		"""
+		Adds a new task
+		"""
 		self.tasks[task.name] = task
 
 	def make_decision(self):
-		"""Performs the active task
+		"""
+		Performs the active task
 		Checks for new task
 		If new task is present end the current task and
-		start the new task"""
+		start the new task
+		"""
 		self.active_task.perform_task()
 
 		new_task = self.active_task.get_new_task()
@@ -25,26 +31,36 @@ class TaskManager():
 			self.active_task.start_task()
 
 	def set_active_task(self, task_name):
-		"""Sets the active task"""
+		"""
+		Sets the active task
+		"""
 		self.active_task = self.tasks[task_name]
 
 class Task(object):
-	"""Base class for a Task"""
+	"""
+	Base class for a Task
+	"""
 	def __init__(self, name, ant):
 		self.name = name
 		self.ant = ant
 		self.new_task = None
 
 	def start_task(self):
-		"""Actions at the beginning of a new task"""
+		"""
+		Actions at the beginning of a new task
+		"""
 		pass
 
 	def perform_task(self):
-		"""Actions done for a task"""
+		"""
+		Actions done for a task
+		"""
 		pass
 
 	def end_task(self):
-		"""Actions at the end of a new task"""
+		"""
+		Actions at the end of a new task
+		"""
 		pass
 
 	def get_new_task(self):
@@ -54,7 +70,9 @@ class Task(object):
 		return new_task
 
 class Explore(Task):
-	"""Ant Exploring Task"""
+	"""
+	Ant Exploring Task
+	"""
 	def __init__(self, ant):
 		super(Explore, self).__init__("explore", ant)
 
@@ -101,12 +119,16 @@ class Explore(Task):
 		ant.reduce_food_scent(1).reduce_home_scent(1)
 
 class TakeFood(Task):
-	"""Gathering Food Task"""
+	"""
+	Gathering Food Task
+	"""
 	def __init__(self, ant):
 		super(TakeFood, self).__init__("take food", ant)
 
 	def perform_task(self):
-		"""Take food if available otherwise return to explore mode"""
+		"""
+		Take food if available otherwise return to explore mode
+		"""
 		ant = self.ant
 		food = ant.ahead().get_food(1)
 		if food:
@@ -117,14 +139,18 @@ class TakeFood(Task):
 			self.new_task = "explore"
 
 	def end_task(self):
-		"""Increase food_scent_strength
-		and reduce home_scent_strength"""
+		"""
+		Increase food_scent_strength
+		and reduce home_scent_strength
+		"""
 		self.ant.food_scent_strength = 40
 		self.ant.home_scent_strength = 0
 
 
 class DropFood(Task):
-	"""Drop Food Task"""
+	"""
+	Drop Food Task
+	"""
 	def __init__(self, ant):
 		super(DropFood, self).__init__("drop food", ant)
 
@@ -156,7 +182,9 @@ class DropFood(Task):
 		self.ant.home_scent_strength = 40
 
 class FollowFoodTrail(Task):
-	"""docstring for FollowFoodTrail"""
+	"""
+	docstring for FollowFoodTrail
+	"""
 	def __init__(self, ant):
 		super(FollowFoodTrail, self).__init__("follow food trail", ant)
 
@@ -186,7 +214,9 @@ class FollowFoodTrail(Task):
 		ant.reduce_home_scent(1).reduce_food_scent(1)
 
 class FollowHomeTrail(Task):
-	"""docstring for FollowFoodTrail"""
+	"""
+	docstring for FollowFoodTrail
+	"""
 	def __init__(self, ant):
 		super(FollowHomeTrail, self).__init__("follow home trail", ant)
 
@@ -221,7 +251,9 @@ class FollowHomeTrail(Task):
 
 
 class ExploreNest(Task):
-	"""Explore inside nest"""
+	"""
+	Explore inside nest
+	"""
 	def __init__(self, ant):
 		super(ExploreNest, self).__init__("explore nest", ant)
 
@@ -243,7 +275,9 @@ class ExploreNest(Task):
 			ant.move()
 
 class ReturnHome(Task):
-	"""Return home if outside"""
+	"""
+	Return home if outside
+	"""
 	def __init__(self, ant):
 		super(ReturnHome, self).__init__("return home", ant)		
 
@@ -272,7 +306,9 @@ class ReturnHome(Task):
 				ant.random_move()
 
 class FindNest(Task):
-	"""Enemy spider finding nest"""
+	"""
+	 finding nest
+	"""
 	def __init__(self, ant):
 		super(FindNest, self).__init__("find nest", ant)
 
@@ -292,7 +328,9 @@ class FindNest(Task):
 			ant.random_move()
 
 class RaidNest(Task):
-	"""Steal food from the nest"""
+	"""
+	Steal food from the nest
+	"""
 	def __init__(self, ant):
 		super(RaidNest, self).__init__("raid nest", ant)
 
@@ -315,7 +353,9 @@ class RaidNest(Task):
 		self.ant.turn(4)	
 
 class Escape(Task):
-	"""enemy ant escape"""
+	"""
+	enemy ant escape
+	"""
 	def __init__(self, ant):
 		super(Escape, self).__init__("escape", ant)
 

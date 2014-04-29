@@ -6,7 +6,9 @@ from display import Entity
 from random import choice, randint
 
 class Ant(Entity):
-	"""A virtual base class for Ants"""
+	"""
+	A virtual base class for Ants
+	"""
 	def __init__(self, world, image, direction, location, nest_id):
 		super(Ant, self).__init__(world, location, [world.cell_size]*2, image)
 		self.world = world
@@ -21,14 +23,18 @@ class Ant(Entity):
 		self.task_manager = TaskManager()
 
 	def neighbour(self, direction):
-		"""Returns location of neighbouring cell in a direction 
-		relative to the ant direction"""
+		"""
+		Returns location of neighbouring cell in a direction 
+		relative to the ant direction
+		"""
 		x, y = self.location
 		dx, dy = DIRECTIONS[(self.direction + direction)%8]
 		return (x+dx)%self.world.width, (y+dy)%self.world.height
 
 	def move(self):
-		"""Move the ant by a unit,
+		"""
+		Move the ant by a unit if the next cell is empty,
+		else turn by an unit
 		Leave a scent trail,
 		remove the ant from its old cell, and
 		update the current cell ant with itself
@@ -48,28 +54,38 @@ class Ant(Entity):
 		return self
 
 	def random_move(self):
-		"""Ant makes a move forward or turns randomly"""
+		"""
+		Ant makes a move forward or turns randomly
+		"""
 		if randint(1,8) == 1:
 			self.turn( choice([-1, 1]) )
 		else:
 			self.move()
 
 	def reduce_home_scent(self, amt=1):
-		"""Reduce home scent by 'amt'"""
+		"""
+		Reduce home scent by 'amt'
+		"""
 		self.home_scent_strength = max(0, self.home_scent_strength*.98)
 		return self
 
 	def reduce_food_scent(self, amt=1):
-		"""Reduce food scent by 'amt'"""
+		"""
+		Reduce food scent by 'amt'
+		"""
 		self.food_scent_strength = max(0, self.food_scent_strength*.98)
 		return self
 
 	def turn(self, n):
-		"""Changes direction n times"""
+		"""
+		Changes direction n times
+		"""
 		self.direction = (self.direction + n) % 8
 
 	def render(self):
-		"""Render itself"""
+		"""
+		Render itself
+		"""
 		if self.has_food():
 			super(Ant, self).render(8)
 		else:
@@ -77,31 +93,46 @@ class Ant(Entity):
 			super(Ant, self).render(self.get_nest_id()*7)
 
 	def get_nest_id(self):
+		"""
+		Returns the id of the nest it belongs to
+		"""
 		return self.nest_id
 
 	def here(self):
-		"""The cell it is standing on"""
+		"""
+		The cell it is standing on
+		"""
 		return self.world[self.location]
 
 	def behind(self):
-		"""The cell just behind"""
+		"""
+		The cell just behind
+		"""
 		return self.world[self.neighbour(4)]
 
 	def ahead(self):
-		"""The cell just ahead"""
+		"""
+		The cell just ahead
+		"""
 		return self.world[self.neighbour(0)]
 
 	def ahead_left(self):
-		"""The cell just ahead-left"""
+		"""
+		The cell just ahead-left
+		"""
 		return self.world[self.neighbour(-1)]
 
 	def ahead_right(self):
-		"""The cell just ahead-right"""
+		"""
+		The cell just ahead-right
+		"""
 		return self.world[self.neighbour(1)]
 
 	def locate_food_nearby(self):
-		"""Locate all sources nearby and return any one randomly
-		return None if no food source is found"""
+		"""
+		Locate all sources nearby and return any one randomly
+		return None if no food source is found
+		"""
 		directions = []
 		if self.ahead().is_food(self.get_nest_id):
 			directions.append(0)
@@ -116,8 +147,10 @@ class Ant(Entity):
 			return None
 
 	def locate_home_nearby(self):
-		"""Locate home cell nearby and return any one randomly
-		return None if not found"""
+		"""
+		Locate home cell nearby and return any one randomly
+		return None if not found
+		"""
 		directions = []
 		if self.ahead().is_own_home(self.get_nest_id()):
 			directions.append(0)
@@ -132,7 +165,8 @@ class Ant(Entity):
 			return None
 
 	def locate_home_scent_nearby(self):
-		"""Scan the 5 directions near the direction of the ant for home scent and
+		"""
+		Scan the 5 directions near the direction of the ant for home scent and
 		return one random direction
 		return None if not found
 		"""
@@ -151,7 +185,8 @@ class Ant(Entity):
 			return None
 
 	def locate_food_scent_nearby(self):
-		"""Scan the 5 directions near the direction of the ant for food scent and
+		"""
+		Scan the 5 directions near the direction of the ant for food scent and
 		return one random direction
 		return None if not found
 		"""
@@ -170,7 +205,8 @@ class Ant(Entity):
 			return None
 
 	def rank_by_food_scent(self):
-		"""Scan the 5 directions near the direction of the ant for food scent and
+		"""
+		Scan the 5 directions near the direction of the ant for food scent and
 		return the direction with the strongest scent
 		return None if not found
 		"""
@@ -187,7 +223,8 @@ class Ant(Entity):
 		return best_direction
 
 	def rank_by_home_scent(self):
-		"""Scan the 5 directions near the direction of the ant for home scent and
+		"""
+		Scan the 5 directions near the direction of the ant for home scent and
 		return the direction with the strongest scent
 		return None if not found
 		"""
@@ -219,7 +256,9 @@ class Ant(Entity):
 
 
 class WorkerAnt(Ant):
-	"""Ants that explores for foodsource and collects food"""
+	"""
+	Ants that explores for foodsource and collects food
+	"""
 	def __init__(self, world, image, direction, location, nest_id):
 		"""
 		Tasks assigned:
@@ -241,7 +280,9 @@ class WorkerAnt(Ant):
 
 
 class QueenAnt(Ant):
-	"""Ants that produces offsprings and populates the colony"""
+	"""
+	Ants that produces offsprings and populates the colony
+	"""
 	def __init__(self, world, image, direction, location, nest_id):
 		"""
 		Tasks assigned:
@@ -269,20 +310,3 @@ class SoldierAnt(Ant):
 		self.task_manager.add_task(ExploreNest(self))
 		self.task_manager.add_task(ReturnHome(self))
 		self.task_manager.set_active_task("explore nest")
-
-class EnemyAnt(Ant):
-	"""Ants that produces offsprings and populates the colony"""
-	def __init__(self, world, image, direction, location, nest_id):
-		"""
-		Tasks assigned:
-			- Find nest
-			- Steal food
-			- Escape from soldier ants
-		Default task:
-			- find nest
-		"""
-		Ant.__init__(self, world, image, direction, location, nest_id)
-		self.task_manager.add_task(FindNest(self))
-		self.task_manager.add_task(RaidNest(self))
-		self.task_manager.add_task(Escape(self))
-		self.task_manager.set_active_task("find nest")

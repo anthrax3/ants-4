@@ -3,8 +3,8 @@ from pygame.constants import *
 from world import World
 
 class Simulation():
-	"""Controls the simulation
-
+	"""
+	Controls the simulation
 		- Runs the main loop
 		- Detects mouse, keyboard and other events
 		- Loads the necessary images
@@ -37,16 +37,21 @@ class Simulation():
 		self.world = World(130, 70, self.images, self.settings)
 
 	def add_image(self, name, path):
-		"""	Loads an image"""
+		"""
+		Loads an image
+		"""
 		self.images[name] = image.load('images/' + path)		
 
 	def run(self):
-		"""Runs the main loop till the user quits"""
+		"""
+		Runs the main loop till the user quits
+		"""
 		while self.quit is False and self.pause is False:
 			self.main_loop()
 
 	def main_loop(self):
-		"""Updates the simulation
+		"""
+		Updates the simulation
 			- Draws the world and update it
 			- Handles all user events
 			- Controls frame rate
@@ -59,22 +64,34 @@ class Simulation():
 		self.clock.tick(self.framerate)
 
 	def handle_events(self):
-		"""Handles all keyboard, mouse and events like QUIT, etc"""
+		"""
+		Handles all keyboard, mouse and events like QUIT, etc
+		"""
 		self.handle_keyboard_events()
 		self.handle_mouse_events()
 		self.handle_general_events() 
 
 	def handle_keyboard_events(self):
+		"""
+		set quit as true if user presses ESCAPE key
+		"""
 		keys = key.get_pressed()
 		if keys[K_q] or keys[K_ESCAPE]:
 			self.quit = True
 
 	def handle_general_events(self):
+		"""
+		set quit true if user clicks the close button
+		"""
 		for evt in event.get():
 			if evt.type == QUIT:
 				self.quit = True
 
 	def handle_mouse_events(self):
+		"""
+		- Creates obstacles on left clicks
+		- Removes obstacles on right clicks
+		"""
 		pressed = mouse.get_pressed()
 		x, y = mouse.get_pos()
 		size = self.settings["cell_size"]

@@ -6,7 +6,9 @@ from constants import GREEN, DIRECTIONS, YELLOW
 from math import sqrt
 
 class Cell(Entity):
-	"""Data containers for each location in World"""
+	"""
+	Data containers for each location in World
+	"""
 	def __init__(self, world, i, j, cell_size):
 		self.obstacle = False
 		self.food = 0
@@ -17,10 +19,16 @@ class Cell(Entity):
 		super(Cell, self).__init__(world, (i, j), [cell_size]*2, world.images["cell"])
 
 	def add_food(self, amt):
+		"""
+		adds food to the cell
+		"""
 		self.food += amt
 		return self
 
 	def add_home_scent(self, amt, id):
+		"""
+		adds home scent for the particular ant colony (depending on the id)
+		"""
 		if not id in self.home_scent:
 			self.home_scent[id] = 0
 		if not self.is_obstacle():
@@ -30,6 +38,9 @@ class Cell(Entity):
 		return self
 
 	def add_food_scent(self, amt, id):
+		"""
+		adds foord scent for the particular ant colony (depending on the id)
+		"""
 		if not id in self.food_scent:
 			self.food_scent[id] = 0
 		if not self.is_obstacle():
@@ -39,7 +50,9 @@ class Cell(Entity):
 		return self
 
 	def get_food(self, amt):
-		"""Get "amt" amount of food if available else returns whatever food is available"""
+		"""
+		Get "amt" amount of food if available else returns whatever food is available
+		"""
 		if self.food < amt:
 			food = self.food
 			self.food = 0
@@ -49,37 +62,73 @@ class Cell(Entity):
 			return amt
 
 	def get_food_scent(self, id):
+		"""
+		get food scent for the colony given by id
+		"""
 		return self.food_scent[id] if id in self.food_scent else 0
 
 	def get_home_scent(self, id):
+		"""
+		get home scent for the colony given by id
+		"""
 		return self.home_scent[id] if id in self.home_scent else 0
 
 	def is_obstacle(self):
+		"""
+		Returns wheather the cell is a obstacle or not
+		"""
 		return bool(self.obstacle)
 
 	def is_home(self):
+		"""
+		Returns wheather the cell is a home or not
+		(independent of which colony the ant belongs)
+		"""
 		return self.home != -1
 
 	def is_own_home(self, id):
+		"""
+		Returns wheather the cell is a home cell_size
+		and has the id of the particular ant's home
+		"""
 		return self.home == id
 
 	def is_enemy_home(self, id):
+		"""
+		Return wheather the cell is a home cell and does not belong to 
+		the ant
+		"""
 		return self.is_home() and not self.is_own_home(id)
 
 	def is_food(self, id):
+		"""
+		Returns true if the cell has food but is not in its own home
+		"""
 		return bool(self.food) and not self.is_own_home(id)
 
 	def has_ant(self):
+		"""
+		Check if the particular cell has an ant
+		"""
 		return bool(self.ant)
 
 	def has_food(self):
+		"""
+		Checks if the cell has food
+		"""
 		return True if self.food > 0 else False
 
 	def make_home(self, id):
+		"""
+		Convert the cell into a home cell of the nest with "id" 
+		"""
 		self.home = id
 		return self
 
 	def make_obstacle(self):
+		"""
+		Convert the cell into an obstacle if the cell is empty
+		"""
 		if not self.is_home() and not self.has_ant() and not self.has_food():
 			self.obstacle = True
 			for id in self.food_scent:
@@ -89,11 +138,16 @@ class Cell(Entity):
 		return self
 
 	def remove_obstacle(self):
+		"""
+		Removes obstacle from the cell
+		"""
 		self.obstacle = False
 		return self
 
 	def evaporate_scent(self, rate):
-		"""Evaporates scent ( decay law )"""
+		"""
+		Evaporates scent ( decay law )
+		"""
 		for id in self.food_scent:
 			food_scent_delta = self.food_scent[id] * rate
 			self.food_scent[id] -= food_scent_delta
@@ -107,6 +161,9 @@ class Cell(Entity):
 		return self
 
 	def nearby(self):
+		"""
+		Returns all nearby 8 cells
+		"""
 		x, y = self.location
 		cells = []
 		for dx, dy in DIRECTIONS:
@@ -115,10 +172,18 @@ class Cell(Entity):
 		return cells
 
 	def get_max_home_scent(self):
+		"""
+		Get the maximum home scent values amongst
+		the scents of all colonies
+		"""
 		scent = self.home_scent.values()
 		return max(scent) if scent else 0
 
 	def get_max_food_scent(self):
+		"""
+		Get the maximum food scent values amongst
+		the scents of all colonies
+		"""
 		scent = self.food_scent.values()
 		return max(scent) if scent else 0
 
@@ -129,7 +194,9 @@ class Cell(Entity):
 	# 	return self.food_scent[id] if id in self.food_scent else 0
 
 	def render(self):
-		"""Changes "index" to render the cell according to what it represents 
+		"""
+		Extends the base class method
+		Changes "index" to render the cell according to what it represents 
 		(home, food, etc) and calls the super class
 		Also renders scent levels with transparency depending on its strength
 		"""
@@ -155,7 +222,9 @@ class Cell(Entity):
 		return self
 
 class Nest(Entity):
-	"""Encapsulates a colony of ants"""
+	"""
+	Encapsulates a colony of ants
+	"""
 	def __init__(self, world, id, size, location, ant_count):
 		self.id = id
 		self.size = size
@@ -169,6 +238,9 @@ class Nest(Entity):
 		self.mark_home()
 
 	def mark_home(self):
+		"""
+		Converts the cell at its location to its nest
+		"""
 		width, height = self.size
 		width /= self.world.settings["cell_size"]
 		height /= self.world.settings["cell_size"]
@@ -178,6 +250,9 @@ class Nest(Entity):
 				self.world[(x+i,y+j)].make_home(self.id)
 
 	def spawn_ants(self):
+		"""
+		Creates instances of ants and adds them into the world
+		"""
 		for ant in self.ant_count:
 			x, y = self.location
 			width, height = self.size
@@ -190,7 +265,9 @@ class Nest(Entity):
 		
 
 class World():
-	"""Encapsulation of all objects in the simulation"""
+	"""
+	Encapsulation of all objects in the simulation
+	"""
 	def __init__(self, width, height, images, settings):
 		"""
 		- Initialise the screen
@@ -222,17 +299,22 @@ class World():
 		self.spawn_colonies(2)
 
 	def __getitem__(self, location):
-		"""Returns the cell at the location"""
+		"""
+		Returns the cell at the location
+		"""
 		x, y = location
 		return self.cells[x%self.width][y%self.height]
 
 	def convert_images(self):
-		"""Convert images to pygame optimised format"""
+		"""
+		Convert images to pygame optimised format
+		"""
 		for name in self.images:
 			self.images[name] = self.images[name].convert()
 
 	def advance(self):
-		"""Advance the simulation by one step
+		"""
+		Advance the simulation by one step
 			- Update te ants
 			- Evaporate all scents
 		"""
@@ -243,48 +325,26 @@ class World():
 		return self
 
 	def add_ant(self, ant):
+		"""
+		add a new ant into the world
+		"""
 		self.ants[self.counter] = ant
 		self.counter += 1
 
-	"""no longer needed"""
-	# def spawn_worker_ants(self):
-	# 	"""Spawns ants"""
-	# 	for i in xrange(self.counter, self.settings["no_of_ants"]):
-	# 		direction = randint(0,7)
-	# 		location = [randint(1,self.width), randint(1,self.height)]
-	# 		location = [self.width/2-10, self.height/2-10]
-	# 		location = [1, 1]
-	# 		new_ant = WorkerAnt(self, self.images["ant"], direction, location)
-	# 		self.add_ant(new_ant)
-
-	# def spawn_soldier_ants(self):
-	# 	"""Spawns ants"""
-	# 	for i in xrange(self.counter, self.settings["no_of_ants"]+5):
-	# 		direction = randint(0,7)
-	# 		location = [self.width/2, self.height/2]
-	# 		location = [1, 1]
-	# 		new_ant = SoldierAnt(self, self.images["ant"], direction, location)
-	# 		self.add_ant(new_ant)
-
 	def spawn_foodsource(self):
-		"""Spawns food sources"""
+		"""
+		Spawns food sources
+		"""
 		x, y = randint(0,self.width-1), randint(0,self.height-1)
 		for i in xrange(randint(2000, 5000)):
 			dx = randint(-3,3)
 			dy = choice([-1,1])*randint(0, int(sqrt(9-dx**2)))
 			self.cells[(x+dx)%self.width][(y+dy)%self.height].add_food(1)
 
-	"""no longer needed"""
-	# def create_home(self):
-	# 	"""Create a nest for ants"""
-	# 	n = self.settings["home_size"]
-	# 	x, y = self.width/2 -5, self.height/2 -5
-	# 	x, y = 1, 1
-	# 	for i in xrange(n):
-	# 		for j in xrange(n):
-	# 			self.cells[x+i-1][y+j-1].make_home()
-
 	def spawn_colonies(self, n=1):
+		"""
+		Creates colonies of ants
+		"""
 		for i in xrange(n):
 			size = [self.settings["home_size"]*self.settings["cell_size"]]*2
 			location = (
@@ -295,13 +355,19 @@ class World():
 			self.nests[i] = nest
 
 	def get_ant_count(self):
-		"""Returns a list of no. of different types of ants"""
+		"""
+		Returns a list of no. of different types of ants
+		"""
 		return { 
 			WorkerAnt: 100,
 			SoldierAnt: 5
 		}
 
 	def create_walls(self):
+		"""
+		Generates obstacles at the edges
+		(otherwise the ants jump from one edge to another)
+		"""
 		for i in xrange(self.width):
 			self[(i, 0)].make_obstacle()
 			self[(i, self.height-1)].make_obstacle()
@@ -311,7 +377,9 @@ class World():
 			self[(self.width-1, j)].make_obstacle()
 
 	def render(self):
-		"""Draws the world on the screen"""
+		"""
+		Draws the world and all its entities on the screen
+		"""
 		self.canvas.fill(GREEN)
 
 		for cells in self.cells:
@@ -328,7 +396,9 @@ class World():
 		return self
 
 	def evaporate_scent(self):
-		"""Evaporates all scent ( uses decay law ) at a rate defined in settings"""
+		"""
+		Evaporates all scent ( uses decay law ) at a rate defined in settings
+		"""
 		for cells in self.cells:
 			for cell in cells:
 				cell.evaporate_scent(self.settings["evaporation_rate"])
