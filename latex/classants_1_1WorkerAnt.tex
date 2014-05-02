@@ -25,15 +25,20 @@ Collaboration diagram for ants.\+Worker\+Ant\+:
 \begin{DoxyCompactItemize}
 \item 
 def \hyperlink{classants_1_1WorkerAnt_a82e7d37f66c81e029cad6038d6515056}{\+\_\+\+\_\+init\+\_\+\+\_\+}
+\item 
+def \hyperlink{classants_1_1WorkerAnt_a3a0836d96b5fe9eba56e9d2d59b555cc}{locate\+\_\+food\+\_\+scent\+\_\+nearby}
+\item 
+def \hyperlink{classants_1_1WorkerAnt_a65ef16439f2ff5d217e1e443d57b65d1}{rank\+\_\+by\+\_\+food\+\_\+scent}
 \end{DoxyCompactItemize}
 \subsection*{Additional Inherited Members}
 
 
 \subsection{Detailed Description}
-\begin{DoxyVerb}Ants that explores for foodsource and collects food\end{DoxyVerb}
+\begin{DoxyVerb}Ants that explores for foodsource and collects food
+\end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00201}{201} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00260}{260} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 
 
@@ -46,7 +51,8 @@ Definition at line \hyperlink{ants_8py_source_l00201}{201} of file \hyperlink{an
 \item[{}]{world, }
 \item[{}]{image, }
 \item[{}]{direction, }
-\item[{}]{location}
+\item[{}]{location, }
+\item[{}]{nest}
 \end{DoxyParamCaption}
 )}}\label{classants_1_1WorkerAnt_a82e7d37f66c81e029cad6038d6515056}
 \begin{DoxyVerb}Tasks assigned:
@@ -60,7 +66,40 @@ Default task:
 \end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00203}{203} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00264}{264} of file \hyperlink{ants_8py_source}{ants.\+py}.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classants_1_1WorkerAnt_a3a0836d96b5fe9eba56e9d2d59b555cc}{\index{ants\+::\+Worker\+Ant@{ants\+::\+Worker\+Ant}!locate\+\_\+food\+\_\+scent\+\_\+nearby@{locate\+\_\+food\+\_\+scent\+\_\+nearby}}
+\index{locate\+\_\+food\+\_\+scent\+\_\+nearby@{locate\+\_\+food\+\_\+scent\+\_\+nearby}!ants\+::\+Worker\+Ant@{ants\+::\+Worker\+Ant}}
+\subsubsection[{locate\+\_\+food\+\_\+scent\+\_\+nearby}]{\setlength{\rightskip}{0pt plus 5cm}def ants.\+Worker\+Ant.\+locate\+\_\+food\+\_\+scent\+\_\+nearby (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classants_1_1WorkerAnt_a3a0836d96b5fe9eba56e9d2d59b555cc}
+\begin{DoxyVerb}Scan the 5 directions near the direction of the ant for food scent and
+return one random direction
+return None if not found
+\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{ants_8py_source_l00283}{283} of file \hyperlink{ants_8py_source}{ants.\+py}.
+
+\hypertarget{classants_1_1WorkerAnt_a65ef16439f2ff5d217e1e443d57b65d1}{\index{ants\+::\+Worker\+Ant@{ants\+::\+Worker\+Ant}!rank\+\_\+by\+\_\+food\+\_\+scent@{rank\+\_\+by\+\_\+food\+\_\+scent}}
+\index{rank\+\_\+by\+\_\+food\+\_\+scent@{rank\+\_\+by\+\_\+food\+\_\+scent}!ants\+::\+Worker\+Ant@{ants\+::\+Worker\+Ant}}
+\subsubsection[{rank\+\_\+by\+\_\+food\+\_\+scent}]{\setlength{\rightskip}{0pt plus 5cm}def ants.\+Worker\+Ant.\+rank\+\_\+by\+\_\+food\+\_\+scent (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classants_1_1WorkerAnt_a65ef16439f2ff5d217e1e443d57b65d1}
+\begin{DoxyVerb}Scan the 5 directions near the direction of the ant for food scent and
+return the direction with the strongest scent
+return None if not found
+\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{ants_8py_source_l00303}{303} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 
 

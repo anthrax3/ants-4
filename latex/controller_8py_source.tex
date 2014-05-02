@@ -2,17 +2,17 @@
 }
 
 \begin{DoxyCode}
-\hypertarget{controller_8py_source_l00001}{}\hyperlink{namespacecontroller}{00001} \textcolor{keyword}{from} pygame \textcolor{keyword}{import} image, time, key, event
+\hypertarget{controller_8py_source_l00001}{}\hyperlink{namespacecontroller}{00001} \textcolor{keyword}{from} pygame \textcolor{keyword}{import} image, time, key, event, mouse
 00002 \textcolor{keyword}{from} \hyperlink{namespacepygame_1_1constants}{pygame.constants} \textcolor{keyword}{import} *
 00003 \textcolor{keyword}{from} world \textcolor{keyword}{import} World
 00004 
 \hypertarget{controller_8py_source_l00005}{}\hyperlink{classcontroller_1_1Simulation}{00005} \textcolor{keyword}{class }\hyperlink{classcontroller_1_1Simulation}{Simulation}():
-00006     \textcolor{stringliteral}{"""Controls the simulation}
-00007 \textcolor{stringliteral}{}
+00006     \textcolor{stringliteral}{"""}
+00007 \textcolor{stringliteral}{    Controls the simulation}
 00008 \textcolor{stringliteral}{        - Runs the main loop}
 00009 \textcolor{stringliteral}{        - Detects mouse, keyboard and other events}
 00010 \textcolor{stringliteral}{        - Loads the necessary images}
-00011 \textcolor{stringliteral}{        - Controls the framerate of the smiulation}
+00011 \textcolor{stringliteral}{        - Controls the framerate of the simulation}
 00012 \textcolor{stringliteral}{    """}
 \hypertarget{controller_8py_source_l00013}{}\hyperlink{classcontroller_1_1Simulation_a0d3a98e6f630a62f18aa5c0c35846381}{00013}     \textcolor{keyword}{def }\hyperlink{classcontroller_1_1Simulation_a0d3a98e6f630a62f18aa5c0c35846381}{\_\_init\_\_}(self):
 \hypertarget{controller_8py_source_l00014}{}\hyperlink{classcontroller_1_1Simulation_a21dd9474d46d4afa868c0bd60cea128b}{00014}         self.\hyperlink{classcontroller_1_1Simulation_a21dd9474d46d4afa868c0bd60cea128b}{clock} = time.Clock()
@@ -20,53 +20,89 @@
 \hypertarget{controller_8py_source_l00016}{}\hyperlink{classcontroller_1_1Simulation_af13461f42bfe6ca017f59e13e57c354e}{00016}         self.\hyperlink{classcontroller_1_1Simulation_af13461f42bfe6ca017f59e13e57c354e}{images} = \{\}
 00017 
 \hypertarget{controller_8py_source_l00018}{}\hyperlink{classcontroller_1_1Simulation_a35d0ffc695295c3b509bd5bc2bdbac9b}{00018}         self.\hyperlink{classcontroller_1_1Simulation_a35d0ffc695295c3b509bd5bc2bdbac9b}{quit} = \textcolor{keyword}{False}
-00019 
-00020         self.\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{add\_image}(\textcolor{stringliteral}{"ant"}, \textcolor{stringliteral}{"ant.png"})
-00021         self.\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{add\_image}(\textcolor{stringliteral}{"grass"}, \textcolor{stringliteral}{"grass.png"})
-00022         self.\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{add\_image}(\textcolor{stringliteral}{"food"}, \textcolor{stringliteral}{"food.png"})
-00023         self.\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{add\_image}(\textcolor{stringliteral}{"home"}, \textcolor{stringliteral}{"home.png"})
-00024         self.\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{add\_image}(\textcolor{stringliteral}{"obstacle"}, \textcolor{stringliteral}{"obstacle.png"})
-00025         self.\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{add\_image}(\textcolor{stringliteral}{"home\_scent"}, \textcolor{stringliteral}{"home\_scent.png"})
-00026         self.\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{add\_image}(\textcolor{stringliteral}{"food\_scent"}, \textcolor{stringliteral}{"food\_scent.png"})
-00027         self.\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{add\_image}(\textcolor{stringliteral}{"cell"}, \textcolor{stringliteral}{"cell.png"})
-00028 
-\hypertarget{controller_8py_source_l00029}{}\hyperlink{classcontroller_1_1Simulation_a5d368ffc3eee12c8c36839ee5bce3644}{00029}         self.\hyperlink{classcontroller_1_1Simulation_a5d368ffc3eee12c8c36839ee5bce3644}{settings} = \{
-00030         \textcolor{stringliteral}{"no\_of\_ants"}: 50,
-00031         \textcolor{stringliteral}{"evaporation\_rate"}: .95,
-00032         \textcolor{stringliteral}{"home\_size"}: 10
-00033         \}
-00034 
-\hypertarget{controller_8py_source_l00035}{}\hyperlink{classcontroller_1_1Simulation_a2ba0c3cf1949a98dd920f6097953c1f5}{00035}         self.\hyperlink{classcontroller_1_1Simulation_a2ba0c3cf1949a98dd920f6097953c1f5}{world} = \hyperlink{classworld_1_1World}{World}(80, 60, 10, self.\hyperlink{classcontroller_1_1Simulation_af13461f42bfe6ca017f59e13e57c354e}{images}, self.
-      \hyperlink{classcontroller_1_1Simulation_a5d368ffc3eee12c8c36839ee5bce3644}{settings})
+\hypertarget{controller_8py_source_l00019}{}\hyperlink{classcontroller_1_1Simulation_a8acaf6508b8b61e163656195706d9025}{00019}         self.\hyperlink{classcontroller_1_1Simulation_a8acaf6508b8b61e163656195706d9025}{pause} = \textcolor{keyword}{False}
+00020 
+00021         self.\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{add\_image}(\textcolor{stringliteral}{"ant"}, \textcolor{stringliteral}{"ant.png"})
+00022         self.\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{add\_image}(\textcolor{stringliteral}{"grass"}, \textcolor{stringliteral}{"grass.png"})
+00023         self.\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{add\_image}(\textcolor{stringliteral}{"food"}, \textcolor{stringliteral}{"food.png"})
+00024         self.\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{add\_image}(\textcolor{stringliteral}{"home"}, \textcolor{stringliteral}{"home.png"})
+00025         self.\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{add\_image}(\textcolor{stringliteral}{"obstacle"}, \textcolor{stringliteral}{"obstacle.png"})
+00026         self.\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{add\_image}(\textcolor{stringliteral}{"home\_scent"}, \textcolor{stringliteral}{"home\_scent.png"})
+00027         self.\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{add\_image}(\textcolor{stringliteral}{"food\_scent"}, \textcolor{stringliteral}{"food\_scent.png"})
+00028         self.\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{add\_image}(\textcolor{stringliteral}{"cell"}, \textcolor{stringliteral}{"cell.png"})
+00029 
+\hypertarget{controller_8py_source_l00030}{}\hyperlink{classcontroller_1_1Simulation_a5d368ffc3eee12c8c36839ee5bce3644}{00030}         self.\hyperlink{classcontroller_1_1Simulation_a5d368ffc3eee12c8c36839ee5bce3644}{settings} = \{
+00031         \textcolor{stringliteral}{"no\_of\_ants"}: 150,
+00032         \textcolor{stringliteral}{"evaporation\_rate"}: .03,
+00033         \textcolor{stringliteral}{"home\_size"}: 10,
+00034         \textcolor{stringliteral}{"cell\_size"}: 10
+00035         \}
 00036 
-\hypertarget{controller_8py_source_l00037}{}\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{00037}     \textcolor{keyword}{def }\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{add\_image}(self, name, path):
-00038         \textcolor{stringliteral}{""" Loads an image"""}
-00039         self.\hyperlink{classcontroller_1_1Simulation_af13461f42bfe6ca017f59e13e57c354e}{images}[name] = image.load(\textcolor{stringliteral}{'images/'} + path)      
-00040 
-\hypertarget{controller_8py_source_l00041}{}\hyperlink{classcontroller_1_1Simulation_a4cbf2928d3f930f4b8cad9c0e64c2524}{00041}     \textcolor{keyword}{def }\hyperlink{classcontroller_1_1Simulation_a4cbf2928d3f930f4b8cad9c0e64c2524}{run}(self):
-00042         \textcolor{stringliteral}{"""Runs the main loop till the user quits"""}
-00043         \textcolor{keywordflow}{while} self.\hyperlink{classcontroller_1_1Simulation_a35d0ffc695295c3b509bd5bc2bdbac9b}{quit} \textcolor{keywordflow}{is} \textcolor{keyword}{False}:
-00044             self.\hyperlink{classcontroller_1_1Simulation_ad86d932f45e2b80ec5336da7c6e6e085}{main\_loop}()
-00045 
-\hypertarget{controller_8py_source_l00046}{}\hyperlink{classcontroller_1_1Simulation_ad86d932f45e2b80ec5336da7c6e6e085}{00046}     \textcolor{keyword}{def }\hyperlink{classcontroller_1_1Simulation_ad86d932f45e2b80ec5336da7c6e6e085}{main\_loop}(self):
-00047         \textcolor{stringliteral}{"""Updates the simulation}
-00048 \textcolor{stringliteral}{            - Draws the world and update it}
-00049 \textcolor{stringliteral}{            - Handles all user events}
-00050 \textcolor{stringliteral}{            - Controls frame rate}
-00051 \textcolor{stringliteral}{        """}
-00052         self.world.render()
-00053         self.world.advance()
-00054 
-00055         self.\hyperlink{classcontroller_1_1Simulation_ad3eb13a30931a88958e3c0c7b5b545a5}{handle\_events}()
-00056 
-00057         self.clock.tick(self.\hyperlink{classcontroller_1_1Simulation_a2bc2a4bb3e974bc7b73be75b49701d9f}{framerate})
-00058 
-\hypertarget{controller_8py_source_l00059}{}\hyperlink{classcontroller_1_1Simulation_ad3eb13a30931a88958e3c0c7b5b545a5}{00059}     \textcolor{keyword}{def }\hyperlink{classcontroller_1_1Simulation_ad3eb13a30931a88958e3c0c7b5b545a5}{handle\_events}(self):
-00060         \textcolor{stringliteral}{"""Handles all keyboard, mouse and events like QUIT, etc"""}
-00061         keys = key.get\_pressed()
-00062         \textcolor{keywordflow}{if} keys[K\_q] \textcolor{keywordflow}{or} keys[K\_ESCAPE]:
-00063             self.\hyperlink{classcontroller_1_1Simulation_a35d0ffc695295c3b509bd5bc2bdbac9b}{quit} = \textcolor{keyword}{True}  
-00064         \textcolor{keywordflow}{for} evt \textcolor{keywordflow}{in} event.get():
-00065             \textcolor{keywordflow}{if} evt.type == QUIT:
-00066                 self.\hyperlink{classcontroller_1_1Simulation_a35d0ffc695295c3b509bd5bc2bdbac9b}{quit} = \textcolor{keyword}{True} 
+\hypertarget{controller_8py_source_l00037}{}\hyperlink{classcontroller_1_1Simulation_a2ba0c3cf1949a98dd920f6097953c1f5}{00037}         self.\hyperlink{classcontroller_1_1Simulation_a2ba0c3cf1949a98dd920f6097953c1f5}{world} = \hyperlink{classworld_1_1World}{World}(130, 70, self.\hyperlink{classcontroller_1_1Simulation_af13461f42bfe6ca017f59e13e57c354e}{images}, self.\hyperlink{classcontroller_1_1Simulation_a5d368ffc3eee12c8c36839ee5bce3644}{settings})
+00038 
+\hypertarget{controller_8py_source_l00039}{}\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{00039}     \textcolor{keyword}{def }\hyperlink{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}{add\_image}(self, name, path):
+00040         \textcolor{stringliteral}{"""}
+00041 \textcolor{stringliteral}{        Loads an image}
+00042 \textcolor{stringliteral}{        """}
+00043         self.\hyperlink{classcontroller_1_1Simulation_af13461f42bfe6ca017f59e13e57c354e}{images}[name] = image.load(\textcolor{stringliteral}{'images/'} + path)      
+00044 
+\hypertarget{controller_8py_source_l00045}{}\hyperlink{classcontroller_1_1Simulation_a4cbf2928d3f930f4b8cad9c0e64c2524}{00045}     \textcolor{keyword}{def }\hyperlink{classcontroller_1_1Simulation_a4cbf2928d3f930f4b8cad9c0e64c2524}{run}(self):
+00046         \textcolor{stringliteral}{"""}
+00047 \textcolor{stringliteral}{        Runs the main loop till the user quits}
+00048 \textcolor{stringliteral}{        """}
+00049         \textcolor{keywordflow}{while} self.\hyperlink{classcontroller_1_1Simulation_a35d0ffc695295c3b509bd5bc2bdbac9b}{quit} \textcolor{keywordflow}{is} \textcolor{keyword}{False} \textcolor{keywordflow}{and} self.\hyperlink{classcontroller_1_1Simulation_a8acaf6508b8b61e163656195706d9025}{pause} \textcolor{keywordflow}{is} \textcolor{keyword}{False}:
+00050             self.\hyperlink{classcontroller_1_1Simulation_ad86d932f45e2b80ec5336da7c6e6e085}{main\_loop}()
+00051 
+\hypertarget{controller_8py_source_l00052}{}\hyperlink{classcontroller_1_1Simulation_ad86d932f45e2b80ec5336da7c6e6e085}{00052}     \textcolor{keyword}{def }\hyperlink{classcontroller_1_1Simulation_ad86d932f45e2b80ec5336da7c6e6e085}{main\_loop}(self):
+00053         \textcolor{stringliteral}{"""}
+00054 \textcolor{stringliteral}{        Updates the simulation}
+00055 \textcolor{stringliteral}{            - Draws the world and update it}
+00056 \textcolor{stringliteral}{            - Handles all user events}
+00057 \textcolor{stringliteral}{            - Controls frame rate}
+00058 \textcolor{stringliteral}{        """}
+00059         self.world.render()
+00060         self.world.advance()
+00061 
+00062         self.\hyperlink{classcontroller_1_1Simulation_ad3eb13a30931a88958e3c0c7b5b545a5}{handle\_events}()
+00063 
+00064         self.clock.tick(self.\hyperlink{classcontroller_1_1Simulation_a2bc2a4bb3e974bc7b73be75b49701d9f}{framerate})
+00065 
+\hypertarget{controller_8py_source_l00066}{}\hyperlink{classcontroller_1_1Simulation_ad3eb13a30931a88958e3c0c7b5b545a5}{00066}     \textcolor{keyword}{def }\hyperlink{classcontroller_1_1Simulation_ad3eb13a30931a88958e3c0c7b5b545a5}{handle\_events}(self):
+00067         \textcolor{stringliteral}{"""}
+00068 \textcolor{stringliteral}{        Handles all keyboard, mouse and events like QUIT, etc}
+00069 \textcolor{stringliteral}{        """}
+00070         self.\hyperlink{classcontroller_1_1Simulation_a247d22a52798856055de287bd13a6cda}{handle\_keyboard\_events}()
+00071         self.\hyperlink{classcontroller_1_1Simulation_aa43d3916e7ff0513f950439d7ae8b5b7}{handle\_mouse\_events}()
+00072         self.\hyperlink{classcontroller_1_1Simulation_ad459f264509c14b43f23894dc35d6656}{handle\_general\_events}() 
+00073 
+\hypertarget{controller_8py_source_l00074}{}\hyperlink{classcontroller_1_1Simulation_a247d22a52798856055de287bd13a6cda}{00074}     \textcolor{keyword}{def }\hyperlink{classcontroller_1_1Simulation_a247d22a52798856055de287bd13a6cda}{handle\_keyboard\_events}(self):
+00075         \textcolor{stringliteral}{"""}
+00076 \textcolor{stringliteral}{        set quit as true if user presses ESCAPE key}
+00077 \textcolor{stringliteral}{        """}
+00078         keys = key.get\_pressed()
+00079         \textcolor{keywordflow}{if} keys[K\_q] \textcolor{keywordflow}{or} keys[K\_ESCAPE]:
+00080             self.\hyperlink{classcontroller_1_1Simulation_a35d0ffc695295c3b509bd5bc2bdbac9b}{quit} = \textcolor{keyword}{True}
+00081 
+\hypertarget{controller_8py_source_l00082}{}\hyperlink{classcontroller_1_1Simulation_ad459f264509c14b43f23894dc35d6656}{00082}     \textcolor{keyword}{def }\hyperlink{classcontroller_1_1Simulation_ad459f264509c14b43f23894dc35d6656}{handle\_general\_events}(self):
+00083         \textcolor{stringliteral}{"""}
+00084 \textcolor{stringliteral}{        set quit true if user clicks the close button}
+00085 \textcolor{stringliteral}{        """}
+00086         \textcolor{keywordflow}{for} evt \textcolor{keywordflow}{in} event.get():
+00087             \textcolor{keywordflow}{if} evt.type == QUIT:
+00088                 self.\hyperlink{classcontroller_1_1Simulation_a35d0ffc695295c3b509bd5bc2bdbac9b}{quit} = \textcolor{keyword}{True}
+00089 
+\hypertarget{controller_8py_source_l00090}{}\hyperlink{classcontroller_1_1Simulation_aa43d3916e7ff0513f950439d7ae8b5b7}{00090}     \textcolor{keyword}{def }\hyperlink{classcontroller_1_1Simulation_aa43d3916e7ff0513f950439d7ae8b5b7}{handle\_mouse\_events}(self):
+00091         \textcolor{stringliteral}{"""}
+00092 \textcolor{stringliteral}{        - Creates obstacles on left clicks}
+00093 \textcolor{stringliteral}{        - Removes obstacles on right clicks}
+00094 \textcolor{stringliteral}{        """}
+00095         pressed = mouse.get\_pressed()
+00096         x, y = mouse.get\_pos()
+00097         size = self.\hyperlink{classcontroller_1_1Simulation_a5d368ffc3eee12c8c36839ee5bce3644}{settings}[\textcolor{stringliteral}{"cell\_size"}]
+00098         cell = self.\hyperlink{classcontroller_1_1Simulation_a2ba0c3cf1949a98dd920f6097953c1f5}{world}[(x/size, y/size)]
+00099         \textcolor{keywordflow}{if} pressed[0]:
+00100             cell.make\_obstacle()
+00101         \textcolor{keywordflow}{elif} pressed[2]:
+00102             \textcolor{keywordflow}{if} cell.is\_obstacle():
+00103                 cell.remove\_obstacle()
 \end{DoxyCode}

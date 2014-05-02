@@ -3,7 +3,8 @@
 }
 
 
-Inheritance diagram for world.\+Cell\+:\nopagebreak
+Inheritance diagram for world.\+Cell\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,7 +13,8 @@ Inheritance diagram for world.\+Cell\+:\nopagebreak
 \end{figure}
 
 
-Collaboration diagram for world.\+Cell\+:\nopagebreak
+Collaboration diagram for world.\+Cell\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -25,28 +27,44 @@ Collaboration diagram for world.\+Cell\+:\nopagebreak
 def \hyperlink{classworld_1_1Cell_a3dd387b6af13f7450acb97fb40c13a0e}{\+\_\+\+\_\+init\+\_\+\+\_\+}
 \item 
 def \hyperlink{classworld_1_1Cell_a3d9725f56b584acd9f75728f364975b0}{add\+\_\+food}
-\item 
+\begin{DoxyCompactList}\small\item\em Adds food to the cell. \end{DoxyCompactList}\item 
 def \hyperlink{classworld_1_1Cell_a52af74786918c6c3f4d1d0b0f44aecb8}{add\+\_\+home\+\_\+scent}
-\item 
+\begin{DoxyCompactList}\small\item\em Adds home scent to the cell. \end{DoxyCompactList}\item 
 def \hyperlink{classworld_1_1Cell_a773c26b2353ffaede745ee726d2e256d}{add\+\_\+food\+\_\+scent}
-\item 
+\begin{DoxyCompactList}\small\item\em Adds food scent to the cell. \end{DoxyCompactList}\item 
 def \hyperlink{classworld_1_1Cell_ace4b7ca65667e6dcecb3c43e850c3568}{get\+\_\+food}
-\item 
+\begin{DoxyCompactList}\small\item\em Gets food from the cell. \end{DoxyCompactList}\item 
+def \hyperlink{classworld_1_1Cell_ae69e7bafa4825b0e208d3bb74c25fe91}{get\+\_\+food\+\_\+scent}
+\begin{DoxyCompactList}\small\item\em Get the amount of food scent in the cell. \end{DoxyCompactList}\item 
+def \hyperlink{classworld_1_1Cell_aac71d7cc30cb979617b1ec8d9f4d9b26}{get\+\_\+home\+\_\+scent}
+\begin{DoxyCompactList}\small\item\em Get the amount of home scent in the cell. \end{DoxyCompactList}\item 
 def \hyperlink{classworld_1_1Cell_a890e2dc899a32ef86c131a98879e9023}{is\+\_\+obstacle}
 \item 
 def \hyperlink{classworld_1_1Cell_a441597e0ea2cff7fce907a12fd8216fa}{is\+\_\+home}
 \item 
+def \hyperlink{classworld_1_1Cell_a1a209720a46e372099e2a301f7e0f6e6}{is\+\_\+own\+\_\+home}
+\begin{DoxyCompactList}\small\item\em Checks if the cell is home cell of the ant. \end{DoxyCompactList}\item 
+def \hyperlink{classworld_1_1Cell_ad242f10cc8c92971200dd9c8bcf5297b}{is\+\_\+enemy\+\_\+home}
+\begin{DoxyCompactList}\small\item\em Checks if the home cell is of the enemy ants. \end{DoxyCompactList}\item 
 def \hyperlink{classworld_1_1Cell_a90eabca5d79eef89b2ae4f677a88a93b}{is\+\_\+food}
-\item 
+\begin{DoxyCompactList}\small\item\em Checks if the cell has food (but should not be its own home) \end{DoxyCompactList}\item 
 def \hyperlink{classworld_1_1Cell_a98e3cac3c42374693afe0aded7a1e06c}{has\+\_\+ant}
 \item 
 def \hyperlink{classworld_1_1Cell_a1097df1a6fe0131898377358017fe7bc}{has\+\_\+food}
 \item 
 def \hyperlink{classworld_1_1Cell_adb830df07e437189375efa6c9ad4981e}{make\+\_\+home}
-\item 
+\begin{DoxyCompactList}\small\item\em Convert the cell into a home cell. \end{DoxyCompactList}\item 
 def \hyperlink{classworld_1_1Cell_a63164a3e74888a97b07ee8e06c633c2a}{make\+\_\+obstacle}
 \item 
+def \hyperlink{classworld_1_1Cell_aed89295fdffe763b9d651b9def6ca4e8}{remove\+\_\+obstacle}
+\item 
 def \hyperlink{classworld_1_1Cell_add0fb2c9e6c963d012cf7e65008b8947}{evaporate\+\_\+scent}
+\begin{DoxyCompactList}\small\item\em Evaporates the scent. \end{DoxyCompactList}\item 
+def \hyperlink{classworld_1_1Cell_aa564ee06853b2db81faa0da4d07e66af}{nearby}
+\item 
+def \hyperlink{classworld_1_1Cell_a05eb363f384507bcca4ab3f9680ba8a9}{get\+\_\+max\+\_\+home\+\_\+scent}
+\item 
+def \hyperlink{classworld_1_1Cell_a7562d15f3a8d223f445a67b89ad60f07}{get\+\_\+max\+\_\+food\+\_\+scent}
 \item 
 def \hyperlink{classworld_1_1Cell_a11f263897c7a04ae900af84d30a30c56}{render}
 \end{DoxyCompactItemize}
@@ -68,7 +86,8 @@ def \hyperlink{classworld_1_1Cell_a11f263897c7a04ae900af84d30a30c56}{render}
 
 
 \subsection{Detailed Description}
-\begin{DoxyVerb}Data containers for each location in World\end{DoxyVerb}
+\begin{DoxyVerb}Data containers for each location in World
+\end{DoxyVerb}
  
 
 Definition at line \hyperlink{world_8py_source_l00008}{8} of file \hyperlink{world_8py_source}{world.\+py}.
@@ -83,13 +102,12 @@ Definition at line \hyperlink{world_8py_source_l00008}{8} of file \hyperlink{wor
 \item[{}]{self, }
 \item[{}]{world, }
 \item[{}]{i, }
-\item[{}]{j, }
-\item[{}]{cell\+\_\+size}
+\item[{}]{j}
 \end{DoxyParamCaption}
 )}}\label{classworld_1_1Cell_a3dd387b6af13f7450acb97fb40c13a0e}
 
 
-Definition at line \hyperlink{world_8py_source_l00010}{10} of file \hyperlink{world_8py_source}{world.\+py}.
+Definition at line \hyperlink{world_8py_source_l00012}{12} of file \hyperlink{world_8py_source}{world.\+py}.
 
 
 
@@ -104,31 +122,66 @@ Definition at line \hyperlink{world_8py_source_l00010}{10} of file \hyperlink{wo
 )}}\label{classworld_1_1Cell_a3d9725f56b584acd9f75728f364975b0}
 
 
-Definition at line \hyperlink{world_8py_source_l00019}{19} of file \hyperlink{world_8py_source}{world.\+py}.
+Adds food to the cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amt} & The amount of food to be added \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{world_8py_source_l00023}{23} of file \hyperlink{world_8py_source}{world.\+py}.
 
 \hypertarget{classworld_1_1Cell_a773c26b2353ffaede745ee726d2e256d}{\index{world\+::\+Cell@{world\+::\+Cell}!add\+\_\+food\+\_\+scent@{add\+\_\+food\+\_\+scent}}
 \index{add\+\_\+food\+\_\+scent@{add\+\_\+food\+\_\+scent}!world\+::\+Cell@{world\+::\+Cell}}
 \subsubsection[{add\+\_\+food\+\_\+scent}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+Cell.\+add\+\_\+food\+\_\+scent (
 \begin{DoxyParamCaption}
 \item[{}]{self, }
-\item[{}]{amt}
+\item[{}]{amt, }
+\item[{}]{id}
 \end{DoxyParamCaption}
 )}}\label{classworld_1_1Cell_a773c26b2353ffaede745ee726d2e256d}
 
 
-Definition at line \hyperlink{world_8py_source_l00025}{25} of file \hyperlink{world_8py_source}{world.\+py}.
+Adds food scent to the cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amt} & The amount of scent to add \\
+\hline
+{\em id} & The id of the nest the ant belongs to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{world_8py_source_l00045}{45} of file \hyperlink{world_8py_source}{world.\+py}.
 
 \hypertarget{classworld_1_1Cell_a52af74786918c6c3f4d1d0b0f44aecb8}{\index{world\+::\+Cell@{world\+::\+Cell}!add\+\_\+home\+\_\+scent@{add\+\_\+home\+\_\+scent}}
 \index{add\+\_\+home\+\_\+scent@{add\+\_\+home\+\_\+scent}!world\+::\+Cell@{world\+::\+Cell}}
 \subsubsection[{add\+\_\+home\+\_\+scent}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+Cell.\+add\+\_\+home\+\_\+scent (
 \begin{DoxyParamCaption}
 \item[{}]{self, }
-\item[{}]{amt}
+\item[{}]{amt, }
+\item[{}]{id}
 \end{DoxyParamCaption}
 )}}\label{classworld_1_1Cell_a52af74786918c6c3f4d1d0b0f44aecb8}
 
 
-Definition at line \hyperlink{world_8py_source_l00022}{22} of file \hyperlink{world_8py_source}{world.\+py}.
+Adds home scent to the cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amt} & The amount of scent to add \\
+\hline
+{\em id} & The id of the nest the ant belongs to \begin{DoxyVerb}adds home scent for the particular ant colony (depending on the id)
+\end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{world_8py_source_l00030}{30} of file \hyperlink{world_8py_source}{world.\+py}.
 
 \hypertarget{classworld_1_1Cell_add0fb2c9e6c963d012cf7e65008b8947}{\index{world\+::\+Cell@{world\+::\+Cell}!evaporate\+\_\+scent@{evaporate\+\_\+scent}}
 \index{evaporate\+\_\+scent@{evaporate\+\_\+scent}!world\+::\+Cell@{world\+::\+Cell}}
@@ -138,10 +191,18 @@ Definition at line \hyperlink{world_8py_source_l00022}{22} of file \hyperlink{wo
 \item[{}]{rate}
 \end{DoxyParamCaption}
 )}}\label{classworld_1_1Cell_add0fb2c9e6c963d012cf7e65008b8947}
-\begin{DoxyVerb}Evaporates scent ( decay law )\end{DoxyVerb}
- 
 
-Definition at line \hyperlink{world_8py_source_l00059}{59} of file \hyperlink{world_8py_source}{world.\+py}.
+
+Evaporates the scent. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rate} & The rate at which evporation happens Follows the decay law \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{world_8py_source_l00147}{147} of file \hyperlink{world_8py_source}{world.\+py}.
 
 \hypertarget{classworld_1_1Cell_ace4b7ca65667e6dcecb3c43e850c3568}{\index{world\+::\+Cell@{world\+::\+Cell}!get\+\_\+food@{get\+\_\+food}}
 \index{get\+\_\+food@{get\+\_\+food}!world\+::\+Cell@{world\+::\+Cell}}
@@ -151,10 +212,90 @@ Definition at line \hyperlink{world_8py_source_l00059}{59} of file \hyperlink{wo
 \item[{}]{amt}
 \end{DoxyParamCaption}
 )}}\label{classworld_1_1Cell_ace4b7ca65667e6dcecb3c43e850c3568}
-\begin{DoxyVerb}Get "amt" amount of food if available else returns whatever food is available\end{DoxyVerb}
+
+
+Gets food from the cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amt} & The amount of food taken Returns an amount of food if available \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{world_8py_source_l00057}{57} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1Cell_ae69e7bafa4825b0e208d3bb74c25fe91}{\index{world\+::\+Cell@{world\+::\+Cell}!get\+\_\+food\+\_\+scent@{get\+\_\+food\+\_\+scent}}
+\index{get\+\_\+food\+\_\+scent@{get\+\_\+food\+\_\+scent}!world\+::\+Cell@{world\+::\+Cell}}
+\subsubsection[{get\+\_\+food\+\_\+scent}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+Cell.\+get\+\_\+food\+\_\+scent (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{id}
+\end{DoxyParamCaption}
+)}}\label{classworld_1_1Cell_ae69e7bafa4825b0e208d3bb74c25fe91}
+
+
+Get the amount of food scent in the cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the nest the ant belongs to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{world_8py_source_l00068}{68} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1Cell_aac71d7cc30cb979617b1ec8d9f4d9b26}{\index{world\+::\+Cell@{world\+::\+Cell}!get\+\_\+home\+\_\+scent@{get\+\_\+home\+\_\+scent}}
+\index{get\+\_\+home\+\_\+scent@{get\+\_\+home\+\_\+scent}!world\+::\+Cell@{world\+::\+Cell}}
+\subsubsection[{get\+\_\+home\+\_\+scent}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+Cell.\+get\+\_\+home\+\_\+scent (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{id}
+\end{DoxyParamCaption}
+)}}\label{classworld_1_1Cell_aac71d7cc30cb979617b1ec8d9f4d9b26}
+
+
+Get the amount of home scent in the cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the nest the ant belongs to \begin{DoxyVerb}get home scent for the colony given by id
+\end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{world_8py_source_l00073}{73} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1Cell_a7562d15f3a8d223f445a67b89ad60f07}{\index{world\+::\+Cell@{world\+::\+Cell}!get\+\_\+max\+\_\+food\+\_\+scent@{get\+\_\+max\+\_\+food\+\_\+scent}}
+\index{get\+\_\+max\+\_\+food\+\_\+scent@{get\+\_\+max\+\_\+food\+\_\+scent}!world\+::\+Cell@{world\+::\+Cell}}
+\subsubsection[{get\+\_\+max\+\_\+food\+\_\+scent}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+Cell.\+get\+\_\+max\+\_\+food\+\_\+scent (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classworld_1_1Cell_a7562d15f3a8d223f445a67b89ad60f07}
+\begin{DoxyVerb}Get the maximum food scent values amongst
+the scents of all colonies
+\end{DoxyVerb}
  
 
-Definition at line \hyperlink{world_8py_source_l00028}{28} of file \hyperlink{world_8py_source}{world.\+py}.
+Definition at line \hyperlink{world_8py_source_l00179}{179} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1Cell_a05eb363f384507bcca4ab3f9680ba8a9}{\index{world\+::\+Cell@{world\+::\+Cell}!get\+\_\+max\+\_\+home\+\_\+scent@{get\+\_\+max\+\_\+home\+\_\+scent}}
+\index{get\+\_\+max\+\_\+home\+\_\+scent@{get\+\_\+max\+\_\+home\+\_\+scent}!world\+::\+Cell@{world\+::\+Cell}}
+\subsubsection[{get\+\_\+max\+\_\+home\+\_\+scent}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+Cell.\+get\+\_\+max\+\_\+home\+\_\+scent (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classworld_1_1Cell_a05eb363f384507bcca4ab3f9680ba8a9}
+\begin{DoxyVerb}Get the maximum home scent values amongst
+the scents of all colonies
+\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{world_8py_source_l00171}{171} of file \hyperlink{world_8py_source}{world.\+py}.
 
 \hypertarget{classworld_1_1Cell_a98e3cac3c42374693afe0aded7a1e06c}{\index{world\+::\+Cell@{world\+::\+Cell}!has\+\_\+ant@{has\+\_\+ant}}
 \index{has\+\_\+ant@{has\+\_\+ant}!world\+::\+Cell@{world\+::\+Cell}}
@@ -163,9 +304,11 @@ Definition at line \hyperlink{world_8py_source_l00028}{28} of file \hyperlink{wo
 \item[{}]{self}
 \end{DoxyParamCaption}
 )}}\label{classworld_1_1Cell_a98e3cac3c42374693afe0aded7a1e06c}
+\begin{DoxyVerb}Check if the particular cell has an ant
+\end{DoxyVerb}
+ 
 
-
-Definition at line \hyperlink{world_8py_source_l00047}{47} of file \hyperlink{world_8py_source}{world.\+py}.
+Definition at line \hyperlink{world_8py_source_l00107}{107} of file \hyperlink{world_8py_source}{world.\+py}.
 
 \hypertarget{classworld_1_1Cell_a1097df1a6fe0131898377358017fe7bc}{\index{world\+::\+Cell@{world\+::\+Cell}!has\+\_\+food@{has\+\_\+food}}
 \index{has\+\_\+food@{has\+\_\+food}!world\+::\+Cell@{world\+::\+Cell}}
@@ -174,20 +317,53 @@ Definition at line \hyperlink{world_8py_source_l00047}{47} of file \hyperlink{wo
 \item[{}]{self}
 \end{DoxyParamCaption}
 )}}\label{classworld_1_1Cell_a1097df1a6fe0131898377358017fe7bc}
+\begin{DoxyVerb}Checks if the cell has food
+\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{world_8py_source_l00113}{113} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1Cell_ad242f10cc8c92971200dd9c8bcf5297b}{\index{world\+::\+Cell@{world\+::\+Cell}!is\+\_\+enemy\+\_\+home@{is\+\_\+enemy\+\_\+home}}
+\index{is\+\_\+enemy\+\_\+home@{is\+\_\+enemy\+\_\+home}!world\+::\+Cell@{world\+::\+Cell}}
+\subsubsection[{is\+\_\+enemy\+\_\+home}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+Cell.\+is\+\_\+enemy\+\_\+home (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{id}
+\end{DoxyParamCaption}
+)}}\label{classworld_1_1Cell_ad242f10cc8c92971200dd9c8bcf5297b}
 
 
-Definition at line \hyperlink{world_8py_source_l00050}{50} of file \hyperlink{world_8py_source}{world.\+py}.
+Checks if the home cell is of the enemy ants. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the nest the ant belongs to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{world_8py_source_l00099}{99} of file \hyperlink{world_8py_source}{world.\+py}.
 
 \hypertarget{classworld_1_1Cell_a90eabca5d79eef89b2ae4f677a88a93b}{\index{world\+::\+Cell@{world\+::\+Cell}!is\+\_\+food@{is\+\_\+food}}
 \index{is\+\_\+food@{is\+\_\+food}!world\+::\+Cell@{world\+::\+Cell}}
 \subsubsection[{is\+\_\+food}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+Cell.\+is\+\_\+food (
 \begin{DoxyParamCaption}
-\item[{}]{self}
+\item[{}]{self, }
+\item[{}]{id}
 \end{DoxyParamCaption}
 )}}\label{classworld_1_1Cell_a90eabca5d79eef89b2ae4f677a88a93b}
 
 
-Definition at line \hyperlink{world_8py_source_l00044}{44} of file \hyperlink{world_8py_source}{world.\+py}.
+Checks if the cell has food (but should not be its own home) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the nest the ant belongs to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{world_8py_source_l00104}{104} of file \hyperlink{world_8py_source}{world.\+py}.
 
 \hypertarget{classworld_1_1Cell_a441597e0ea2cff7fce907a12fd8216fa}{\index{world\+::\+Cell@{world\+::\+Cell}!is\+\_\+home@{is\+\_\+home}}
 \index{is\+\_\+home@{is\+\_\+home}!world\+::\+Cell@{world\+::\+Cell}}
@@ -196,9 +372,12 @@ Definition at line \hyperlink{world_8py_source_l00044}{44} of file \hyperlink{wo
 \item[{}]{self}
 \end{DoxyParamCaption}
 )}}\label{classworld_1_1Cell_a441597e0ea2cff7fce907a12fd8216fa}
+\begin{DoxyVerb}Returns wheather the cell is a home or not
+(independent of which colony the ant belongs)
+\end{DoxyVerb}
+ 
 
-
-Definition at line \hyperlink{world_8py_source_l00041}{41} of file \hyperlink{world_8py_source}{world.\+py}.
+Definition at line \hyperlink{world_8py_source_l00085}{85} of file \hyperlink{world_8py_source}{world.\+py}.
 
 \hypertarget{classworld_1_1Cell_a890e2dc899a32ef86c131a98879e9023}{\index{world\+::\+Cell@{world\+::\+Cell}!is\+\_\+obstacle@{is\+\_\+obstacle}}
 \index{is\+\_\+obstacle@{is\+\_\+obstacle}!world\+::\+Cell@{world\+::\+Cell}}
@@ -207,20 +386,53 @@ Definition at line \hyperlink{world_8py_source_l00041}{41} of file \hyperlink{wo
 \item[{}]{self}
 \end{DoxyParamCaption}
 )}}\label{classworld_1_1Cell_a890e2dc899a32ef86c131a98879e9023}
+\begin{DoxyVerb}Returns wheather the cell is a obstacle or not
+\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{world_8py_source_l00079}{79} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1Cell_a1a209720a46e372099e2a301f7e0f6e6}{\index{world\+::\+Cell@{world\+::\+Cell}!is\+\_\+own\+\_\+home@{is\+\_\+own\+\_\+home}}
+\index{is\+\_\+own\+\_\+home@{is\+\_\+own\+\_\+home}!world\+::\+Cell@{world\+::\+Cell}}
+\subsubsection[{is\+\_\+own\+\_\+home}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+Cell.\+is\+\_\+own\+\_\+home (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{id}
+\end{DoxyParamCaption}
+)}}\label{classworld_1_1Cell_a1a209720a46e372099e2a301f7e0f6e6}
 
 
-Definition at line \hyperlink{world_8py_source_l00038}{38} of file \hyperlink{world_8py_source}{world.\+py}.
+Checks if the cell is home cell of the ant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the nest the ant belongs to \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{world_8py_source_l00094}{94} of file \hyperlink{world_8py_source}{world.\+py}.
 
 \hypertarget{classworld_1_1Cell_adb830df07e437189375efa6c9ad4981e}{\index{world\+::\+Cell@{world\+::\+Cell}!make\+\_\+home@{make\+\_\+home}}
 \index{make\+\_\+home@{make\+\_\+home}!world\+::\+Cell@{world\+::\+Cell}}
 \subsubsection[{make\+\_\+home}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+Cell.\+make\+\_\+home (
 \begin{DoxyParamCaption}
-\item[{}]{self}
+\item[{}]{self, }
+\item[{}]{id}
 \end{DoxyParamCaption}
 )}}\label{classworld_1_1Cell_adb830df07e437189375efa6c9ad4981e}
 
 
-Definition at line \hyperlink{world_8py_source_l00053}{53} of file \hyperlink{world_8py_source}{world.\+py}.
+Convert the cell into a home cell. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The id of the nest \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{world_8py_source_l00121}{121} of file \hyperlink{world_8py_source}{world.\+py}.
 
 \hypertarget{classworld_1_1Cell_a63164a3e74888a97b07ee8e06c633c2a}{\index{world\+::\+Cell@{world\+::\+Cell}!make\+\_\+obstacle@{make\+\_\+obstacle}}
 \index{make\+\_\+obstacle@{make\+\_\+obstacle}!world\+::\+Cell@{world\+::\+Cell}}
@@ -229,9 +441,37 @@ Definition at line \hyperlink{world_8py_source_l00053}{53} of file \hyperlink{wo
 \item[{}]{self}
 \end{DoxyParamCaption}
 )}}\label{classworld_1_1Cell_a63164a3e74888a97b07ee8e06c633c2a}
+\begin{DoxyVerb}Convert the cell into an obstacle if the cell is empty
+\end{DoxyVerb}
+ 
 
+Definition at line \hyperlink{world_8py_source_l00125}{125} of file \hyperlink{world_8py_source}{world.\+py}.
 
-Definition at line \hyperlink{world_8py_source_l00056}{56} of file \hyperlink{world_8py_source}{world.\+py}.
+\hypertarget{classworld_1_1Cell_aa564ee06853b2db81faa0da4d07e66af}{\index{world\+::\+Cell@{world\+::\+Cell}!nearby@{nearby}}
+\index{nearby@{nearby}!world\+::\+Cell@{world\+::\+Cell}}
+\subsubsection[{nearby}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+Cell.\+nearby (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classworld_1_1Cell_aa564ee06853b2db81faa0da4d07e66af}
+\begin{DoxyVerb}Returns all nearby 8 cells
+\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{world_8py_source_l00160}{160} of file \hyperlink{world_8py_source}{world.\+py}.
+
+\hypertarget{classworld_1_1Cell_aed89295fdffe763b9d651b9def6ca4e8}{\index{world\+::\+Cell@{world\+::\+Cell}!remove\+\_\+obstacle@{remove\+\_\+obstacle}}
+\index{remove\+\_\+obstacle@{remove\+\_\+obstacle}!world\+::\+Cell@{world\+::\+Cell}}
+\subsubsection[{remove\+\_\+obstacle}]{\setlength{\rightskip}{0pt plus 5cm}def world.\+Cell.\+remove\+\_\+obstacle (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classworld_1_1Cell_aed89295fdffe763b9d651b9def6ca4e8}
+\begin{DoxyVerb}Removes obstacle from the cell
+\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{world_8py_source_l00137}{137} of file \hyperlink{world_8py_source}{world.\+py}.
 
 \hypertarget{classworld_1_1Cell_a11f263897c7a04ae900af84d30a30c56}{\index{world\+::\+Cell@{world\+::\+Cell}!render@{render}}
 \index{render@{render}!world\+::\+Cell@{world\+::\+Cell}}
@@ -240,13 +480,14 @@ Definition at line \hyperlink{world_8py_source_l00056}{56} of file \hyperlink{wo
 \item[{}]{self}
 \end{DoxyParamCaption}
 )}}\label{classworld_1_1Cell_a11f263897c7a04ae900af84d30a30c56}
-\begin{DoxyVerb}Changes "index" to render the cell according to what it represents 
+\begin{DoxyVerb}Extends the base class method
+Changes "index" to render the cell according to what it represents 
 (home, food, etc) and calls the super class
 Also renders scent levels with transparency depending on its strength
 \end{DoxyVerb}
  
 
-Definition at line \hyperlink{world_8py_source_l00068}{68} of file \hyperlink{world_8py_source}{world.\+py}.
+Definition at line \hyperlink{world_8py_source_l00187}{187} of file \hyperlink{world_8py_source}{world.\+py}.
 
 
 
@@ -256,42 +497,42 @@ Definition at line \hyperlink{world_8py_source_l00068}{68} of file \hyperlink{wo
 \subsubsection[{ant}]{\setlength{\rightskip}{0pt plus 5cm}world.\+Cell.\+ant}}\label{classworld_1_1Cell_abfd9b278ac86f77970b7766a7c2e3231}
 
 
-Definition at line \hyperlink{world_8py_source_l00015}{15} of file \hyperlink{world_8py_source}{world.\+py}.
+Definition at line \hyperlink{world_8py_source_l00017}{17} of file \hyperlink{world_8py_source}{world.\+py}.
 
 \hypertarget{classworld_1_1Cell_a401fde7236825c1843dad8764c2fb4a8}{\index{world\+::\+Cell@{world\+::\+Cell}!food@{food}}
 \index{food@{food}!world\+::\+Cell@{world\+::\+Cell}}
 \subsubsection[{food}]{\setlength{\rightskip}{0pt plus 5cm}world.\+Cell.\+food}}\label{classworld_1_1Cell_a401fde7236825c1843dad8764c2fb4a8}
 
 
-Definition at line \hyperlink{world_8py_source_l00012}{12} of file \hyperlink{world_8py_source}{world.\+py}.
+Definition at line \hyperlink{world_8py_source_l00014}{14} of file \hyperlink{world_8py_source}{world.\+py}.
 
 \hypertarget{classworld_1_1Cell_acec0cb9d8a7eb92bedf71dc57641efbe}{\index{world\+::\+Cell@{world\+::\+Cell}!food\+\_\+scent@{food\+\_\+scent}}
 \index{food\+\_\+scent@{food\+\_\+scent}!world\+::\+Cell@{world\+::\+Cell}}
 \subsubsection[{food\+\_\+scent}]{\setlength{\rightskip}{0pt plus 5cm}world.\+Cell.\+food\+\_\+scent}}\label{classworld_1_1Cell_acec0cb9d8a7eb92bedf71dc57641efbe}
 
 
-Definition at line \hyperlink{world_8py_source_l00014}{14} of file \hyperlink{world_8py_source}{world.\+py}.
+Definition at line \hyperlink{world_8py_source_l00016}{16} of file \hyperlink{world_8py_source}{world.\+py}.
 
 \hypertarget{classworld_1_1Cell_a9baf3378be8090bf1faf1b19b9aa5fd3}{\index{world\+::\+Cell@{world\+::\+Cell}!home@{home}}
 \index{home@{home}!world\+::\+Cell@{world\+::\+Cell}}
 \subsubsection[{home}]{\setlength{\rightskip}{0pt plus 5cm}world.\+Cell.\+home}}\label{classworld_1_1Cell_a9baf3378be8090bf1faf1b19b9aa5fd3}
 
 
-Definition at line \hyperlink{world_8py_source_l00016}{16} of file \hyperlink{world_8py_source}{world.\+py}.
+Definition at line \hyperlink{world_8py_source_l00018}{18} of file \hyperlink{world_8py_source}{world.\+py}.
 
 \hypertarget{classworld_1_1Cell_a0ef4adaadea1ccdcd1b61c70e242aa4a}{\index{world\+::\+Cell@{world\+::\+Cell}!home\+\_\+scent@{home\+\_\+scent}}
 \index{home\+\_\+scent@{home\+\_\+scent}!world\+::\+Cell@{world\+::\+Cell}}
 \subsubsection[{home\+\_\+scent}]{\setlength{\rightskip}{0pt plus 5cm}world.\+Cell.\+home\+\_\+scent}}\label{classworld_1_1Cell_a0ef4adaadea1ccdcd1b61c70e242aa4a}
 
 
-Definition at line \hyperlink{world_8py_source_l00013}{13} of file \hyperlink{world_8py_source}{world.\+py}.
+Definition at line \hyperlink{world_8py_source_l00015}{15} of file \hyperlink{world_8py_source}{world.\+py}.
 
 \hypertarget{classworld_1_1Cell_aeaf17388b8c9000fe612ab043418825c}{\index{world\+::\+Cell@{world\+::\+Cell}!obstacle@{obstacle}}
 \index{obstacle@{obstacle}!world\+::\+Cell@{world\+::\+Cell}}
 \subsubsection[{obstacle}]{\setlength{\rightskip}{0pt plus 5cm}world.\+Cell.\+obstacle}}\label{classworld_1_1Cell_aeaf17388b8c9000fe612ab043418825c}
 
 
-Definition at line \hyperlink{world_8py_source_l00011}{11} of file \hyperlink{world_8py_source}{world.\+py}.
+Definition at line \hyperlink{world_8py_source_l00013}{13} of file \hyperlink{world_8py_source}{world.\+py}.
 
 
 

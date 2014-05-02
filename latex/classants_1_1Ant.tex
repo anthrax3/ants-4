@@ -26,19 +26,23 @@ Collaboration diagram for ants.\+Ant\+:
 \item 
 def \hyperlink{classants_1_1Ant_a0fa15b6ba2860b445d390c07bc11d4e2}{\+\_\+\+\_\+init\+\_\+\+\_\+}
 \item 
+def \hyperlink{classants_1_1Ant_a5ee52d730c2bcbd0cfd0a8cf8d9206c6}{get\+\_\+location}
+\item 
 def \hyperlink{classants_1_1Ant_a2ddd97dadaa5d24c459b0117dc6e1190}{neighbour}
 \item 
 def \hyperlink{classants_1_1Ant_a0067159f23e5e9e4b3564d48c1564f11}{move}
 \item 
 def \hyperlink{classants_1_1Ant_a3a636b900b6fdbed032e3a635495a4c4}{random\+\_\+move}
 \item 
-def \hyperlink{classants_1_1Ant_a216ebc2ce2dfeb88d6bbc714bc50ecb5}{reduce\+\_\+home\+\_\+scent}
+def \hyperlink{classants_1_1Ant_a0f92c3c4a37d6c3998bc71fc0a6b9cee}{reduce\+\_\+home\+\_\+scent\+\_\+strength}
 \item 
-def \hyperlink{classants_1_1Ant_a285d1e406b6d2cc67779e873e879feb0}{reduce\+\_\+food\+\_\+scent}
+def \hyperlink{classants_1_1Ant_a1d51e32dc22891ded9f02ffc71e612cd}{reduce\+\_\+food\+\_\+scent\+\_\+strength}
 \item 
 def \hyperlink{classants_1_1Ant_a445ec1d1f8e4cb539c4f66fafa129131}{turn}
 \item 
 def \hyperlink{classants_1_1Ant_a95585d833c74c56155a0d79394d511cc}{render}
+\item 
+def \hyperlink{classants_1_1Ant_a10dc42722864d5850912dd34242d5cf8}{get\+\_\+nest\+\_\+id}
 \item 
 def \hyperlink{classants_1_1Ant_a2e60480b7534b107e12d7f23fd06d5f1}{here}
 \item 
@@ -52,19 +56,31 @@ def \hyperlink{classants_1_1Ant_ad7a5311d831e8bcc07061e6a12edad8c}{ahead\+\_\+ri
 \item 
 def \hyperlink{classants_1_1Ant_af9af7f8a5c766021ef0f68171d09abca}{locate\+\_\+food\+\_\+nearby}
 \item 
+def \hyperlink{classants_1_1Ant_aeec9c17184393435fd4d4936b6f2736a}{is\+\_\+enemy}
+\begin{DoxyCompactList}\small\item\em Returns true if the ant passed is an enemy. \end{DoxyCompactList}\item 
 def \hyperlink{classants_1_1Ant_a5795d0898e3d0d020a0a0a626a5ef7b0}{locate\+\_\+home\+\_\+nearby}
 \item 
 def \hyperlink{classants_1_1Ant_a81a141f3417ddb32b8d1abbd95bbc477}{locate\+\_\+home\+\_\+scent\+\_\+nearby}
-\item 
-def \hyperlink{classants_1_1Ant_a97ffad1c0e634f38585e7913908e9524}{locate\+\_\+food\+\_\+scent\+\_\+nearby}
-\item 
-def \hyperlink{classants_1_1Ant_a164a2a76f1779462fe81e8f169a92a93}{rank\+\_\+by\+\_\+food\+\_\+scent}
 \item 
 def \hyperlink{classants_1_1Ant_a6f3e3bd98a5f382098cdc1c02e1e2fd0}{rank\+\_\+by\+\_\+home\+\_\+scent}
 \item 
 def \hyperlink{classants_1_1Ant_ae85884312b4aa10f965b84535bed37fc}{drop\+\_\+food}
 \item 
+def \hyperlink{classants_1_1Ant_accd1fa305032e848021a4d8b90f3f8ce}{take\+\_\+food}
+\begin{DoxyCompactList}\small\item\em carry half the food and increase health by half the amount \end{DoxyCompactList}\item 
 def \hyperlink{classants_1_1Ant_a41de1c29941a444dab25a88cbc3a881d}{has\+\_\+food}
+\item 
+def \hyperlink{classants_1_1Ant_ae90d1356ca3370e47c24c5fe63ebfeaf}{set\+\_\+food\+\_\+scent\+\_\+strength}
+\item 
+def \hyperlink{classants_1_1Ant_ae8234d6ecb9f7666e255ffa8a978355c}{set\+\_\+home\+\_\+scent\+\_\+strength}
+\item 
+def \hyperlink{classants_1_1Ant_a89ad26b1d79990f95979464bbd3bf9b8}{reduce\+\_\+health}
+\begin{DoxyCompactList}\small\item\em Reduces the health of the ant. \end{DoxyCompactList}\item 
+def \hyperlink{classants_1_1Ant_a218d9a25e9df83abf85ff596c214075c}{is\+\_\+dead}
+\item 
+def \hyperlink{classants_1_1Ant_a78620c709fca31c9a0b2994534082bdc}{is\+\_\+alive}
+\item 
+def \hyperlink{classants_1_1Ant_a16d8e187423f707e067fe2d562100437}{is\+\_\+hungry}
 \item 
 def \hyperlink{classants_1_1Ant_a9e4bf6309b80ab33bd628f6e7d78d013}{\+\_\+\+\_\+nonzero\+\_\+\+\_\+}
 \end{DoxyCompactItemize}
@@ -75,11 +91,15 @@ def \hyperlink{classants_1_1Ant_a9e4bf6309b80ab33bd628f6e7d78d013}{\+\_\+\+\_\+n
 \item 
 \hyperlink{classants_1_1Ant_adf5f970b6b5e8472f42275114eeac779}{image}
 \item 
+\hyperlink{classants_1_1Ant_acaafd510ade5c38719b8082027162132}{nest}
+\item 
 \hyperlink{classants_1_1Ant_ae26b7ffd236a83d8d5c96ec6ec07b4bb}{direction}
 \item 
 \hyperlink{classants_1_1Ant_ae7de139b6f5bdb8d4ab42755c405ef5d}{location}
 \item 
 \hyperlink{classants_1_1Ant_afcfbbf8bd338401378d25c512204eb91}{food}
+\item 
+\hyperlink{classants_1_1Ant_aa147562276c788d4533ab63ac44d96a6}{health}
 \item 
 \hyperlink{classants_1_1Ant_ad7fb2ac4566880fdacfd7bf7f4ec1109}{food\+\_\+scent\+\_\+strength}
 \item 
@@ -90,10 +110,11 @@ def \hyperlink{classants_1_1Ant_a9e4bf6309b80ab33bd628f6e7d78d013}{\+\_\+\+\_\+n
 
 
 \subsection{Detailed Description}
-\begin{DoxyVerb}A virtual base class for Ants\end{DoxyVerb}
+\begin{DoxyVerb}A virtual base class for Ants
+\end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00006}{6} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00008}{8} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 
 
@@ -106,12 +127,13 @@ Definition at line \hyperlink{ants_8py_source_l00006}{6} of file \hyperlink{ants
 \item[{}]{world, }
 \item[{}]{image, }
 \item[{}]{direction, }
-\item[{}]{location}
+\item[{}]{location, }
+\item[{}]{nest}
 \end{DoxyParamCaption}
 )}}\label{classants_1_1Ant_a0fa15b6ba2860b445d390c07bc11d4e2}
 
 
-Definition at line \hyperlink{ants_8py_source_l00008}{8} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00012}{12} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 
 
@@ -125,7 +147,7 @@ Definition at line \hyperlink{ants_8py_source_l00008}{8} of file \hyperlink{ants
 )}}\label{classants_1_1Ant_a9e4bf6309b80ab33bd628f6e7d78d013}
 
 
-Definition at line \hyperlink{ants_8py_source_l00197}{197} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00256}{256} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_ac2c8f048d99cd48a5829ddf7ff4a708a}{\index{ants\+::\+Ant@{ants\+::\+Ant}!ahead@{ahead}}
 \index{ahead@{ahead}!ants\+::\+Ant@{ants\+::\+Ant}}
@@ -134,10 +156,11 @@ Definition at line \hyperlink{ants_8py_source_l00197}{197} of file \hyperlink{an
 \item[{}]{self}
 \end{DoxyParamCaption}
 )}}\label{classants_1_1Ant_ac2c8f048d99cd48a5829ddf7ff4a708a}
-\begin{DoxyVerb}The cell just ahead\end{DoxyVerb}
+\begin{DoxyVerb}The cell just ahead
+\end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00077}{77} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00117}{117} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_a2dbb07eefeecbc51d257f81fb0ba1c71}{\index{ants\+::\+Ant@{ants\+::\+Ant}!ahead\+\_\+left@{ahead\+\_\+left}}
 \index{ahead\+\_\+left@{ahead\+\_\+left}!ants\+::\+Ant@{ants\+::\+Ant}}
@@ -146,10 +169,11 @@ Definition at line \hyperlink{ants_8py_source_l00077}{77} of file \hyperlink{ant
 \item[{}]{self}
 \end{DoxyParamCaption}
 )}}\label{classants_1_1Ant_a2dbb07eefeecbc51d257f81fb0ba1c71}
-\begin{DoxyVerb}The cell just ahead-left\end{DoxyVerb}
+\begin{DoxyVerb}The cell just ahead-left
+\end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00081}{81} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00123}{123} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_ad7a5311d831e8bcc07061e6a12edad8c}{\index{ants\+::\+Ant@{ants\+::\+Ant}!ahead\+\_\+right@{ahead\+\_\+right}}
 \index{ahead\+\_\+right@{ahead\+\_\+right}!ants\+::\+Ant@{ants\+::\+Ant}}
@@ -158,10 +182,11 @@ Definition at line \hyperlink{ants_8py_source_l00081}{81} of file \hyperlink{ant
 \item[{}]{self}
 \end{DoxyParamCaption}
 )}}\label{classants_1_1Ant_ad7a5311d831e8bcc07061e6a12edad8c}
-\begin{DoxyVerb}The cell just ahead-right\end{DoxyVerb}
+\begin{DoxyVerb}The cell just ahead-right
+\end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00085}{85} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00129}{129} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_a192f8411faa05c48db8db99d033f5d15}{\index{ants\+::\+Ant@{ants\+::\+Ant}!behind@{behind}}
 \index{behind@{behind}!ants\+::\+Ant@{ants\+::\+Ant}}
@@ -170,10 +195,11 @@ Definition at line \hyperlink{ants_8py_source_l00085}{85} of file \hyperlink{ant
 \item[{}]{self}
 \end{DoxyParamCaption}
 )}}\label{classants_1_1Ant_a192f8411faa05c48db8db99d033f5d15}
-\begin{DoxyVerb}The cell just behind\end{DoxyVerb}
+\begin{DoxyVerb}The cell just behind
+\end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00073}{73} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00111}{111} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_ae85884312b4aa10f965b84535bed37fc}{\index{ants\+::\+Ant@{ants\+::\+Ant}!drop\+\_\+food@{drop\+\_\+food}}
 \index{drop\+\_\+food@{drop\+\_\+food}!ants\+::\+Ant@{ants\+::\+Ant}}
@@ -187,7 +213,31 @@ Update the food values of the home cell it reached
 \end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00187}{187} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00214}{214} of file \hyperlink{ants_8py_source}{ants.\+py}.
+
+\hypertarget{classants_1_1Ant_a5ee52d730c2bcbd0cfd0a8cf8d9206c6}{\index{ants\+::\+Ant@{ants\+::\+Ant}!get\+\_\+location@{get\+\_\+location}}
+\index{get\+\_\+location@{get\+\_\+location}!ants\+::\+Ant@{ants\+::\+Ant}}
+\subsubsection[{get\+\_\+location}]{\setlength{\rightskip}{0pt plus 5cm}def ants.\+Ant.\+get\+\_\+location (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classants_1_1Ant_a5ee52d730c2bcbd0cfd0a8cf8d9206c6}
+
+
+Definition at line \hyperlink{ants_8py_source_l00026}{26} of file \hyperlink{ants_8py_source}{ants.\+py}.
+
+\hypertarget{classants_1_1Ant_a10dc42722864d5850912dd34242d5cf8}{\index{ants\+::\+Ant@{ants\+::\+Ant}!get\+\_\+nest\+\_\+id@{get\+\_\+nest\+\_\+id}}
+\index{get\+\_\+nest\+\_\+id@{get\+\_\+nest\+\_\+id}!ants\+::\+Ant@{ants\+::\+Ant}}
+\subsubsection[{get\+\_\+nest\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}def ants.\+Ant.\+get\+\_\+nest\+\_\+id (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classants_1_1Ant_a10dc42722864d5850912dd34242d5cf8}
+\begin{DoxyVerb}Returns the id of the nest it belongs to
+\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{ants_8py_source_l00099}{99} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_a41de1c29941a444dab25a88cbc3a881d}{\index{ants\+::\+Ant@{ants\+::\+Ant}!has\+\_\+food@{has\+\_\+food}}
 \index{has\+\_\+food@{has\+\_\+food}!ants\+::\+Ant@{ants\+::\+Ant}}
@@ -196,9 +246,11 @@ Definition at line \hyperlink{ants_8py_source_l00187}{187} of file \hyperlink{an
 \item[{}]{self}
 \end{DoxyParamCaption}
 )}}\label{classants_1_1Ant_a41de1c29941a444dab25a88cbc3a881d}
+\begin{DoxyVerb}Checks if the ant has food_scent
+\end{DoxyVerb}
+ 
 
-
-Definition at line \hyperlink{ants_8py_source_l00194}{194} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00230}{230} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_a2e60480b7534b107e12d7f23fd06d5f1}{\index{ants\+::\+Ant@{ants\+::\+Ant}!here@{here}}
 \index{here@{here}!ants\+::\+Ant@{ants\+::\+Ant}}
@@ -207,10 +259,65 @@ Definition at line \hyperlink{ants_8py_source_l00194}{194} of file \hyperlink{an
 \item[{}]{self}
 \end{DoxyParamCaption}
 )}}\label{classants_1_1Ant_a2e60480b7534b107e12d7f23fd06d5f1}
-\begin{DoxyVerb}The cell it is standing on\end{DoxyVerb}
+\begin{DoxyVerb}The cell it is standing on
+\end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00069}{69} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00105}{105} of file \hyperlink{ants_8py_source}{ants.\+py}.
+
+\hypertarget{classants_1_1Ant_a78620c709fca31c9a0b2994534082bdc}{\index{ants\+::\+Ant@{ants\+::\+Ant}!is\+\_\+alive@{is\+\_\+alive}}
+\index{is\+\_\+alive@{is\+\_\+alive}!ants\+::\+Ant@{ants\+::\+Ant}}
+\subsubsection[{is\+\_\+alive}]{\setlength{\rightskip}{0pt plus 5cm}def ants.\+Ant.\+is\+\_\+alive (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classants_1_1Ant_a78620c709fca31c9a0b2994534082bdc}
+
+
+Definition at line \hyperlink{ants_8py_source_l00250}{250} of file \hyperlink{ants_8py_source}{ants.\+py}.
+
+\hypertarget{classants_1_1Ant_a218d9a25e9df83abf85ff596c214075c}{\index{ants\+::\+Ant@{ants\+::\+Ant}!is\+\_\+dead@{is\+\_\+dead}}
+\index{is\+\_\+dead@{is\+\_\+dead}!ants\+::\+Ant@{ants\+::\+Ant}}
+\subsubsection[{is\+\_\+dead}]{\setlength{\rightskip}{0pt plus 5cm}def ants.\+Ant.\+is\+\_\+dead (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classants_1_1Ant_a218d9a25e9df83abf85ff596c214075c}
+
+
+Definition at line \hyperlink{ants_8py_source_l00247}{247} of file \hyperlink{ants_8py_source}{ants.\+py}.
+
+\hypertarget{classants_1_1Ant_aeec9c17184393435fd4d4936b6f2736a}{\index{ants\+::\+Ant@{ants\+::\+Ant}!is\+\_\+enemy@{is\+\_\+enemy}}
+\index{is\+\_\+enemy@{is\+\_\+enemy}!ants\+::\+Ant@{ants\+::\+Ant}}
+\subsubsection[{is\+\_\+enemy}]{\setlength{\rightskip}{0pt plus 5cm}def ants.\+Ant.\+is\+\_\+enemy (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{ant}
+\end{DoxyParamCaption}
+)}}\label{classants_1_1Ant_aeec9c17184393435fd4d4936b6f2736a}
+
+
+Returns true if the ant passed is an enemy. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ant} & The other ant \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{ants_8py_source_l00155}{155} of file \hyperlink{ants_8py_source}{ants.\+py}.
+
+\hypertarget{classants_1_1Ant_a16d8e187423f707e067fe2d562100437}{\index{ants\+::\+Ant@{ants\+::\+Ant}!is\+\_\+hungry@{is\+\_\+hungry}}
+\index{is\+\_\+hungry@{is\+\_\+hungry}!ants\+::\+Ant@{ants\+::\+Ant}}
+\subsubsection[{is\+\_\+hungry}]{\setlength{\rightskip}{0pt plus 5cm}def ants.\+Ant.\+is\+\_\+hungry (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classants_1_1Ant_a16d8e187423f707e067fe2d562100437}
+
+
+Definition at line \hyperlink{ants_8py_source_l00253}{253} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_af9af7f8a5c766021ef0f68171d09abca}{\index{ants\+::\+Ant@{ants\+::\+Ant}!locate\+\_\+food\+\_\+nearby@{locate\+\_\+food\+\_\+nearby}}
 \index{locate\+\_\+food\+\_\+nearby@{locate\+\_\+food\+\_\+nearby}!ants\+::\+Ant@{ants\+::\+Ant}}
@@ -220,25 +327,11 @@ Definition at line \hyperlink{ants_8py_source_l00069}{69} of file \hyperlink{ant
 \end{DoxyParamCaption}
 )}}\label{classants_1_1Ant_af9af7f8a5c766021ef0f68171d09abca}
 \begin{DoxyVerb}Locate all sources nearby and return any one randomly
-return None if no food source is found\end{DoxyVerb}
- 
-
-Definition at line \hyperlink{ants_8py_source_l00089}{89} of file \hyperlink{ants_8py_source}{ants.\+py}.
-
-\hypertarget{classants_1_1Ant_a97ffad1c0e634f38585e7913908e9524}{\index{ants\+::\+Ant@{ants\+::\+Ant}!locate\+\_\+food\+\_\+scent\+\_\+nearby@{locate\+\_\+food\+\_\+scent\+\_\+nearby}}
-\index{locate\+\_\+food\+\_\+scent\+\_\+nearby@{locate\+\_\+food\+\_\+scent\+\_\+nearby}!ants\+::\+Ant@{ants\+::\+Ant}}
-\subsubsection[{locate\+\_\+food\+\_\+scent\+\_\+nearby}]{\setlength{\rightskip}{0pt plus 5cm}def ants.\+Ant.\+locate\+\_\+food\+\_\+scent\+\_\+nearby (
-\begin{DoxyParamCaption}
-\item[{}]{self}
-\end{DoxyParamCaption}
-)}}\label{classants_1_1Ant_a97ffad1c0e634f38585e7913908e9524}
-\begin{DoxyVerb}Scan the 5 directions near the direction of the ant for food scent and
-return one random direction
-return None if not found
+return None if no food source is found
 \end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00140}{140} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00135}{135} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_a5795d0898e3d0d020a0a0a626a5ef7b0}{\index{ants\+::\+Ant@{ants\+::\+Ant}!locate\+\_\+home\+\_\+nearby@{locate\+\_\+home\+\_\+nearby}}
 \index{locate\+\_\+home\+\_\+nearby@{locate\+\_\+home\+\_\+nearby}!ants\+::\+Ant@{ants\+::\+Ant}}
@@ -248,10 +341,11 @@ Definition at line \hyperlink{ants_8py_source_l00140}{140} of file \hyperlink{an
 \end{DoxyParamCaption}
 )}}\label{classants_1_1Ant_a5795d0898e3d0d020a0a0a626a5ef7b0}
 \begin{DoxyVerb}Locate home cell nearby and return any one randomly
-return None if not found\end{DoxyVerb}
+return None if not found
+\end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00105}{105} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00158}{158} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_a81a141f3417ddb32b8d1abbd95bbc477}{\index{ants\+::\+Ant@{ants\+::\+Ant}!locate\+\_\+home\+\_\+scent\+\_\+nearby@{locate\+\_\+home\+\_\+scent\+\_\+nearby}}
 \index{locate\+\_\+home\+\_\+scent\+\_\+nearby@{locate\+\_\+home\+\_\+scent\+\_\+nearby}!ants\+::\+Ant@{ants\+::\+Ant}}
@@ -266,7 +360,7 @@ return None if not found
 \end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00121}{121} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00176}{176} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_a0067159f23e5e9e4b3564d48c1564f11}{\index{ants\+::\+Ant@{ants\+::\+Ant}!move@{move}}
 \index{move@{move}!ants\+::\+Ant@{ants\+::\+Ant}}
@@ -275,14 +369,15 @@ Definition at line \hyperlink{ants_8py_source_l00121}{121} of file \hyperlink{an
 \item[{}]{self}
 \end{DoxyParamCaption}
 )}}\label{classants_1_1Ant_a0067159f23e5e9e4b3564d48c1564f11}
-\begin{DoxyVerb}Move the ant by a unit,
-Leave a scent trail,
+\begin{DoxyVerb}Moves the ant by a unit if the next cell is empty,
+otherwise turn by an unit
+It also leaves a scent trail,
 remove the ant from its old cell, and
 update the current cell ant with itself
 \end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00027}{27} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00038}{38} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_a2ddd97dadaa5d24c459b0117dc6e1190}{\index{ants\+::\+Ant@{ants\+::\+Ant}!neighbour@{neighbour}}
 \index{neighbour@{neighbour}!ants\+::\+Ant@{ants\+::\+Ant}}
@@ -293,10 +388,11 @@ Definition at line \hyperlink{ants_8py_source_l00027}{27} of file \hyperlink{ant
 \end{DoxyParamCaption}
 )}}\label{classants_1_1Ant_a2ddd97dadaa5d24c459b0117dc6e1190}
 \begin{DoxyVerb}Returns location of neighbouring cell in a direction 
-relative to the ant direction\end{DoxyVerb}
+relative to the ant direction
+\end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00020}{20} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00029}{29} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_a3a636b900b6fdbed032e3a635495a4c4}{\index{ants\+::\+Ant@{ants\+::\+Ant}!random\+\_\+move@{random\+\_\+move}}
 \index{random\+\_\+move@{random\+\_\+move}!ants\+::\+Ant@{ants\+::\+Ant}}
@@ -305,25 +401,11 @@ Definition at line \hyperlink{ants_8py_source_l00020}{20} of file \hyperlink{ant
 \item[{}]{self}
 \end{DoxyParamCaption}
 )}}\label{classants_1_1Ant_a3a636b900b6fdbed032e3a635495a4c4}
-\begin{DoxyVerb}Ant makes a move forward or turns randomly\end{DoxyVerb}
- 
-
-Definition at line \hyperlink{ants_8py_source_l00041}{41} of file \hyperlink{ants_8py_source}{ants.\+py}.
-
-\hypertarget{classants_1_1Ant_a164a2a76f1779462fe81e8f169a92a93}{\index{ants\+::\+Ant@{ants\+::\+Ant}!rank\+\_\+by\+\_\+food\+\_\+scent@{rank\+\_\+by\+\_\+food\+\_\+scent}}
-\index{rank\+\_\+by\+\_\+food\+\_\+scent@{rank\+\_\+by\+\_\+food\+\_\+scent}!ants\+::\+Ant@{ants\+::\+Ant}}
-\subsubsection[{rank\+\_\+by\+\_\+food\+\_\+scent}]{\setlength{\rightskip}{0pt plus 5cm}def ants.\+Ant.\+rank\+\_\+by\+\_\+food\+\_\+scent (
-\begin{DoxyParamCaption}
-\item[{}]{self}
-\end{DoxyParamCaption}
-)}}\label{classants_1_1Ant_a164a2a76f1779462fe81e8f169a92a93}
-\begin{DoxyVerb}Scan the 5 directions near the direction of the ant for food scent and
-return the direction with the strongest scent
-return None if not found
+\begin{DoxyVerb}Ant makes a move forward or turns randomly
 \end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00159}{159} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00060}{60} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_a6f3e3bd98a5f382098cdc1c02e1e2fd0}{\index{ants\+::\+Ant@{ants\+::\+Ant}!rank\+\_\+by\+\_\+home\+\_\+scent@{rank\+\_\+by\+\_\+home\+\_\+scent}}
 \index{rank\+\_\+by\+\_\+home\+\_\+scent@{rank\+\_\+by\+\_\+home\+\_\+scent}!ants\+::\+Ant@{ants\+::\+Ant}}
@@ -338,33 +420,56 @@ return None if not found
 \end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00173}{173} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00196}{196} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
-\hypertarget{classants_1_1Ant_a285d1e406b6d2cc67779e873e879feb0}{\index{ants\+::\+Ant@{ants\+::\+Ant}!reduce\+\_\+food\+\_\+scent@{reduce\+\_\+food\+\_\+scent}}
-\index{reduce\+\_\+food\+\_\+scent@{reduce\+\_\+food\+\_\+scent}!ants\+::\+Ant@{ants\+::\+Ant}}
-\subsubsection[{reduce\+\_\+food\+\_\+scent}]{\setlength{\rightskip}{0pt plus 5cm}def ants.\+Ant.\+reduce\+\_\+food\+\_\+scent (
+\hypertarget{classants_1_1Ant_a1d51e32dc22891ded9f02ffc71e612cd}{\index{ants\+::\+Ant@{ants\+::\+Ant}!reduce\+\_\+food\+\_\+scent\+\_\+strength@{reduce\+\_\+food\+\_\+scent\+\_\+strength}}
+\index{reduce\+\_\+food\+\_\+scent\+\_\+strength@{reduce\+\_\+food\+\_\+scent\+\_\+strength}!ants\+::\+Ant@{ants\+::\+Ant}}
+\subsubsection[{reduce\+\_\+food\+\_\+scent\+\_\+strength}]{\setlength{\rightskip}{0pt plus 5cm}def ants.\+Ant.\+reduce\+\_\+food\+\_\+scent\+\_\+strength (
 \begin{DoxyParamCaption}
 \item[{}]{self, }
 \item[{}]{amt = {\ttfamily 1}}
 \end{DoxyParamCaption}
-)}}\label{classants_1_1Ant_a285d1e406b6d2cc67779e873e879feb0}
-\begin{DoxyVerb}Reduce food scent by 'amt'\end{DoxyVerb}
+)}}\label{classants_1_1Ant_a1d51e32dc22891ded9f02ffc71e612cd}
+\begin{DoxyVerb}Reduce food scent by 'amt'
+\end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00053}{53} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00076}{76} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
-\hypertarget{classants_1_1Ant_a216ebc2ce2dfeb88d6bbc714bc50ecb5}{\index{ants\+::\+Ant@{ants\+::\+Ant}!reduce\+\_\+home\+\_\+scent@{reduce\+\_\+home\+\_\+scent}}
-\index{reduce\+\_\+home\+\_\+scent@{reduce\+\_\+home\+\_\+scent}!ants\+::\+Ant@{ants\+::\+Ant}}
-\subsubsection[{reduce\+\_\+home\+\_\+scent}]{\setlength{\rightskip}{0pt plus 5cm}def ants.\+Ant.\+reduce\+\_\+home\+\_\+scent (
+\hypertarget{classants_1_1Ant_a89ad26b1d79990f95979464bbd3bf9b8}{\index{ants\+::\+Ant@{ants\+::\+Ant}!reduce\+\_\+health@{reduce\+\_\+health}}
+\index{reduce\+\_\+health@{reduce\+\_\+health}!ants\+::\+Ant@{ants\+::\+Ant}}
+\subsubsection[{reduce\+\_\+health}]{\setlength{\rightskip}{0pt plus 5cm}def ants.\+Ant.\+reduce\+\_\+health (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{amt}
+\end{DoxyParamCaption}
+)}}\label{classants_1_1Ant_a89ad26b1d79990f95979464bbd3bf9b8}
+
+
+Reduces the health of the ant. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amt} & The amount of health to reduce \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{ants_8py_source_l00244}{244} of file \hyperlink{ants_8py_source}{ants.\+py}.
+
+\hypertarget{classants_1_1Ant_a0f92c3c4a37d6c3998bc71fc0a6b9cee}{\index{ants\+::\+Ant@{ants\+::\+Ant}!reduce\+\_\+home\+\_\+scent\+\_\+strength@{reduce\+\_\+home\+\_\+scent\+\_\+strength}}
+\index{reduce\+\_\+home\+\_\+scent\+\_\+strength@{reduce\+\_\+home\+\_\+scent\+\_\+strength}!ants\+::\+Ant@{ants\+::\+Ant}}
+\subsubsection[{reduce\+\_\+home\+\_\+scent\+\_\+strength}]{\setlength{\rightskip}{0pt plus 5cm}def ants.\+Ant.\+reduce\+\_\+home\+\_\+scent\+\_\+strength (
 \begin{DoxyParamCaption}
 \item[{}]{self, }
 \item[{}]{amt = {\ttfamily 1}}
 \end{DoxyParamCaption}
-)}}\label{classants_1_1Ant_a216ebc2ce2dfeb88d6bbc714bc50ecb5}
-\begin{DoxyVerb}Reduce home scent by 'amt'\end{DoxyVerb}
+)}}\label{classants_1_1Ant_a0f92c3c4a37d6c3998bc71fc0a6b9cee}
+\begin{DoxyVerb}Reduce home scent by 'amt'
+\end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00048}{48} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00069}{69} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_a95585d833c74c56155a0d79394d511cc}{\index{ants\+::\+Ant@{ants\+::\+Ant}!render@{render}}
 \index{render@{render}!ants\+::\+Ant@{ants\+::\+Ant}}
@@ -373,10 +478,56 @@ Definition at line \hyperlink{ants_8py_source_l00048}{48} of file \hyperlink{ant
 \item[{}]{self}
 \end{DoxyParamCaption}
 )}}\label{classants_1_1Ant_a95585d833c74c56155a0d79394d511cc}
-\begin{DoxyVerb}Render itself\end{DoxyVerb}
+\begin{DoxyVerb}Render itself
+\end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00062}{62} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00089}{89} of file \hyperlink{ants_8py_source}{ants.\+py}.
+
+\hypertarget{classants_1_1Ant_ae90d1356ca3370e47c24c5fe63ebfeaf}{\index{ants\+::\+Ant@{ants\+::\+Ant}!set\+\_\+food\+\_\+scent\+\_\+strength@{set\+\_\+food\+\_\+scent\+\_\+strength}}
+\index{set\+\_\+food\+\_\+scent\+\_\+strength@{set\+\_\+food\+\_\+scent\+\_\+strength}!ants\+::\+Ant@{ants\+::\+Ant}}
+\subsubsection[{set\+\_\+food\+\_\+scent\+\_\+strength}]{\setlength{\rightskip}{0pt plus 5cm}def ants.\+Ant.\+set\+\_\+food\+\_\+scent\+\_\+strength (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{strength}
+\end{DoxyParamCaption}
+)}}\label{classants_1_1Ant_ae90d1356ca3370e47c24c5fe63ebfeaf}
+
+
+Definition at line \hyperlink{ants_8py_source_l00236}{236} of file \hyperlink{ants_8py_source}{ants.\+py}.
+
+\hypertarget{classants_1_1Ant_ae8234d6ecb9f7666e255ffa8a978355c}{\index{ants\+::\+Ant@{ants\+::\+Ant}!set\+\_\+home\+\_\+scent\+\_\+strength@{set\+\_\+home\+\_\+scent\+\_\+strength}}
+\index{set\+\_\+home\+\_\+scent\+\_\+strength@{set\+\_\+home\+\_\+scent\+\_\+strength}!ants\+::\+Ant@{ants\+::\+Ant}}
+\subsubsection[{set\+\_\+home\+\_\+scent\+\_\+strength}]{\setlength{\rightskip}{0pt plus 5cm}def ants.\+Ant.\+set\+\_\+home\+\_\+scent\+\_\+strength (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{strength}
+\end{DoxyParamCaption}
+)}}\label{classants_1_1Ant_ae8234d6ecb9f7666e255ffa8a978355c}
+
+
+Definition at line \hyperlink{ants_8py_source_l00239}{239} of file \hyperlink{ants_8py_source}{ants.\+py}.
+
+\hypertarget{classants_1_1Ant_accd1fa305032e848021a4d8b90f3f8ce}{\index{ants\+::\+Ant@{ants\+::\+Ant}!take\+\_\+food@{take\+\_\+food}}
+\index{take\+\_\+food@{take\+\_\+food}!ants\+::\+Ant@{ants\+::\+Ant}}
+\subsubsection[{take\+\_\+food}]{\setlength{\rightskip}{0pt plus 5cm}def ants.\+Ant.\+take\+\_\+food (
+\begin{DoxyParamCaption}
+\item[{}]{self, }
+\item[{}]{amt}
+\end{DoxyParamCaption}
+)}}\label{classants_1_1Ant_accd1fa305032e848021a4d8b90f3f8ce}
+
+
+carry half the food and increase health by half the amount 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amt} & The amount of food \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{ants_8py_source_l00226}{226} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_a445ec1d1f8e4cb539c4f66fafa129131}{\index{ants\+::\+Ant@{ants\+::\+Ant}!turn@{turn}}
 \index{turn@{turn}!ants\+::\+Ant@{ants\+::\+Ant}}
@@ -386,10 +537,11 @@ Definition at line \hyperlink{ants_8py_source_l00062}{62} of file \hyperlink{ant
 \item[{}]{n}
 \end{DoxyParamCaption}
 )}}\label{classants_1_1Ant_a445ec1d1f8e4cb539c4f66fafa129131}
-\begin{DoxyVerb}Changes direction n times\end{DoxyVerb}
+\begin{DoxyVerb}Changes direction n times
+\end{DoxyVerb}
  
 
-Definition at line \hyperlink{ants_8py_source_l00058}{58} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00083}{83} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 
 
@@ -399,56 +551,70 @@ Definition at line \hyperlink{ants_8py_source_l00058}{58} of file \hyperlink{ant
 \subsubsection[{direction}]{\setlength{\rightskip}{0pt plus 5cm}ants.\+Ant.\+direction}}\label{classants_1_1Ant_ae26b7ffd236a83d8d5c96ec6ec07b4bb}
 
 
-Definition at line \hyperlink{ants_8py_source_l00012}{12} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00017}{17} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_afcfbbf8bd338401378d25c512204eb91}{\index{ants\+::\+Ant@{ants\+::\+Ant}!food@{food}}
 \index{food@{food}!ants\+::\+Ant@{ants\+::\+Ant}}
 \subsubsection[{food}]{\setlength{\rightskip}{0pt plus 5cm}ants.\+Ant.\+food}}\label{classants_1_1Ant_afcfbbf8bd338401378d25c512204eb91}
 
 
-Definition at line \hyperlink{ants_8py_source_l00014}{14} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00019}{19} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_ad7fb2ac4566880fdacfd7bf7f4ec1109}{\index{ants\+::\+Ant@{ants\+::\+Ant}!food\+\_\+scent\+\_\+strength@{food\+\_\+scent\+\_\+strength}}
 \index{food\+\_\+scent\+\_\+strength@{food\+\_\+scent\+\_\+strength}!ants\+::\+Ant@{ants\+::\+Ant}}
 \subsubsection[{food\+\_\+scent\+\_\+strength}]{\setlength{\rightskip}{0pt plus 5cm}ants.\+Ant.\+food\+\_\+scent\+\_\+strength}}\label{classants_1_1Ant_ad7fb2ac4566880fdacfd7bf7f4ec1109}
 
 
-Definition at line \hyperlink{ants_8py_source_l00015}{15} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00021}{21} of file \hyperlink{ants_8py_source}{ants.\+py}.
+
+\hypertarget{classants_1_1Ant_aa147562276c788d4533ab63ac44d96a6}{\index{ants\+::\+Ant@{ants\+::\+Ant}!health@{health}}
+\index{health@{health}!ants\+::\+Ant@{ants\+::\+Ant}}
+\subsubsection[{health}]{\setlength{\rightskip}{0pt plus 5cm}ants.\+Ant.\+health}}\label{classants_1_1Ant_aa147562276c788d4533ab63ac44d96a6}
+
+
+Definition at line \hyperlink{ants_8py_source_l00020}{20} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_a7885f0124adf5b10fd6fa5e8ac47edb9}{\index{ants\+::\+Ant@{ants\+::\+Ant}!home\+\_\+scent\+\_\+strength@{home\+\_\+scent\+\_\+strength}}
 \index{home\+\_\+scent\+\_\+strength@{home\+\_\+scent\+\_\+strength}!ants\+::\+Ant@{ants\+::\+Ant}}
 \subsubsection[{home\+\_\+scent\+\_\+strength}]{\setlength{\rightskip}{0pt plus 5cm}ants.\+Ant.\+home\+\_\+scent\+\_\+strength}}\label{classants_1_1Ant_a7885f0124adf5b10fd6fa5e8ac47edb9}
 
 
-Definition at line \hyperlink{ants_8py_source_l00016}{16} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00022}{22} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_adf5f970b6b5e8472f42275114eeac779}{\index{ants\+::\+Ant@{ants\+::\+Ant}!image@{image}}
 \index{image@{image}!ants\+::\+Ant@{ants\+::\+Ant}}
 \subsubsection[{image}]{\setlength{\rightskip}{0pt plus 5cm}ants.\+Ant.\+image}}\label{classants_1_1Ant_adf5f970b6b5e8472f42275114eeac779}
 
 
-Definition at line \hyperlink{ants_8py_source_l00011}{11} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00015}{15} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_ae7de139b6f5bdb8d4ab42755c405ef5d}{\index{ants\+::\+Ant@{ants\+::\+Ant}!location@{location}}
 \index{location@{location}!ants\+::\+Ant@{ants\+::\+Ant}}
 \subsubsection[{location}]{\setlength{\rightskip}{0pt plus 5cm}ants.\+Ant.\+location}}\label{classants_1_1Ant_ae7de139b6f5bdb8d4ab42755c405ef5d}
 
 
-Definition at line \hyperlink{ants_8py_source_l00013}{13} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00018}{18} of file \hyperlink{ants_8py_source}{ants.\+py}.
+
+\hypertarget{classants_1_1Ant_acaafd510ade5c38719b8082027162132}{\index{ants\+::\+Ant@{ants\+::\+Ant}!nest@{nest}}
+\index{nest@{nest}!ants\+::\+Ant@{ants\+::\+Ant}}
+\subsubsection[{nest}]{\setlength{\rightskip}{0pt plus 5cm}ants.\+Ant.\+nest}}\label{classants_1_1Ant_acaafd510ade5c38719b8082027162132}
+
+
+Definition at line \hyperlink{ants_8py_source_l00016}{16} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_a80e2218dcfabbd9ef4d83638dd20d943}{\index{ants\+::\+Ant@{ants\+::\+Ant}!task\+\_\+manager@{task\+\_\+manager}}
 \index{task\+\_\+manager@{task\+\_\+manager}!ants\+::\+Ant@{ants\+::\+Ant}}
 \subsubsection[{task\+\_\+manager}]{\setlength{\rightskip}{0pt plus 5cm}ants.\+Ant.\+task\+\_\+manager}}\label{classants_1_1Ant_a80e2218dcfabbd9ef4d83638dd20d943}
 
 
-Definition at line \hyperlink{ants_8py_source_l00018}{18} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00024}{24} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 \hypertarget{classants_1_1Ant_a55f64c7cafb3806bdcfda42586adbff5}{\index{ants\+::\+Ant@{ants\+::\+Ant}!world@{world}}
 \index{world@{world}!ants\+::\+Ant@{ants\+::\+Ant}}
 \subsubsection[{world}]{\setlength{\rightskip}{0pt plus 5cm}ants.\+Ant.\+world}}\label{classants_1_1Ant_a55f64c7cafb3806bdcfda42586adbff5}
 
 
-Definition at line \hyperlink{ants_8py_source_l00010}{10} of file \hyperlink{ants_8py_source}{ants.\+py}.
+Definition at line \hyperlink{ants_8py_source_l00014}{14} of file \hyperlink{ants_8py_source}{ants.\+py}.
 
 
 

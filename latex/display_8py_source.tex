@@ -3,22 +3,27 @@
 
 \begin{DoxyCode}
 \hypertarget{display_8py_source_l00001}{}\hyperlink{namespacedisplay}{00001} \textcolor{keyword}{class }\hyperlink{classdisplay_1_1Entity}{Entity}(object):
-00002     \textcolor{stringliteral}{"""Base class for all drawable objects"""}
-\hypertarget{display_8py_source_l00003}{}\hyperlink{classdisplay_1_1Entity_a10294b5b8a8fa95f95f29aaf521efd56}{00003}     \textcolor{keyword}{def }\hyperlink{classdisplay_1_1Entity_a10294b5b8a8fa95f95f29aaf521efd56}{\_\_init\_\_}(self, world, location, size, image):
-\hypertarget{display_8py_source_l00004}{}\hyperlink{classdisplay_1_1Entity_ad7e3284bfb984c309b35d5a077bd5b21}{00004}         self.\hyperlink{classdisplay_1_1Entity_ad7e3284bfb984c309b35d5a077bd5b21}{world} = world
-\hypertarget{display_8py_source_l00005}{}\hyperlink{classdisplay_1_1Entity_ae2a1114b0c54ef7eb43c2bd6cd097258}{00005}         self.\hyperlink{classdisplay_1_1Entity_ae2a1114b0c54ef7eb43c2bd6cd097258}{location} = location
-\hypertarget{display_8py_source_l00006}{}\hyperlink{classdisplay_1_1Entity_aa56fd9b8bb6c9510f24ea13be8c6a218}{00006}         self.\hyperlink{classdisplay_1_1Entity_aa56fd9b8bb6c9510f24ea13be8c6a218}{size} = size
-\hypertarget{display_8py_source_l00007}{}\hyperlink{classdisplay_1_1Entity_a244569c285ad924e6200d4c1c8b4639c}{00007}         self.\hyperlink{classdisplay_1_1Entity_a244569c285ad924e6200d4c1c8b4639c}{image} = image
-00008 
-\hypertarget{display_8py_source_l00009}{}\hyperlink{classdisplay_1_1Entity_abbea5f77f08ce3347010d9c452440737}{00009}     \textcolor{keyword}{def }\hyperlink{classdisplay_1_1Entity_abbea5f77f08ce3347010d9c452440737}{render}(self, index=0):
-00010         \textcolor{stringliteral}{"""Draw the object into the screen}
-00011 \textcolor{stringliteral}{            - selects the portion of the image to draw from the "index" argument}
-00012 \textcolor{stringliteral}{        """}
-00013         x, y = self.\hyperlink{classdisplay_1_1Entity_ae2a1114b0c54ef7eb43c2bd6cd097258}{location}
-00014         x *= self.world.cell\_size
-00015         y *= self.world.cell\_size
-00016         w, h = self.\hyperlink{classdisplay_1_1Entity_aa56fd9b8bb6c9510f24ea13be8c6a218}{size}
-00017         position = (x, y)
-00018         patch\_rect = (w*index, 0, w, h)
-00019         self.world.canvas.blit(self.\hyperlink{classdisplay_1_1Entity_a244569c285ad924e6200d4c1c8b4639c}{image}, position, patch\_rect)
+00002     \textcolor{stringliteral}{"""}
+00003 \textcolor{stringliteral}{    Base class for all drawable objects}
+00004 \textcolor{stringliteral}{    """}
+\hypertarget{display_8py_source_l00005}{}\hyperlink{classdisplay_1_1Entity_a10294b5b8a8fa95f95f29aaf521efd56}{00005}     \textcolor{keyword}{def }\hyperlink{classdisplay_1_1Entity_a10294b5b8a8fa95f95f29aaf521efd56}{\_\_init\_\_}(self, world, location, size, image):
+\hypertarget{display_8py_source_l00006}{}\hyperlink{classdisplay_1_1Entity_ad7e3284bfb984c309b35d5a077bd5b21}{00006}         self.\hyperlink{classdisplay_1_1Entity_ad7e3284bfb984c309b35d5a077bd5b21}{world} = world
+\hypertarget{display_8py_source_l00007}{}\hyperlink{classdisplay_1_1Entity_ae2a1114b0c54ef7eb43c2bd6cd097258}{00007}         self.\hyperlink{classdisplay_1_1Entity_ae2a1114b0c54ef7eb43c2bd6cd097258}{location} = location
+\hypertarget{display_8py_source_l00008}{}\hyperlink{classdisplay_1_1Entity_aa56fd9b8bb6c9510f24ea13be8c6a218}{00008}         self.\hyperlink{classdisplay_1_1Entity_aa56fd9b8bb6c9510f24ea13be8c6a218}{size} = size
+\hypertarget{display_8py_source_l00009}{}\hyperlink{classdisplay_1_1Entity_a244569c285ad924e6200d4c1c8b4639c}{00009}         self.\hyperlink{classdisplay_1_1Entity_a244569c285ad924e6200d4c1c8b4639c}{image} = image
+00010 
+\hypertarget{display_8py_source_l00011}{}\hyperlink{classdisplay_1_1Entity_abbea5f77f08ce3347010d9c452440737}{00011}     \textcolor{keyword}{def }\hyperlink{classdisplay_1_1Entity_abbea5f77f08ce3347010d9c452440737}{render}(self, index=0):
+00012         \textcolor{stringliteral}{"""}
+00013 \textcolor{stringliteral}{        Draw the object into the screen}
+00014 \textcolor{stringliteral}{            - selects the portion of the image to draw from the "index" argument}
+00015 \textcolor{stringliteral}{        """}
+00016         x, y = self.\hyperlink{classdisplay_1_1Entity_ae2a1114b0c54ef7eb43c2bd6cd097258}{location}
+00017         x *= self.world.cell\_size
+00018         y *= self.world.cell\_size
+00019         w, h = self.\hyperlink{classdisplay_1_1Entity_aa56fd9b8bb6c9510f24ea13be8c6a218}{size}
+00020         w *= self.world.cell\_size
+00021         h *= self.world.cell\_size
+00022         position = (x, y)
+00023         patch\_rect = (w*index, 0, w, h)
+00024         self.world.canvas.blit(self.\hyperlink{classdisplay_1_1Entity_a244569c285ad924e6200d4c1c8b4639c}{image}, position, patch\_rect)
 \end{DoxyCode}

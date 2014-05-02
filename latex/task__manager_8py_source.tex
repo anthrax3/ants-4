@@ -5,208 +5,345 @@
 \hypertarget{task__manager_8py_source_l00001}{}\hyperlink{namespacetask__manager}{00001} \textcolor{keyword}{from} random \textcolor{keyword}{import} randint, choice
 00002 
 \hypertarget{task__manager_8py_source_l00003}{}\hyperlink{classtask__manager_1_1TaskManager}{00003} \textcolor{keyword}{class }\hyperlink{classtask__manager_1_1TaskManager}{TaskManager}():
-00004     \textcolor{stringliteral}{"""Decides and performs all actions of an Ant"""}
-\hypertarget{task__manager_8py_source_l00005}{}\hyperlink{classtask__manager_1_1TaskManager_a750d99ccae60977d027c156d607a245d}{00005}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1TaskManager_a750d99ccae60977d027c156d607a245d}{\_\_init\_\_}(self):
-\hypertarget{task__manager_8py_source_l00006}{}\hyperlink{classtask__manager_1_1TaskManager_a13e69f2bbcef1d7ca03e92235cf9772e}{00006}         self.\hyperlink{classtask__manager_1_1TaskManager_a13e69f2bbcef1d7ca03e92235cf9772e}{tasks} = \{\}
-\hypertarget{task__manager_8py_source_l00007}{}\hyperlink{classtask__manager_1_1TaskManager_a3389ea690b2ade9bfe1efa5ad079b777}{00007}         self.\hyperlink{classtask__manager_1_1TaskManager_a3389ea690b2ade9bfe1efa5ad079b777}{active\_task} = \textcolor{keywordtype}{None}
-00008 
-\hypertarget{task__manager_8py_source_l00009}{}\hyperlink{classtask__manager_1_1TaskManager_a4cedc030cbfa126c93c7050896111283}{00009}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1TaskManager_a4cedc030cbfa126c93c7050896111283}{add\_task}(self, task):
-00010         \textcolor{stringliteral}{"""Adds a new task"""}
-00011         self.\hyperlink{classtask__manager_1_1TaskManager_a13e69f2bbcef1d7ca03e92235cf9772e}{tasks}[task.name] = task
-00012 
-\hypertarget{task__manager_8py_source_l00013}{}\hyperlink{classtask__manager_1_1TaskManager_a623b3d93407140ddd95753251f850f0b}{00013}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1TaskManager_a623b3d93407140ddd95753251f850f0b}{make\_decision}(self):
-00014         \textcolor{stringliteral}{"""Performs the active task}
-00015 \textcolor{stringliteral}{        Checks for new task}
-00016 \textcolor{stringliteral}{        If new task is present end the current task and}
-00017 \textcolor{stringliteral}{        start the new task"""}
-00018         self.active\_task.perform\_task()
-00019 
-00020         new\_task = self.active\_task.get\_new\_task()
-00021 
-00022         \textcolor{keywordflow}{if} new\_task:
-00023             self.active\_task.end\_task()
-00024             self.\hyperlink{classtask__manager_1_1TaskManager_ae6fddee07733c42fb3e8e29b3e45af8c}{set\_active\_task}(new\_task)
-00025             self.active\_task.start\_task()
-00026 
-\hypertarget{task__manager_8py_source_l00027}{}\hyperlink{classtask__manager_1_1TaskManager_ae6fddee07733c42fb3e8e29b3e45af8c}{00027}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1TaskManager_ae6fddee07733c42fb3e8e29b3e45af8c}{set\_active\_task}(self, task\_name):
-00028         \textcolor{stringliteral}{"""Sets the active task"""}
-00029         self.\hyperlink{classtask__manager_1_1TaskManager_a3389ea690b2ade9bfe1efa5ad079b777}{active\_task} = self.\hyperlink{classtask__manager_1_1TaskManager_a13e69f2bbcef1d7ca03e92235cf9772e}{tasks}[task\_name]
-00030 
-\hypertarget{task__manager_8py_source_l00031}{}\hyperlink{classtask__manager_1_1Task}{00031} \textcolor{keyword}{class }\hyperlink{classtask__manager_1_1Task}{Task}(object):
-00032     \textcolor{stringliteral}{"""Base class for a Task"""}
-\hypertarget{task__manager_8py_source_l00033}{}\hyperlink{classtask__manager_1_1Task_aab0d2d2ec0b4b3e87969d843a101e118}{00033}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1Task_aab0d2d2ec0b4b3e87969d843a101e118}{\_\_init\_\_}(self, name, ant):
-\hypertarget{task__manager_8py_source_l00034}{}\hyperlink{classtask__manager_1_1Task_a1a12769253144bf3a864cdff907b9fb6}{00034}         self.\hyperlink{classtask__manager_1_1Task_a1a12769253144bf3a864cdff907b9fb6}{name} = name
-\hypertarget{task__manager_8py_source_l00035}{}\hyperlink{classtask__manager_1_1Task_ac43e25887825a1bb6e3d4a5a049968be}{00035}         self.\hyperlink{classtask__manager_1_1Task_ac43e25887825a1bb6e3d4a5a049968be}{ant} = ant
-\hypertarget{task__manager_8py_source_l00036}{}\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{00036}         self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{keywordtype}{None}
-00037 
-\hypertarget{task__manager_8py_source_l00038}{}\hyperlink{classtask__manager_1_1Task_aacfcc36829c22c789f31edaf60ef1cc4}{00038}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1Task_aacfcc36829c22c789f31edaf60ef1cc4}{start\_task}(self):
-00039         \textcolor{stringliteral}{"""Actions at the beginning of a new task"""}
-00040         \textcolor{keywordflow}{pass}
-00041 
-\hypertarget{task__manager_8py_source_l00042}{}\hyperlink{classtask__manager_1_1Task_a20da98293fb7cae0c80cc0caa864c025}{00042}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1Task_a20da98293fb7cae0c80cc0caa864c025}{perform\_task}(self):
-00043         \textcolor{stringliteral}{"""Actions done for a task"""}
-00044         \textcolor{keywordflow}{pass}
-00045 
-\hypertarget{task__manager_8py_source_l00046}{}\hyperlink{classtask__manager_1_1Task_a9422ddc4ca06f29aed2bbd53bfde8da4}{00046}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1Task_a9422ddc4ca06f29aed2bbd53bfde8da4}{end\_task}(self):
-00047         \textcolor{stringliteral}{"""Actions at the end of a new task"""}
-00048         \textcolor{keywordflow}{pass}
-00049 
-\hypertarget{task__manager_8py_source_l00050}{}\hyperlink{classtask__manager_1_1Task_ab46cf79945b53ec633f6f52b37c7a5cb}{00050}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1Task_ab46cf79945b53ec633f6f52b37c7a5cb}{get\_new\_task}(self):
-00051         \textcolor{stringliteral}{"""Returns and resets new task"""}
-00052         new\_task = self.new\_task
-00053         self.new\_task = \textcolor{keywordtype}{None}
-00054         \textcolor{keywordflow}{return} new\_task
-00055 
-\hypertarget{task__manager_8py_source_l00056}{}\hyperlink{classtask__manager_1_1Explore}{00056} \textcolor{keyword}{class }\hyperlink{classtask__manager_1_1Explore}{Explore}(\hyperlink{classtask__manager_1_1Task}{Task}):
-00057     \textcolor{stringliteral}{"""Ant Exploring Task"""}
-\hypertarget{task__manager_8py_source_l00058}{}\hyperlink{classtask__manager_1_1Explore_ae95cc7a4676c07732fcf0faed752959c}{00058}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1Explore_ae95cc7a4676c07732fcf0faed752959c}{\_\_init\_\_}(self, ant):
-00059         super(Explore, self).\hyperlink{classtask__manager_1_1Explore_ae95cc7a4676c07732fcf0faed752959c}{\_\_init\_\_}(\textcolor{stringliteral}{"explore"}, ant)
+00004     \textcolor{stringliteral}{"""}
+00005 \textcolor{stringliteral}{    Decides and performs all actions of an Ant}
+00006 \textcolor{stringliteral}{    """}
+\hypertarget{task__manager_8py_source_l00007}{}\hyperlink{classtask__manager_1_1TaskManager_a750d99ccae60977d027c156d607a245d}{00007}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1TaskManager_a750d99ccae60977d027c156d607a245d}{\_\_init\_\_}(self):
+\hypertarget{task__manager_8py_source_l00008}{}\hyperlink{classtask__manager_1_1TaskManager_a13e69f2bbcef1d7ca03e92235cf9772e}{00008}         self.\hyperlink{classtask__manager_1_1TaskManager_a13e69f2bbcef1d7ca03e92235cf9772e}{tasks} = \{\}
+\hypertarget{task__manager_8py_source_l00009}{}\hyperlink{classtask__manager_1_1TaskManager_a3389ea690b2ade9bfe1efa5ad079b777}{00009}         self.\hyperlink{classtask__manager_1_1TaskManager_a3389ea690b2ade9bfe1efa5ad079b777}{active\_task} = \textcolor{keywordtype}{None}
+00010 
+\hypertarget{task__manager_8py_source_l00011}{}\hyperlink{classtask__manager_1_1TaskManager_a4cedc030cbfa126c93c7050896111283}{00011}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1TaskManager_a4cedc030cbfa126c93c7050896111283}{add\_task}(self, task):
+00012         \textcolor{stringliteral}{"""}
+00013 \textcolor{stringliteral}{        Adds a new task}
+00014 \textcolor{stringliteral}{        """}
+00015         self.\hyperlink{classtask__manager_1_1TaskManager_a13e69f2bbcef1d7ca03e92235cf9772e}{tasks}[task.name] = task
+00016 
+\hypertarget{task__manager_8py_source_l00017}{}\hyperlink{classtask__manager_1_1TaskManager_a623b3d93407140ddd95753251f850f0b}{00017}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1TaskManager_a623b3d93407140ddd95753251f850f0b}{make\_decision}(self):
+00018         \textcolor{stringliteral}{"""}
+00019 \textcolor{stringliteral}{        Performs the active task}
+00020 \textcolor{stringliteral}{        Checks for new task}
+00021 \textcolor{stringliteral}{        If new task is present end the current task and}
+00022 \textcolor{stringliteral}{        start the new task}
+00023 \textcolor{stringliteral}{        """}
+00024         self.active\_task.perform\_task()
+00025 
+00026         new\_task = self.active\_task.get\_new\_task()
+00027 
+00028         \textcolor{keywordflow}{if} new\_task:
+00029             self.active\_task.end\_task()
+00030             self.\hyperlink{classtask__manager_1_1TaskManager_ae6fddee07733c42fb3e8e29b3e45af8c}{set\_active\_task}(new\_task)
+00031             self.active\_task.start\_task()
+00032 
+\hypertarget{task__manager_8py_source_l00033}{}\hyperlink{classtask__manager_1_1TaskManager_ae6fddee07733c42fb3e8e29b3e45af8c}{00033}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1TaskManager_ae6fddee07733c42fb3e8e29b3e45af8c}{set\_active\_task}(self, task\_name):
+00034         \textcolor{stringliteral}{"""}
+00035 \textcolor{stringliteral}{        Sets the active task}
+00036 \textcolor{stringliteral}{        """}
+00037         self.\hyperlink{classtask__manager_1_1TaskManager_a3389ea690b2ade9bfe1efa5ad079b777}{active\_task} = self.\hyperlink{classtask__manager_1_1TaskManager_a13e69f2bbcef1d7ca03e92235cf9772e}{tasks}[task\_name]
+00038 
+\hypertarget{task__manager_8py_source_l00039}{}\hyperlink{classtask__manager_1_1Task}{00039} \textcolor{keyword}{class }\hyperlink{classtask__manager_1_1Task}{Task}(object):
+00040     \textcolor{stringliteral}{"""}
+00041 \textcolor{stringliteral}{    Base class for a Task}
+00042 \textcolor{stringliteral}{    """}
+\hypertarget{task__manager_8py_source_l00043}{}\hyperlink{classtask__manager_1_1Task_aab0d2d2ec0b4b3e87969d843a101e118}{00043}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1Task_aab0d2d2ec0b4b3e87969d843a101e118}{\_\_init\_\_}(self, name, ant):
+\hypertarget{task__manager_8py_source_l00044}{}\hyperlink{classtask__manager_1_1Task_a1a12769253144bf3a864cdff907b9fb6}{00044}         self.\hyperlink{classtask__manager_1_1Task_a1a12769253144bf3a864cdff907b9fb6}{name} = name
+\hypertarget{task__manager_8py_source_l00045}{}\hyperlink{classtask__manager_1_1Task_ac43e25887825a1bb6e3d4a5a049968be}{00045}         self.\hyperlink{classtask__manager_1_1Task_ac43e25887825a1bb6e3d4a5a049968be}{ant} = ant
+\hypertarget{task__manager_8py_source_l00046}{}\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{00046}         self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{keywordtype}{None}
+00047 
+\hypertarget{task__manager_8py_source_l00048}{}\hyperlink{classtask__manager_1_1Task_aacfcc36829c22c789f31edaf60ef1cc4}{00048}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1Task_aacfcc36829c22c789f31edaf60ef1cc4}{start\_task}(self):
+00049         \textcolor{stringliteral}{"""}
+00050 \textcolor{stringliteral}{        Actions at the beginning of a new task}
+00051 \textcolor{stringliteral}{        """}
+00052         \textcolor{keywordflow}{pass}
+00053 
+\hypertarget{task__manager_8py_source_l00054}{}\hyperlink{classtask__manager_1_1Task_a20da98293fb7cae0c80cc0caa864c025}{00054}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1Task_a20da98293fb7cae0c80cc0caa864c025}{perform\_task}(self):
+00055         \textcolor{stringliteral}{"""}
+00056 \textcolor{stringliteral}{        Actions done for a task}
+00057 \textcolor{stringliteral}{        each time a task is performed reduce the health by one}
+00058 \textcolor{stringliteral}{        """}
+00059         self.ant.reduce\_health(.001)
 00060 
-\hypertarget{task__manager_8py_source_l00061}{}\hyperlink{classtask__manager_1_1Explore_a8ba5647950e170022bec93bc73c4a8de}{00061}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1Explore_a8ba5647950e170022bec93bc73c4a8de}{perform\_task}(self):
+\hypertarget{task__manager_8py_source_l00061}{}\hyperlink{classtask__manager_1_1Task_a9422ddc4ca06f29aed2bbd53bfde8da4}{00061}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1Task_a9422ddc4ca06f29aed2bbd53bfde8da4}{end\_task}(self):
 00062         \textcolor{stringliteral}{"""}
-00063 \textcolor{stringliteral}{         If ant has food - }
-00064 \textcolor{stringliteral}{             find home nearby and drop food there, else}
-00065 \textcolor{stringliteral}{             find home scent nearby and switch to that task, else}
-00066 \textcolor{stringliteral}{             make a random move}
-00067 \textcolor{stringliteral}{         If ant is searching for food}
-00068 \textcolor{stringliteral}{             if food is found switch to take food task, else}
-00069 \textcolor{stringliteral}{             find a food scent trail, else}
-00070 \textcolor{stringliteral}{             avoid obstacles}
-00071 \textcolor{stringliteral}{             reverse direction if it finds home nearby}
-00072 \textcolor{stringliteral}{         Reduce it scent strength by an unit}
-00073 \textcolor{stringliteral}{        """}
-00074         ant = self.\hyperlink{classtask__manager_1_1Task_ac43e25887825a1bb6e3d4a5a049968be}{ant}
-00075         \textcolor{keywordflow}{if} ant.has\_food():
-00076             home\_nearby = ant.locate\_home\_nearby()
-00077             home\_scent\_nearby = ant.locate\_home\_scent\_nearby()
-00078             \textcolor{keywordflow}{if} home\_nearby != \textcolor{keywordtype}{None}:
-\hypertarget{task__manager_8py_source_l00079}{}\hyperlink{classtask__manager_1_1Explore_ab1f83ac00c442f8eedd1403a59e74060}{00079}                 self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"drop food"}
-00080             \textcolor{keywordflow}{elif} home\_scent\_nearby != \textcolor{keywordtype}{None}:
-00081                 ant.turn(home\_scent\_nearby)
-00082                 self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"follow home trail"}
-00083             \textcolor{keywordflow}{else}:
-00084                 ant.random\_move()
-00085         \textcolor{keywordflow}{else}:
-00086             food\_nearby = ant.locate\_food\_nearby()
-00087             food\_scent\_nearby = ant.locate\_food\_scent\_nearby()
-00088             \textcolor{keywordflow}{if} food\_nearby != \textcolor{keywordtype}{None}:
-00089                 ant.turn(food\_nearby)
-00090                 self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"take food"}
-00091             \textcolor{keywordflow}{elif} ant.ahead().is\_obstacle() \textcolor{keywordflow}{or} ant.ahead().has\_ant():
-00092                 ant.turn(randint(1,3)-2)
-00093             \textcolor{keywordflow}{elif} ant.ahead().is\_home():
-00094                 ant.turn(4)
-00095                 ant.home\_scent\_strength = 40
-00096             \textcolor{keywordflow}{elif} ant.ahead().food\_scent > 1 \textcolor{keywordflow}{and} ant.food <= 0:
-00097                 ant.move()
-00098                 self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"follow food trail"}
-00099             \textcolor{keywordflow}{else}:
-00100                 ant.random\_move()
-00101         ant.reduce\_food\_scent(1).reduce\_home\_scent(1)
-00102 
-\hypertarget{task__manager_8py_source_l00103}{}\hyperlink{classtask__manager_1_1TakeFood}{00103} \textcolor{keyword}{class }\hyperlink{classtask__manager_1_1TakeFood}{TakeFood}(\hyperlink{classtask__manager_1_1Task}{Task}):
-00104     \textcolor{stringliteral}{"""Gathering Food Task"""}
-\hypertarget{task__manager_8py_source_l00105}{}\hyperlink{classtask__manager_1_1TakeFood_a4c5cc2bb37fc196bc5cb34f56fa62a29}{00105}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1TakeFood_a4c5cc2bb37fc196bc5cb34f56fa62a29}{\_\_init\_\_}(self, ant):
-00106         super(TakeFood, self).\hyperlink{classtask__manager_1_1TakeFood_a4c5cc2bb37fc196bc5cb34f56fa62a29}{\_\_init\_\_}(\textcolor{stringliteral}{"take food"}, ant)
-00107 
-\hypertarget{task__manager_8py_source_l00108}{}\hyperlink{classtask__manager_1_1TakeFood_af42eebb5d9ee945cafd05908d478bab3}{00108}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1TakeFood_af42eebb5d9ee945cafd05908d478bab3}{perform\_task}(self):
-00109         \textcolor{stringliteral}{"""Take food if available otherwise return to explore mode"""}
-00110         ant = self.\hyperlink{classtask__manager_1_1Task_ac43e25887825a1bb6e3d4a5a049968be}{ant}
-00111         food = ant.ahead().get\_food(1)
-00112         \textcolor{keywordflow}{if} food:
-00113             ant.food = food
-00114             ant.turn(4)
-\hypertarget{task__manager_8py_source_l00115}{}\hyperlink{classtask__manager_1_1TakeFood_a592252f7a2b882cf283c9da9cbab07a2}{00115}             self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"follow home trail"}
-00116         \textcolor{keywordflow}{else}:
-00117             self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"explore"}
-00118 
-\hypertarget{task__manager_8py_source_l00119}{}\hyperlink{classtask__manager_1_1TakeFood_a01c78eece0496ccd7c7badde7ce848b4}{00119}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1TakeFood_a01c78eece0496ccd7c7badde7ce848b4}{end\_task}(self):
-00120         \textcolor{stringliteral}{"""Increase food\_scent\_strength}
-00121 \textcolor{stringliteral}{        and reduce home\_scent\_strength"""}
-00122         self.ant.food\_scent\_strength = 40
-00123         self.ant.home\_scent\_strength = 0
-00124 
-00125 
-\hypertarget{task__manager_8py_source_l00126}{}\hyperlink{classtask__manager_1_1DropFood}{00126} \textcolor{keyword}{class }\hyperlink{classtask__manager_1_1DropFood}{DropFood}(\hyperlink{classtask__manager_1_1Task}{Task}):
-00127     \textcolor{stringliteral}{"""Drop Food Task"""}
-\hypertarget{task__manager_8py_source_l00128}{}\hyperlink{classtask__manager_1_1DropFood_a0f759e307357de441edd8465313ca4e8}{00128}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1DropFood_a0f759e307357de441edd8465313ca4e8}{\_\_init\_\_}(self, ant):
-00129         super(DropFood, self).\hyperlink{classtask__manager_1_1DropFood_a0f759e307357de441edd8465313ca4e8}{\_\_init\_\_}(\textcolor{stringliteral}{"drop food"}, ant)
-00130 
-\hypertarget{task__manager_8py_source_l00131}{}\hyperlink{classtask__manager_1_1DropFood_a82661a2394895191b28bb7ac1aeb5bf4}{00131}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1DropFood_a82661a2394895191b28bb7ac1aeb5bf4}{perform\_task}(self):
-00132         \textcolor{stringliteral}{"""}
-00133 \textcolor{stringliteral}{        If ant reaches home drop the food inside the home}
-00134 \textcolor{stringliteral}{        otherwise follow a home trail}
-00135 \textcolor{stringliteral}{        """}
-00136         ant = self.\hyperlink{classtask__manager_1_1Task_ac43e25887825a1bb6e3d4a5a049968be}{ant}
-00137         home\_nearby = ant.locate\_home\_nearby()
-00138         \textcolor{keywordflow}{if} home\_nearby !=\textcolor{keywordtype}{None}:
-00139             ant.turn(home\_nearby)
-00140             ant.drop\_food()
-00141             ant.turn(4)
-\hypertarget{task__manager_8py_source_l00142}{}\hyperlink{classtask__manager_1_1DropFood_a9c3891af721254b73254732f0cb18f59}{00142}             self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"explore"}
-00143         \textcolor{keywordflow}{else}:
-00144             self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"follow home trail"}
-00145 
-\hypertarget{task__manager_8py_source_l00146}{}\hyperlink{classtask__manager_1_1DropFood_aedccf366d55d4b081239ff27b72d896d}{00146}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1DropFood_aedccf366d55d4b081239ff27b72d896d}{end\_task}(self):
-00147         \textcolor{stringliteral}{"""}
-00148 \textcolor{stringliteral}{        Increase home scent strength and reduce food scent strength}
-00149 \textcolor{stringliteral}{        """}
-00150         self.ant.food\_scent\_strength = 0
-00151         self.ant.home\_scent\_strength = 40
+00063 \textcolor{stringliteral}{        Actions at the end of a new task}
+00064 \textcolor{stringliteral}{        """}
+00065         \textcolor{keywordflow}{pass}
+00066 
+\hypertarget{task__manager_8py_source_l00067}{}\hyperlink{classtask__manager_1_1Task_ab46cf79945b53ec633f6f52b37c7a5cb}{00067}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1Task_ab46cf79945b53ec633f6f52b37c7a5cb}{get\_new\_task}(self):
+00068         \textcolor{stringliteral}{"""Returns and resets new task"""}
+00069         new\_task = self.new\_task
+00070         self.new\_task = \textcolor{keywordtype}{None}
+00071         \textcolor{keywordflow}{return} new\_task
+00072 
+\hypertarget{task__manager_8py_source_l00073}{}\hyperlink{classtask__manager_1_1Explore}{00073} \textcolor{keyword}{class }\hyperlink{classtask__manager_1_1Explore}{Explore}(\hyperlink{classtask__manager_1_1Task}{Task}):
+00074     \textcolor{stringliteral}{"""}
+00075 \textcolor{stringliteral}{    Ant Exploring Task}
+00076 \textcolor{stringliteral}{    """}
+\hypertarget{task__manager_8py_source_l00077}{}\hyperlink{classtask__manager_1_1Explore_ae95cc7a4676c07732fcf0faed752959c}{00077}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1Explore_ae95cc7a4676c07732fcf0faed752959c}{\_\_init\_\_}(self, ant):
+00078         super(Explore, self).\hyperlink{classtask__manager_1_1Explore_ae95cc7a4676c07732fcf0faed752959c}{\_\_init\_\_}(\textcolor{stringliteral}{"explore"}, ant)
+00079 
+\hypertarget{task__manager_8py_source_l00080}{}\hyperlink{classtask__manager_1_1Explore_a8ba5647950e170022bec93bc73c4a8de}{00080}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1Explore_a8ba5647950e170022bec93bc73c4a8de}{perform\_task}(self):
+00081         \textcolor{stringliteral}{"""}
+00082 \textcolor{stringliteral}{         If ant has food - }
+00083 \textcolor{stringliteral}{             find home nearby and drop food there, else}
+00084 \textcolor{stringliteral}{             find home scent nearby and switch to follow home trail task, else}
+00085 \textcolor{stringliteral}{             make a random move}
+00086 \textcolor{stringliteral}{         If ant is searching for food}
+00087 \textcolor{stringliteral}{             if food is found switch to take food task, else}
+00088 \textcolor{stringliteral}{             find a food scent trail,}
+00089 \textcolor{stringliteral}{             reverse direction if it finds home nearby}
+00090 \textcolor{stringliteral}{         Reduce it scent strength by an unit}
+00091 \textcolor{stringliteral}{        """}
+00092         ant = self.\hyperlink{classtask__manager_1_1Task_ac43e25887825a1bb6e3d4a5a049968be}{ant}
+00093         \textcolor{keywordflow}{if} ant.has\_food():
+00094             home\_nearby = ant.locate\_home\_nearby()
+00095             home\_scent\_nearby = ant.locate\_home\_scent\_nearby()
+00096             \textcolor{keywordflow}{if} home\_nearby != \textcolor{keywordtype}{None}:
+\hypertarget{task__manager_8py_source_l00097}{}\hyperlink{classtask__manager_1_1Explore_ab1f83ac00c442f8eedd1403a59e74060}{00097}                 self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"drop food"}
+00098             \textcolor{keywordflow}{elif} home\_scent\_nearby != \textcolor{keywordtype}{None}:
+00099                 ant.turn(home\_scent\_nearby)
+00100                 self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"follow home trail"}
+00101             \textcolor{keywordflow}{else}:
+00102                 ant.random\_move()
+00103         \textcolor{keywordflow}{else}:
+00104             food\_nearby = ant.locate\_food\_nearby()
+00105             food\_scent\_nearby = ant.locate\_food\_scent\_nearby()
+00106             \textcolor{keywordflow}{if} ant.here().is\_own\_home(ant.get\_nest\_id()):
+00107                 ant.move()
+00108             \textcolor{keywordflow}{elif} food\_nearby != \textcolor{keywordtype}{None}:
+00109                 ant.turn(food\_nearby)
+00110                 self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"take food"}
+00111             \textcolor{keywordflow}{elif} ant.ahead().is\_own\_home(ant.get\_nest\_id()):
+00112                 ant.turn(choice([3, 4, 5]))
+00113                 ant.home\_scent\_strength = 40
+00114             \textcolor{keywordflow}{elif} food\_scent\_nearby != \textcolor{keywordtype}{None}:
+00115                 ant.turn(food\_scent\_nearby)
+00116                 self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"follow food trail"}
+00117             \textcolor{keywordflow}{else}:
+00118                 ant.random\_move()
+00119         ant.reduce\_food\_scent\_strength(1).reduce\_home\_scent\_strength(1)
+00120         super(Explore, self).\hyperlink{classtask__manager_1_1Explore_a8ba5647950e170022bec93bc73c4a8de}{perform\_task}()
+00121 
+\hypertarget{task__manager_8py_source_l00122}{}\hyperlink{classtask__manager_1_1TakeFood}{00122} \textcolor{keyword}{class }\hyperlink{classtask__manager_1_1TakeFood}{TakeFood}(\hyperlink{classtask__manager_1_1Task}{Task}):
+00123     \textcolor{stringliteral}{"""}
+00124 \textcolor{stringliteral}{    Gathers food from the cell}
+00125 \textcolor{stringliteral}{    If food is present it takes the food otherwise it returns to explore mode}
+00126 \textcolor{stringliteral}{    """}
+\hypertarget{task__manager_8py_source_l00127}{}\hyperlink{classtask__manager_1_1TakeFood_a4c5cc2bb37fc196bc5cb34f56fa62a29}{00127}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1TakeFood_a4c5cc2bb37fc196bc5cb34f56fa62a29}{\_\_init\_\_}(self, ant):
+00128         super(TakeFood, self).\hyperlink{classtask__manager_1_1TakeFood_a4c5cc2bb37fc196bc5cb34f56fa62a29}{\_\_init\_\_}(\textcolor{stringliteral}{"take food"}, ant)
+00129 
+\hypertarget{task__manager_8py_source_l00130}{}\hyperlink{classtask__manager_1_1TakeFood_af42eebb5d9ee945cafd05908d478bab3}{00130}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1TakeFood_af42eebb5d9ee945cafd05908d478bab3}{perform\_task}(self):
+00131         \textcolor{stringliteral}{"""}
+00132 \textcolor{stringliteral}{        Take food if available otherwise return to explore mode}
+00133 \textcolor{stringliteral}{        """}
+00134         ant = self.\hyperlink{classtask__manager_1_1Task_ac43e25887825a1bb6e3d4a5a049968be}{ant}
+00135         food = ant.ahead().get\_food(1)
+00136         \textcolor{keywordflow}{if} food:
+00137             ant.take\_food(food)
+00138             ant.turn(4)
+\hypertarget{task__manager_8py_source_l00139}{}\hyperlink{classtask__manager_1_1TakeFood_a592252f7a2b882cf283c9da9cbab07a2}{00139}             self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"follow home trail"}
+00140         \textcolor{keywordflow}{else}:
+00141             self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"explore"}
+00142         super(TakeFood, self).\hyperlink{classtask__manager_1_1TakeFood_af42eebb5d9ee945cafd05908d478bab3}{perform\_task}()
+00143 
+\hypertarget{task__manager_8py_source_l00144}{}\hyperlink{classtask__manager_1_1TakeFood_a01c78eece0496ccd7c7badde7ce848b4}{00144}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1TakeFood_a01c78eece0496ccd7c7badde7ce848b4}{end\_task}(self):
+00145         \textcolor{stringliteral}{"""}
+00146 \textcolor{stringliteral}{        Increase food\_scent\_strength}
+00147 \textcolor{stringliteral}{        and reduce home\_scent\_strength}
+00148 \textcolor{stringliteral}{        """}
+00149         self.ant.set\_food\_scent\_strength(40)
+00150         self.ant.set\_home\_scent\_strength(0)
+00151 
 00152 
-\hypertarget{task__manager_8py_source_l00153}{}\hyperlink{classtask__manager_1_1FollowFoodTrail}{00153} \textcolor{keyword}{class }\hyperlink{classtask__manager_1_1FollowFoodTrail}{FollowFoodTrail}(\hyperlink{classtask__manager_1_1Task}{Task}):
-00154     \textcolor{stringliteral}{"""docstring for FollowFoodTrail"""}
-\hypertarget{task__manager_8py_source_l00155}{}\hyperlink{classtask__manager_1_1FollowFoodTrail_a6af05bfd09141281c9943c8f01a0896b}{00155}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1FollowFoodTrail_a6af05bfd09141281c9943c8f01a0896b}{\_\_init\_\_}(self, ant):
-00156         super(FollowFoodTrail, self).\hyperlink{classtask__manager_1_1FollowFoodTrail_a6af05bfd09141281c9943c8f01a0896b}{\_\_init\_\_}(\textcolor{stringliteral}{"follow food trail"}, ant)
-00157 
-\hypertarget{task__manager_8py_source_l00158}{}\hyperlink{classtask__manager_1_1FollowFoodTrail_a68013dbb3ab9d25676217de4d22c48eb}{00158}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1FollowFoodTrail_a68013dbb3ab9d25676217de4d22c48eb}{start\_task}(self):
-00159         \textcolor{keywordflow}{pass}
-00160 
-\hypertarget{task__manager_8py_source_l00161}{}\hyperlink{classtask__manager_1_1FollowFoodTrail_aa805a2a4e9a76ba7afa252ca5efbd121}{00161}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1FollowFoodTrail_aa805a2a4e9a76ba7afa252ca5efbd121}{perform\_task}(self):
-00162         \textcolor{stringliteral}{"""}
-00163 \textcolor{stringliteral}{        if food is found take food\_scent\_strength}
-00164 \textcolor{stringliteral}{        otherwise rank cells based on scent and follow it}
-00165 \textcolor{stringliteral}{        if scent trail is lost, return to explore mode}
-00166 \textcolor{stringliteral}{        """}
-00167         ant = self.ant
-00168         food\_nearby = ant.locate\_food\_nearby()
-00169         food\_scent\_nearby = ant.locate\_food\_scent\_nearby()
-00170         \textcolor{keywordflow}{if} food\_nearby != \textcolor{keywordtype}{None}:
-00171             ant.turn(food\_nearby)
-\hypertarget{task__manager_8py_source_l00172}{}\hyperlink{classtask__manager_1_1FollowFoodTrail_aefc8c49492622a4e4fa61279fd52ed12}{00172}             self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"take food"}
-00173         \textcolor{keywordflow}{elif} ant.ahead().is\_obstacle() \textcolor{keywordflow}{or} ant.ahead().has\_ant():
-00174             ant.turn(randint(1,3)-2)
-00175         \textcolor{keywordflow}{elif} ant.ahead().is\_home():
-00176             ant.turn(4)
-00177             ant.home\_scent\_strength = 40
-00178         \textcolor{keywordflow}{else}:
-00179             ant.turn(ant.rank\_by\_food\_scent())
-00180             ant.move()
-00181         ant.reduce\_home\_scent(1).reduce\_food\_scent(1)
+\hypertarget{task__manager_8py_source_l00153}{}\hyperlink{classtask__manager_1_1DropFood}{00153} \textcolor{keyword}{class }\hyperlink{classtask__manager_1_1DropFood}{DropFood}(\hyperlink{classtask__manager_1_1Task}{Task}):
+00154     \textcolor{stringliteral}{"""}
+00155 \textcolor{stringliteral}{    Drop the food inside the nest}
+00156 \textcolor{stringliteral}{    Randomly walks inside the nest and drops the food}
+00157 \textcolor{stringliteral}{    and returns to explore mode}
+00158 \textcolor{stringliteral}{    """}
+\hypertarget{task__manager_8py_source_l00159}{}\hyperlink{classtask__manager_1_1DropFood_a0f759e307357de441edd8465313ca4e8}{00159}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1DropFood_a0f759e307357de441edd8465313ca4e8}{\_\_init\_\_}(self, ant):
+00160         super(DropFood, self).\hyperlink{classtask__manager_1_1DropFood_a0f759e307357de441edd8465313ca4e8}{\_\_init\_\_}(\textcolor{stringliteral}{"drop food"}, ant)
+00161 
+\hypertarget{task__manager_8py_source_l00162}{}\hyperlink{classtask__manager_1_1DropFood_ab086df733d469229b17fdc652155aa3d}{00162}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1DropFood_ab086df733d469229b17fdc652155aa3d}{start\_task}(self):
+00163         self.ant.set\_food\_scent\_strength(0)
+00164         self.ant.set\_home\_scent\_strength(40)
+00165 
+\hypertarget{task__manager_8py_source_l00166}{}\hyperlink{classtask__manager_1_1DropFood_a82661a2394895191b28bb7ac1aeb5bf4}{00166}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1DropFood_a82661a2394895191b28bb7ac1aeb5bf4}{perform\_task}(self):
+00167         \textcolor{stringliteral}{"""}
+00168 \textcolor{stringliteral}{        If ant reaches home drop the food inside the home}
+00169 \textcolor{stringliteral}{        otherwise follow a home trail}
+00170 \textcolor{stringliteral}{        """}
+00171         ant = self.\hyperlink{classtask__manager_1_1Task_ac43e25887825a1bb6e3d4a5a049968be}{ant}
+00172         home\_nearby = ant.locate\_home\_nearby()
+00173         \textcolor{keywordflow}{if} home\_nearby !=\textcolor{keywordtype}{None}:
+00174             ant.turn(home\_nearby)
+00175             ant.move()
+00176             \textcolor{keywordflow}{if} randint(1,10) == 1:
+00177                 ant.drop\_food()
+\hypertarget{task__manager_8py_source_l00178}{}\hyperlink{classtask__manager_1_1DropFood_a9c3891af721254b73254732f0cb18f59}{00178}                 self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"explore"}
+00179         \textcolor{keywordflow}{else}:
+00180             self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"follow home trail"}
+00181         super(DropFood, self).\hyperlink{classtask__manager_1_1DropFood_a82661a2394895191b28bb7ac1aeb5bf4}{perform\_task}()    
 00182 
-\hypertarget{task__manager_8py_source_l00183}{}\hyperlink{classtask__manager_1_1FollowHomeTrail}{00183} \textcolor{keyword}{class }\hyperlink{classtask__manager_1_1FollowHomeTrail}{FollowHomeTrail}(\hyperlink{classtask__manager_1_1Task}{Task}):
-00184     \textcolor{stringliteral}{"""docstring for FollowFoodTrail"""}
-\hypertarget{task__manager_8py_source_l00185}{}\hyperlink{classtask__manager_1_1FollowHomeTrail_a644c02e687f8a412a39e81628742f3b5}{00185}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1FollowHomeTrail_a644c02e687f8a412a39e81628742f3b5}{\_\_init\_\_}(self, ant):
-00186         super(FollowHomeTrail, self).\hyperlink{classtask__manager_1_1FollowHomeTrail_a644c02e687f8a412a39e81628742f3b5}{\_\_init\_\_}(\textcolor{stringliteral}{"follow home trail"}, ant)
-00187 
-\hypertarget{task__manager_8py_source_l00188}{}\hyperlink{classtask__manager_1_1FollowHomeTrail_a0ffd4aabfafcfead05a02e149e5fab91}{00188}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1FollowHomeTrail_a0ffd4aabfafcfead05a02e149e5fab91}{start\_task}(self):
-00189         \textcolor{keywordflow}{pass}
-00190 
-\hypertarget{task__manager_8py_source_l00191}{}\hyperlink{classtask__manager_1_1FollowHomeTrail_ae4386ef7470e20e3f42fab9fc65b70cb}{00191}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1FollowHomeTrail_ae4386ef7470e20e3f42fab9fc65b70cb}{perform\_task}(self):
-00192         \textcolor{stringliteral}{"""}
-00193 \textcolor{stringliteral}{            If home is reached drop the food\_scent\_strength}
-00194 \textcolor{stringliteral}{            If trail is lost return to explore mode}
-00195 \textcolor{stringliteral}{            else rank the cell by home scent strength and follow itself}
-00196 \textcolor{stringliteral}{        """}
-00197         ant = self.ant
-00198         home\_nearby = ant.locate\_home\_nearby()
-00199         \textcolor{keywordflow}{if} ant.ahead().is\_obstacle() \textcolor{keywordflow}{or} ant.ahead().has\_ant() \textcolor{keywordflow}{or} ant.ahead().is\_food():
-00200             ant.turn(choice([-1, 1]))
-00201         \textcolor{keywordflow}{elif} home\_nearby != \textcolor{keywordtype}{None}:
-00202             ant.turn(home\_nearby)
-\hypertarget{task__manager_8py_source_l00203}{}\hyperlink{classtask__manager_1_1FollowHomeTrail_aae7878e14c1b1aeeac617e2e03074705}{00203}             self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"drop food"}
-00204         \textcolor{keywordflow}{else}:
-00205             ant.turn(ant.rank\_by\_home\_scent())
-00206             ant.move()
-00207         ant.reduce\_food\_scent(1).reduce\_home\_scent(1)
+\hypertarget{task__manager_8py_source_l00183}{}\hyperlink{classtask__manager_1_1DropFood_aedccf366d55d4b081239ff27b72d896d}{00183}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1DropFood_aedccf366d55d4b081239ff27b72d896d}{end\_task}(self):
+00184         \textcolor{stringliteral}{"""}
+00185 \textcolor{stringliteral}{        Increase home scent strength and reduce food scent strength}
+00186 \textcolor{stringliteral}{        """}
+00187         self.ant.set\_food\_scent\_strength(0)
+00188         self.ant.set\_home\_scent\_strength(40)
+00189 
+\hypertarget{task__manager_8py_source_l00190}{}\hyperlink{classtask__manager_1_1FollowFoodTrail}{00190} \textcolor{keyword}{class }\hyperlink{classtask__manager_1_1FollowFoodTrail}{FollowFoodTrail}(\hyperlink{classtask__manager_1_1Task}{Task}):
+00191     \textcolor{stringliteral}{"""}
+00192 \textcolor{stringliteral}{    Follows food trail if it finds a food scent nearby}
+00193 \textcolor{stringliteral}{    """}
+\hypertarget{task__manager_8py_source_l00194}{}\hyperlink{classtask__manager_1_1FollowFoodTrail_a6af05bfd09141281c9943c8f01a0896b}{00194}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1FollowFoodTrail_a6af05bfd09141281c9943c8f01a0896b}{\_\_init\_\_}(self, ant):
+00195         super(FollowFoodTrail, self).\hyperlink{classtask__manager_1_1FollowFoodTrail_a6af05bfd09141281c9943c8f01a0896b}{\_\_init\_\_}(\textcolor{stringliteral}{"follow food trail"}, ant)
+00196 
+\hypertarget{task__manager_8py_source_l00197}{}\hyperlink{classtask__manager_1_1FollowFoodTrail_a68013dbb3ab9d25676217de4d22c48eb}{00197}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1FollowFoodTrail_a68013dbb3ab9d25676217de4d22c48eb}{start\_task}(self):
+00198         \textcolor{keywordflow}{pass}
+00199 
+\hypertarget{task__manager_8py_source_l00200}{}\hyperlink{classtask__manager_1_1FollowFoodTrail_aa805a2a4e9a76ba7afa252ca5efbd121}{00200}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1FollowFoodTrail_aa805a2a4e9a76ba7afa252ca5efbd121}{perform\_task}(self):
+00201         \textcolor{stringliteral}{"""}
+00202 \textcolor{stringliteral}{        if food is found take food\_scent\_strength}
+00203 \textcolor{stringliteral}{        otherwise rank cells based on scent and follow it}
+00204 \textcolor{stringliteral}{        if scent trail is lost, return to explore mode}
+00205 \textcolor{stringliteral}{        """}
+00206         ant = self.ant
+00207         food\_nearby = ant.locate\_food\_nearby()
+00208         \textcolor{comment}{# food\_scent\_nearby = ant.locate\_food\_scent\_nearby()}
+00209         \textcolor{keywordflow}{if} food\_nearby != \textcolor{keywordtype}{None}:
+00210             ant.turn(food\_nearby)
+\hypertarget{task__manager_8py_source_l00211}{}\hyperlink{classtask__manager_1_1FollowFoodTrail_aefc8c49492622a4e4fa61279fd52ed12}{00211}             self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"take food"}
+00212         \textcolor{keywordflow}{elif} ant.ahead().is\_obstacle() \textcolor{keywordflow}{or} ant.ahead().has\_ant():
+00213             ant.turn(randint(1,3)-2)
+00214         \textcolor{keywordflow}{elif} ant.ahead().is\_own\_home(ant.get\_nest\_id()) \textcolor{keywordflow}{and} \textcolor{keywordflow}{not} ant.here().is\_own\_home(ant.get\_nest\_id()):
+00215             ant.turn(4)
+00216             ant.home\_scent\_strength = 40
+00217         \textcolor{keywordflow}{else}:
+00218             ant.turn(ant.rank\_by\_food\_scent())
+00219             ant.move()
+00220         ant.reduce\_home\_scent\_strength(1).reduce\_food\_scent\_strength(1)
+00221         super(FollowFoodTrail, self).\hyperlink{classtask__manager_1_1FollowFoodTrail_aa805a2a4e9a76ba7afa252ca5efbd121}{perform\_task}()
+00222 
+\hypertarget{task__manager_8py_source_l00223}{}\hyperlink{classtask__manager_1_1FollowHomeTrail}{00223} \textcolor{keyword}{class }\hyperlink{classtask__manager_1_1FollowHomeTrail}{FollowHomeTrail}(\hyperlink{classtask__manager_1_1Task}{Task}):
+00224     \textcolor{stringliteral}{"""}
+00225 \textcolor{stringliteral}{    Follows a home trail if it finds home scent }
+00226 \textcolor{stringliteral}{    """}
+\hypertarget{task__manager_8py_source_l00227}{}\hyperlink{classtask__manager_1_1FollowHomeTrail_a644c02e687f8a412a39e81628742f3b5}{00227}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1FollowHomeTrail_a644c02e687f8a412a39e81628742f3b5}{\_\_init\_\_}(self, ant):
+00228         super(FollowHomeTrail, self).\hyperlink{classtask__manager_1_1FollowHomeTrail_a644c02e687f8a412a39e81628742f3b5}{\_\_init\_\_}(\textcolor{stringliteral}{"follow home trail"}, ant)
+00229 
+\hypertarget{task__manager_8py_source_l00230}{}\hyperlink{classtask__manager_1_1FollowHomeTrail_a0ffd4aabfafcfead05a02e149e5fab91}{00230}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1FollowHomeTrail_a0ffd4aabfafcfead05a02e149e5fab91}{start\_task}(self):
+00231         \textcolor{keywordflow}{pass}
+00232 
+\hypertarget{task__manager_8py_source_l00233}{}\hyperlink{classtask__manager_1_1FollowHomeTrail_ae4386ef7470e20e3f42fab9fc65b70cb}{00233}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1FollowHomeTrail_ae4386ef7470e20e3f42fab9fc65b70cb}{perform\_task}(self):
+00234         \textcolor{stringliteral}{"""}
+00235 \textcolor{stringliteral}{            If home is reached drop the food\_scent\_strength}
+00236 \textcolor{stringliteral}{            If trail is lost return to explore mode}
+00237 \textcolor{stringliteral}{            else rank the cell by home scent strength and follow itself}
+00238 \textcolor{stringliteral}{        """}
+00239         ant = self.ant
+00240         home\_nearby = ant.locate\_home\_nearby()
+00241         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} ant.has\_food():
+\hypertarget{task__manager_8py_source_l00242}{}\hyperlink{classtask__manager_1_1FollowHomeTrail_aae7878e14c1b1aeeac617e2e03074705}{00242}             self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"explore"}
+00243         \textcolor{keywordflow}{elif} ant.ahead().is\_obstacle() \textcolor{keywordflow}{or} ant.ahead().has\_ant():
+00244             ant.turn(choice([-1, 1]))
+00245         \textcolor{keywordflow}{elif} ant.ahead().is\_food(ant.get\_nest\_id()):
+00246             ant.turn(4)
+00247             self.ant.food\_scent\_strength = 40
+00248         \textcolor{keywordflow}{elif} home\_nearby != \textcolor{keywordtype}{None}:
+00249             ant.turn(home\_nearby)
+00250             self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"drop food"}
+00251         \textcolor{keywordflow}{else}:
+00252             new\_direction = ant.rank\_by\_home\_scent()
+00253             \textcolor{keywordflow}{if} new\_direction:
+00254                 ant.turn(new\_direction)
+00255                 ant.move()
+00256             \textcolor{keywordflow}{else}:
+00257                 ant.random\_move()
+00258         ant.reduce\_food\_scent\_strength(1).reduce\_home\_scent\_strength(1)
+00259         super(FollowHomeTrail, self).\hyperlink{classtask__manager_1_1FollowHomeTrail_ae4386ef7470e20e3f42fab9fc65b70cb}{perform\_task}()
+00260 
+\hypertarget{task__manager_8py_source_l00261}{}\hyperlink{classtask__manager_1_1ReturnHome}{00261} \textcolor{keyword}{class }\hyperlink{classtask__manager_1_1ReturnHome}{ReturnHome}(\hyperlink{classtask__manager_1_1Task}{Task}):
+00262     \textcolor{stringliteral}{"""}
+00263 \textcolor{stringliteral}{    Return home if the ant is roaming outside}
+00264 \textcolor{stringliteral}{    """}
+\hypertarget{task__manager_8py_source_l00265}{}\hyperlink{classtask__manager_1_1ReturnHome_ada66b785625008db20221e1b53d419f6}{00265}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1ReturnHome_ada66b785625008db20221e1b53d419f6}{\_\_init\_\_}(self, ant):
+00266         super(ReturnHome, self).\hyperlink{classtask__manager_1_1ReturnHome_ada66b785625008db20221e1b53d419f6}{\_\_init\_\_}(\textcolor{stringliteral}{"return home"}, ant)        
+00267 
+\hypertarget{task__manager_8py_source_l00268}{}\hyperlink{classtask__manager_1_1ReturnHome_a8201892f7668c2ca1e7c08f2a51c4309}{00268}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1ReturnHome_a8201892f7668c2ca1e7c08f2a51c4309}{start\_task}(self):
+00269         self.ant.set\_home\_scent\_strength(0)
+00270         self.ant.set\_food\_scent\_strength(0)
+00271 
+\hypertarget{task__manager_8py_source_l00272}{}\hyperlink{classtask__manager_1_1ReturnHome_ab9d2b69cbefdeaf308df564c13f5aac2}{00272}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1ReturnHome_ab9d2b69cbefdeaf308df564c13f5aac2}{perform\_task}(self):
+00273         \textcolor{stringliteral}{"""}
+00274 \textcolor{stringliteral}{        Follow home trail and return home}
+00275 \textcolor{stringliteral}{        """}
+00276         ant = self.\hyperlink{classtask__manager_1_1Task_ac43e25887825a1bb6e3d4a5a049968be}{ant}
+00277         home\_nearby = ant.locate\_home\_nearby()
+00278         \textcolor{keywordflow}{if} ant.ahead().is\_obstacle() \textcolor{keywordflow}{or} ant.ahead().is\_food(ant.get\_nest\_id()) \textcolor{keywordflow}{or} ant.ahead().has\_ant():
+00279             ant.turn(choice([-1, 1]))
+00280         \textcolor{keywordflow}{elif} home\_nearby != \textcolor{keywordtype}{None}:
+00281             ant.turn(home\_nearby)
+00282             ant.move()
+\hypertarget{task__manager_8py_source_l00283}{}\hyperlink{classtask__manager_1_1ReturnHome_afd37383d07987cb20f716cfe86b7b957}{00283}             self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"guard nest"}
+00284         \textcolor{keywordflow}{else}:
+00285             new\_direction = ant.rank\_by\_home\_scent()
+00286             \textcolor{keywordflow}{if} new\_direction:
+00287                 ant.turn(new\_direction)
+00288                 ant.move()
+00289             \textcolor{keywordflow}{else}:
+00290                 ant.random\_move()
+00291         super(ReturnHome, self).\hyperlink{classtask__manager_1_1ReturnHome_ab9d2b69cbefdeaf308df564c13f5aac2}{perform\_task}()
+00292 
+\hypertarget{task__manager_8py_source_l00293}{}\hyperlink{classtask__manager_1_1GuardNest}{00293} \textcolor{keyword}{class }\hyperlink{classtask__manager_1_1GuardNest}{GuardNest}(\hyperlink{classtask__manager_1_1Task}{Task}):
+00294     \textcolor{stringliteral}{"""}
+00295 \textcolor{stringliteral}{    Guards the nest}
+00296 \textcolor{stringliteral}{    If it sees an enemy ant it attacks it}
+00297 \textcolor{stringliteral}{    """}
+\hypertarget{task__manager_8py_source_l00298}{}\hyperlink{classtask__manager_1_1GuardNest_ac1b98762825c860890caff5649269cb1}{00298}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1GuardNest_ac1b98762825c860890caff5649269cb1}{\_\_init\_\_}(self, ant):
+00299         super(GuardNest, self).\hyperlink{classtask__manager_1_1GuardNest_ac1b98762825c860890caff5649269cb1}{\_\_init\_\_}(\textcolor{stringliteral}{"guard nest"}, ant)
+00300 
+\hypertarget{task__manager_8py_source_l00301}{}\hyperlink{classtask__manager_1_1GuardNest_a44493cf7d0653d2b548040a5857ef330}{00301}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1GuardNest_a44493cf7d0653d2b548040a5857ef330}{start\_task}(self):
+00302         self.ant.set\_home\_scent\_strength(2)
+00303         self.ant.set\_food\_scent\_strength(0)
+00304 
+\hypertarget{task__manager_8py_source_l00305}{}\hyperlink{classtask__manager_1_1GuardNest_a18003edc3f1e2fca7bfe34cf078e96f8}{00305}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1GuardNest_a18003edc3f1e2fca7bfe34cf078e96f8}{perform\_task}(self):
+00306         \textcolor{stringliteral}{"""}
+00307 \textcolor{stringliteral}{        Travel along the walls of the nest}
+00308 \textcolor{stringliteral}{        """}
+00309         ant = self.\hyperlink{classtask__manager_1_1Task_ac43e25887825a1bb6e3d4a5a049968be}{ant}
+00310         home\_nearby = ant.locate\_home\_nearby()
+00311         enemy\_ant\_nearby = ant.get\_enemy\_ant\_nearby()
+00312         \textcolor{keywordflow}{if} enemy\_ant\_nearby:
+00313             ant.attack(enemy\_ant\_nearby)
+00314         \textcolor{keywordflow}{if} \textcolor{keywordflow}{not} home\_nearby:
+\hypertarget{task__manager_8py_source_l00315}{}\hyperlink{classtask__manager_1_1GuardNest_ada22ecced047079d5f4d98a0b86a2d0e}{00315}             self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"return home"}
+00316         \textcolor{keywordflow}{elif} \textcolor{keywordflow}{not} ant.ahead().is\_own\_home(ant.get\_nest\_id()):
+00317             ant.turn(choice([-1, 1]))
+00318         \textcolor{keywordflow}{else}:
+00319             ant.move()
+00320         super(GuardNest, self).\hyperlink{classtask__manager_1_1GuardNest_a18003edc3f1e2fca7bfe34cf078e96f8}{perform\_task}()
+00321 
+\hypertarget{task__manager_8py_source_l00322}{}\hyperlink{classtask__manager_1_1ProduceAnts}{00322} \textcolor{keyword}{class }\hyperlink{classtask__manager_1_1ProduceAnts}{ProduceAnts}(\hyperlink{classtask__manager_1_1Task}{Task}):
+00323     \textcolor{stringliteral}{"""}
+00324 \textcolor{stringliteral}{    Randomly produce new ants}
+00325 \textcolor{stringliteral}{    """}
+\hypertarget{task__manager_8py_source_l00326}{}\hyperlink{classtask__manager_1_1ProduceAnts_ab154b2db66b66e0fc43d3ef5094bf73e}{00326}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1ProduceAnts_ab154b2db66b66e0fc43d3ef5094bf73e}{\_\_init\_\_}(self, ant):
+00327         super(ProduceAnts, self).\hyperlink{classtask__manager_1_1ProduceAnts_ab154b2db66b66e0fc43d3ef5094bf73e}{\_\_init\_\_}(\textcolor{stringliteral}{"produce ants"}, ant)
+00328 
+\hypertarget{task__manager_8py_source_l00329}{}\hyperlink{classtask__manager_1_1ProduceAnts_aa1636ae28589d29d45d83dd71b2dccbb}{00329}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1ProduceAnts_aa1636ae28589d29d45d83dd71b2dccbb}{perform\_task}(self):
+00330         \textcolor{stringliteral}{"""randomly produce new ants"""}
+00331         \textcolor{keywordflow}{if} self.ant.is\_hungry():
+\hypertarget{task__manager_8py_source_l00332}{}\hyperlink{classtask__manager_1_1ProduceAnts_a52f38a28435526dc06a11cd23916ee4b}{00332}             self.\hyperlink{classtask__manager_1_1Task_af16658f4c3c447e24f73ed3d1803e058}{new\_task} = \textcolor{stringliteral}{"have food"}
+00333         \textcolor{keywordflow}{elif} randint(1,100) == 1:
+00334             self.ant.nest.add\_new\_ant\_randomly()
+00335         super(ProduceAnts, self).\hyperlink{classtask__manager_1_1ProduceAnts_aa1636ae28589d29d45d83dd71b2dccbb}{perform\_task}()
+00336         
+\hypertarget{task__manager_8py_source_l00337}{}\hyperlink{classtask__manager_1_1FindFood}{00337} \textcolor{keyword}{class }\hyperlink{classtask__manager_1_1FindFood}{FindFood}(\hyperlink{classtask__manager_1_1Task}{Task}):
+00338     \textcolor{stringliteral}{"""Finds food if hungry"""}
+\hypertarget{task__manager_8py_source_l00339}{}\hyperlink{classtask__manager_1_1FindFood_abf53da166a9a36fbab4ce1c87fa93694}{00339}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1FindFood_abf53da166a9a36fbab4ce1c87fa93694}{\_\_init\_\_}(self, ant):
+00340         super(FindFood, self).\hyperlink{classtask__manager_1_1FindFood_abf53da166a9a36fbab4ce1c87fa93694}{\_\_init\_\_}(\textcolor{stringliteral}{"find food"}, ant)
+00341 
+\hypertarget{task__manager_8py_source_l00342}{}\hyperlink{classtask__manager_1_1FindFood_aab9303f02e5e7d4884228e1fe5f6142c}{00342}     \textcolor{keyword}{def }\hyperlink{classtask__manager_1_1FindFood_aab9303f02e5e7d4884228e1fe5f6142c}{perform\_task}(self):
+00343         \textcolor{stringliteral}{"""find food"""}
+00344         super(FindFood, self).\hyperlink{classtask__manager_1_1FindFood_aab9303f02e5e7d4884228e1fe5f6142c}{perform\_task}()
 \end{DoxyCode}

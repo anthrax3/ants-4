@@ -3,11 +3,12 @@
 }
 
 
-Collaboration diagram for controller.\+Simulation\+:\nopagebreak
+Collaboration diagram for controller.\+Simulation\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=184pt]{classcontroller_1_1Simulation__coll__graph}
+\includegraphics[width=220pt]{classcontroller_1_1Simulation__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Member Functions}
@@ -22,6 +23,12 @@ def \hyperlink{classcontroller_1_1Simulation_a4cbf2928d3f930f4b8cad9c0e64c2524}{
 def \hyperlink{classcontroller_1_1Simulation_ad86d932f45e2b80ec5336da7c6e6e085}{main\+\_\+loop}
 \item 
 def \hyperlink{classcontroller_1_1Simulation_ad3eb13a30931a88958e3c0c7b5b545a5}{handle\+\_\+events}
+\item 
+def \hyperlink{classcontroller_1_1Simulation_a247d22a52798856055de287bd13a6cda}{handle\+\_\+keyboard\+\_\+events}
+\item 
+def \hyperlink{classcontroller_1_1Simulation_ad459f264509c14b43f23894dc35d6656}{handle\+\_\+general\+\_\+events}
+\item 
+def \hyperlink{classcontroller_1_1Simulation_aa43d3916e7ff0513f950439d7ae8b5b7}{handle\+\_\+mouse\+\_\+events}
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -34,6 +41,8 @@ def \hyperlink{classcontroller_1_1Simulation_ad3eb13a30931a88958e3c0c7b5b545a5}{
 \item 
 \hyperlink{classcontroller_1_1Simulation_a35d0ffc695295c3b509bd5bc2bdbac9b}{quit}
 \item 
+\hyperlink{classcontroller_1_1Simulation_a8acaf6508b8b61e163656195706d9025}{pause}
+\item 
 \hyperlink{classcontroller_1_1Simulation_a5d368ffc3eee12c8c36839ee5bce3644}{settings}
 \item 
 \hyperlink{classcontroller_1_1Simulation_a2ba0c3cf1949a98dd920f6097953c1f5}{world}
@@ -42,11 +51,10 @@ def \hyperlink{classcontroller_1_1Simulation_ad3eb13a30931a88958e3c0c7b5b545a5}{
 
 \subsection{Detailed Description}
 \begin{DoxyVerb}Controls the simulation
-
     - Runs the main loop
     - Detects mouse, keyboard and other events
     - Loads the necessary images
-    - Controls the framerate of the smiulation
+    - Controls the framerate of the simulation
 \end{DoxyVerb}
  
 
@@ -78,10 +86,11 @@ Definition at line \hyperlink{controller_8py_source_l00013}{13} of file \hyperli
 \item[{}]{path}
 \end{DoxyParamCaption}
 )}}\label{classcontroller_1_1Simulation_a91674f018c921725aa36ec25396a7304}
-\begin{DoxyVerb}Loads an image\end{DoxyVerb}
+\begin{DoxyVerb}Loads an image
+\end{DoxyVerb}
  
 
-Definition at line \hyperlink{controller_8py_source_l00037}{37} of file \hyperlink{controller_8py_source}{controller.\+py}.
+Definition at line \hyperlink{controller_8py_source_l00039}{39} of file \hyperlink{controller_8py_source}{controller.\+py}.
 
 \hypertarget{classcontroller_1_1Simulation_ad3eb13a30931a88958e3c0c7b5b545a5}{\index{controller\+::\+Simulation@{controller\+::\+Simulation}!handle\+\_\+events@{handle\+\_\+events}}
 \index{handle\+\_\+events@{handle\+\_\+events}!controller\+::\+Simulation@{controller\+::\+Simulation}}
@@ -90,10 +99,51 @@ Definition at line \hyperlink{controller_8py_source_l00037}{37} of file \hyperli
 \item[{}]{self}
 \end{DoxyParamCaption}
 )}}\label{classcontroller_1_1Simulation_ad3eb13a30931a88958e3c0c7b5b545a5}
-\begin{DoxyVerb}Handles all keyboard, mouse and events like QUIT, etc\end{DoxyVerb}
+\begin{DoxyVerb}Handles all keyboard, mouse and events like QUIT, etc
+\end{DoxyVerb}
  
 
-Definition at line \hyperlink{controller_8py_source_l00059}{59} of file \hyperlink{controller_8py_source}{controller.\+py}.
+Definition at line \hyperlink{controller_8py_source_l00066}{66} of file \hyperlink{controller_8py_source}{controller.\+py}.
+
+\hypertarget{classcontroller_1_1Simulation_ad459f264509c14b43f23894dc35d6656}{\index{controller\+::\+Simulation@{controller\+::\+Simulation}!handle\+\_\+general\+\_\+events@{handle\+\_\+general\+\_\+events}}
+\index{handle\+\_\+general\+\_\+events@{handle\+\_\+general\+\_\+events}!controller\+::\+Simulation@{controller\+::\+Simulation}}
+\subsubsection[{handle\+\_\+general\+\_\+events}]{\setlength{\rightskip}{0pt plus 5cm}def controller.\+Simulation.\+handle\+\_\+general\+\_\+events (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classcontroller_1_1Simulation_ad459f264509c14b43f23894dc35d6656}
+\begin{DoxyVerb}set quit true if user clicks the close button
+\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{controller_8py_source_l00082}{82} of file \hyperlink{controller_8py_source}{controller.\+py}.
+
+\hypertarget{classcontroller_1_1Simulation_a247d22a52798856055de287bd13a6cda}{\index{controller\+::\+Simulation@{controller\+::\+Simulation}!handle\+\_\+keyboard\+\_\+events@{handle\+\_\+keyboard\+\_\+events}}
+\index{handle\+\_\+keyboard\+\_\+events@{handle\+\_\+keyboard\+\_\+events}!controller\+::\+Simulation@{controller\+::\+Simulation}}
+\subsubsection[{handle\+\_\+keyboard\+\_\+events}]{\setlength{\rightskip}{0pt plus 5cm}def controller.\+Simulation.\+handle\+\_\+keyboard\+\_\+events (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classcontroller_1_1Simulation_a247d22a52798856055de287bd13a6cda}
+\begin{DoxyVerb}set quit as true if user presses ESCAPE key
+\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{controller_8py_source_l00074}{74} of file \hyperlink{controller_8py_source}{controller.\+py}.
+
+\hypertarget{classcontroller_1_1Simulation_aa43d3916e7ff0513f950439d7ae8b5b7}{\index{controller\+::\+Simulation@{controller\+::\+Simulation}!handle\+\_\+mouse\+\_\+events@{handle\+\_\+mouse\+\_\+events}}
+\index{handle\+\_\+mouse\+\_\+events@{handle\+\_\+mouse\+\_\+events}!controller\+::\+Simulation@{controller\+::\+Simulation}}
+\subsubsection[{handle\+\_\+mouse\+\_\+events}]{\setlength{\rightskip}{0pt plus 5cm}def controller.\+Simulation.\+handle\+\_\+mouse\+\_\+events (
+\begin{DoxyParamCaption}
+\item[{}]{self}
+\end{DoxyParamCaption}
+)}}\label{classcontroller_1_1Simulation_aa43d3916e7ff0513f950439d7ae8b5b7}
+\begin{DoxyVerb}- Creates obstacles on left clicks
+- Removes obstacles on right clicks
+\end{DoxyVerb}
+ 
+
+Definition at line \hyperlink{controller_8py_source_l00090}{90} of file \hyperlink{controller_8py_source}{controller.\+py}.
 
 \hypertarget{classcontroller_1_1Simulation_ad86d932f45e2b80ec5336da7c6e6e085}{\index{controller\+::\+Simulation@{controller\+::\+Simulation}!main\+\_\+loop@{main\+\_\+loop}}
 \index{main\+\_\+loop@{main\+\_\+loop}!controller\+::\+Simulation@{controller\+::\+Simulation}}
@@ -109,7 +159,7 @@ Definition at line \hyperlink{controller_8py_source_l00059}{59} of file \hyperli
 \end{DoxyVerb}
  
 
-Definition at line \hyperlink{controller_8py_source_l00046}{46} of file \hyperlink{controller_8py_source}{controller.\+py}.
+Definition at line \hyperlink{controller_8py_source_l00052}{52} of file \hyperlink{controller_8py_source}{controller.\+py}.
 
 \hypertarget{classcontroller_1_1Simulation_a4cbf2928d3f930f4b8cad9c0e64c2524}{\index{controller\+::\+Simulation@{controller\+::\+Simulation}!run@{run}}
 \index{run@{run}!controller\+::\+Simulation@{controller\+::\+Simulation}}
@@ -118,10 +168,11 @@ Definition at line \hyperlink{controller_8py_source_l00046}{46} of file \hyperli
 \item[{}]{self}
 \end{DoxyParamCaption}
 )}}\label{classcontroller_1_1Simulation_a4cbf2928d3f930f4b8cad9c0e64c2524}
-\begin{DoxyVerb}Runs the main loop till the user quits\end{DoxyVerb}
+\begin{DoxyVerb}Runs the main loop till the user quits
+\end{DoxyVerb}
  
 
-Definition at line \hyperlink{controller_8py_source_l00041}{41} of file \hyperlink{controller_8py_source}{controller.\+py}.
+Definition at line \hyperlink{controller_8py_source_l00045}{45} of file \hyperlink{controller_8py_source}{controller.\+py}.
 
 
 
@@ -147,6 +198,13 @@ Definition at line \hyperlink{controller_8py_source_l00015}{15} of file \hyperli
 
 Definition at line \hyperlink{controller_8py_source_l00016}{16} of file \hyperlink{controller_8py_source}{controller.\+py}.
 
+\hypertarget{classcontroller_1_1Simulation_a8acaf6508b8b61e163656195706d9025}{\index{controller\+::\+Simulation@{controller\+::\+Simulation}!pause@{pause}}
+\index{pause@{pause}!controller\+::\+Simulation@{controller\+::\+Simulation}}
+\subsubsection[{pause}]{\setlength{\rightskip}{0pt plus 5cm}controller.\+Simulation.\+pause}}\label{classcontroller_1_1Simulation_a8acaf6508b8b61e163656195706d9025}
+
+
+Definition at line \hyperlink{controller_8py_source_l00019}{19} of file \hyperlink{controller_8py_source}{controller.\+py}.
+
 \hypertarget{classcontroller_1_1Simulation_a35d0ffc695295c3b509bd5bc2bdbac9b}{\index{controller\+::\+Simulation@{controller\+::\+Simulation}!quit@{quit}}
 \index{quit@{quit}!controller\+::\+Simulation@{controller\+::\+Simulation}}
 \subsubsection[{quit}]{\setlength{\rightskip}{0pt plus 5cm}controller.\+Simulation.\+quit}}\label{classcontroller_1_1Simulation_a35d0ffc695295c3b509bd5bc2bdbac9b}
@@ -159,14 +217,14 @@ Definition at line \hyperlink{controller_8py_source_l00018}{18} of file \hyperli
 \subsubsection[{settings}]{\setlength{\rightskip}{0pt plus 5cm}controller.\+Simulation.\+settings}}\label{classcontroller_1_1Simulation_a5d368ffc3eee12c8c36839ee5bce3644}
 
 
-Definition at line \hyperlink{controller_8py_source_l00029}{29} of file \hyperlink{controller_8py_source}{controller.\+py}.
+Definition at line \hyperlink{controller_8py_source_l00030}{30} of file \hyperlink{controller_8py_source}{controller.\+py}.
 
 \hypertarget{classcontroller_1_1Simulation_a2ba0c3cf1949a98dd920f6097953c1f5}{\index{controller\+::\+Simulation@{controller\+::\+Simulation}!world@{world}}
 \index{world@{world}!controller\+::\+Simulation@{controller\+::\+Simulation}}
 \subsubsection[{world}]{\setlength{\rightskip}{0pt plus 5cm}controller.\+Simulation.\+world}}\label{classcontroller_1_1Simulation_a2ba0c3cf1949a98dd920f6097953c1f5}
 
 
-Definition at line \hyperlink{controller_8py_source_l00035}{35} of file \hyperlink{controller_8py_source}{controller.\+py}.
+Definition at line \hyperlink{controller_8py_source_l00037}{37} of file \hyperlink{controller_8py_source}{controller.\+py}.
 
 
 
