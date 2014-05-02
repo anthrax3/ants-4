@@ -54,8 +54,9 @@ class Task(object):
 	def perform_task(self):
 		"""
 		Actions done for a task
+		each time a task is performed reduce the health by one
 		"""
-		self.ant.reduce_health(.1)
+		self.ant.reduce_health(.001)
 
 	def end_task(self):
 		"""
@@ -80,12 +81,11 @@ class Explore(Task):
 		"""
 		 If ant has food - 
 			 find home nearby and drop food there, else
-			 find home scent nearby and switch to that task, else
+			 find home scent nearby and switch to follow home trail task, else
 			 make a random move
 		 If ant is searching for food
 		 	 if food is found switch to take food task, else
-		 	 find a food scent trail, else
-		 	 avoid obstacles
+		 	 find a food scent trail,
 		 	 reverse direction if it finds home nearby
 		 Reduce it scent strength by an unit
 		"""
@@ -116,11 +116,13 @@ class Explore(Task):
 				self.new_task = "follow food trail"
 			else:
 				ant.random_move()
-		ant.reduce_food_scent(1).reduce_home_scent(1)
+		ant.reduce_food_scent_strength(1).reduce_home_scent_strength(1)
+		super(Explore, self).perform_task()
 
 class TakeFood(Task):
 	"""
-	Gathering Food Task
+	Gathers food from the cell
+	If food is present it takes the food otherwise it returns to explore mode
 	"""
 	def __init__(self, ant):
 		super(TakeFood, self).__init__("take food", ant)
@@ -137,26 +139,29 @@ class TakeFood(Task):
 			self.new_task = "follow home trail"
 		else:
 			self.new_task = "explore"
+		super(TakeFood, self).perform_task()
 
 	def end_task(self):
 		"""
 		Increase food_scent_strength
 		and reduce home_scent_strength
 		"""
-		self.ant.food_scent_strength = 40
-		self.ant.home_scent_strength = 0
+		self.ant.set_food_scent_strength(40)
+		self.ant.set_home_scent_strength(0)
 
 
 class DropFood(Task):
 	"""
-	Drop Food Task
+	Drop the food inside the nest
+	Randomly walks inside the nest and drops the food
+	and returns to explore mode
 	"""
 	def __init__(self, ant):
 		super(DropFood, self).__init__("drop food", ant)
 
 	def start_task(self):
-		self.ant.food_scent_strength = 0
-		self.ant.home_scent_strength = 40
+		self.ant.set_food_scent_strength(0)
+		self.ant.set_home_scent_strength(40)
 
 	def perform_task(self):
 		"""
@@ -173,17 +178,18 @@ class DropFood(Task):
 				self.new_task = "explore"
 		else:
 			self.new_task = "follow home trail"
+		super(DropFood, self).perform_task()	
 
 	def end_task(self):
 		"""
 		Increase home scent strength and reduce food scent strength
 		"""
-		self.ant.food_scent_strength = 0
-		self.ant.home_scent_strength = 40
+		self.ant.set_food_scent_strength(0)
+		self.ant.set_home_scent_strength(40)
 
 class FollowFoodTrail(Task):
 	"""
-	docstring for FollowFoodTrail
+	Follows food trail if it finds a food scent nearby
 	"""
 	def __init__(self, ant):
 		super(FollowFoodTrail, self).__init__("follow food trail", ant)
@@ -211,11 +217,12 @@ class FollowFoodTrail(Task):
 		else:
 			ant.turn(ant.rank_by_food_scent())
 			ant.move()
-		ant.reduce_home_scent(1).reduce_food_scent(1)
+		ant.reduce_home_scent_strength(1).reduce_food_scent_strength(1)
+		super(FollowFoodTrail, self).perform_task()
 
 class FollowHomeTrail(Task):
 	"""
-	docstring for FollowFoodTrail
+	Follows a home trail if it finds home scent 
 	"""
 	def __init__(self, ant):
 		super(FollowHomeTrail, self).__init__("follow home trail", ant)
@@ -231,7 +238,9 @@ class FollowHomeTrail(Task):
 		"""
 		ant = self.ant
 		home_nearby = ant.locate_home_nearby()
-		if ant.ahead().is_obstacle() or ant.ahead().has_ant():
+		if not ant.has_food():
+			self.new_task = "explore"
+		elif ant.ahead().is_obstacle() or ant.ahead().has_ant():
 			ant.turn(choice([-1, 1]))
 		elif ant.ahead().is_food(ant.get_nest_id()):
 			ant.turn(4)
@@ -246,18 +255,19 @@ class FollowHomeTrail(Task):
 				ant.move()
 			else:
 				ant.random_move()
-		ant.reduce_food_scent(1).reduce_home_scent(1)
+		ant.reduce_food_scent_strength(1).reduce_home_scent_strength(1)
+		super(FollowHomeTrail, self).perform_task()
 
 class ReturnHome(Task):
 	"""
-	Return home if outside
+	Return home if the ant is roaming outside
 	"""
 	def __init__(self, ant):
 		super(ReturnHome, self).__init__("return home", ant)		
 
 	def start_task(self):
-		self.ant.home_scent_strength = 0
-		self.ant.food_scent_strength = 0
+		self.ant.set_home_scent_strength(0)
+		self.ant.set_food_scent_strength(0)
 
 	def perform_task(self):
 		"""
@@ -278,17 +288,19 @@ class ReturnHome(Task):
 				ant.move()
 			else:
 				ant.random_move()
+		super(ReturnHome, self).perform_task()
 
 class GuardNest(Task):
 	"""
-	Guard inside nest
+	Guards the nest
+	If it sees an enemy ant it attacks it
 	"""
 	def __init__(self, ant):
 		super(GuardNest, self).__init__("guard nest", ant)
 
 	def start_task(self):
-		self.ant.home_scent_strength = 2
-		self.ant.food_scent_strength = 0
+		self.ant.set_home_scent_strength(2)
+		self.ant.set_food_scent_strength(0)
 
 	def perform_task(self):
 		"""
@@ -305,3 +317,28 @@ class GuardNest(Task):
 			ant.turn(choice([-1, 1]))
 		else:
 			ant.move()
+		super(GuardNest, self).perform_task()
+
+class ProduceAnts(Task):
+	"""
+	Randomly produce new ants
+	"""
+	def __init__(self, ant):
+		super(ProduceAnts, self).__init__("produce ants", ant)
+
+	def perform_task(self):
+		"""randomly produce new ants"""
+		if self.ant.is_hungry():
+			self.new_task = "have food"
+		elif randint(1,100) == 1:
+			self.ant.nest.add_new_ant_randomly()
+		super(ProduceAnts, self).perform_task()
+		
+class FindFood(Task):
+	"""Finds food if hungry"""
+	def __init__(self, ant):
+		super(FindFood, self).__init__("find food", ant)
+
+	def perform_task(self):
+		"""find food"""
+		super(FindFood, self).perform_task()

@@ -1,4 +1,4 @@
-from ants import WorkerAnt, SoldierAnt
+from ants import WorkerAnt, SoldierAnt, QueenAnt
 from random import randint, choice
 from pygame import display, Surface
 from display import Entity
@@ -9,14 +9,14 @@ class Cell(Entity):
 	"""
 	Data containers for each location in World
 	"""
-	def __init__(self, world, i, j, cell_size):
+	def __init__(self, world, i, j):
 		self.obstacle = False
 		self.food = 0
 		self.home_scent = {}
 		self.food_scent = {}
 		self.ant = None
 		self.home = -1
-		super(Cell, self).__init__(world, (i, j), [cell_size]*2, world.images["cell"])
+		super(Cell, self).__init__(world, (i, j), (1,1), world.images["cell"])
 
 	## Adds food to the cell
 	# @param amt The amount of food to be added
@@ -220,19 +220,25 @@ class Nest(Entity):
 		self.world = world
 		self.ant_count = ant_count
 		super(Nest, self).__init__(world, location, size, None)
-		self.image = Surface(self.size)
-		self.image.fill(YELLOW)
-		self.image.set_alpha(196)
 		self.spawn_ants()
 		self.mark_home()
+		self.set_image()
+
+	def set_image(self):
+		w, h = self.size
+		w *= self.world.cell_size
+		h *= self.world.cell_size
+		self.image = Surface((w,h))
+		self.image.fill(YELLOW)
+		self.image.set_alpha(196)
 
 	def mark_home(self):
 		"""
 		Converts the cell at its location to its nest
 		"""
 		width, height = self.size
-		width /= self.world.settings["cell_size"]
-		height /= self.world.settings["cell_size"]
+		# width /= self.world.settings["cell_size"]
+		# height /= self.world.settings["cell_size"]
 		x, y = self.location
 		for i in range(width):
 			for j in range(height):
@@ -243,14 +249,27 @@ class Nest(Entity):
 		Creates instances of ants and adds them into the world
 		"""
 		for ant in self.ant_count:
-			x, y = self.location
-			width, height = self.size
 			for i in range(self.ant_count[ant]):
-				direction = randint(1,8)
-				location = x+randint(0,width/self.world.settings["cell_size"]), y+randint(0,height/self.world.settings["cell_size"])
-				new_ant = ant(self.world, self.world.images["ant"], direction, location, self)
-				self.world.add_ant(new_ant)
+				self.add_new_ant(ant)
 
+	def add_new_ant(self, ant_type):
+		x, y = self.location
+		width, height = self.size
+		direction = randint(1,8)
+		location = x+randint(0,width/self.world.settings["cell_size"]), y+randint(0,height/self.world.settings["cell_size"])
+		new_ant = ant_type(self.world, self.world.images["ant"], direction, location, self)
+		self.world.add_ant(new_ant)
+
+	def add_new_ant_randomly(self):
+		num = randint(1,100)
+		if num<90:
+			ant = WorkerAnt
+		elif num<98:
+			ant = SoldierAnt
+		else:
+			ant = QueenAnt
+		self.add_new_ant(ant)
+		
 		
 
 class World():
@@ -273,7 +292,7 @@ class World():
 		self.canvas = display.set_mode((self.width*self.cell_size, self.height*self.cell_size))
 		self.convert_images()
 
-		self.cells = [[Cell(self, i, j, self.cell_size) for j in xrange(height)] for i in xrange(width)]
+		self.cells = [[Cell(self, i, j) for j in xrange(height)] for i in xrange(width)]
 
 		self.counter = 0
 
@@ -307,8 +326,8 @@ class World():
 			- Update te ants
 			- Evaporate all scents
 		"""
-		for i in self.ants:
-			self.ants[i].task_manager.make_decision()
+		for ant in self.ants.values():
+			ant.task_manager.make_decision()
 
 		self.evaporate_scent()
 		self.remove_dead_ants()
@@ -319,6 +338,7 @@ class World():
 		add a new ant into the world
 		"""
 		self.ants[self.counter] = ant
+		self[ant.get_location()].ant = ant
 		self.counter += 1
 
 	def spawn_foodsource(self):
@@ -336,7 +356,7 @@ class World():
 		Creates colonies of ants
 		"""
 		for i in xrange(n):
-			size = [self.settings["home_size"]*self.settings["cell_size"]]*2
+			size = [self.settings["home_size"]]*2
 			location = (
 				randint(0, self.width - self.settings["home_size"]),
 				randint(0, self.height - self.settings["home_size"])
@@ -349,8 +369,9 @@ class World():
 		Returns a list of no. of different types of ants
 		"""
 		return { 
-			WorkerAnt: 100,
-			SoldierAnt: 5
+			WorkerAnt: 94,
+			SoldierAnt: 5,
+			QueenAnt: 1
 		}
 
 	def create_walls(self):

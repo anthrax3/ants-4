@@ -1,6 +1,7 @@
 from constants import DIRECTIONS
 from task_manager import TaskManager, Explore, TakeFood, FollowHomeTrail, FollowFoodTrail, DropFood
 from task_manager import GuardNest, ReturnHome
+from task_manager import ProduceAnts, FindFood
 from display import Entity
 from random import choice, randint
 
@@ -9,7 +10,7 @@ class Ant(Entity):
 	A virtual base class for Ants
 	"""
 	def __init__(self, world, image, direction, location, nest):
-		super(Ant, self).__init__(world, location, [world.cell_size]*2, image)
+		super(Ant, self).__init__(world, location, (1,1), image)
 		self.world = world
 		self.image = image
 		self.nest = nest
@@ -22,6 +23,9 @@ class Ant(Entity):
 
 		self.task_manager = TaskManager()
 
+	def get_location(self):
+		return self.location
+
 	def neighbour(self, direction):
 		"""
 		Returns location of neighbouring cell in a direction 
@@ -33,9 +37,9 @@ class Ant(Entity):
 
 	def move(self):
 		"""
-		Move the ant by a unit if the next cell is empty,
-		else turn by an unit
-		Leave a scent trail,
+		Moves the ant by a unit if the next cell is empty,
+		otherwise turn by an unit
+		It also leaves a scent trail,
 		remove the ant from its old cell, and
 		update the current cell ant with itself
 		"""
@@ -51,9 +55,6 @@ class Ant(Entity):
 			for cell in self.here().nearby():
 				cell.add_home_scent(self.home_scent_strength/1., self.get_nest_id()).add_food_scent(self.food_scent_strength/1., self.get_nest_id())
 			self.here().ant = self
-		self.reduce_health(.001)
-		if self.health <= 0 and  self.has_food():
-			self.health += .1 if self.food >= .1 else self.food
 		return self
 
 	def random_move(self):
@@ -65,14 +66,14 @@ class Ant(Entity):
 		else:
 			self.move()
 
-	def reduce_home_scent(self, amt=1):
+	def reduce_home_scent_strength(self, amt=1):
 		"""
 		Reduce home scent by 'amt'
 		"""
 		self.home_scent_strength = max(0, self.home_scent_strength*.98)
 		return self
 
-	def reduce_food_scent(self, amt=1):
+	def reduce_food_scent_strength(self, amt=1):
 		"""
 		Reduce food scent by 'amt'
 		"""
@@ -192,6 +193,93 @@ class Ant(Entity):
 		else:
 			return None
 
+	def rank_by_home_scent(self):
+		"""
+		Scan the 5 directions near the direction of the ant for home scent and
+		return the direction with the strongest scent
+		return None if not found
+		"""
+		best_direction = 0
+		best_direction_scent = 0
+		for i in [0, -1, 1, -1, 2]:
+			cell = self.world[self.neighbour(i)]
+			if cell.has_ant() or cell.is_obstacle():
+				continue
+			I = max(1, abs(i))
+			if cell.get_home_scent(self.get_nest_id())*1./I > best_direction_scent:
+				best_direction = i
+				best_direction_scent = cell.get_home_scent(self.get_nest_id())
+		return best_direction if best_direction_scent > .3 else None
+
+	def drop_food(self):
+		"""
+		Set food to zero
+		Update the food values of the home cell it reached
+		"""
+		self.here().food += self.food
+		self.food = 0
+
+	
+	## carry half the food and
+	# increase health by half the amount
+	# @param amt The amount of food
+	def take_food(self, amt):
+		self.food = amt*.5
+		self.health += amt*.5
+
+	def has_food(self):
+		"""
+		Checks if the ant has food_scent
+		"""
+		return self.food>0
+
+	def set_food_scent_strength(self, strength):
+		self.food_scent_strength = strength
+
+	def set_home_scent_strength(self, strength):
+		self.home_scent_strength = strength
+
+	## Reduces the health of the ant
+	# @param amt The amount of health to reduce
+	def reduce_health(self, amt):
+		self.health -= amt
+
+	def is_dead(self):
+		return True if self.health<0 else False
+
+	def is_alive(self):
+		return not self.is_dead()
+
+	def is_hungry(self):
+		return self.health < .1
+
+	def __nonzero__(self):
+		return True
+
+
+class WorkerAnt(Ant):
+	"""
+	Ants that explores for foodsource and collects food
+	"""
+	def __init__(self, world, image, direction, location, nest):
+		"""
+		Tasks assigned:
+			- Explore
+			- TakeFood
+			- DropFood
+			- FollowFoodTrail
+			- FollowHomeTrail
+		Default task:
+			- Explore
+		"""
+		Ant.__init__(self, world, image, direction, location, nest)
+		self.task_manager.add_task(Explore(self))
+		self.task_manager.add_task(TakeFood(self))
+		self.task_manager.add_task(DropFood(self))
+		self.task_manager.add_task(FollowFoodTrail(self))
+		self.task_manager.add_task(FollowHomeTrail(self))
+		self.task_manager.set_active_task("explore")
+
 	def locate_food_scent_nearby(self):
 		"""
 		Scan the 5 directions near the direction of the ant for food scent and
@@ -230,79 +318,6 @@ class Ant(Entity):
 				best_direction_scent = cell.get_food_scent(self.get_nest_id())
 		return best_direction
 
-	def rank_by_home_scent(self):
-		"""
-		Scan the 5 directions near the direction of the ant for home scent and
-		return the direction with the strongest scent
-		return None if not found
-		"""
-		best_direction = 0
-		best_direction_scent = 0
-		for i in [0, -1, 1, -1, 2]:
-			cell = self.world[self.neighbour(i)]
-			if cell.has_ant() or cell.is_obstacle():
-				continue
-			I = max(1, abs(i))
-			if cell.get_home_scent(self.get_nest_id())*1./I > best_direction_scent:
-				best_direction = i
-				best_direction_scent = cell.get_home_scent(self.get_nest_id())
-		return best_direction if best_direction_scent > .3 else None
-
-	def drop_food(self):
-		"""
-		Set food to zero
-		Update the food values of the home cell it reached
-		"""
-		self.here().food += self.food
-		self.food = 0
-
-	def take_food(self, amt):
-		self.food = amt*.9
-		self.health += amt*.1
-
-	def has_food(self):
-		"""
-		Checks if the ant has food_scent
-		"""
-		return bool(self.food)
-
-	## Reduces the health of the ant
-	# @param amt The amount of health to reduce
-	def reduce_health(self, amt):
-		self.health -= amt
-
-	def is_dead(self):
-		return True if self.health<0 else False
-
-	def is_alive(self):
-		return not self.is_dead()
-
-	def __nonzero__(self):
-		return True
-
-
-class WorkerAnt(Ant):
-	"""
-	Ants that explores for foodsource and collects food
-	"""
-	def __init__(self, world, image, direction, location, nest):
-		"""
-		Tasks assigned:
-			- Explore
-			- TakeFood
-			- DropFood
-			- FollowFoodTrail
-			- FollowHomeTrail
-		Default task:
-			- Explore
-		"""
-		Ant.__init__(self, world, image, direction, location, nest)
-		self.task_manager.add_task(Explore(self))
-		self.task_manager.add_task(TakeFood(self))
-		self.task_manager.add_task(DropFood(self))
-		self.task_manager.add_task(FollowFoodTrail(self))
-		self.task_manager.add_task(FollowHomeTrail(self))
-		self.task_manager.set_active_task("explore")
 
 
 class QueenAnt(Ant):
@@ -312,13 +327,16 @@ class QueenAnt(Ant):
 	def __init__(self, world, image, direction, location, nest):
 		"""
 		Tasks assigned:
-			- HaveFood
+			- Find Food
 			- Produce offsprings
 		Default task:
-			- Have Food
+			- Find Food
 		"""
 		Ant.__init__(self, world, image, direction, location, nest)
-		raise NotImplementedError
+		self.task_manager.add_task(ProduceAnts(self))
+		self.task_manager.add_task(FindFood(self))
+		self.task_manager.set_active_task("produce ants")
+		self.health = 2
 
 
 class SoldierAnt(Ant):
