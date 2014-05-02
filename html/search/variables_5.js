@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['image',['image',['../classants_1_1Ant.html#adf5f970b6b5e8472f42275114eeac779',1,'ants.Ant.image()'],['../classdisplay_1_1Entity.html#a244569c285ad924e6200d4c1c8b4639c',1,'display.Entity.image()']]],
-  ['images',['images',['../classcontroller_1_1Simulation.html#af13461f42bfe6ca017f59e13e57c354e',1,'controller.Simulation.images()'],['../classworld_1_1World.html#a9388f4c8146cbf9983f4a42c3015b61a',1,'world.World.images()']]]
+  ['health',['health',['../classants_1_1Ant.html#aa147562276c788d4533ab63ac44d96a6',1,'ants.Ant.health()'],['../classants_1_1QueenAnt.html#adb02e07e568bf5cf90408cb641cb5b57',1,'ants.QueenAnt.health()']]],
+  ['height',['height',['../classworld_1_1World.html#acfdba03fac144372fcc56922a1a339a2',1,'world.World.height()'],['../namespaceconstants.html#a581305cb095bf2d8826a12abef66a15e',1,'constants.HEIGHT()']]],
+  ['home',['home',['../classworld_1_1Cell.html#a9baf3378be8090bf1faf1b19b9aa5fd3',1,'world::Cell']]],
+  ['home_5fscent',['home_scent',['../classworld_1_1Cell.html#a0ef4adaadea1ccdcd1b61c70e242aa4a',1,'world::Cell']]],
+  ['home_5fscent_5fstrength',['home_scent_strength',['../classants_1_1Ant.html#a7885f0124adf5b10fd6fa5e8ac47edb9',1,'ants::Ant']]]
 ];

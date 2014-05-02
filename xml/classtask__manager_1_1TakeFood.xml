@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="115" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="115" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/task_manager.py" line="139" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/task_manager.py" bodystart="139" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="105" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="105" bodyend="107"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/task_manager.py" line="127" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/task_manager.py" bodystart="127" bodyend="129"/>
       </memberdef>
       <memberdef kind="function" id="classtask__manager_1_1TakeFood_1af42eebb5d9ee945cafd05908d478bab3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -40,10 +40,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Take food if available otherwise return to explore mode</verbatim> </para>        </detaileddescription>
+<para><verbatim>Take food if available otherwise return to explore mode
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="108" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="108" bodyend="118"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/task_manager.py" line="130" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/task_manager.py" bodystart="130" bodyend="143"/>
       </memberdef>
       <memberdef kind="function" id="classtask__manager_1_1TakeFood_1a01c78eece0496ccd7c7badde7ce848b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -54,51 +55,54 @@
         </briefdescription>
         <detaileddescription>
 <para><verbatim>Increase food_scent_strength
-and reduce home_scent_strength</verbatim> </para>        </detaileddescription>
+and reduce home_scent_strength
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="119" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="119" bodyend="125"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/task_manager.py" line="144" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/task_manager.py" bodystart="144" bodyend="152"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><verbatim>Gathering Food Task</verbatim> </para>    </detaileddescription>
+<para><verbatim>Gathers food from the cell
+If food is present it takes the food otherwise it returns to explore mode
+</verbatim> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="139">
+      <node id="225">
         <label>task_manager.TakeFood</label>
         <link refid="classtask__manager_1_1TakeFood"/>
-        <childnode refid="140" relation="public-inheritance">
+        <childnode refid="226" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="141">
+      <node id="227">
         <label>object</label>
       </node>
-      <node id="140">
+      <node id="226">
         <label>task_manager.Task</label>
         <link refid="classtask__manager_1_1Task"/>
-        <childnode refid="141" relation="public-inheritance">
+        <childnode refid="227" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="142">
+      <node id="228">
         <label>task_manager.TakeFood</label>
         <link refid="classtask__manager_1_1TakeFood"/>
-        <childnode refid="143" relation="public-inheritance">
+        <childnode refid="229" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="144">
+      <node id="230">
         <label>object</label>
       </node>
-      <node id="143">
+      <node id="229">
         <label>task_manager.Task</label>
         <link refid="classtask__manager_1_1Task"/>
-        <childnode refid="144" relation="public-inheritance">
+        <childnode refid="230" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="103" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="103" bodyend="126"/>
+    <location file="/home/acer/Dropbox/eclipse/ants/task_manager.py" line="122" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/task_manager.py" bodystart="122" bodyend="153"/>
     <listofallmembers>
       <member refid="classtask__manager_1_1TakeFood_1a4c5cc2bb37fc196bc5cb34f56fa62a29" prot="public" virt="non-virtual"><scope>task_manager::TakeFood</scope><name>__init__</name></member>
       <member refid="classtask__manager_1_1Task_1aab0d2d2ec0b4b3e87969d843a101e118" prot="public" virt="non-virtual" ambiguityscope="task_manager::Task."><scope>task_manager::TakeFood</scope><name>__init__</name></member>

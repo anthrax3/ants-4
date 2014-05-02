@@ -1,7 +1,11 @@
 <map id="task_manager.Task" name="task_manager.Task">
-<area shape="rect" id="node5" href="$classtask__manager_1_1DropFood.html" title="{task_manager.DropFood\n|+ new_task\l|+ __init__()\l+ perform_task()\l+ end_task()\l}" alt="" coords="5,376,171,496"/>
-<area shape="rect" id="node7" href="$classtask__manager_1_1Explore.html" title="{task_manager.Explore\n|+ new_task\l|+ __init__()\l+ perform_task()\l}" alt="" coords="195,385,347,487"/>
-<area shape="rect" id="node9" href="$classtask__manager_1_1FollowFoodTrail.html" title="{task_manager.FollowFoodTrail\n|+ new_task\l|+ __init__()\l+ start_task()\l+ perform_task()\l}" alt="" coords="371,376,571,496"/>
-<area shape="rect" id="node11" href="$classtask__manager_1_1FollowHomeTrail.html" title="{task_manager.FollowHomeTrail\n|+ new_task\l|+ __init__()\l+ start_task()\l+ perform_task()\l}" alt="" coords="595,376,800,496"/>
-<area shape="rect" id="node13" href="$classtask__manager_1_1TakeFood.html" title="{task_manager.TakeFood\n|+ new_task\l|+ __init__()\l+ perform_task()\l+ end_task()\l}" alt="" coords="824,376,989,496"/>
+<area shape="rect" id="node5" href="$classtask__manager_1_1DropFood.html" title="{task_manager.DropFood\n|+ new_task\l|+ __init__()\l+ start_task()\l+ perform_task()\l+ end_task()\l}" alt="" coords="5,377,171,514"/>
+<area shape="rect" id="node7" href="$classtask__manager_1_1Explore.html" title="{task_manager.Explore\n|+ new_task\l|+ __init__()\l+ perform_task()\l}" alt="" coords="195,394,347,497"/>
+<area shape="rect" id="node9" href="$classtask__manager_1_1FindFood.html" title="{task_manager.FindFood\n||+ __init__()\l+ perform_task()\l}" alt="" coords="371,394,533,497"/>
+<area shape="rect" id="node11" href="$classtask__manager_1_1FollowFoodTrail.html" title="{task_manager.FollowFoodTrail\n|+ new_task\l|+ __init__()\l+ start_task()\l+ perform_task()\l}" alt="" coords="557,385,757,505"/>
+<area shape="rect" id="node13" href="$classtask__manager_1_1FollowHomeTrail.html" title="{task_manager.FollowHomeTrail\n|+ new_task\l|+ __init__()\l+ start_task()\l+ perform_task()\l}" alt="" coords="781,385,987,505"/>
+<area shape="rect" id="node15" href="$classtask__manager_1_1GuardNest.html" title="{task_manager.GuardNest\n|+ new_task\l|+ __init__()\l+ start_task()\l+ perform_task()\l}" alt="" coords="1011,385,1181,505"/>
+<area shape="rect" id="node17" href="$classtask__manager_1_1ProduceAnts.html" title="{task_manager.ProduceAnts\n|+ new_task\l|+ __init__()\l+ perform_task()\l}" alt="" coords="1205,394,1387,497"/>
+<area shape="rect" id="node19" href="$classtask__manager_1_1ReturnHome.html" title="{task_manager.ReturnHome\n|+ new_task\l|+ __init__()\l+ start_task()\l+ perform_task()\l}" alt="" coords="1411,385,1592,505"/>
+<area shape="rect" id="node21" href="$classtask__manager_1_1TakeFood.html" title="{task_manager.TakeFood\n|+ new_task\l|+ __init__()\l+ perform_task()\l+ end_task()\l}" alt="" coords="1616,385,1781,505"/>
 </map>

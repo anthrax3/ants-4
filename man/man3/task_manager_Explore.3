@@ -1,4 +1,4 @@
-.TH "task_manager.Explore" 3 "Wed Apr 9 2014" "Ant Colony" \" -*- nroff -*-
+.TH "task_manager.Explore" 3 "Sat May 3 2014" "Ant Colony" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -31,17 +31,18 @@ Inherits \fBtask_manager\&.Task\fP\&.
 .PP
 .nf
 Ant Exploring Task
+
 .fi
 .PP
  
 .PP
-Definition at line 56 of file task_manager\&.py\&.
+Definition at line 73 of file task_manager\&.py\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "def task_manager\&.Explore\&.__init__ (self, ant)"
 
 .PP
-Definition at line 58 of file task_manager\&.py\&.
+Definition at line 77 of file task_manager\&.py\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "def task_manager\&.Explore\&.perform_task (self)"
@@ -50,12 +51,11 @@ Definition at line 58 of file task_manager\&.py\&.
 .nf
  If ant has food - 
      find home nearby and drop food there, else
-     find home scent nearby and switch to that task, else
+     find home scent nearby and switch to follow home trail task, else
      make a random move
  If ant is searching for food
      if food is found switch to take food task, else
-     find a food scent trail, else
-     avoid obstacles
+     find a food scent trail,
      reverse direction if it finds home nearby
  Reduce it scent strength by an unit
 
@@ -63,13 +63,13 @@ Definition at line 58 of file task_manager\&.py\&.
 .PP
  
 .PP
-Definition at line 61 of file task_manager\&.py\&.
+Definition at line 80 of file task_manager\&.py\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "task_manager\&.Explore\&.new_task"
 
 .PP
-Definition at line 79 of file task_manager\&.py\&.
+Definition at line 97 of file task_manager\&.py\&.
 
 .SH "Author"
 .PP 

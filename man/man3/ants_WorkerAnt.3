@@ -1,4 +1,4 @@
-.TH "ants.WorkerAnt" 3 "Wed Apr 9 2014" "Ant Colony" \" -*- nroff -*-
+.TH "ants.WorkerAnt" 3 "Sat May 3 2014" "Ant Colony" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -14,6 +14,12 @@ Inherits \fBants\&.Ant\fP\&.
 .ti -1c
 .RI "def \fB__init__\fP"
 .br
+.ti -1c
+.RI "def \fBlocate_food_scent_nearby\fP"
+.br
+.ti -1c
+.RI "def \fBrank_by_food_scent\fP"
+.br
 .in -1c
 .SS "Additional Inherited Members"
 .SH "Detailed Description"
@@ -22,14 +28,15 @@ Inherits \fBants\&.Ant\fP\&.
 .PP
 .nf
 Ants that explores for foodsource and collects food
+
 .fi
 .PP
  
 .PP
-Definition at line 201 of file ants\&.py\&.
+Definition at line 260 of file ants\&.py\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "def ants\&.WorkerAnt\&.__init__ (self, world, image, direction, location)"
+.SS "def ants\&.WorkerAnt\&.__init__ (self, world, image, direction, location, nest)"
 
 .PP
 .nf
@@ -46,7 +53,35 @@ Default task:
 .PP
  
 .PP
-Definition at line 203 of file ants\&.py\&.
+Definition at line 264 of file ants\&.py\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "def ants\&.WorkerAnt\&.locate_food_scent_nearby (self)"
+
+.PP
+.nf
+Scan the 5 directions near the direction of the ant for food scent and
+return one random direction
+return None if not found
+
+.fi
+.PP
+ 
+.PP
+Definition at line 283 of file ants\&.py\&.
+.SS "def ants\&.WorkerAnt\&.rank_by_food_scent (self)"
+
+.PP
+.nf
+Scan the 5 directions near the direction of the ant for food scent and
+return the direction with the strongest scent
+return None if not found
+
+.fi
+.PP
+ 
+.PP
+Definition at line 303 of file ants\&.py\&.
 
 .SH "Author"
 .PP 

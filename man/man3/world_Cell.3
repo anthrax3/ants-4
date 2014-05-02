@@ -1,4 +1,4 @@
-.TH "world.Cell" 3 "Wed Apr 9 2014" "Ant Colony" \" -*- nroff -*-
+.TH "world.Cell" 3 "Sat May 3 2014" "Ant Colony" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -17,15 +17,27 @@ Inherits \fBdisplay\&.Entity\fP\&.
 .ti -1c
 .RI "def \fBadd_food\fP"
 .br
+.RI "\fIAdds food to the cell\&. \fP"
 .ti -1c
 .RI "def \fBadd_home_scent\fP"
 .br
+.RI "\fIAdds home scent to the cell\&. \fP"
 .ti -1c
 .RI "def \fBadd_food_scent\fP"
 .br
+.RI "\fIAdds food scent to the cell\&. \fP"
 .ti -1c
 .RI "def \fBget_food\fP"
 .br
+.RI "\fIGets food from the cell\&. \fP"
+.ti -1c
+.RI "def \fBget_food_scent\fP"
+.br
+.RI "\fIGet the amount of food scent in the cell\&. \fP"
+.ti -1c
+.RI "def \fBget_home_scent\fP"
+.br
+.RI "\fIGet the amount of home scent in the cell\&. \fP"
 .ti -1c
 .RI "def \fBis_obstacle\fP"
 .br
@@ -33,8 +45,17 @@ Inherits \fBdisplay\&.Entity\fP\&.
 .RI "def \fBis_home\fP"
 .br
 .ti -1c
+.RI "def \fBis_own_home\fP"
+.br
+.RI "\fIChecks if the cell is home cell of the ant\&. \fP"
+.ti -1c
+.RI "def \fBis_enemy_home\fP"
+.br
+.RI "\fIChecks if the home cell is of the enemy ants\&. \fP"
+.ti -1c
 .RI "def \fBis_food\fP"
 .br
+.RI "\fIChecks if the cell has food (but should not be its own home) \fP"
 .ti -1c
 .RI "def \fBhas_ant\fP"
 .br
@@ -44,11 +65,25 @@ Inherits \fBdisplay\&.Entity\fP\&.
 .ti -1c
 .RI "def \fBmake_home\fP"
 .br
+.RI "\fIConvert the cell into a home cell\&. \fP"
 .ti -1c
 .RI "def \fBmake_obstacle\fP"
 .br
 .ti -1c
+.RI "def \fBremove_obstacle\fP"
+.br
+.ti -1c
 .RI "def \fBevaporate_scent\fP"
+.br
+.RI "\fIEvaporates the scent\&. \fP"
+.ti -1c
+.RI "def \fBnearby\fP"
+.br
+.ti -1c
+.RI "def \fBget_max_home_scent\fP"
+.br
+.ti -1c
+.RI "def \fBget_max_food_scent\fP"
 .br
 .ti -1c
 .RI "def \fBrender\fP"
@@ -82,6 +117,7 @@ Inherits \fBdisplay\&.Entity\fP\&.
 .PP
 .nf
 Data containers for each location in World
+
 .fi
 .PP
  
@@ -89,76 +125,280 @@ Data containers for each location in World
 Definition at line 8 of file world\&.py\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "def world\&.Cell\&.__init__ (self, world, i, j, cell_size)"
+.SS "def world\&.Cell\&.__init__ (self, world, i, j)"
 
 .PP
-Definition at line 10 of file world\&.py\&.
+Definition at line 12 of file world\&.py\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "def world\&.Cell\&.add_food (self, amt)"
 
 .PP
-Definition at line 19 of file world\&.py\&.
-.SS "def world\&.Cell\&.add_food_scent (self, amt)"
+Adds food to the cell\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIamt\fP The amount of food to be added 
+.RE
+.PP
 
 .PP
-Definition at line 25 of file world\&.py\&.
-.SS "def world\&.Cell\&.add_home_scent (self, amt)"
+Definition at line 23 of file world\&.py\&.
+.SS "def world\&.Cell\&.add_food_scent (self, amt, id)"
 
 .PP
-Definition at line 22 of file world\&.py\&.
+Adds food scent to the cell\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIamt\fP The amount of scent to add 
+.br
+\fIid\fP The id of the nest the ant belongs to 
+.RE
+.PP
+
+.PP
+Definition at line 45 of file world\&.py\&.
+.SS "def world\&.Cell\&.add_home_scent (self, amt, id)"
+
+.PP
+Adds home scent to the cell\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIamt\fP The amount of scent to add 
+.br
+\fIid\fP The id of the nest the ant belongs to 
+.PP
+.nf
+adds home scent for the particular ant colony (depending on the id)
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.PP
+Definition at line 30 of file world\&.py\&.
 .SS "def world\&.Cell\&.evaporate_scent (self, rate)"
 
 .PP
-.nf
-Evaporates scent ( decay law )
-.fi
+Evaporates the scent\&. 
 .PP
- 
+\fBParameters:\fP
+.RS 4
+\fIrate\fP The rate at which evporation happens Follows the decay law 
+.RE
 .PP
-Definition at line 59 of file world\&.py\&.
+
+.PP
+Definition at line 147 of file world\&.py\&.
 .SS "def world\&.Cell\&.get_food (self, amt)"
 
 .PP
+Gets food from the cell\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIamt\fP The amount of food taken Returns an amount of food if available 
+.RE
+.PP
+
+.PP
+Definition at line 57 of file world\&.py\&.
+.SS "def world\&.Cell\&.get_food_scent (self, id)"
+
+.PP
+Get the amount of food scent in the cell\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIid\fP The id of the nest the ant belongs to 
+.RE
+.PP
+
+.PP
+Definition at line 68 of file world\&.py\&.
+.SS "def world\&.Cell\&.get_home_scent (self, id)"
+
+.PP
+Get the amount of home scent in the cell\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIid\fP The id of the nest the ant belongs to 
+.PP
 .nf
-Get "amt" amount of food if available else returns whatever food is available
+get home scent for the colony given by id
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.PP
+Definition at line 73 of file world\&.py\&.
+.SS "def world\&.Cell\&.get_max_food_scent (self)"
+
+.PP
+.nf
+Get the maximum food scent values amongst
+the scents of all colonies
+
 .fi
 .PP
  
 .PP
-Definition at line 28 of file world\&.py\&.
+Definition at line 179 of file world\&.py\&.
+.SS "def world\&.Cell\&.get_max_home_scent (self)"
+
+.PP
+.nf
+Get the maximum home scent values amongst
+the scents of all colonies
+
+.fi
+.PP
+ 
+.PP
+Definition at line 171 of file world\&.py\&.
 .SS "def world\&.Cell\&.has_ant (self)"
 
 .PP
-Definition at line 47 of file world\&.py\&.
+.nf
+Check if the particular cell has an ant
+
+.fi
+.PP
+ 
+.PP
+Definition at line 107 of file world\&.py\&.
 .SS "def world\&.Cell\&.has_food (self)"
 
 .PP
-Definition at line 50 of file world\&.py\&.
-.SS "def world\&.Cell\&.is_food (self)"
+.nf
+Checks if the cell has food
+
+.fi
+.PP
+ 
+.PP
+Definition at line 113 of file world\&.py\&.
+.SS "def world\&.Cell\&.is_enemy_home (self, id)"
 
 .PP
-Definition at line 44 of file world\&.py\&.
+Checks if the home cell is of the enemy ants\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIid\fP The id of the nest the ant belongs to 
+.RE
+.PP
+
+.PP
+Definition at line 99 of file world\&.py\&.
+.SS "def world\&.Cell\&.is_food (self, id)"
+
+.PP
+Checks if the cell has food (but should not be its own home) 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIid\fP The id of the nest the ant belongs to 
+.RE
+.PP
+
+.PP
+Definition at line 104 of file world\&.py\&.
 .SS "def world\&.Cell\&.is_home (self)"
 
 .PP
-Definition at line 41 of file world\&.py\&.
+.nf
+Returns wheather the cell is a home or not
+(independent of which colony the ant belongs)
+
+.fi
+.PP
+ 
+.PP
+Definition at line 85 of file world\&.py\&.
 .SS "def world\&.Cell\&.is_obstacle (self)"
 
 .PP
-Definition at line 38 of file world\&.py\&.
-.SS "def world\&.Cell\&.make_home (self)"
+.nf
+Returns wheather the cell is a obstacle or not
+
+.fi
+.PP
+ 
+.PP
+Definition at line 79 of file world\&.py\&.
+.SS "def world\&.Cell\&.is_own_home (self, id)"
 
 .PP
-Definition at line 53 of file world\&.py\&.
+Checks if the cell is home cell of the ant\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIid\fP The id of the nest the ant belongs to 
+.RE
+.PP
+
+.PP
+Definition at line 94 of file world\&.py\&.
+.SS "def world\&.Cell\&.make_home (self, id)"
+
+.PP
+Convert the cell into a home cell\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIid\fP The id of the nest 
+.RE
+.PP
+
+.PP
+Definition at line 121 of file world\&.py\&.
 .SS "def world\&.Cell\&.make_obstacle (self)"
 
 .PP
-Definition at line 56 of file world\&.py\&.
+.nf
+Convert the cell into an obstacle if the cell is empty
+
+.fi
+.PP
+ 
+.PP
+Definition at line 125 of file world\&.py\&.
+.SS "def world\&.Cell\&.nearby (self)"
+
+.PP
+.nf
+Returns all nearby 8 cells
+
+.fi
+.PP
+ 
+.PP
+Definition at line 160 of file world\&.py\&.
+.SS "def world\&.Cell\&.remove_obstacle (self)"
+
+.PP
+.nf
+Removes obstacle from the cell
+
+.fi
+.PP
+ 
+.PP
+Definition at line 137 of file world\&.py\&.
 .SS "def world\&.Cell\&.render (self)"
 
 .PP
 .nf
+Extends the base class method
 Changes "index" to render the cell according to what it represents 
 (home, food, etc) and calls the super class
 Also renders scent levels with transparency depending on its strength
@@ -167,33 +407,33 @@ Also renders scent levels with transparency depending on its strength
 .PP
  
 .PP
-Definition at line 68 of file world\&.py\&.
+Definition at line 187 of file world\&.py\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "world\&.Cell\&.ant"
 
 .PP
-Definition at line 15 of file world\&.py\&.
+Definition at line 17 of file world\&.py\&.
 .SS "world\&.Cell\&.food"
 
 .PP
-Definition at line 12 of file world\&.py\&.
+Definition at line 14 of file world\&.py\&.
 .SS "world\&.Cell\&.food_scent"
 
 .PP
-Definition at line 14 of file world\&.py\&.
+Definition at line 16 of file world\&.py\&.
 .SS "world\&.Cell\&.home"
 
 .PP
-Definition at line 16 of file world\&.py\&.
+Definition at line 18 of file world\&.py\&.
 .SS "world\&.Cell\&.home_scent"
 
 .PP
-Definition at line 13 of file world\&.py\&.
+Definition at line 15 of file world\&.py\&.
 .SS "world\&.Cell\&.obstacle"
 
 .PP
-Definition at line 11 of file world\&.py\&.
+Definition at line 13 of file world\&.py\&.
 
 .SH "Author"
 .PP 

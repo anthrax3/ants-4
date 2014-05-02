@@ -5,10 +5,11 @@
     <innerclass refid="classants_1_1Ant" prot="public">ants::Ant</innerclass>
     <innerclass refid="classants_1_1WorkerAnt" prot="public">ants::WorkerAnt</innerclass>
     <innerclass refid="classants_1_1QueenAnt" prot="public">ants::QueenAnt</innerclass>
+    <innerclass refid="classants_1_1SoldierAnt" prot="public">ants::SoldierAnt</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="1" column="1"/>
+    <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="1" column="1"/>
   </compounddef>
 </doxygen>

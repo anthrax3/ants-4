@@ -119,6 +119,8 @@ $(document).ready(function(){initNavTree('classcontroller_1_1Simulation.html',''
 </div>
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classcontroller_1_1Simulation__coll__graph.png" border="0" usemap="#controller_8Simulation_coll__map" alt="Collaboration graph"/></div>
+<map name="controller_8Simulation_coll__map" id="controller_8Simulation_coll__map">
+</map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -133,6 +135,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad86d932f45e2b80ec5336da7c6e6e085"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3eb13a30931a88958e3c0c7b5b545a5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontroller_1_1Simulation.html#ad3eb13a30931a88958e3c0c7b5b545a5">handle_events</a></td></tr>
 <tr class="separator:ad3eb13a30931a88958e3c0c7b5b545a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a247d22a52798856055de287bd13a6cda"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontroller_1_1Simulation.html#a247d22a52798856055de287bd13a6cda">handle_keyboard_events</a></td></tr>
+<tr class="separator:a247d22a52798856055de287bd13a6cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad459f264509c14b43f23894dc35d6656"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontroller_1_1Simulation.html#ad459f264509c14b43f23894dc35d6656">handle_general_events</a></td></tr>
+<tr class="separator:ad459f264509c14b43f23894dc35d6656"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa43d3916e7ff0513f950439d7ae8b5b7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontroller_1_1Simulation.html#aa43d3916e7ff0513f950439d7ae8b5b7">handle_mouse_events</a></td></tr>
+<tr class="separator:aa43d3916e7ff0513f950439d7ae8b5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -144,6 +152,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:af13461f42bfe6ca017f59e13e57c354e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35d0ffc695295c3b509bd5bc2bdbac9b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontroller_1_1Simulation.html#a35d0ffc695295c3b509bd5bc2bdbac9b">quit</a></td></tr>
 <tr class="separator:a35d0ffc695295c3b509bd5bc2bdbac9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8acaf6508b8b61e163656195706d9025"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontroller_1_1Simulation.html#a8acaf6508b8b61e163656195706d9025">pause</a></td></tr>
+<tr class="separator:a8acaf6508b8b61e163656195706d9025"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d368ffc3eee12c8c36839ee5bce3644"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontroller_1_1Simulation.html#a5d368ffc3eee12c8c36839ee5bce3644">settings</a></td></tr>
 <tr class="separator:a5d368ffc3eee12c8c36839ee5bce3644"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ba0c3cf1949a98dd920f6097953c1f5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classcontroller_1_1Simulation.html#a2ba0c3cf1949a98dd920f6097953c1f5">world</a></td></tr>
@@ -151,11 +161,10 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><pre class="fragment">Controls the simulation
-
     - Runs the main loop
     - Detects mouse, keyboard and other events
     - Loads the necessary images
-    - Controls the framerate of the smiulation
+    - Controls the framerate of the simulation
 </pre> 
 <p>Definition at line <a class="el" href="controller_8py_source.html#l00005">5</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -207,8 +216,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Loads an image</pre> 
-<p>Definition at line <a class="el" href="controller_8py_source.html#l00037">37</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<pre class="fragment">Loads an image
+</pre> 
+<p>Definition at line <a class="el" href="controller_8py_source.html#l00039">39</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -225,8 +235,67 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Handles all keyboard, mouse and events like QUIT, etc</pre> 
-<p>Definition at line <a class="el" href="controller_8py_source.html#l00059">59</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<pre class="fragment">Handles all keyboard, mouse and events like QUIT, etc
+</pre> 
+<p>Definition at line <a class="el" href="controller_8py_source.html#l00066">66</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad459f264509c14b43f23894dc35d6656"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def controller.Simulation.handle_general_events </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">set quit true if user clicks the close button
+</pre> 
+<p>Definition at line <a class="el" href="controller_8py_source.html#l00082">82</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a247d22a52798856055de287bd13a6cda"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def controller.Simulation.handle_keyboard_events </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">set quit as true if user presses ESCAPE key
+</pre> 
+<p>Definition at line <a class="el" href="controller_8py_source.html#l00074">74</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa43d3916e7ff0513f950439d7ae8b5b7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def controller.Simulation.handle_mouse_events </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">- Creates obstacles on left clicks
+- Removes obstacles on right clicks
+</pre> 
+<p>Definition at line <a class="el" href="controller_8py_source.html#l00090">90</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -248,7 +317,7 @@ Public Attributes</h2></td></tr>
     - Handles all user events
     - Controls frame rate
 </pre> 
-<p>Definition at line <a class="el" href="controller_8py_source.html#l00046">46</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p>Definition at line <a class="el" href="controller_8py_source.html#l00052">52</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -265,8 +334,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Runs the main loop till the user quits</pre> 
-<p>Definition at line <a class="el" href="controller_8py_source.html#l00041">41</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<pre class="fragment">Runs the main loop till the user quits
+</pre> 
+<p>Definition at line <a class="el" href="controller_8py_source.html#l00045">45</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -313,6 +383,20 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a8acaf6508b8b61e163656195706d9025"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">controller.Simulation.pause</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="controller_8py_source.html#l00019">19</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a35d0ffc695295c3b509bd5bc2bdbac9b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -337,7 +421,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="controller_8py_source.html#l00029">29</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p>Definition at line <a class="el" href="controller_8py_source.html#l00030">30</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -351,7 +435,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="controller_8py_source.html#l00035">35</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
+<p>Definition at line <a class="el" href="controller_8py_source.html#l00037">37</a> of file <a class="el" href="controller_8py_source.html">controller.py</a>.</p>
 
 </div>
 </div>
@@ -364,7 +448,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacecontroller.html">controller</a></li><li class="navelem"><a class="el" href="classcontroller_1_1Simulation.html">Simulation</a></li>
-    <li class="footer">Generated on Wed Apr 9 2014 18:43:11 for Ant Colony by
+    <li class="footer">Generated on Sat May 3 2014 00:13:00 for Ant Colony by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

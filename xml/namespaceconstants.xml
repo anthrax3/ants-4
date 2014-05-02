@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/constants.py" line="1" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/constants.py" bodystart="1" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/constants.py" line="1" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/constants.py" bodystart="1" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespaceconstants_1aa1f49ae50d4547cd3b9f4801d04f5830" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/constants.py" line="3" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/constants.py" bodystart="3" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/constants.py" line="3" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/constants.py" bodystart="3" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespaceconstants_1a581305cb095bf2d8826a12abef66a15e" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -44,13 +44,41 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/constants.py" line="4" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/constants.py" bodystart="4" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/constants.py" line="4" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/constants.py" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceconstants_1ab7ba6a498f408091781f6f90a0446bcc" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple constants.WHITE</definition>
+        <argsstring></argsstring>
+        <name>WHITE</name>
+        <initializer>= (255,255,255)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/constants.py" line="5" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/constants.py" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceconstants_1a71ba084102da630a352232ea121e0e95" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple constants.GREEN</definition>
+        <argsstring></argsstring>
+        <name>GREEN</name>
+        <initializer>= (0,255,20)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/constants.py" line="6" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/constants.py" bodystart="6" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/acer/Ubuntu One/eclipse/ants/constants.py" line="1" column="1"/>
+    <location file="/home/acer/Dropbox/eclipse/ants/constants.py" line="1" column="1"/>
   </compounddef>
 </doxygen>

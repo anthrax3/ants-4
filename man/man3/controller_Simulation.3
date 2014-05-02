@@ -1,4 +1,4 @@
-.TH "controller.Simulation" 3 "Wed Apr 9 2014" "Ant Colony" \" -*- nroff -*-
+.TH "controller.Simulation" 3 "Sat May 3 2014" "Ant Colony" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -24,6 +24,15 @@ controller.Simulation \-
 .ti -1c
 .RI "def \fBhandle_events\fP"
 .br
+.ti -1c
+.RI "def \fBhandle_keyboard_events\fP"
+.br
+.ti -1c
+.RI "def \fBhandle_general_events\fP"
+.br
+.ti -1c
+.RI "def \fBhandle_mouse_events\fP"
+.br
 .in -1c
 .SS "Public Attributes"
 
@@ -41,6 +50,9 @@ controller.Simulation \-
 .RI "\fBquit\fP"
 .br
 .ti -1c
+.RI "\fBpause\fP"
+.br
+.ti -1c
 .RI "\fBsettings\fP"
 .br
 .ti -1c
@@ -53,11 +65,10 @@ controller.Simulation \-
 .PP
 .nf
 Controls the simulation
-
     - Runs the main loop
     - Detects mouse, keyboard and other events
     - Loads the necessary images
-    - Controls the framerate of the smiulation
+    - Controls the framerate of the simulation
 
 .fi
 .PP
@@ -77,21 +88,57 @@ Definition at line 13 of file controller\&.py\&.
 .PP
 .nf
 Loads an image
+
 .fi
 .PP
  
 .PP
-Definition at line 37 of file controller\&.py\&.
+Definition at line 39 of file controller\&.py\&.
 .SS "def controller\&.Simulation\&.handle_events (self)"
 
 .PP
 .nf
 Handles all keyboard, mouse and events like QUIT, etc
+
 .fi
 .PP
  
 .PP
-Definition at line 59 of file controller\&.py\&.
+Definition at line 66 of file controller\&.py\&.
+.SS "def controller\&.Simulation\&.handle_general_events (self)"
+
+.PP
+.nf
+set quit true if user clicks the close button
+
+.fi
+.PP
+ 
+.PP
+Definition at line 82 of file controller\&.py\&.
+.SS "def controller\&.Simulation\&.handle_keyboard_events (self)"
+
+.PP
+.nf
+set quit as true if user presses ESCAPE key
+
+.fi
+.PP
+ 
+.PP
+Definition at line 74 of file controller\&.py\&.
+.SS "def controller\&.Simulation\&.handle_mouse_events (self)"
+
+.PP
+.nf
+- Creates obstacles on left clicks
+- Removes obstacles on right clicks
+
+.fi
+.PP
+ 
+.PP
+Definition at line 90 of file controller\&.py\&.
 .SS "def controller\&.Simulation\&.main_loop (self)"
 
 .PP
@@ -105,17 +152,18 @@ Updates the simulation
 .PP
  
 .PP
-Definition at line 46 of file controller\&.py\&.
+Definition at line 52 of file controller\&.py\&.
 .SS "def controller\&.Simulation\&.run (self)"
 
 .PP
 .nf
 Runs the main loop till the user quits
+
 .fi
 .PP
  
 .PP
-Definition at line 41 of file controller\&.py\&.
+Definition at line 45 of file controller\&.py\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "controller\&.Simulation\&.clock"
@@ -130,6 +178,10 @@ Definition at line 15 of file controller\&.py\&.
 
 .PP
 Definition at line 16 of file controller\&.py\&.
+.SS "controller\&.Simulation\&.pause"
+
+.PP
+Definition at line 19 of file controller\&.py\&.
 .SS "controller\&.Simulation\&.quit"
 
 .PP
@@ -137,11 +189,11 @@ Definition at line 18 of file controller\&.py\&.
 .SS "controller\&.Simulation\&.settings"
 
 .PP
-Definition at line 29 of file controller\&.py\&.
+Definition at line 30 of file controller\&.py\&.
 .SS "controller\&.Simulation\&.world"
 
 .PP
-Definition at line 35 of file controller\&.py\&.
+Definition at line 37 of file controller\&.py\&.
 
 .SH "Author"
 .PP 

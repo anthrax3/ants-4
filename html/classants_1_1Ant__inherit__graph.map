@@ -1,5 +1,6 @@
 <map id="ants.Ant" name="ants.Ant">
-<area shape="rect" id="node7" href="$classants_1_1QueenAnt.html" title="{ants.QueenAnt\n||+ __init__()\l}" alt="" coords="5,771,115,856"/>
-<area shape="rect" id="node9" href="$classants_1_1WorkerAnt.html" title="{ants.WorkerAnt\n||+ __init__()\l}" alt="" coords="139,771,251,856"/>
-<area shape="rect" id="node2" href="$classdisplay_1_1Entity.html" title="{display.Entity\n|+ world\l+ location\l+ size\l+ image\l|+ __init__()\l+ render()\l}" alt="" coords="76,139,177,293"/>
+<area shape="rect" id="node7" href="$classants_1_1QueenAnt.html" title="{ants.QueenAnt\n|+ health\l|+ __init__()\l}" alt="" coords="5,823,115,908"/>
+<area shape="rect" id="node9" href="$classants_1_1SoldierAnt.html" title="{ants.SoldierAnt\n||+ __init__()\l+ get_enemy_ant_nearby()\l+ attack()\l}" alt="" coords="139,805,315,925"/>
+<area shape="rect" id="node11" href="$classants_1_1WorkerAnt.html" title="{ants.WorkerAnt\n||+ __init__()\l+ locate_food_scent_nearby()\l+ rank_by_food_scent()\l}" alt="" coords="339,805,533,925"/>
+<area shape="rect" id="node2" href="$classdisplay_1_1Entity.html" title="{display.Entity\n|+ world\l+ location\l+ size\l+ image\l|+ __init__()\l+ render()\l}" alt="" coords="176,139,277,293"/>
 </map>

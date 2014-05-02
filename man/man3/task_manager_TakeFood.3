@@ -1,4 +1,4 @@
-.TH "task_manager.TakeFood" 3 "Wed Apr 9 2014" "Ant Colony" \" -*- nroff -*-
+.TH "task_manager.TakeFood" 3 "Sat May 3 2014" "Ant Colony" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -33,18 +33,20 @@ Inherits \fBtask_manager\&.Task\fP\&.
 
 .PP
 .nf
-Gathering Food Task
+Gathers food from the cell
+If food is present it takes the food otherwise it returns to explore mode
+
 .fi
 .PP
  
 .PP
-Definition at line 103 of file task_manager\&.py\&.
+Definition at line 122 of file task_manager\&.py\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "def task_manager\&.TakeFood\&.__init__ (self, ant)"
 
 .PP
-Definition at line 105 of file task_manager\&.py\&.
+Definition at line 127 of file task_manager\&.py\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "def task_manager\&.TakeFood\&.end_task (self)"
@@ -53,27 +55,29 @@ Definition at line 105 of file task_manager\&.py\&.
 .nf
 Increase food_scent_strength
 and reduce home_scent_strength
+
 .fi
 .PP
  
 .PP
-Definition at line 119 of file task_manager\&.py\&.
+Definition at line 144 of file task_manager\&.py\&.
 .SS "def task_manager\&.TakeFood\&.perform_task (self)"
 
 .PP
 .nf
 Take food if available otherwise return to explore mode
+
 .fi
 .PP
  
 .PP
-Definition at line 108 of file task_manager\&.py\&.
+Definition at line 130 of file task_manager\&.py\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "task_manager\&.TakeFood\&.new_task"
 
 .PP
-Definition at line 115 of file task_manager\&.py\&.
+Definition at line 139 of file task_manager\&.py\&.
 
 .SH "Author"
 .PP 

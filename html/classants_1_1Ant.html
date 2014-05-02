@@ -120,7 +120,7 @@ $(document).ready(function(){initNavTree('classants_1_1Ant.html','');});
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classants_1_1Ant__inherit__graph.png" border="0" usemap="#ants_8Ant_inherit__map" alt="Inheritance graph"/></div>
 <map name="ants_8Ant_inherit__map" id="ants_8Ant_inherit__map">
-<area shape="rect" id="node7" href="classants_1_1QueenAnt.html" title="{ants.QueenAnt\n||+ __init__()\l}" alt="" coords="5,771,115,856"/><area shape="rect" id="node9" href="classants_1_1WorkerAnt.html" title="{ants.WorkerAnt\n||+ __init__()\l}" alt="" coords="139,771,251,856"/><area shape="rect" id="node2" href="classdisplay_1_1Entity.html" title="{display.Entity\n|+ world\l+ location\l+ size\l+ image\l|+ __init__()\l+ render()\l}" alt="" coords="76,139,177,293"/></map>
+<area shape="rect" id="node7" href="classants_1_1QueenAnt.html" title="{ants.QueenAnt\n|+ health\l|+ __init__()\l}" alt="" coords="5,823,115,908"/><area shape="rect" id="node9" href="classants_1_1SoldierAnt.html" title="{ants.SoldierAnt\n||+ __init__()\l+ get_enemy_ant_nearby()\l+ attack()\l}" alt="" coords="139,805,315,925"/><area shape="rect" id="node11" href="classants_1_1WorkerAnt.html" title="{ants.WorkerAnt\n||+ __init__()\l+ locate_food_scent_nearby()\l+ rank_by_food_scent()\l}" alt="" coords="339,805,533,925"/><area shape="rect" id="node2" href="classdisplay_1_1Entity.html" title="{display.Entity\n|+ world\l+ location\l+ size\l+ image\l|+ __init__()\l+ render()\l}" alt="" coords="176,139,277,293"/></map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for ants.Ant:</div>
@@ -129,27 +129,31 @@ $(document).ready(function(){initNavTree('classants_1_1Ant.html','');});
 <div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classants_1_1Ant__coll__graph.png" border="0" usemap="#ants_8Ant_coll__map" alt="Collaboration graph"/></div>
 <map name="ants_8Ant_coll__map" id="ants_8Ant_coll__map">
-<area shape="rect" id="node2" href="classdisplay_1_1Entity.html" title="{display.Entity\n|+ world\l+ location\l+ size\l+ image\l|+ __init__()\l+ render()\l}" alt="" coords="33,139,135,293"/></map>
+<area shape="rect" id="node2" href="classdisplay_1_1Entity.html" title="{display.Entity\n|+ world\l+ location\l+ size\l+ image\l|+ __init__()\l+ render()\l}" alt="" coords="61,139,163,293"/></map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0fa15b6ba2860b445d390c07bc11d4e2"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a0fa15b6ba2860b445d390c07bc11d4e2">__init__</a></td></tr>
 <tr class="separator:a0fa15b6ba2860b445d390c07bc11d4e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ee52d730c2bcbd0cfd0a8cf8d9206c6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a5ee52d730c2bcbd0cfd0a8cf8d9206c6">get_location</a></td></tr>
+<tr class="separator:a5ee52d730c2bcbd0cfd0a8cf8d9206c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ddd97dadaa5d24c459b0117dc6e1190"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a2ddd97dadaa5d24c459b0117dc6e1190">neighbour</a></td></tr>
 <tr class="separator:a2ddd97dadaa5d24c459b0117dc6e1190"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0067159f23e5e9e4b3564d48c1564f11"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a0067159f23e5e9e4b3564d48c1564f11">move</a></td></tr>
 <tr class="separator:a0067159f23e5e9e4b3564d48c1564f11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a636b900b6fdbed032e3a635495a4c4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a3a636b900b6fdbed032e3a635495a4c4">random_move</a></td></tr>
 <tr class="separator:a3a636b900b6fdbed032e3a635495a4c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a216ebc2ce2dfeb88d6bbc714bc50ecb5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a216ebc2ce2dfeb88d6bbc714bc50ecb5">reduce_home_scent</a></td></tr>
-<tr class="separator:a216ebc2ce2dfeb88d6bbc714bc50ecb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a285d1e406b6d2cc67779e873e879feb0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a285d1e406b6d2cc67779e873e879feb0">reduce_food_scent</a></td></tr>
-<tr class="separator:a285d1e406b6d2cc67779e873e879feb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f92c3c4a37d6c3998bc71fc0a6b9cee"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a0f92c3c4a37d6c3998bc71fc0a6b9cee">reduce_home_scent_strength</a></td></tr>
+<tr class="separator:a0f92c3c4a37d6c3998bc71fc0a6b9cee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d51e32dc22891ded9f02ffc71e612cd"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a1d51e32dc22891ded9f02ffc71e612cd">reduce_food_scent_strength</a></td></tr>
+<tr class="separator:a1d51e32dc22891ded9f02ffc71e612cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a445ec1d1f8e4cb539c4f66fafa129131"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a445ec1d1f8e4cb539c4f66fafa129131">turn</a></td></tr>
 <tr class="separator:a445ec1d1f8e4cb539c4f66fafa129131"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95585d833c74c56155a0d79394d511cc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a95585d833c74c56155a0d79394d511cc">render</a></td></tr>
 <tr class="separator:a95585d833c74c56155a0d79394d511cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10dc42722864d5850912dd34242d5cf8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a10dc42722864d5850912dd34242d5cf8">get_nest_id</a></td></tr>
+<tr class="separator:a10dc42722864d5850912dd34242d5cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e60480b7534b107e12d7f23fd06d5f1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a2e60480b7534b107e12d7f23fd06d5f1">here</a></td></tr>
 <tr class="separator:a2e60480b7534b107e12d7f23fd06d5f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a192f8411faa05c48db8db99d033f5d15"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a192f8411faa05c48db8db99d033f5d15">behind</a></td></tr>
@@ -162,20 +166,35 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad7a5311d831e8bcc07061e6a12edad8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9af7f8a5c766021ef0f68171d09abca"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#af9af7f8a5c766021ef0f68171d09abca">locate_food_nearby</a></td></tr>
 <tr class="separator:af9af7f8a5c766021ef0f68171d09abca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeec9c17184393435fd4d4936b6f2736a"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#aeec9c17184393435fd4d4936b6f2736a">is_enemy</a></td></tr>
+<tr class="memdesc:aeec9c17184393435fd4d4936b6f2736a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if the ant passed is an enemy.  <a href="#aeec9c17184393435fd4d4936b6f2736a">More...</a><br/></td></tr>
+<tr class="separator:aeec9c17184393435fd4d4936b6f2736a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5795d0898e3d0d020a0a0a626a5ef7b0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a5795d0898e3d0d020a0a0a626a5ef7b0">locate_home_nearby</a></td></tr>
 <tr class="separator:a5795d0898e3d0d020a0a0a626a5ef7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81a141f3417ddb32b8d1abbd95bbc477"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a81a141f3417ddb32b8d1abbd95bbc477">locate_home_scent_nearby</a></td></tr>
 <tr class="separator:a81a141f3417ddb32b8d1abbd95bbc477"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97ffad1c0e634f38585e7913908e9524"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a97ffad1c0e634f38585e7913908e9524">locate_food_scent_nearby</a></td></tr>
-<tr class="separator:a97ffad1c0e634f38585e7913908e9524"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a164a2a76f1779462fe81e8f169a92a93"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a164a2a76f1779462fe81e8f169a92a93">rank_by_food_scent</a></td></tr>
-<tr class="separator:a164a2a76f1779462fe81e8f169a92a93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6f3e3bd98a5f382098cdc1c02e1e2fd0"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a6f3e3bd98a5f382098cdc1c02e1e2fd0">rank_by_home_scent</a></td></tr>
 <tr class="separator:a6f3e3bd98a5f382098cdc1c02e1e2fd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae85884312b4aa10f965b84535bed37fc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#ae85884312b4aa10f965b84535bed37fc">drop_food</a></td></tr>
 <tr class="separator:ae85884312b4aa10f965b84535bed37fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accd1fa305032e848021a4d8b90f3f8ce"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#accd1fa305032e848021a4d8b90f3f8ce">take_food</a></td></tr>
+<tr class="memdesc:accd1fa305032e848021a4d8b90f3f8ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">carry half the food and increase health by half the amount  <a href="#accd1fa305032e848021a4d8b90f3f8ce">More...</a><br/></td></tr>
+<tr class="separator:accd1fa305032e848021a4d8b90f3f8ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41de1c29941a444dab25a88cbc3a881d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a41de1c29941a444dab25a88cbc3a881d">has_food</a></td></tr>
 <tr class="separator:a41de1c29941a444dab25a88cbc3a881d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae90d1356ca3370e47c24c5fe63ebfeaf"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#ae90d1356ca3370e47c24c5fe63ebfeaf">set_food_scent_strength</a></td></tr>
+<tr class="separator:ae90d1356ca3370e47c24c5fe63ebfeaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8234d6ecb9f7666e255ffa8a978355c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#ae8234d6ecb9f7666e255ffa8a978355c">set_home_scent_strength</a></td></tr>
+<tr class="separator:ae8234d6ecb9f7666e255ffa8a978355c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89ad26b1d79990f95979464bbd3bf9b8"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a89ad26b1d79990f95979464bbd3bf9b8">reduce_health</a></td></tr>
+<tr class="memdesc:a89ad26b1d79990f95979464bbd3bf9b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reduces the health of the ant.  <a href="#a89ad26b1d79990f95979464bbd3bf9b8">More...</a><br/></td></tr>
+<tr class="separator:a89ad26b1d79990f95979464bbd3bf9b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a218d9a25e9df83abf85ff596c214075c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a218d9a25e9df83abf85ff596c214075c">is_dead</a></td></tr>
+<tr class="separator:a218d9a25e9df83abf85ff596c214075c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78620c709fca31c9a0b2994534082bdc"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a78620c709fca31c9a0b2994534082bdc">is_alive</a></td></tr>
+<tr class="separator:a78620c709fca31c9a0b2994534082bdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16d8e187423f707e067fe2d562100437"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a16d8e187423f707e067fe2d562100437">is_hungry</a></td></tr>
+<tr class="separator:a16d8e187423f707e067fe2d562100437"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e4bf6309b80ab33bd628f6e7d78d013"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a9e4bf6309b80ab33bd628f6e7d78d013">__nonzero__</a></td></tr>
 <tr class="separator:a9e4bf6309b80ab33bd628f6e7d78d013"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classdisplay_1_1Entity"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classdisplay_1_1Entity')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classdisplay_1_1Entity.html">display.Entity</a></td></tr>
@@ -190,12 +209,16 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a55f64c7cafb3806bdcfda42586adbff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf5f970b6b5e8472f42275114eeac779"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#adf5f970b6b5e8472f42275114eeac779">image</a></td></tr>
 <tr class="separator:adf5f970b6b5e8472f42275114eeac779"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaafd510ade5c38719b8082027162132"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#acaafd510ade5c38719b8082027162132">nest</a></td></tr>
+<tr class="separator:acaafd510ade5c38719b8082027162132"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae26b7ffd236a83d8d5c96ec6ec07b4bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#ae26b7ffd236a83d8d5c96ec6ec07b4bb">direction</a></td></tr>
 <tr class="separator:ae26b7ffd236a83d8d5c96ec6ec07b4bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7de139b6f5bdb8d4ab42755c405ef5d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#ae7de139b6f5bdb8d4ab42755c405ef5d">location</a></td></tr>
 <tr class="separator:ae7de139b6f5bdb8d4ab42755c405ef5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afcfbbf8bd338401378d25c512204eb91"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#afcfbbf8bd338401378d25c512204eb91">food</a></td></tr>
 <tr class="separator:afcfbbf8bd338401378d25c512204eb91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa147562276c788d4533ab63ac44d96a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#aa147562276c788d4533ab63ac44d96a6">health</a></td></tr>
+<tr class="separator:aa147562276c788d4533ab63ac44d96a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7fb2ac4566880fdacfd7bf7f4ec1109"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#ad7fb2ac4566880fdacfd7bf7f4ec1109">food_scent_strength</a></td></tr>
 <tr class="separator:ad7fb2ac4566880fdacfd7bf7f4ec1109"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7885f0124adf5b10fd6fa5e8ac47edb9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classants_1_1Ant.html#a7885f0124adf5b10fd6fa5e8ac47edb9">home_scent_strength</a></td></tr>
@@ -213,8 +236,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a244569c285ad924e6200d4c1c8b4639c inherit pub_attribs_classdisplay_1_1Entity"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">A virtual base class for Ants</pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00006">6</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<div class="textblock"><pre class="fragment">A virtual base class for Ants
+</pre> 
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00008">8</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a0fa15b6ba2860b445d390c07bc11d4e2"></a>
 <div class="memitem">
@@ -248,7 +272,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>location</em>&#160;</td>
+          <td class="paramname"><em>location</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>nest</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -258,7 +288,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00008">8</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00012">12</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -277,7 +307,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00197">197</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00256">256</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -294,8 +324,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">The cell just ahead</pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00077">77</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<pre class="fragment">The cell just ahead
+</pre> 
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00117">117</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -312,8 +343,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">The cell just ahead-left</pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00081">81</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<pre class="fragment">The cell just ahead-left
+</pre> 
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00123">123</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -330,8 +362,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">The cell just ahead-right</pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00085">85</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<pre class="fragment">The cell just ahead-right
+</pre> 
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00129">129</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -348,8 +381,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">The cell just behind</pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00073">73</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<pre class="fragment">The cell just behind
+</pre> 
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00111">111</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -369,7 +403,44 @@ Public Attributes</h2></td></tr>
 <pre class="fragment">Set food to zero
 Update the food values of the home cell it reached
 </pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00187">187</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00214">214</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5ee52d730c2bcbd0cfd0a8cf8d9206c6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def ants.Ant.get_location </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00026">26</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a10dc42722864d5850912dd34242d5cf8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def ants.Ant.get_nest_id </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Returns the id of the nest it belongs to
+</pre> 
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00099">99</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -386,8 +457,9 @@ Update the food values of the home cell it reached
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00194">194</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<pre class="fragment">Checks if the ant has food_scent
+</pre> 
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00230">230</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -404,8 +476,99 @@ Update the food values of the home cell it reached
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">The cell it is standing on</pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00069">69</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<pre class="fragment">The cell it is standing on
+</pre> 
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00105">105</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a78620c709fca31c9a0b2994534082bdc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def ants.Ant.is_alive </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00250">250</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a218d9a25e9df83abf85ff596c214075c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def ants.Ant.is_dead </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00247">247</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeec9c17184393435fd4d4936b6f2736a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def ants.Ant.is_enemy </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>ant</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns true if the ant passed is an enemy. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ant</td><td>The other ant </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00155">155</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a16d8e187423f707e067fe2d562100437"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def ants.Ant.is_hungry </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00253">253</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -423,29 +586,9 @@ Update the food values of the home cell it reached
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Locate all sources nearby and return any one randomly
-return None if no food source is found</pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00089">89</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a97ffad1c0e634f38585e7913908e9524"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def ants.Ant.locate_food_scent_nearby </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">Scan the 5 directions near the direction of the ant for food scent and
-return one random direction
-return None if not found
+return None if no food source is found
 </pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00140">140</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00135">135</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -463,8 +606,9 @@ return None if not found
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Locate home cell nearby and return any one randomly
-return None if not found</pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00105">105</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+return None if not found
+</pre> 
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00158">158</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -485,7 +629,7 @@ return None if not found</pre>
 return one random direction
 return None if not found
 </pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00121">121</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00176">176</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -502,12 +646,13 @@ return None if not found
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Move the ant by a unit,
-Leave a scent trail,
+<pre class="fragment">Moves the ant by a unit if the next cell is empty,
+otherwise turn by an unit
+It also leaves a scent trail,
 remove the ant from its old cell, and
 update the current cell ant with itself
 </pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00027">27</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00038">38</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -535,8 +680,9 @@ update the current cell ant with itself
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Returns location of neighbouring cell in a direction 
-relative to the ant direction</pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00020">20</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+relative to the ant direction
+</pre> 
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00029">29</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -553,29 +699,9 @@ relative to the ant direction</pre>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Ant makes a move forward or turns randomly</pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00041">41</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a164a2a76f1779462fe81e8f169a92a93"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def ants.Ant.rank_by_food_scent </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<pre class="fragment">Scan the 5 directions near the direction of the ant for food scent and
-return the direction with the strongest scent
-return None if not found
+<pre class="fragment">Ant makes a move forward or turns randomly
 </pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00159">159</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00060">60</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -596,16 +722,16 @@ return None if not found
 return the direction with the strongest scent
 return None if not found
 </pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00173">173</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00196">196</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a285d1e406b6d2cc67779e873e879feb0"></a>
+<a class="anchor" id="a1d51e32dc22891ded9f02ffc71e612cd"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def ants.Ant.reduce_food_scent </td>
+          <td class="memname">def ants.Ant.reduce_food_scent_strength </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>
@@ -623,17 +749,54 @@ return None if not found
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Reduce food scent by 'amt'</pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00053">53</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<pre class="fragment">Reduce food scent by 'amt'
+</pre> 
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00076">76</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="a216ebc2ce2dfeb88d6bbc714bc50ecb5"></a>
+<a class="anchor" id="a89ad26b1d79990f95979464bbd3bf9b8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def ants.Ant.reduce_home_scent </td>
+          <td class="memname">def ants.Ant.reduce_health </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>amt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reduces the health of the ant. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">amt</td><td>The amount of health to reduce </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00244">244</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0f92c3c4a37d6c3998bc71fc0a6b9cee"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def ants.Ant.reduce_home_scent_strength </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>
@@ -651,8 +814,9 @@ return None if not found
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Reduce home scent by 'amt'</pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00048">48</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<pre class="fragment">Reduce home scent by 'amt'
+</pre> 
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00069">69</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -669,8 +833,101 @@ return None if not found
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Render itself</pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00062">62</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<pre class="fragment">Render itself
+</pre> 
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00089">89</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae90d1356ca3370e47c24c5fe63ebfeaf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def ants.Ant.set_food_scent_strength </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00236">236</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae8234d6ecb9f7666e255ffa8a978355c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def ants.Ant.set_home_scent_strength </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>strength</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00239">239</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="accd1fa305032e848021a4d8b90f3f8ce"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def ants.Ant.take_food </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>amt</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>carry half the food and increase health by half the amount </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">amt</td><td>The amount of food </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00226">226</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -697,8 +954,9 @@ return None if not found
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Changes direction n times</pre> 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00058">58</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<pre class="fragment">Changes direction n times
+</pre> 
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00083">83</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -713,7 +971,7 @@ return None if not found
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00012">12</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00017">17</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -727,7 +985,7 @@ return None if not found
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00014">14</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00019">19</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -741,7 +999,21 @@ return None if not found
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00015">15</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00021">21</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa147562276c788d4533ab63ac44d96a6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ants.Ant.health</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00020">20</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -755,7 +1027,7 @@ return None if not found
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00016">16</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00022">22</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -769,7 +1041,7 @@ return None if not found
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00011">11</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00015">15</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -783,7 +1055,21 @@ return None if not found
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00013">13</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00018">18</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acaafd510ade5c38719b8082027162132"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ants.Ant.nest</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00016">16</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -797,7 +1083,7 @@ return None if not found
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00018">18</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00024">24</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -811,7 +1097,7 @@ return None if not found
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="ants_8py_source.html#l00010">10</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
+<p>Definition at line <a class="el" href="ants_8py_source.html#l00014">14</a> of file <a class="el" href="ants_8py_source.html">ants.py</a>.</p>
 
 </div>
 </div>
@@ -824,7 +1110,7 @@ return None if not found
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceants.html">ants</a></li><li class="navelem"><a class="el" href="classants_1_1Ant.html">Ant</a></li>
-    <li class="footer">Generated on Wed Apr 9 2014 18:43:11 for Ant Colony by
+    <li class="footer">Generated on Sat May 3 2014 00:13:00 for Ant Colony by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -1,4 +1,4 @@
-.TH "world.World" 3 "Wed Apr 9 2014" "Ant Colony" \" -*- nroff -*-
+.TH "world.World" 3 "Sat May 3 2014" "Ant Colony" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -22,13 +22,19 @@ world.World \-
 .RI "def \fBadvance\fP"
 .br
 .ti -1c
-.RI "def \fBspawn_ants\fP"
+.RI "def \fBadd_ant\fP"
 .br
 .ti -1c
 .RI "def \fBspawn_foodsource\fP"
 .br
 .ti -1c
-.RI "def \fBcreate_home\fP"
+.RI "def \fBspawn_colonies\fP"
+.br
+.ti -1c
+.RI "def \fBget_ant_count\fP"
+.br
+.ti -1c
+.RI "def \fBcreate_walls\fP"
 .br
 .ti -1c
 .RI "def \fBrender\fP"
@@ -36,10 +42,16 @@ world.World \-
 .ti -1c
 .RI "def \fBevaporate_scent\fP"
 .br
+.ti -1c
+.RI "def \fBremove_dead_ants\fP"
+.br
 .in -1c
 .SS "Public Attributes"
 
 .in +1c
+.ti -1c
+.RI "\fBsettings\fP"
+.br
 .ti -1c
 .RI "\fBwidth\fP"
 .br
@@ -53,9 +65,6 @@ world.World \-
 .RI "\fBimages\fP"
 .br
 .ti -1c
-.RI "\fBsettings\fP"
-.br
-.ti -1c
 .RI "\fBcanvas\fP"
 .br
 .ti -1c
@@ -67,6 +76,9 @@ world.World \-
 .ti -1c
 .RI "\fBants\fP"
 .br
+.ti -1c
+.RI "\fBnests\fP"
+.br
 .in -1c
 .SH "Detailed Description"
 .PP 
@@ -74,14 +86,15 @@ world.World \-
 .PP
 .nf
 Encapsulation of all objects in the simulation
+
 .fi
 .PP
  
 .PP
-Definition at line 96 of file world\&.py\&.
+Definition at line 275 of file world\&.py\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "def world\&.World\&.__init__ (self, width, height, cell_size, images, settings)"
+.SS "def world\&.World\&.__init__ (self, width, height, images, settings)"
 
 .PP
 .nf
@@ -94,7 +107,7 @@ Definition at line 96 of file world\&.py\&.
 .PP
  
 .PP
-Definition at line 98 of file world\&.py\&.
+Definition at line 279 of file world\&.py\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "def world\&.World\&.__getitem__ (self, location)"
@@ -102,11 +115,23 @@ Definition at line 98 of file world\&.py\&.
 .PP
 .nf
 Returns the cell at the location
+
 .fi
 .PP
  
 .PP
-Definition at line 124 of file world\&.py\&.
+Definition at line 309 of file world\&.py\&.
+.SS "def world\&.World\&.add_ant (self, ant)"
+
+.PP
+.nf
+add a new ant into the world
+
+.fi
+.PP
+ 
+.PP
+Definition at line 336 of file world\&.py\&.
 .SS "def world\&.World\&.advance (self)"
 
 .PP
@@ -119,105 +144,131 @@ Advance the simulation by one step
 .PP
  
 .PP
-Definition at line 134 of file world\&.py\&.
+Definition at line 323 of file world\&.py\&.
 .SS "def world\&.World\&.convert_images (self)"
 
 .PP
 .nf
 Convert images to pygame optimised format
+
 .fi
 .PP
  
 .PP
-Definition at line 129 of file world\&.py\&.
-.SS "def world\&.World\&.create_home (self)"
+Definition at line 316 of file world\&.py\&.
+.SS "def world\&.World\&.create_walls (self)"
 
 .PP
 .nf
-Create a nest for ants
+Generates obstacles at the edges
+(otherwise the ants jump from one edge to another)
+
 .fi
 .PP
  
 .PP
-Definition at line 160 of file world\&.py\&.
+Definition at line 377 of file world\&.py\&.
 .SS "def world\&.World\&.evaporate_scent (self)"
 
 .PP
 .nf
 Evaporates all scent ( uses decay law ) at a rate defined in settings
+
 .fi
 .PP
  
 .PP
-Definition at line 181 of file world\&.py\&.
+Definition at line 409 of file world\&.py\&.
+.SS "def world\&.World\&.get_ant_count (self)"
+
+.PP
+.nf
+Returns a list of no. of different types of ants
+
+.fi
+.PP
+ 
+.PP
+Definition at line 367 of file world\&.py\&.
+.SS "def world\&.World\&.remove_dead_ants (self)"
+
+.PP
+Definition at line 418 of file world\&.py\&.
 .SS "def world\&.World\&.render (self)"
 
 .PP
 .nf
-Draws the world on the screen
+Draws the world and all its entities on the screen
+
 .fi
 .PP
  
 .PP
-Definition at line 168 of file world\&.py\&.
-.SS "def world\&.World\&.spawn_ants (self)"
+Definition at line 390 of file world\&.py\&.
+.SS "def world\&.World\&.spawn_colonies (self, n = \fC1\fP)"
 
 .PP
 .nf
-Spawns ants
+Creates colonies of ants
+
 .fi
 .PP
  
 .PP
-Definition at line 144 of file world\&.py\&.
+Definition at line 354 of file world\&.py\&.
 .SS "def world\&.World\&.spawn_foodsource (self)"
 
 .PP
 .nf
 Spawns food sources
+
 .fi
 .PP
  
 .PP
-Definition at line 152 of file world\&.py\&.
+Definition at line 344 of file world\&.py\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "world\&.World\&.ants"
 
 .PP
-Definition at line 118 of file world\&.py\&.
+Definition at line 299 of file world\&.py\&.
 .SS "world\&.World\&.canvas"
 
 .PP
-Definition at line 111 of file world\&.py\&.
+Definition at line 292 of file world\&.py\&.
 .SS "world\&.World\&.cell_size"
 
 .PP
-Definition at line 107 of file world\&.py\&.
+Definition at line 289 of file world\&.py\&.
 .SS "world\&.World\&.cells"
 
 .PP
-Definition at line 114 of file world\&.py\&.
+Definition at line 295 of file world\&.py\&.
 .SS "world\&.World\&.counter"
 
 .PP
-Definition at line 116 of file world\&.py\&.
+Definition at line 297 of file world\&.py\&.
 .SS "world\&.World\&.height"
 
 .PP
-Definition at line 106 of file world\&.py\&.
+Definition at line 288 of file world\&.py\&.
 .SS "world\&.World\&.images"
 
 .PP
-Definition at line 108 of file world\&.py\&.
+Definition at line 290 of file world\&.py\&.
+.SS "world\&.World\&.nests"
+
+.PP
+Definition at line 300 of file world\&.py\&.
 .SS "world\&.World\&.settings"
 
 .PP
-Definition at line 109 of file world\&.py\&.
+Definition at line 286 of file world\&.py\&.
 .SS "world\&.World\&.width"
 
 .PP
-Definition at line 105 of file world\&.py\&.
+Definition at line 287 of file world\&.py\&.
 
 .SH "Author"
 .PP 

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classtask__manager_1_1FindFood" kind="class" prot="public">
+    <compoundname>task_manager::FindFood</compoundname>
+    <basecompoundref refid="classtask__manager_1_1Task" prot="public" virt="non-virtual">task_manager.Task</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classtask__manager_1_1FindFood_1abf53da166a9a36fbab4ce1c87fa93694" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def task_manager.FindFood.__init__</definition>
+        <argsstring></argsstring>
+        <name>__init__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/task_manager.py" line="339" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/task_manager.py" bodystart="339" bodyend="341"/>
+      </memberdef>
+      <memberdef kind="function" id="classtask__manager_1_1FindFood_1aab9303f02e5e7d4884228e1fe5f6142c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def task_manager.FindFood.perform_task</definition>
+        <argsstring></argsstring>
+        <name>perform_task</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>find food</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/task_manager.py" line="342" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/task_manager.py" bodystart="342" bodyend="345"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Finds food if hungry</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="167">
+        <label>object</label>
+      </node>
+      <node id="165">
+        <label>task_manager.FindFood</label>
+        <link refid="classtask__manager_1_1FindFood"/>
+        <childnode refid="166" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="166">
+        <label>task_manager.Task</label>
+        <link refid="classtask__manager_1_1Task"/>
+        <childnode refid="167" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="170">
+        <label>object</label>
+      </node>
+      <node id="168">
+        <label>task_manager.FindFood</label>
+        <link refid="classtask__manager_1_1FindFood"/>
+        <childnode refid="169" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="169">
+        <label>task_manager.Task</label>
+        <link refid="classtask__manager_1_1Task"/>
+        <childnode refid="170" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/acer/Dropbox/eclipse/ants/task_manager.py" line="337" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/task_manager.py" bodystart="337" bodyend="345"/>
+    <listofallmembers>
+      <member refid="classtask__manager_1_1FindFood_1abf53da166a9a36fbab4ce1c87fa93694" prot="public" virt="non-virtual"><scope>task_manager::FindFood</scope><name>__init__</name></member>
+      <member refid="classtask__manager_1_1Task_1aab0d2d2ec0b4b3e87969d843a101e118" prot="public" virt="non-virtual" ambiguityscope="task_manager::Task."><scope>task_manager::FindFood</scope><name>__init__</name></member>
+      <member refid="classtask__manager_1_1Task_1ac43e25887825a1bb6e3d4a5a049968be" prot="public" virt="non-virtual"><scope>task_manager::FindFood</scope><name>ant</name></member>
+      <member refid="classtask__manager_1_1Task_1a9422ddc4ca06f29aed2bbd53bfde8da4" prot="public" virt="non-virtual"><scope>task_manager::FindFood</scope><name>end_task</name></member>
+      <member refid="classtask__manager_1_1Task_1ab46cf79945b53ec633f6f52b37c7a5cb" prot="public" virt="non-virtual"><scope>task_manager::FindFood</scope><name>get_new_task</name></member>
+      <member refid="classtask__manager_1_1Task_1a1a12769253144bf3a864cdff907b9fb6" prot="public" virt="non-virtual"><scope>task_manager::FindFood</scope><name>name</name></member>
+      <member refid="classtask__manager_1_1Task_1af16658f4c3c447e24f73ed3d1803e058" prot="public" virt="non-virtual"><scope>task_manager::FindFood</scope><name>new_task</name></member>
+      <member refid="classtask__manager_1_1FindFood_1aab9303f02e5e7d4884228e1fe5f6142c" prot="public" virt="non-virtual"><scope>task_manager::FindFood</scope><name>perform_task</name></member>
+      <member refid="classtask__manager_1_1Task_1aacfcc36829c22c789f31edaf60ef1cc4" prot="public" virt="non-virtual"><scope>task_manager::FindFood</scope><name>start_task</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['queenant',['QueenAnt',['../classants_1_1QueenAnt.html',1,'ants']]]
+  ['guardnest',['GuardNest',['../classtask__manager_1_1GuardNest.html',1,'task_manager']]]
 ];

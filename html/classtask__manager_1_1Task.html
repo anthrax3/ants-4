@@ -120,7 +120,7 @@ $(document).ready(function(){initNavTree('classtask__manager_1_1Task.html','');}
 <div id="dynsection-0-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classtask__manager_1_1Task__inherit__graph.png" border="0" usemap="#task__manager_8Task_inherit__map" alt="Inheritance graph"/></div>
 <map name="task__manager_8Task_inherit__map" id="task__manager_8Task_inherit__map">
-<area shape="rect" id="node5" href="classtask__manager_1_1DropFood.html" title="{task_manager.DropFood\n|+ new_task\l|+ __init__()\l+ perform_task()\l+ end_task()\l}" alt="" coords="5,376,171,496"/><area shape="rect" id="node7" href="classtask__manager_1_1Explore.html" title="{task_manager.Explore\n|+ new_task\l|+ __init__()\l+ perform_task()\l}" alt="" coords="195,385,347,487"/><area shape="rect" id="node9" href="classtask__manager_1_1FollowFoodTrail.html" title="{task_manager.FollowFoodTrail\n|+ new_task\l|+ __init__()\l+ start_task()\l+ perform_task()\l}" alt="" coords="371,376,571,496"/><area shape="rect" id="node11" href="classtask__manager_1_1FollowHomeTrail.html" title="{task_manager.FollowHomeTrail\n|+ new_task\l|+ __init__()\l+ start_task()\l+ perform_task()\l}" alt="" coords="595,376,800,496"/><area shape="rect" id="node13" href="classtask__manager_1_1TakeFood.html" title="{task_manager.TakeFood\n|+ new_task\l|+ __init__()\l+ perform_task()\l+ end_task()\l}" alt="" coords="824,376,989,496"/></map>
+<area shape="rect" id="node5" href="classtask__manager_1_1DropFood.html" title="{task_manager.DropFood\n|+ new_task\l|+ __init__()\l+ start_task()\l+ perform_task()\l+ end_task()\l}" alt="" coords="5,377,171,514"/><area shape="rect" id="node7" href="classtask__manager_1_1Explore.html" title="{task_manager.Explore\n|+ new_task\l|+ __init__()\l+ perform_task()\l}" alt="" coords="195,394,347,497"/><area shape="rect" id="node9" href="classtask__manager_1_1FindFood.html" title="{task_manager.FindFood\n||+ __init__()\l+ perform_task()\l}" alt="" coords="371,394,533,497"/><area shape="rect" id="node11" href="classtask__manager_1_1FollowFoodTrail.html" title="{task_manager.FollowFoodTrail\n|+ new_task\l|+ __init__()\l+ start_task()\l+ perform_task()\l}" alt="" coords="557,385,757,505"/><area shape="rect" id="node13" href="classtask__manager_1_1FollowHomeTrail.html" title="{task_manager.FollowHomeTrail\n|+ new_task\l|+ __init__()\l+ start_task()\l+ perform_task()\l}" alt="" coords="781,385,987,505"/><area shape="rect" id="node15" href="classtask__manager_1_1GuardNest.html" title="{task_manager.GuardNest\n|+ new_task\l|+ __init__()\l+ start_task()\l+ perform_task()\l}" alt="" coords="1011,385,1181,505"/><area shape="rect" id="node17" href="classtask__manager_1_1ProduceAnts.html" title="{task_manager.ProduceAnts\n|+ new_task\l|+ __init__()\l+ perform_task()\l}" alt="" coords="1205,394,1387,497"/><area shape="rect" id="node19" href="classtask__manager_1_1ReturnHome.html" title="{task_manager.ReturnHome\n|+ new_task\l|+ __init__()\l+ start_task()\l+ perform_task()\l}" alt="" coords="1411,385,1592,505"/><area shape="rect" id="node21" href="classtask__manager_1_1TakeFood.html" title="{task_manager.TakeFood\n|+ new_task\l|+ __init__()\l+ perform_task()\l+ end_task()\l}" alt="" coords="1616,385,1781,505"/></map>
 </div>
 <div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for task_manager.Task:</div>
@@ -153,8 +153,9 @@ Public Attributes</h2></td></tr>
 <tr class="separator:af16658f4c3c447e24f73ed3d1803e058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><pre class="fragment">Base class for a Task</pre> 
-<p>Definition at line <a class="el" href="task__manager_8py_source.html#l00031">31</a> of file <a class="el" href="task__manager_8py_source.html">task_manager.py</a>.</p>
+<div class="textblock"><pre class="fragment">Base class for a Task
+</pre> 
+<p>Definition at line <a class="el" href="task__manager_8py_source.html#l00039">39</a> of file <a class="el" href="task__manager_8py_source.html">task_manager.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aab0d2d2ec0b4b3e87969d843a101e118"></a>
 <div class="memitem">
@@ -186,7 +187,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="task__manager_8py_source.html#l00033">33</a> of file <a class="el" href="task__manager_8py_source.html">task_manager.py</a>.</p>
+<p>Definition at line <a class="el" href="task__manager_8py_source.html#l00043">43</a> of file <a class="el" href="task__manager_8py_source.html">task_manager.py</a>.</p>
 
 </div>
 </div>
@@ -204,8 +205,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Actions at the end of a new task</pre> 
-<p>Definition at line <a class="el" href="task__manager_8py_source.html#l00046">46</a> of file <a class="el" href="task__manager_8py_source.html">task_manager.py</a>.</p>
+<pre class="fragment">Actions at the end of a new task
+</pre> 
+<p>Definition at line <a class="el" href="task__manager_8py_source.html#l00061">61</a> of file <a class="el" href="task__manager_8py_source.html">task_manager.py</a>.</p>
 
 </div>
 </div>
@@ -223,7 +225,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <pre class="fragment">Returns and resets new task</pre> 
-<p>Definition at line <a class="el" href="task__manager_8py_source.html#l00050">50</a> of file <a class="el" href="task__manager_8py_source.html">task_manager.py</a>.</p>
+<p>Definition at line <a class="el" href="task__manager_8py_source.html#l00067">67</a> of file <a class="el" href="task__manager_8py_source.html">task_manager.py</a>.</p>
 
 </div>
 </div>
@@ -240,8 +242,10 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Actions done for a task</pre> 
-<p>Definition at line <a class="el" href="task__manager_8py_source.html#l00042">42</a> of file <a class="el" href="task__manager_8py_source.html">task_manager.py</a>.</p>
+<pre class="fragment">Actions done for a task
+each time a task is performed reduce the health by one
+</pre> 
+<p>Definition at line <a class="el" href="task__manager_8py_source.html#l00054">54</a> of file <a class="el" href="task__manager_8py_source.html">task_manager.py</a>.</p>
 
 </div>
 </div>
@@ -258,8 +262,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Actions at the beginning of a new task</pre> 
-<p>Definition at line <a class="el" href="task__manager_8py_source.html#l00038">38</a> of file <a class="el" href="task__manager_8py_source.html">task_manager.py</a>.</p>
+<pre class="fragment">Actions at the beginning of a new task
+</pre> 
+<p>Definition at line <a class="el" href="task__manager_8py_source.html#l00048">48</a> of file <a class="el" href="task__manager_8py_source.html">task_manager.py</a>.</p>
 
 </div>
 </div>
@@ -274,7 +279,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="task__manager_8py_source.html#l00035">35</a> of file <a class="el" href="task__manager_8py_source.html">task_manager.py</a>.</p>
+<p>Definition at line <a class="el" href="task__manager_8py_source.html#l00045">45</a> of file <a class="el" href="task__manager_8py_source.html">task_manager.py</a>.</p>
 
 </div>
 </div>
@@ -288,7 +293,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="task__manager_8py_source.html#l00034">34</a> of file <a class="el" href="task__manager_8py_source.html">task_manager.py</a>.</p>
+<p>Definition at line <a class="el" href="task__manager_8py_source.html#l00044">44</a> of file <a class="el" href="task__manager_8py_source.html">task_manager.py</a>.</p>
 
 </div>
 </div>
@@ -302,7 +307,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="task__manager_8py_source.html#l00036">36</a> of file <a class="el" href="task__manager_8py_source.html">task_manager.py</a>.</p>
+<p>Definition at line <a class="el" href="task__manager_8py_source.html#l00046">46</a> of file <a class="el" href="task__manager_8py_source.html">task_manager.py</a>.</p>
 
 </div>
 </div>
@@ -315,7 +320,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacetask__manager.html">task_manager</a></li><li class="navelem"><a class="el" href="classtask__manager_1_1Task.html">Task</a></li>
-    <li class="footer">Generated on Wed Apr 9 2014 18:43:11 for Ant Colony by
+    <li class="footer">Generated on Sat May 3 2014 00:13:00 for Ant Colony by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

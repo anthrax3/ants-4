@@ -1,0 +1,4 @@
+<map id="ants.SoldierAnt" name="ants.SoldierAnt">
+<area shape="rect" id="node2" href="$classants_1_1Ant.html" title="{ants.Ant\n|+ world\l+ image\l+ nest\l+ direction\l+ location\l+ food\l+ health\l+ food_scent_strength\l+ home_scent_strength\l+ task_manager\l|+ __init__()\l+ get_location()\l+ neighbour()\l+ move()\l+ random_move()\l+ reduce_home_scent_strength()\l+ reduce_food_scent_strength()\l+ turn()\l+ render()\l+ get_nest_id()\land 20 more...\l}" alt="" coords="5,342,219,757"/>
+<area shape="rect" id="node4" href="$classdisplay_1_1Entity.html" title="{display.Entity\n|+ world\l+ location\l+ size\l+ image\l|+ __init__()\l+ render()\l}" alt="" coords="61,139,163,293"/>
+</map>

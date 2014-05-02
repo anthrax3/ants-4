@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['width',['width',['../classworld_1_1World.html#a5ace9de2d4cd40bbb013db9712f4ef34',1,'world.World.width()'],['../namespaceconstants.html#aa1f49ae50d4547cd3b9f4801d04f5830',1,'constants.WIDTH()']]],
-  ['world',['world',['../classants_1_1Ant.html#a55f64c7cafb3806bdcfda42586adbff5',1,'ants.Ant.world()'],['../classcontroller_1_1Simulation.html#a2ba0c3cf1949a98dd920f6097953c1f5',1,'controller.Simulation.world()'],['../classdisplay_1_1Entity.html#ad7e3284bfb984c309b35d5a077bd5b21',1,'display.Entity.world()']]]
+  ['settings',['settings',['../classcontroller_1_1Simulation.html#a5d368ffc3eee12c8c36839ee5bce3644',1,'controller.Simulation.settings()'],['../classworld_1_1World.html#a41e0f9d00bb365408abee5a084bdce24',1,'world.World.settings()']]],
+  ['simulation',['simulation',['../namespacemain.html#a587e23faee5ea0116a33678f99304c82',1,'main']]],
+  ['size',['size',['../classdisplay_1_1Entity.html#aa56fd9b8bb6c9510f24ea13be8c6a218',1,'display.Entity.size()'],['../classworld_1_1Nest.html#a779ec4ef0582e917964de4efaedaef84',1,'world.Nest.size()']]]
 ];

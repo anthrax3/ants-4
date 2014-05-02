@@ -3,11 +3,12 @@
   <compounddef id="namespaceworld" kind="namespace">
     <compoundname>world</compoundname>
     <innerclass refid="classworld_1_1Cell" prot="public">world::Cell</innerclass>
+    <innerclass refid="classworld_1_1Nest" prot="public">world::Nest</innerclass>
     <innerclass refid="classworld_1_1World" prot="public">world::World</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="1" column="1"/>
+    <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="1" column="1"/>
   </compounddef>
 </doxygen>

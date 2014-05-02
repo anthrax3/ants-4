@@ -9,10 +9,14 @@
     <innerclass refid="classtask__manager_1_1DropFood" prot="public">task_manager::DropFood</innerclass>
     <innerclass refid="classtask__manager_1_1FollowFoodTrail" prot="public">task_manager::FollowFoodTrail</innerclass>
     <innerclass refid="classtask__manager_1_1FollowHomeTrail" prot="public">task_manager::FollowHomeTrail</innerclass>
+    <innerclass refid="classtask__manager_1_1ReturnHome" prot="public">task_manager::ReturnHome</innerclass>
+    <innerclass refid="classtask__manager_1_1GuardNest" prot="public">task_manager::GuardNest</innerclass>
+    <innerclass refid="classtask__manager_1_1ProduceAnts" prot="public">task_manager::ProduceAnts</innerclass>
+    <innerclass refid="classtask__manager_1_1FindFood" prot="public">task_manager::FindFood</innerclass>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="1" column="1"/>
+    <location file="/home/acer/Dropbox/eclipse/ants/task_manager.py" line="1" column="1"/>
   </compounddef>
 </doxygen>

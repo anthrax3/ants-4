@@ -1,4 +1,4 @@
-.TH "task_manager.DropFood" 3 "Wed Apr 9 2014" "Ant Colony" \" -*- nroff -*-
+.TH "task_manager.DropFood" 3 "Sat May 3 2014" "Ant Colony" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -13,6 +13,9 @@ Inherits \fBtask_manager\&.Task\fP\&.
 .in +1c
 .ti -1c
 .RI "def \fB__init__\fP"
+.br
+.ti -1c
+.RI "def \fBstart_task\fP"
 .br
 .ti -1c
 .RI "def \fBperform_task\fP"
@@ -33,18 +36,21 @@ Inherits \fBtask_manager\&.Task\fP\&.
 
 .PP
 .nf
-Drop Food Task
+Drop the food inside the nest
+Randomly walks inside the nest and drops the food
+and returns to explore mode
+
 .fi
 .PP
  
 .PP
-Definition at line 126 of file task_manager\&.py\&.
+Definition at line 153 of file task_manager\&.py\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
 .SS "def task_manager\&.DropFood\&.__init__ (self, ant)"
 
 .PP
-Definition at line 128 of file task_manager\&.py\&.
+Definition at line 159 of file task_manager\&.py\&.
 .SH "Member Function Documentation"
 .PP 
 .SS "def task_manager\&.DropFood\&.end_task (self)"
@@ -57,7 +63,7 @@ Increase home scent strength and reduce food scent strength
 .PP
  
 .PP
-Definition at line 146 of file task_manager\&.py\&.
+Definition at line 183 of file task_manager\&.py\&.
 .SS "def task_manager\&.DropFood\&.perform_task (self)"
 
 .PP
@@ -69,13 +75,17 @@ otherwise follow a home trail
 .PP
  
 .PP
-Definition at line 131 of file task_manager\&.py\&.
+Definition at line 166 of file task_manager\&.py\&.
+.SS "def task_manager\&.DropFood\&.start_task (self)"
+
+.PP
+Definition at line 162 of file task_manager\&.py\&.
 .SH "Member Data Documentation"
 .PP 
 .SS "task_manager\&.DropFood\&.new_task"
 
 .PP
-Definition at line 142 of file task_manager\&.py\&.
+Definition at line 178 of file task_manager\&.py\&.
 
 .SH "Author"
 .PP 

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="203" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="203" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/task_manager.py" line="242" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/task_manager.py" bodystart="242" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="185" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="185" bodyend="187"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/task_manager.py" line="227" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/task_manager.py" bodystart="227" bodyend="229"/>
       </memberdef>
       <memberdef kind="function" id="classtask__manager_1_1FollowHomeTrail_1a0ffd4aabfafcfead05a02e149e5fab91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="188" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="188" bodyend="190"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/task_manager.py" line="230" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/task_manager.py" bodystart="230" bodyend="232"/>
       </memberdef>
       <memberdef kind="function" id="classtask__manager_1_1FollowHomeTrail_1ae4386ef7470e20e3f42fab9fc65b70cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -59,48 +59,49 @@
 </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="191" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="191" bodyend="208"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/task_manager.py" line="233" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/task_manager.py" bodystart="233" bodyend="260"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><verbatim>docstring for FollowFoodTrail</verbatim> </para>    </detaileddescription>
+<para><verbatim>Follows a home trail if it finds home scent 
+</verbatim> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="125">
+      <node id="179">
         <label>object</label>
       </node>
-      <node id="123">
+      <node id="177">
         <label>task_manager.FollowHomeTrail</label>
         <link refid="classtask__manager_1_1FollowHomeTrail"/>
-        <childnode refid="124" relation="public-inheritance">
+        <childnode refid="178" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="124">
+      <node id="178">
         <label>task_manager.Task</label>
         <link refid="classtask__manager_1_1Task"/>
-        <childnode refid="125" relation="public-inheritance">
+        <childnode refid="179" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="128">
+      <node id="182">
         <label>object</label>
       </node>
-      <node id="126">
+      <node id="180">
         <label>task_manager.FollowHomeTrail</label>
         <link refid="classtask__manager_1_1FollowHomeTrail"/>
-        <childnode refid="127" relation="public-inheritance">
+        <childnode refid="181" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="127">
+      <node id="181">
         <label>task_manager.Task</label>
         <link refid="classtask__manager_1_1Task"/>
-        <childnode refid="128" relation="public-inheritance">
+        <childnode refid="182" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="183" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="183" bodyend="208"/>
+    <location file="/home/acer/Dropbox/eclipse/ants/task_manager.py" line="223" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/task_manager.py" bodystart="223" bodyend="261"/>
     <listofallmembers>
       <member refid="classtask__manager_1_1FollowHomeTrail_1a644c02e687f8a412a39e81628742f3b5" prot="public" virt="non-virtual"><scope>task_manager::FollowHomeTrail</scope><name>__init__</name></member>
       <member refid="classtask__manager_1_1Task_1aab0d2d2ec0b4b3e87969d843a101e118" prot="public" virt="non-virtual" ambiguityscope="task_manager::Task."><scope>task_manager::FollowHomeTrail</scope><name>__init__</name></member>

@@ -145,17 +145,23 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>__init__()
 : <a class="el" href="classants_1_1Ant.html#a0fa15b6ba2860b445d390c07bc11d4e2">ants.Ant</a>
 , <a class="el" href="classants_1_1QueenAnt.html#aea3ff8fa90122567905806f675eb9472">ants.QueenAnt</a>
+, <a class="el" href="classants_1_1SoldierAnt.html#adaaa2dc645cd3f4c190a86caa7e18f35">ants.SoldierAnt</a>
 , <a class="el" href="classants_1_1WorkerAnt.html#a82e7d37f66c81e029cad6038d6515056">ants.WorkerAnt</a>
 , <a class="el" href="classcontroller_1_1Simulation.html#a0d3a98e6f630a62f18aa5c0c35846381">controller.Simulation</a>
 , <a class="el" href="classdisplay_1_1Entity.html#a10294b5b8a8fa95f95f29aaf521efd56">display.Entity</a>
 , <a class="el" href="classtask__manager_1_1DropFood.html#a0f759e307357de441edd8465313ca4e8">task_manager.DropFood</a>
 , <a class="el" href="classtask__manager_1_1Explore.html#ae95cc7a4676c07732fcf0faed752959c">task_manager.Explore</a>
+, <a class="el" href="classtask__manager_1_1FindFood.html#abf53da166a9a36fbab4ce1c87fa93694">task_manager.FindFood</a>
 , <a class="el" href="classtask__manager_1_1FollowFoodTrail.html#a6af05bfd09141281c9943c8f01a0896b">task_manager.FollowFoodTrail</a>
 , <a class="el" href="classtask__manager_1_1FollowHomeTrail.html#a644c02e687f8a412a39e81628742f3b5">task_manager.FollowHomeTrail</a>
+, <a class="el" href="classtask__manager_1_1GuardNest.html#ac1b98762825c860890caff5649269cb1">task_manager.GuardNest</a>
+, <a class="el" href="classtask__manager_1_1ProduceAnts.html#ab154b2db66b66e0fc43d3ef5094bf73e">task_manager.ProduceAnts</a>
+, <a class="el" href="classtask__manager_1_1ReturnHome.html#ada66b785625008db20221e1b53d419f6">task_manager.ReturnHome</a>
 , <a class="el" href="classtask__manager_1_1TakeFood.html#a4c5cc2bb37fc196bc5cb34f56fa62a29">task_manager.TakeFood</a>
 , <a class="el" href="classtask__manager_1_1Task.html#aab0d2d2ec0b4b3e87969d843a101e118">task_manager.Task</a>
 , <a class="el" href="classtask__manager_1_1TaskManager.html#a750d99ccae60977d027c156d607a245d">task_manager.TaskManager</a>
 , <a class="el" href="classworld_1_1Cell.html#a3dd387b6af13f7450acb97fb40c13a0e">world.Cell</a>
+, <a class="el" href="classworld_1_1Nest.html#a76e2fb1c7adfc7b4843bd9a1491c67f7">world.Nest</a>
 , <a class="el" href="classworld_1_1World.html#a4351253668240be9d3a0d5bc2f1aa18f">world.World</a>
 </li>
 <li>__nonzero__()
@@ -168,6 +174,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>active_task
 : <a class="el" href="classtask__manager_1_1TaskManager.html#a3389ea690b2ade9bfe1efa5ad079b777">task_manager.TaskManager</a>
 </li>
+<li>add_ant()
+: <a class="el" href="classworld_1_1World.html#a83af04b7168b479b93ef75b1a9fb8dc2">world.World</a>
+</li>
 <li>add_food()
 : <a class="el" href="classworld_1_1Cell.html#a3d9725f56b584acd9f75728f364975b0">world.Cell</a>
 </li>
@@ -179,6 +188,12 @@ $(document).ready(function(){initNavTree('functions.html','');});
 </li>
 <li>add_image()
 : <a class="el" href="classcontroller_1_1Simulation.html#a91674f018c921725aa36ec25396a7304">controller.Simulation</a>
+</li>
+<li>add_new_ant()
+: <a class="el" href="classworld_1_1Nest.html#a0b76a02840f15fe7909859d523736a58">world.Nest</a>
+</li>
+<li>add_new_ant_randomly()
+: <a class="el" href="classworld_1_1Nest.html#ac845bc370bbb778a45a360145a48be61">world.Nest</a>
 </li>
 <li>add_task()
 : <a class="el" href="classtask__manager_1_1TaskManager.html#a4cedc030cbfa126c93c7050896111283">task_manager.TaskManager</a>
@@ -199,8 +214,14 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="classtask__manager_1_1Task.html#ac43e25887825a1bb6e3d4a5a049968be">task_manager.Task</a>
 , <a class="el" href="classworld_1_1Cell.html#abfd9b278ac86f77970b7766a7c2e3231">world.Cell</a>
 </li>
+<li>ant_count
+: <a class="el" href="classworld_1_1Nest.html#aa41cdaa8399fe934d89f5573ff804cbc">world.Nest</a>
+</li>
 <li>ants
 : <a class="el" href="classworld_1_1World.html#aff3d808329d4220a8bd5e917c151c14a">world.World</a>
+</li>
+<li>attack()
+: <a class="el" href="classants_1_1SoldierAnt.html#a66062d822fc415e73332f7b13cf853c8">ants.SoldierAnt</a>
 </li>
 </ul>
 
@@ -231,8 +252,8 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>counter
 : <a class="el" href="classworld_1_1World.html#a93d8708ed00be71dfd78cb42767529ce">world.World</a>
 </li>
-<li>create_home()
-: <a class="el" href="classworld_1_1World.html#a1dd90d1ccaa88b5e9bfdceed9dd65de6">world.World</a>
+<li>create_walls()
+: <a class="el" href="classworld_1_1World.html#a85d9fcbadcac5428c6f4207404221826">world.World</a>
 </li>
 </ul>
 
@@ -278,8 +299,32 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_g"></a>- g -</h3><ul>
+<li>get_ant_count()
+: <a class="el" href="classworld_1_1World.html#a71b1d7a0d1b22365b4d8ed2ac6a72b98">world.World</a>
+</li>
+<li>get_enemy_ant_nearby()
+: <a class="el" href="classants_1_1SoldierAnt.html#aa3d00e2aca5711f0b5784fd2ec0f4989">ants.SoldierAnt</a>
+</li>
 <li>get_food()
 : <a class="el" href="classworld_1_1Cell.html#ace4b7ca65667e6dcecb3c43e850c3568">world.Cell</a>
+</li>
+<li>get_food_scent()
+: <a class="el" href="classworld_1_1Cell.html#ae69e7bafa4825b0e208d3bb74c25fe91">world.Cell</a>
+</li>
+<li>get_home_scent()
+: <a class="el" href="classworld_1_1Cell.html#aac71d7cc30cb979617b1ec8d9f4d9b26">world.Cell</a>
+</li>
+<li>get_location()
+: <a class="el" href="classants_1_1Ant.html#a5ee52d730c2bcbd0cfd0a8cf8d9206c6">ants.Ant</a>
+</li>
+<li>get_max_food_scent()
+: <a class="el" href="classworld_1_1Cell.html#a7562d15f3a8d223f445a67b89ad60f07">world.Cell</a>
+</li>
+<li>get_max_home_scent()
+: <a class="el" href="classworld_1_1Cell.html#a05eb363f384507bcca4ab3f9680ba8a9">world.Cell</a>
+</li>
+<li>get_nest_id()
+: <a class="el" href="classants_1_1Ant.html#a10dc42722864d5850912dd34242d5cf8">ants.Ant</a>
 </li>
 <li>get_new_task()
 : <a class="el" href="classtask__manager_1_1Task.html#ab46cf79945b53ec633f6f52b37c7a5cb">task_manager.Task</a>
@@ -291,12 +336,25 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>handle_events()
 : <a class="el" href="classcontroller_1_1Simulation.html#ad3eb13a30931a88958e3c0c7b5b545a5">controller.Simulation</a>
 </li>
+<li>handle_general_events()
+: <a class="el" href="classcontroller_1_1Simulation.html#ad459f264509c14b43f23894dc35d6656">controller.Simulation</a>
+</li>
+<li>handle_keyboard_events()
+: <a class="el" href="classcontroller_1_1Simulation.html#a247d22a52798856055de287bd13a6cda">controller.Simulation</a>
+</li>
+<li>handle_mouse_events()
+: <a class="el" href="classcontroller_1_1Simulation.html#aa43d3916e7ff0513f950439d7ae8b5b7">controller.Simulation</a>
+</li>
 <li>has_ant()
 : <a class="el" href="classworld_1_1Cell.html#a98e3cac3c42374693afe0aded7a1e06c">world.Cell</a>
 </li>
 <li>has_food()
 : <a class="el" href="classants_1_1Ant.html#a41de1c29941a444dab25a88cbc3a881d">ants.Ant</a>
 , <a class="el" href="classworld_1_1Cell.html#a1097df1a6fe0131898377358017fe7bc">world.Cell</a>
+</li>
+<li>health
+: <a class="el" href="classants_1_1Ant.html#aa147562276c788d4533ab63ac44d96a6">ants.Ant</a>
+, <a class="el" href="classants_1_1QueenAnt.html#adb02e07e568bf5cf90408cb641cb5b57">ants.QueenAnt</a>
 </li>
 <li>height
 : <a class="el" href="classworld_1_1World.html#acfdba03fac144372fcc56922a1a339a2">world.World</a>
@@ -317,13 +375,29 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_i"></a>- i -</h3><ul>
+<li>id
+: <a class="el" href="classworld_1_1Nest.html#a2ab2394f7ded6041e64cfea7390519c3">world.Nest</a>
+</li>
 <li>image
 : <a class="el" href="classants_1_1Ant.html#adf5f970b6b5e8472f42275114eeac779">ants.Ant</a>
 , <a class="el" href="classdisplay_1_1Entity.html#a244569c285ad924e6200d4c1c8b4639c">display.Entity</a>
+, <a class="el" href="classworld_1_1Nest.html#a1d943529c7685aa0cadeb43f9891ff03">world.Nest</a>
 </li>
 <li>images
 : <a class="el" href="classcontroller_1_1Simulation.html#af13461f42bfe6ca017f59e13e57c354e">controller.Simulation</a>
 , <a class="el" href="classworld_1_1World.html#a9388f4c8146cbf9983f4a42c3015b61a">world.World</a>
+</li>
+<li>is_alive()
+: <a class="el" href="classants_1_1Ant.html#a78620c709fca31c9a0b2994534082bdc">ants.Ant</a>
+</li>
+<li>is_dead()
+: <a class="el" href="classants_1_1Ant.html#a218d9a25e9df83abf85ff596c214075c">ants.Ant</a>
+</li>
+<li>is_enemy()
+: <a class="el" href="classants_1_1Ant.html#aeec9c17184393435fd4d4936b6f2736a">ants.Ant</a>
+</li>
+<li>is_enemy_home()
+: <a class="el" href="classworld_1_1Cell.html#ad242f10cc8c92971200dd9c8bcf5297b">world.Cell</a>
 </li>
 <li>is_food()
 : <a class="el" href="classworld_1_1Cell.html#a90eabca5d79eef89b2ae4f677a88a93b">world.Cell</a>
@@ -331,8 +405,14 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>is_home()
 : <a class="el" href="classworld_1_1Cell.html#a441597e0ea2cff7fce907a12fd8216fa">world.Cell</a>
 </li>
+<li>is_hungry()
+: <a class="el" href="classants_1_1Ant.html#a16d8e187423f707e067fe2d562100437">ants.Ant</a>
+</li>
 <li>is_obstacle()
 : <a class="el" href="classworld_1_1Cell.html#a890e2dc899a32ef86c131a98879e9023">world.Cell</a>
+</li>
+<li>is_own_home()
+: <a class="el" href="classworld_1_1Cell.html#a1a209720a46e372099e2a301f7e0f6e6">world.Cell</a>
 </li>
 </ul>
 
@@ -342,7 +422,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="classants_1_1Ant.html#af9af7f8a5c766021ef0f68171d09abca">ants.Ant</a>
 </li>
 <li>locate_food_scent_nearby()
-: <a class="el" href="classants_1_1Ant.html#a97ffad1c0e634f38585e7913908e9524">ants.Ant</a>
+: <a class="el" href="classants_1_1WorkerAnt.html#a3a0836d96b5fe9eba56e9d2d59b555cc">ants.WorkerAnt</a>
 </li>
 <li>locate_home_nearby()
 : <a class="el" href="classants_1_1Ant.html#a5795d0898e3d0d020a0a0a626a5ef7b0">ants.Ant</a>
@@ -370,6 +450,9 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>make_obstacle()
 : <a class="el" href="classworld_1_1Cell.html#a63164a3e74888a97b07ee8e06c633c2a">world.Cell</a>
 </li>
+<li>mark_home()
+: <a class="el" href="classworld_1_1Nest.html#a4a57d2cea404003ee77306758e9da3e1">world.Nest</a>
+</li>
 <li>move()
 : <a class="el" href="classants_1_1Ant.html#a0067159f23e5e9e4b3564d48c1564f11">ants.Ant</a>
 </li>
@@ -380,14 +463,26 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>name
 : <a class="el" href="classtask__manager_1_1Task.html#a1a12769253144bf3a864cdff907b9fb6">task_manager.Task</a>
 </li>
+<li>nearby()
+: <a class="el" href="classworld_1_1Cell.html#aa564ee06853b2db81faa0da4d07e66af">world.Cell</a>
+</li>
 <li>neighbour()
 : <a class="el" href="classants_1_1Ant.html#a2ddd97dadaa5d24c459b0117dc6e1190">ants.Ant</a>
+</li>
+<li>nest
+: <a class="el" href="classants_1_1Ant.html#acaafd510ade5c38719b8082027162132">ants.Ant</a>
+</li>
+<li>nests
+: <a class="el" href="classworld_1_1World.html#af8524470ea81aa32b4c4045f4d5768e7">world.World</a>
 </li>
 <li>new_task
 : <a class="el" href="classtask__manager_1_1DropFood.html#a9c3891af721254b73254732f0cb18f59">task_manager.DropFood</a>
 , <a class="el" href="classtask__manager_1_1Explore.html#ab1f83ac00c442f8eedd1403a59e74060">task_manager.Explore</a>
 , <a class="el" href="classtask__manager_1_1FollowFoodTrail.html#aefc8c49492622a4e4fa61279fd52ed12">task_manager.FollowFoodTrail</a>
 , <a class="el" href="classtask__manager_1_1FollowHomeTrail.html#aae7878e14c1b1aeeac617e2e03074705">task_manager.FollowHomeTrail</a>
+, <a class="el" href="classtask__manager_1_1GuardNest.html#ada22ecced047079d5f4d98a0b86a2d0e">task_manager.GuardNest</a>
+, <a class="el" href="classtask__manager_1_1ProduceAnts.html#a52f38a28435526dc06a11cd23916ee4b">task_manager.ProduceAnts</a>
+, <a class="el" href="classtask__manager_1_1ReturnHome.html#afd37383d07987cb20f716cfe86b7b957">task_manager.ReturnHome</a>
 , <a class="el" href="classtask__manager_1_1TakeFood.html#a592252f7a2b882cf283c9da9cbab07a2">task_manager.TakeFood</a>
 , <a class="el" href="classtask__manager_1_1Task.html#af16658f4c3c447e24f73ed3d1803e058">task_manager.Task</a>
 </li>
@@ -402,11 +497,18 @@ $(document).ready(function(){initNavTree('functions.html','');});
 
 
 <h3><a class="anchor" id="index_p"></a>- p -</h3><ul>
+<li>pause
+: <a class="el" href="classcontroller_1_1Simulation.html#a8acaf6508b8b61e163656195706d9025">controller.Simulation</a>
+</li>
 <li>perform_task()
 : <a class="el" href="classtask__manager_1_1DropFood.html#a82661a2394895191b28bb7ac1aeb5bf4">task_manager.DropFood</a>
 , <a class="el" href="classtask__manager_1_1Explore.html#a8ba5647950e170022bec93bc73c4a8de">task_manager.Explore</a>
+, <a class="el" href="classtask__manager_1_1FindFood.html#aab9303f02e5e7d4884228e1fe5f6142c">task_manager.FindFood</a>
 , <a class="el" href="classtask__manager_1_1FollowFoodTrail.html#aa805a2a4e9a76ba7afa252ca5efbd121">task_manager.FollowFoodTrail</a>
 , <a class="el" href="classtask__manager_1_1FollowHomeTrail.html#ae4386ef7470e20e3f42fab9fc65b70cb">task_manager.FollowHomeTrail</a>
+, <a class="el" href="classtask__manager_1_1GuardNest.html#a18003edc3f1e2fca7bfe34cf078e96f8">task_manager.GuardNest</a>
+, <a class="el" href="classtask__manager_1_1ProduceAnts.html#aa1636ae28589d29d45d83dd71b2dccbb">task_manager.ProduceAnts</a>
+, <a class="el" href="classtask__manager_1_1ReturnHome.html#ab9d2b69cbefdeaf308df564c13f5aac2">task_manager.ReturnHome</a>
 , <a class="el" href="classtask__manager_1_1TakeFood.html#af42eebb5d9ee945cafd05908d478bab3">task_manager.TakeFood</a>
 , <a class="el" href="classtask__manager_1_1Task.html#a20da98293fb7cae0c80cc0caa864c025">task_manager.Task</a>
 </li>
@@ -425,16 +527,25 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="classants_1_1Ant.html#a3a636b900b6fdbed032e3a635495a4c4">ants.Ant</a>
 </li>
 <li>rank_by_food_scent()
-: <a class="el" href="classants_1_1Ant.html#a164a2a76f1779462fe81e8f169a92a93">ants.Ant</a>
+: <a class="el" href="classants_1_1WorkerAnt.html#a65ef16439f2ff5d217e1e443d57b65d1">ants.WorkerAnt</a>
 </li>
 <li>rank_by_home_scent()
 : <a class="el" href="classants_1_1Ant.html#a6f3e3bd98a5f382098cdc1c02e1e2fd0">ants.Ant</a>
 </li>
-<li>reduce_food_scent()
-: <a class="el" href="classants_1_1Ant.html#a285d1e406b6d2cc67779e873e879feb0">ants.Ant</a>
+<li>reduce_food_scent_strength()
+: <a class="el" href="classants_1_1Ant.html#a1d51e32dc22891ded9f02ffc71e612cd">ants.Ant</a>
 </li>
-<li>reduce_home_scent()
-: <a class="el" href="classants_1_1Ant.html#a216ebc2ce2dfeb88d6bbc714bc50ecb5">ants.Ant</a>
+<li>reduce_health()
+: <a class="el" href="classants_1_1Ant.html#a89ad26b1d79990f95979464bbd3bf9b8">ants.Ant</a>
+</li>
+<li>reduce_home_scent_strength()
+: <a class="el" href="classants_1_1Ant.html#a0f92c3c4a37d6c3998bc71fc0a6b9cee">ants.Ant</a>
+</li>
+<li>remove_dead_ants()
+: <a class="el" href="classworld_1_1World.html#ad2b1f49767a4d6eae2291b1ff48c9b0d">world.World</a>
+</li>
+<li>remove_obstacle()
+: <a class="el" href="classworld_1_1Cell.html#aed89295fdffe763b9d651b9def6ca4e8">world.Cell</a>
 </li>
 <li>render()
 : <a class="el" href="classants_1_1Ant.html#a95585d833c74c56155a0d79394d511cc">ants.Ant</a>
@@ -452,28 +563,47 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <li>set_active_task()
 : <a class="el" href="classtask__manager_1_1TaskManager.html#ae6fddee07733c42fb3e8e29b3e45af8c">task_manager.TaskManager</a>
 </li>
+<li>set_food_scent_strength()
+: <a class="el" href="classants_1_1Ant.html#ae90d1356ca3370e47c24c5fe63ebfeaf">ants.Ant</a>
+</li>
+<li>set_home_scent_strength()
+: <a class="el" href="classants_1_1Ant.html#ae8234d6ecb9f7666e255ffa8a978355c">ants.Ant</a>
+</li>
+<li>set_image()
+: <a class="el" href="classworld_1_1Nest.html#a91914c56d2849f47dfd2b2ad97996fb6">world.Nest</a>
+</li>
 <li>settings
 : <a class="el" href="classcontroller_1_1Simulation.html#a5d368ffc3eee12c8c36839ee5bce3644">controller.Simulation</a>
 , <a class="el" href="classworld_1_1World.html#a41e0f9d00bb365408abee5a084bdce24">world.World</a>
 </li>
 <li>size
 : <a class="el" href="classdisplay_1_1Entity.html#aa56fd9b8bb6c9510f24ea13be8c6a218">display.Entity</a>
+, <a class="el" href="classworld_1_1Nest.html#a779ec4ef0582e917964de4efaedaef84">world.Nest</a>
 </li>
 <li>spawn_ants()
-: <a class="el" href="classworld_1_1World.html#aaf7c311b1dbcac59ccff5e0319e14692">world.World</a>
+: <a class="el" href="classworld_1_1Nest.html#a756db917e2fa8aeb72c5277637822a53">world.Nest</a>
+</li>
+<li>spawn_colonies()
+: <a class="el" href="classworld_1_1World.html#aa0e6994339219d9e933edc9bcb0c8eb5">world.World</a>
 </li>
 <li>spawn_foodsource()
 : <a class="el" href="classworld_1_1World.html#af83c041eb0a9fee93eae12bb24038b0a">world.World</a>
 </li>
 <li>start_task()
-: <a class="el" href="classtask__manager_1_1FollowFoodTrail.html#a68013dbb3ab9d25676217de4d22c48eb">task_manager.FollowFoodTrail</a>
+: <a class="el" href="classtask__manager_1_1DropFood.html#ab086df733d469229b17fdc652155aa3d">task_manager.DropFood</a>
+, <a class="el" href="classtask__manager_1_1FollowFoodTrail.html#a68013dbb3ab9d25676217de4d22c48eb">task_manager.FollowFoodTrail</a>
 , <a class="el" href="classtask__manager_1_1FollowHomeTrail.html#a0ffd4aabfafcfead05a02e149e5fab91">task_manager.FollowHomeTrail</a>
+, <a class="el" href="classtask__manager_1_1GuardNest.html#a44493cf7d0653d2b548040a5857ef330">task_manager.GuardNest</a>
+, <a class="el" href="classtask__manager_1_1ReturnHome.html#a8201892f7668c2ca1e7c08f2a51c4309">task_manager.ReturnHome</a>
 , <a class="el" href="classtask__manager_1_1Task.html#aacfcc36829c22c789f31edaf60ef1cc4">task_manager.Task</a>
 </li>
 </ul>
 
 
 <h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>take_food()
+: <a class="el" href="classants_1_1Ant.html#accd1fa305032e848021a4d8b90f3f8ce">ants.Ant</a>
+</li>
 <li>task_manager
 : <a class="el" href="classants_1_1Ant.html#a80e2218dcfabbd9ef4d83638dd20d943">ants.Ant</a>
 </li>
@@ -494,6 +624,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 : <a class="el" href="classants_1_1Ant.html#a55f64c7cafb3806bdcfda42586adbff5">ants.Ant</a>
 , <a class="el" href="classcontroller_1_1Simulation.html#a2ba0c3cf1949a98dd920f6097953c1f5">controller.Simulation</a>
 , <a class="el" href="classdisplay_1_1Entity.html#ad7e3284bfb984c309b35d5a077bd5b21">display.Entity</a>
+, <a class="el" href="classworld_1_1Nest.html#a624fe0079926173a6356a3d59410dcf3">world.Nest</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -501,7 +632,7 @@ $(document).ready(function(){initNavTree('functions.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Apr 9 2014 18:43:11 for Ant Colony by
+    <li class="footer">Generated on Sat May 3 2014 00:13:00 for Ant Colony by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

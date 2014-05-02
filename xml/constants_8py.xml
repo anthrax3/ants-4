@@ -12,8 +12,10 @@
 <codeline lineno="2"><highlight class="normal"><sp/><sp/><sp/><sp/>(-1,0),<sp/>(-1,-1),<sp/>(0,-1),<sp/>(1,-1))</highlight></codeline>
 <codeline lineno="3" refid="namespaceconstants_1aa1f49ae50d4547cd3b9f4801d04f5830" refkind="member"><highlight class="normal">WIDTH<sp/>=<sp/>80</highlight></codeline>
 <codeline lineno="4" refid="namespaceconstants_1a581305cb095bf2d8826a12abef66a15e" refkind="member"><highlight class="normal">HEIGHT<sp/>=<sp/>60</highlight></codeline>
-<codeline lineno="5"><highlight class="normal">WHITE<sp/>=<sp/>(255,255,255)</highlight></codeline>
+<codeline lineno="5" refid="namespaceconstants_1ab7ba6a498f408091781f6f90a0446bcc" refkind="member"><highlight class="normal">WHITE<sp/>=<sp/>(255,255,255)</highlight></codeline>
+<codeline lineno="6" refid="namespaceconstants_1a71ba084102da630a352232ea121e0e95" refkind="member"><highlight class="normal">GREEN<sp/>=<sp/>(0,255,20)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">YELLOW<sp/>=<sp/>(255,255,0)</highlight></codeline>
     </programlisting>
-    <location file="/home/acer/Ubuntu One/eclipse/ants/constants.py"/>
+    <location file="/home/acer/Dropbox/eclipse/ants/constants.py"/>
   </compounddef>
 </doxygen>

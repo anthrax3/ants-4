@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="79" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="79" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/task_manager.py" line="97" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/task_manager.py" bodystart="97" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="58" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="58" bodyend="60"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/task_manager.py" line="77" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/task_manager.py" bodystart="77" bodyend="79"/>
       </memberdef>
       <memberdef kind="function" id="classtask__manager_1_1Explore_1a8ba5647950e170022bec93bc73c4a8de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -42,59 +42,59 @@
         <detaileddescription>
 <para><verbatim> If ant has food - 
      find home nearby and drop food there, else
-     find home scent nearby and switch to that task, else
+     find home scent nearby and switch to follow home trail task, else
      make a random move
  If ant is searching for food
      if food is found switch to take food task, else
-     find a food scent trail, else
-     avoid obstacles
+     find a food scent trail,
      reverse direction if it finds home nearby
  Reduce it scent strength by an unit
 </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="61" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="61" bodyend="102"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/task_manager.py" line="80" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/task_manager.py" bodystart="80" bodyend="121"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><verbatim>Ant Exploring Task</verbatim> </para>    </detaileddescription>
+<para><verbatim>Ant Exploring Task
+</verbatim> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="111">
+      <node id="159">
         <label>task_manager.Explore</label>
         <link refid="classtask__manager_1_1Explore"/>
-        <childnode refid="112" relation="public-inheritance">
+        <childnode refid="160" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="113">
+      <node id="161">
         <label>object</label>
       </node>
-      <node id="112">
+      <node id="160">
         <label>task_manager.Task</label>
         <link refid="classtask__manager_1_1Task"/>
-        <childnode refid="113" relation="public-inheritance">
+        <childnode refid="161" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="114">
+      <node id="162">
         <label>task_manager.Explore</label>
         <link refid="classtask__manager_1_1Explore"/>
-        <childnode refid="115" relation="public-inheritance">
+        <childnode refid="163" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="116">
+      <node id="164">
         <label>object</label>
       </node>
-      <node id="115">
+      <node id="163">
         <label>task_manager.Task</label>
         <link refid="classtask__manager_1_1Task"/>
-        <childnode refid="116" relation="public-inheritance">
+        <childnode refid="164" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" line="56" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/task_manager.py" bodystart="56" bodyend="103"/>
+    <location file="/home/acer/Dropbox/eclipse/ants/task_manager.py" line="73" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/task_manager.py" bodystart="73" bodyend="122"/>
     <listofallmembers>
       <member refid="classtask__manager_1_1Explore_1ae95cc7a4676c07732fcf0faed752959c" prot="public" virt="non-virtual"><scope>task_manager::Explore</scope><name>__init__</name></member>
       <member refid="classtask__manager_1_1Task_1aab0d2d2ec0b4b3e87969d843a101e118" prot="public" virt="non-virtual" ambiguityscope="task_manager::Task."><scope>task_manager::Explore</scope><name>__init__</name></member>

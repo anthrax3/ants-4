@@ -5,6 +5,7 @@
     <basecompoundref prot="public" virt="non-virtual">object</basecompoundref>
     <derivedcompoundref refid="classants_1_1Ant" prot="public" virt="non-virtual">ants.Ant</derivedcompoundref>
     <derivedcompoundref refid="classworld_1_1Cell" prot="public" virt="non-virtual">world.Cell</derivedcompoundref>
+    <derivedcompoundref refid="classworld_1_1Nest" prot="public" virt="non-virtual">world.Nest</derivedcompoundref>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="classdisplay_1_1Entity_1ad7e3284bfb984c309b35d5a077bd5b21" prot="public" static="no" mutable="no">
         <type></type>
@@ -17,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/display.py" line="4" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/display.py" bodystart="4" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/display.py" line="6" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/display.py" bodystart="6" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdisplay_1_1Entity_1ae2a1114b0c54ef7eb43c2bd6cd097258" prot="public" static="no" mutable="no">
         <type></type>
@@ -30,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/display.py" line="5" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/display.py" bodystart="5" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/display.py" line="7" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/display.py" bodystart="7" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdisplay_1_1Entity_1aa56fd9b8bb6c9510f24ea13be8c6a218" prot="public" static="no" mutable="no">
         <type></type>
@@ -43,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/display.py" line="6" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/display.py" bodystart="6" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/display.py" line="8" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/display.py" bodystart="8" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classdisplay_1_1Entity_1a244569c285ad924e6200d4c1c8b4639c" prot="public" static="no" mutable="no">
         <type></type>
@@ -56,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/display.py" line="7" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/display.py" bodystart="7" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/display.py" line="9" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/display.py" bodystart="9" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -71,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/display.py" line="3" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/display.py" bodystart="3" bodyend="8"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/display.py" line="5" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/display.py" bodystart="5" bodyend="10"/>
       </memberdef>
       <memberdef kind="function" id="classdisplay_1_1Entity_1abbea5f77f08ce3347010d9c452440737" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -86,60 +87,73 @@
 </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/display.py" line="9" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/display.py" bodystart="9" bodyend="19"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/display.py" line="11" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/display.py" bodystart="11" bodyend="24"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><verbatim>Base class for all drawable objects</verbatim> </para>    </detaileddescription>
+<para><verbatim>Base class for all drawable objects
+</verbatim> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="107">
+      <node id="153">
+        <label>ants.SoldierAnt</label>
+        <link refid="classants_1_1SoldierAnt"/>
+        <childnode refid="151" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="154">
         <label>ants.WorkerAnt</label>
         <link refid="classants_1_1WorkerAnt"/>
-        <childnode refid="105" relation="public-inheritance">
+        <childnode refid="151" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="106">
+      <node id="152">
         <label>ants.QueenAnt</label>
         <link refid="classants_1_1QueenAnt"/>
-        <childnode refid="105" relation="public-inheritance">
+        <childnode refid="151" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="104">
+      <node id="156">
+        <label>world.Nest</label>
+        <link refid="classworld_1_1Nest"/>
+        <childnode refid="149" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="150">
         <label>object</label>
       </node>
-      <node id="108">
+      <node id="155">
         <label>world.Cell</label>
         <link refid="classworld_1_1Cell"/>
-        <childnode refid="103" relation="public-inheritance">
+        <childnode refid="149" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="103">
+      <node id="149">
         <label>display.Entity</label>
         <link refid="classdisplay_1_1Entity"/>
-        <childnode refid="104" relation="public-inheritance">
+        <childnode refid="150" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="105">
+      <node id="151">
         <label>ants.Ant</label>
         <link refid="classants_1_1Ant"/>
-        <childnode refid="103" relation="public-inheritance">
+        <childnode refid="149" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="110">
+      <node id="158">
         <label>object</label>
       </node>
-      <node id="109">
+      <node id="157">
         <label>display.Entity</label>
         <link refid="classdisplay_1_1Entity"/>
-        <childnode refid="110" relation="public-inheritance">
+        <childnode refid="158" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/acer/Ubuntu One/eclipse/ants/display.py" line="1" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/display.py" bodystart="1" bodyend="19"/>
+    <location file="/home/acer/Dropbox/eclipse/ants/display.py" line="1" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/display.py" bodystart="1" bodyend="24"/>
     <listofallmembers>
       <member refid="classdisplay_1_1Entity_1a10294b5b8a8fa95f95f29aaf521efd56" prot="public" virt="non-virtual"><scope>display::Entity</scope><name>__init__</name></member>
       <member refid="classdisplay_1_1Entity_1a244569c285ad924e6200d4c1c8b4639c" prot="public" virt="non-virtual"><scope>display::Entity</scope><name>image</name></member>

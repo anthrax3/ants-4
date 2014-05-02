@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classants_1_1SoldierAnt" kind="class" prot="public">
+    <compoundname>ants::SoldierAnt</compoundname>
+    <basecompoundref refid="classants_1_1Ant" prot="public" virt="non-virtual">ants.Ant</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classants_1_1SoldierAnt_1adaaa2dc645cd3f4c190a86caa7e18f35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.SoldierAnt.__init__</definition>
+        <argsstring></argsstring>
+        <name>__init__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Tasks assigned:
+    - Guard nest
+    - Return home
+Default task:
+    - Guard nest
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="344" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="344" bodyend="356"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1SoldierAnt_1aa3d00e2aca5711f0b5784fd2ec0f4989" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.SoldierAnt.get_enemy_ant_nearby</definition>
+        <argsstring></argsstring>
+        <name>get_enemy_ant_nearby</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns one enemy ant nearby at random
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="357" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="357" bodyend="365"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1SoldierAnt_1a66062d822fc415e73332f7b13cf853c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.SoldierAnt.attack</definition>
+        <argsstring></argsstring>
+        <name>attack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="366" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="366" bodyend="367"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Ants that produces offsprings and populates the colony</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="217">
+        <label>ants.SoldierAnt</label>
+        <link refid="classants_1_1SoldierAnt"/>
+        <childnode refid="218" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="220">
+        <label>object</label>
+      </node>
+      <node id="219">
+        <label>display.Entity</label>
+        <link refid="classdisplay_1_1Entity"/>
+        <childnode refid="220" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="218">
+        <label>ants.Ant</label>
+        <link refid="classants_1_1Ant"/>
+        <childnode refid="219" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="221">
+        <label>ants.SoldierAnt</label>
+        <link refid="classants_1_1SoldierAnt"/>
+        <childnode refid="222" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="224">
+        <label>object</label>
+      </node>
+      <node id="223">
+        <label>display.Entity</label>
+        <link refid="classdisplay_1_1Entity"/>
+        <childnode refid="224" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="222">
+        <label>ants.Ant</label>
+        <link refid="classants_1_1Ant"/>
+        <childnode refid="223" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="342" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="342" bodyend="367"/>
+    <listofallmembers>
+      <member refid="classants_1_1SoldierAnt_1adaaa2dc645cd3f4c190a86caa7e18f35" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>__init__</name></member>
+      <member refid="classdisplay_1_1Entity_1a10294b5b8a8fa95f95f29aaf521efd56" prot="public" virt="non-virtual" ambiguityscope="display::Entity."><scope>ants::SoldierAnt</scope><name>__init__</name></member>
+      <member refid="classants_1_1Ant_1a9e4bf6309b80ab33bd628f6e7d78d013" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>__nonzero__</name></member>
+      <member refid="classants_1_1Ant_1ac2c8f048d99cd48a5829ddf7ff4a708a" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>ahead</name></member>
+      <member refid="classants_1_1Ant_1a2dbb07eefeecbc51d257f81fb0ba1c71" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>ahead_left</name></member>
+      <member refid="classants_1_1Ant_1ad7a5311d831e8bcc07061e6a12edad8c" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>ahead_right</name></member>
+      <member refid="classants_1_1SoldierAnt_1a66062d822fc415e73332f7b13cf853c8" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>attack</name></member>
+      <member refid="classants_1_1Ant_1a192f8411faa05c48db8db99d033f5d15" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>behind</name></member>
+      <member refid="classants_1_1Ant_1ae26b7ffd236a83d8d5c96ec6ec07b4bb" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>direction</name></member>
+      <member refid="classants_1_1Ant_1ae85884312b4aa10f965b84535bed37fc" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>drop_food</name></member>
+      <member refid="classants_1_1Ant_1afcfbbf8bd338401378d25c512204eb91" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>food</name></member>
+      <member refid="classants_1_1Ant_1ad7fb2ac4566880fdacfd7bf7f4ec1109" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>food_scent_strength</name></member>
+      <member refid="classants_1_1SoldierAnt_1aa3d00e2aca5711f0b5784fd2ec0f4989" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>get_enemy_ant_nearby</name></member>
+      <member refid="classants_1_1Ant_1a5ee52d730c2bcbd0cfd0a8cf8d9206c6" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>get_location</name></member>
+      <member refid="classants_1_1Ant_1a10dc42722864d5850912dd34242d5cf8" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>get_nest_id</name></member>
+      <member refid="classants_1_1Ant_1a41de1c29941a444dab25a88cbc3a881d" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>has_food</name></member>
+      <member refid="classants_1_1Ant_1aa147562276c788d4533ab63ac44d96a6" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>health</name></member>
+      <member refid="classants_1_1Ant_1a2e60480b7534b107e12d7f23fd06d5f1" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>here</name></member>
+      <member refid="classants_1_1Ant_1a7885f0124adf5b10fd6fa5e8ac47edb9" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>home_scent_strength</name></member>
+      <member refid="classants_1_1Ant_1adf5f970b6b5e8472f42275114eeac779" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>image</name></member>
+      <member refid="classants_1_1Ant_1a78620c709fca31c9a0b2994534082bdc" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>is_alive</name></member>
+      <member refid="classants_1_1Ant_1a218d9a25e9df83abf85ff596c214075c" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>is_dead</name></member>
+      <member refid="classants_1_1Ant_1aeec9c17184393435fd4d4936b6f2736a" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>is_enemy</name></member>
+      <member refid="classants_1_1Ant_1a16d8e187423f707e067fe2d562100437" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>is_hungry</name></member>
+      <member refid="classants_1_1Ant_1af9af7f8a5c766021ef0f68171d09abca" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>locate_food_nearby</name></member>
+      <member refid="classants_1_1Ant_1a5795d0898e3d0d020a0a0a626a5ef7b0" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>locate_home_nearby</name></member>
+      <member refid="classants_1_1Ant_1a81a141f3417ddb32b8d1abbd95bbc477" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>locate_home_scent_nearby</name></member>
+      <member refid="classants_1_1Ant_1ae7de139b6f5bdb8d4ab42755c405ef5d" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>location</name></member>
+      <member refid="classants_1_1Ant_1a0067159f23e5e9e4b3564d48c1564f11" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>move</name></member>
+      <member refid="classants_1_1Ant_1a2ddd97dadaa5d24c459b0117dc6e1190" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>neighbour</name></member>
+      <member refid="classants_1_1Ant_1acaafd510ade5c38719b8082027162132" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>nest</name></member>
+      <member refid="classants_1_1Ant_1a3a636b900b6fdbed032e3a635495a4c4" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>random_move</name></member>
+      <member refid="classants_1_1Ant_1a6f3e3bd98a5f382098cdc1c02e1e2fd0" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>rank_by_home_scent</name></member>
+      <member refid="classants_1_1Ant_1a1d51e32dc22891ded9f02ffc71e612cd" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>reduce_food_scent_strength</name></member>
+      <member refid="classants_1_1Ant_1a89ad26b1d79990f95979464bbd3bf9b8" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>reduce_health</name></member>
+      <member refid="classants_1_1Ant_1a0f92c3c4a37d6c3998bc71fc0a6b9cee" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>reduce_home_scent_strength</name></member>
+      <member refid="classants_1_1Ant_1a95585d833c74c56155a0d79394d511cc" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>render</name></member>
+      <member refid="classdisplay_1_1Entity_1abbea5f77f08ce3347010d9c452440737" prot="public" virt="non-virtual" ambiguityscope="display::Entity."><scope>ants::SoldierAnt</scope><name>render</name></member>
+      <member refid="classants_1_1Ant_1ae90d1356ca3370e47c24c5fe63ebfeaf" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>set_food_scent_strength</name></member>
+      <member refid="classants_1_1Ant_1ae8234d6ecb9f7666e255ffa8a978355c" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>set_home_scent_strength</name></member>
+      <member refid="classdisplay_1_1Entity_1aa56fd9b8bb6c9510f24ea13be8c6a218" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>size</name></member>
+      <member refid="classants_1_1Ant_1accd1fa305032e848021a4d8b90f3f8ce" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>take_food</name></member>
+      <member refid="classants_1_1Ant_1a80e2218dcfabbd9ef4d83638dd20d943" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>task_manager</name></member>
+      <member refid="classants_1_1Ant_1a445ec1d1f8e4cb539c4f66fafa129131" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>turn</name></member>
+      <member refid="classants_1_1Ant_1a55f64c7cafb3806bdcfda42586adbff5" prot="public" virt="non-virtual"><scope>ants::SoldierAnt</scope><name>world</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

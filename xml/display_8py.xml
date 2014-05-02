@@ -10,25 +10,30 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1" refid="namespacedisplay" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdisplay_1_1Entity" kindref="compound">Entity</ref>(object):</highlight></codeline>
-<codeline lineno="2"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Base<sp/>class<sp/>for<sp/>all<sp/>drawable<sp/>objects&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3" refid="classdisplay_1_1Entity_1a10294b5b8a8fa95f95f29aaf521efd56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classdisplay_1_1Entity_1a10294b5b8a8fa95f95f29aaf521efd56" kindref="member">__init__</ref>(self,<sp/>world,<sp/>location,<sp/>size,<sp/>image):</highlight></codeline>
-<codeline lineno="4" refid="classdisplay_1_1Entity_1ad7e3284bfb984c309b35d5a077bd5b21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classdisplay_1_1Entity_1ad7e3284bfb984c309b35d5a077bd5b21" kindref="member">world</ref><sp/>=<sp/>world</highlight></codeline>
-<codeline lineno="5" refid="classdisplay_1_1Entity_1ae2a1114b0c54ef7eb43c2bd6cd097258" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classdisplay_1_1Entity_1ae2a1114b0c54ef7eb43c2bd6cd097258" kindref="member">location</ref><sp/>=<sp/>location</highlight></codeline>
-<codeline lineno="6" refid="classdisplay_1_1Entity_1aa56fd9b8bb6c9510f24ea13be8c6a218" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classdisplay_1_1Entity_1aa56fd9b8bb6c9510f24ea13be8c6a218" kindref="member">size</ref><sp/>=<sp/>size</highlight></codeline>
-<codeline lineno="7" refid="classdisplay_1_1Entity_1a244569c285ad924e6200d4c1c8b4639c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classdisplay_1_1Entity_1a244569c285ad924e6200d4c1c8b4639c" kindref="member">image</ref><sp/>=<sp/>image</highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9" refid="classdisplay_1_1Entity_1abbea5f77f08ce3347010d9c452440737" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classdisplay_1_1Entity_1abbea5f77f08ce3347010d9c452440737" kindref="member">render</ref>(self,<sp/>index=0):</highlight></codeline>
-<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;Draw<sp/>the<sp/>object<sp/>into<sp/>the<sp/>screen</highlight></codeline>
-<codeline lineno="11"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>selects<sp/>the<sp/>portion<sp/>of<sp/>the<sp/>image<sp/>to<sp/>draw<sp/>from<sp/>the<sp/>&quot;index&quot;<sp/>argument</highlight></codeline>
-<codeline lineno="12"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x,<sp/>y<sp/>=<sp/>self.<ref refid="classdisplay_1_1Entity_1ae2a1114b0c54ef7eb43c2bd6cd097258" kindref="member">location</ref></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>*=<sp/>self.world.cell_size</highlight></codeline>
-<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>*=<sp/>self.world.cell_size</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w,<sp/>h<sp/>=<sp/>self.<ref refid="classdisplay_1_1Entity_1aa56fd9b8bb6c9510f24ea13be8c6a218" kindref="member">size</ref></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position<sp/>=<sp/>(x,<sp/>y)</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>patch_rect<sp/>=<sp/>(w*index,<sp/>0,<sp/>w,<sp/>h)</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.world.canvas.blit(self.<ref refid="classdisplay_1_1Entity_1a244569c285ad924e6200d4c1c8b4639c" kindref="member">image</ref>,<sp/>position,<sp/>patch_rect)</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="3"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Base<sp/>class<sp/>for<sp/>all<sp/>drawable<sp/>objects</highlight></codeline>
+<codeline lineno="4"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5" refid="classdisplay_1_1Entity_1a10294b5b8a8fa95f95f29aaf521efd56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classdisplay_1_1Entity_1a10294b5b8a8fa95f95f29aaf521efd56" kindref="member">__init__</ref>(self,<sp/>world,<sp/>location,<sp/>size,<sp/>image):</highlight></codeline>
+<codeline lineno="6" refid="classdisplay_1_1Entity_1ad7e3284bfb984c309b35d5a077bd5b21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classdisplay_1_1Entity_1ad7e3284bfb984c309b35d5a077bd5b21" kindref="member">world</ref><sp/>=<sp/>world</highlight></codeline>
+<codeline lineno="7" refid="classdisplay_1_1Entity_1ae2a1114b0c54ef7eb43c2bd6cd097258" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classdisplay_1_1Entity_1ae2a1114b0c54ef7eb43c2bd6cd097258" kindref="member">location</ref><sp/>=<sp/>location</highlight></codeline>
+<codeline lineno="8" refid="classdisplay_1_1Entity_1aa56fd9b8bb6c9510f24ea13be8c6a218" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classdisplay_1_1Entity_1aa56fd9b8bb6c9510f24ea13be8c6a218" kindref="member">size</ref><sp/>=<sp/>size</highlight></codeline>
+<codeline lineno="9" refid="classdisplay_1_1Entity_1a244569c285ad924e6200d4c1c8b4639c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="classdisplay_1_1Entity_1a244569c285ad924e6200d4c1c8b4639c" kindref="member">image</ref><sp/>=<sp/>image</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="classdisplay_1_1Entity_1abbea5f77f08ce3347010d9c452440737" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="classdisplay_1_1Entity_1abbea5f77f08ce3347010d9c452440737" kindref="member">render</ref>(self,<sp/>index=0):</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="13"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Draw<sp/>the<sp/>object<sp/>into<sp/>the<sp/>screen</highlight></codeline>
+<codeline lineno="14"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>selects<sp/>the<sp/>portion<sp/>of<sp/>the<sp/>image<sp/>to<sp/>draw<sp/>from<sp/>the<sp/>&quot;index&quot;<sp/>argument</highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x,<sp/>y<sp/>=<sp/>self.<ref refid="classdisplay_1_1Entity_1ae2a1114b0c54ef7eb43c2bd6cd097258" kindref="member">location</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>*=<sp/>self.world.cell_size</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>*=<sp/>self.world.cell_size</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w,<sp/>h<sp/>=<sp/>self.<ref refid="classdisplay_1_1Entity_1aa56fd9b8bb6c9510f24ea13be8c6a218" kindref="member">size</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>w<sp/>*=<sp/>self.world.cell_size</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>h<sp/>*=<sp/>self.world.cell_size</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>position<sp/>=<sp/>(x,<sp/>y)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>patch_rect<sp/>=<sp/>(w*index,<sp/>0,<sp/>w,<sp/>h)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.world.canvas.blit(self.<ref refid="classdisplay_1_1Entity_1a244569c285ad924e6200d4c1c8b4639c" kindref="member">image</ref>,<sp/>position,<sp/>patch_rect)</highlight></codeline>
     </programlisting>
-    <location file="/home/acer/Ubuntu One/eclipse/ants/display.py"/>
+    <location file="/home/acer/Dropbox/eclipse/ants/display.py"/>
   </compounddef>
 </doxygen>

@@ -107,38 +107,43 @@ $(document).ready(function(){initNavTree('display_8py_source.html','');});
 </div><!--header-->
 <div class="contents">
 <a href="display_8py.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacedisplay.html">    1</a></span>&#160;<span class="keyword">class </span><a class="code" href="classdisplay_1_1Entity.html">Entity</a>(object):</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&quot;&quot;&quot;Base class for all drawable objects&quot;&quot;&quot;</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno"><a class="line" href="classdisplay_1_1Entity.html#a10294b5b8a8fa95f95f29aaf521efd56">    3</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classdisplay_1_1Entity.html#a10294b5b8a8fa95f95f29aaf521efd56">__init__</a>(self, world, location, size, image):</div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="classdisplay_1_1Entity.html#ad7e3284bfb984c309b35d5a077bd5b21">    4</a></span>&#160;        self.<a class="code" href="classdisplay_1_1Entity.html#ad7e3284bfb984c309b35d5a077bd5b21">world</a> = world</div>
-<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classdisplay_1_1Entity.html#ae2a1114b0c54ef7eb43c2bd6cd097258">    5</a></span>&#160;        self.<a class="code" href="classdisplay_1_1Entity.html#ae2a1114b0c54ef7eb43c2bd6cd097258">location</a> = location</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classdisplay_1_1Entity.html#aa56fd9b8bb6c9510f24ea13be8c6a218">    6</a></span>&#160;        self.<a class="code" href="classdisplay_1_1Entity.html#aa56fd9b8bb6c9510f24ea13be8c6a218">size</a> = size</div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classdisplay_1_1Entity.html#a244569c285ad924e6200d4c1c8b4639c">    7</a></span>&#160;        self.<a class="code" href="classdisplay_1_1Entity.html#a244569c285ad924e6200d4c1c8b4639c">image</a> = image</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classdisplay_1_1Entity.html#abbea5f77f08ce3347010d9c452440737">    9</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classdisplay_1_1Entity.html#abbea5f77f08ce3347010d9c452440737">render</a>(self, index=0):</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="stringliteral">&quot;&quot;&quot;Draw the object into the screen</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="stringliteral">            - selects the portion of the image to draw from the &quot;index&quot; argument</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="stringliteral">        &quot;&quot;&quot;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        x, y = self.<a class="code" href="classdisplay_1_1Entity.html#ae2a1114b0c54ef7eb43c2bd6cd097258">location</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        x *= self.world.cell_size</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        y *= self.world.cell_size</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        w, h = self.<a class="code" href="classdisplay_1_1Entity.html#aa56fd9b8bb6c9510f24ea13be8c6a218">size</a></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        position = (x, y)</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        patch_rect = (w*index, 0, w, h)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        self.world.canvas.blit(self.<a class="code" href="classdisplay_1_1Entity.html#a244569c285ad924e6200d4c1c8b4639c">image</a>, position, patch_rect)</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="stringliteral">    Base class for all drawable objects</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="stringliteral">    &quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classdisplay_1_1Entity.html#a10294b5b8a8fa95f95f29aaf521efd56">    5</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classdisplay_1_1Entity.html#a10294b5b8a8fa95f95f29aaf521efd56">__init__</a>(self, world, location, size, image):</div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classdisplay_1_1Entity.html#ad7e3284bfb984c309b35d5a077bd5b21">    6</a></span>&#160;        self.<a class="code" href="classdisplay_1_1Entity.html#ad7e3284bfb984c309b35d5a077bd5b21">world</a> = world</div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="classdisplay_1_1Entity.html#ae2a1114b0c54ef7eb43c2bd6cd097258">    7</a></span>&#160;        self.<a class="code" href="classdisplay_1_1Entity.html#ae2a1114b0c54ef7eb43c2bd6cd097258">location</a> = location</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classdisplay_1_1Entity.html#aa56fd9b8bb6c9510f24ea13be8c6a218">    8</a></span>&#160;        self.<a class="code" href="classdisplay_1_1Entity.html#aa56fd9b8bb6c9510f24ea13be8c6a218">size</a> = size</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classdisplay_1_1Entity.html#a244569c285ad924e6200d4c1c8b4639c">    9</a></span>&#160;        self.<a class="code" href="classdisplay_1_1Entity.html#a244569c285ad924e6200d4c1c8b4639c">image</a> = image</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classdisplay_1_1Entity.html#abbea5f77f08ce3347010d9c452440737">   11</a></span>&#160;    <span class="keyword">def </span><a class="code" href="classdisplay_1_1Entity.html#abbea5f77f08ce3347010d9c452440737">render</a>(self, index=0):</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="stringliteral">        Draw the object into the screen</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="stringliteral">            - selects the portion of the image to draw from the &quot;index&quot; argument</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="stringliteral">        &quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        x, y = self.<a class="code" href="classdisplay_1_1Entity.html#ae2a1114b0c54ef7eb43c2bd6cd097258">location</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        x *= self.world.cell_size</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        y *= self.world.cell_size</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        w, h = self.<a class="code" href="classdisplay_1_1Entity.html#aa56fd9b8bb6c9510f24ea13be8c6a218">size</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        w *= self.world.cell_size</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        h *= self.world.cell_size</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        position = (x, y)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        patch_rect = (w*index, 0, w, h)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        self.world.canvas.blit(self.<a class="code" href="classdisplay_1_1Entity.html#a244569c285ad924e6200d4c1c8b4639c">image</a>, position, patch_rect)</div>
 <div class="ttc" id="classdisplay_1_1Entity_html"><div class="ttname"><a href="classdisplay_1_1Entity.html">display.Entity</a></div><div class="ttdef"><b>Definition:</b> <a href="display_8py_source.html#l00001">display.py:1</a></div></div>
-<div class="ttc" id="classdisplay_1_1Entity_html_abbea5f77f08ce3347010d9c452440737"><div class="ttname"><a href="classdisplay_1_1Entity.html#abbea5f77f08ce3347010d9c452440737">display.Entity.render</a></div><div class="ttdeci">def render</div><div class="ttdef"><b>Definition:</b> <a href="display_8py_source.html#l00009">display.py:9</a></div></div>
-<div class="ttc" id="classdisplay_1_1Entity_html_ae2a1114b0c54ef7eb43c2bd6cd097258"><div class="ttname"><a href="classdisplay_1_1Entity.html#ae2a1114b0c54ef7eb43c2bd6cd097258">display.Entity.location</a></div><div class="ttdeci">location</div><div class="ttdef"><b>Definition:</b> <a href="display_8py_source.html#l00005">display.py:5</a></div></div>
-<div class="ttc" id="classdisplay_1_1Entity_html_a244569c285ad924e6200d4c1c8b4639c"><div class="ttname"><a href="classdisplay_1_1Entity.html#a244569c285ad924e6200d4c1c8b4639c">display.Entity.image</a></div><div class="ttdeci">image</div><div class="ttdef"><b>Definition:</b> <a href="display_8py_source.html#l00007">display.py:7</a></div></div>
-<div class="ttc" id="classdisplay_1_1Entity_html_aa56fd9b8bb6c9510f24ea13be8c6a218"><div class="ttname"><a href="classdisplay_1_1Entity.html#aa56fd9b8bb6c9510f24ea13be8c6a218">display.Entity.size</a></div><div class="ttdeci">size</div><div class="ttdef"><b>Definition:</b> <a href="display_8py_source.html#l00006">display.py:6</a></div></div>
-<div class="ttc" id="classdisplay_1_1Entity_html_a10294b5b8a8fa95f95f29aaf521efd56"><div class="ttname"><a href="classdisplay_1_1Entity.html#a10294b5b8a8fa95f95f29aaf521efd56">display.Entity.__init__</a></div><div class="ttdeci">def __init__</div><div class="ttdef"><b>Definition:</b> <a href="display_8py_source.html#l00003">display.py:3</a></div></div>
-<div class="ttc" id="classdisplay_1_1Entity_html_ad7e3284bfb984c309b35d5a077bd5b21"><div class="ttname"><a href="classdisplay_1_1Entity.html#ad7e3284bfb984c309b35d5a077bd5b21">display.Entity.world</a></div><div class="ttdeci">world</div><div class="ttdef"><b>Definition:</b> <a href="display_8py_source.html#l00004">display.py:4</a></div></div>
+<div class="ttc" id="classdisplay_1_1Entity_html_abbea5f77f08ce3347010d9c452440737"><div class="ttname"><a href="classdisplay_1_1Entity.html#abbea5f77f08ce3347010d9c452440737">display.Entity.render</a></div><div class="ttdeci">def render</div><div class="ttdef"><b>Definition:</b> <a href="display_8py_source.html#l00011">display.py:11</a></div></div>
+<div class="ttc" id="classdisplay_1_1Entity_html_ae2a1114b0c54ef7eb43c2bd6cd097258"><div class="ttname"><a href="classdisplay_1_1Entity.html#ae2a1114b0c54ef7eb43c2bd6cd097258">display.Entity.location</a></div><div class="ttdeci">location</div><div class="ttdef"><b>Definition:</b> <a href="display_8py_source.html#l00007">display.py:7</a></div></div>
+<div class="ttc" id="classdisplay_1_1Entity_html_a244569c285ad924e6200d4c1c8b4639c"><div class="ttname"><a href="classdisplay_1_1Entity.html#a244569c285ad924e6200d4c1c8b4639c">display.Entity.image</a></div><div class="ttdeci">image</div><div class="ttdef"><b>Definition:</b> <a href="display_8py_source.html#l00009">display.py:9</a></div></div>
+<div class="ttc" id="classdisplay_1_1Entity_html_aa56fd9b8bb6c9510f24ea13be8c6a218"><div class="ttname"><a href="classdisplay_1_1Entity.html#aa56fd9b8bb6c9510f24ea13be8c6a218">display.Entity.size</a></div><div class="ttdeci">size</div><div class="ttdef"><b>Definition:</b> <a href="display_8py_source.html#l00008">display.py:8</a></div></div>
+<div class="ttc" id="classdisplay_1_1Entity_html_a10294b5b8a8fa95f95f29aaf521efd56"><div class="ttname"><a href="classdisplay_1_1Entity.html#a10294b5b8a8fa95f95f29aaf521efd56">display.Entity.__init__</a></div><div class="ttdeci">def __init__</div><div class="ttdef"><b>Definition:</b> <a href="display_8py_source.html#l00005">display.py:5</a></div></div>
+<div class="ttc" id="classdisplay_1_1Entity_html_ad7e3284bfb984c309b35d5a077bd5b21"><div class="ttname"><a href="classdisplay_1_1Entity.html#ad7e3284bfb984c309b35d5a077bd5b21">display.Entity.world</a></div><div class="ttdeci">world</div><div class="ttdef"><b>Definition:</b> <a href="display_8py_source.html#l00006">display.py:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="display_8py.html">display.py</a></li>
-    <li class="footer">Generated on Wed Apr 9 2014 18:43:11 for Ant Colony by
+    <li class="footer">Generated on Sat May 3 2014 00:13:00 for Ant Colony by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -3,33 +3,43 @@
   <compound refid="classants_1_1Ant" kind="class"><name>ants::Ant</name>
     <member refid="classants_1_1Ant_1a55f64c7cafb3806bdcfda42586adbff5" kind="variable"><name>world</name></member>
     <member refid="classants_1_1Ant_1adf5f970b6b5e8472f42275114eeac779" kind="variable"><name>image</name></member>
+    <member refid="classants_1_1Ant_1acaafd510ade5c38719b8082027162132" kind="variable"><name>nest</name></member>
     <member refid="classants_1_1Ant_1ae26b7ffd236a83d8d5c96ec6ec07b4bb" kind="variable"><name>direction</name></member>
     <member refid="classants_1_1Ant_1ae7de139b6f5bdb8d4ab42755c405ef5d" kind="variable"><name>location</name></member>
     <member refid="classants_1_1Ant_1afcfbbf8bd338401378d25c512204eb91" kind="variable"><name>food</name></member>
+    <member refid="classants_1_1Ant_1aa147562276c788d4533ab63ac44d96a6" kind="variable"><name>health</name></member>
     <member refid="classants_1_1Ant_1ad7fb2ac4566880fdacfd7bf7f4ec1109" kind="variable"><name>food_scent_strength</name></member>
     <member refid="classants_1_1Ant_1a7885f0124adf5b10fd6fa5e8ac47edb9" kind="variable"><name>home_scent_strength</name></member>
     <member refid="classants_1_1Ant_1a80e2218dcfabbd9ef4d83638dd20d943" kind="variable"><name>task_manager</name></member>
     <member refid="classants_1_1Ant_1a0fa15b6ba2860b445d390c07bc11d4e2" kind="function"><name>__init__</name></member>
+    <member refid="classants_1_1Ant_1a5ee52d730c2bcbd0cfd0a8cf8d9206c6" kind="function"><name>get_location</name></member>
     <member refid="classants_1_1Ant_1a2ddd97dadaa5d24c459b0117dc6e1190" kind="function"><name>neighbour</name></member>
     <member refid="classants_1_1Ant_1a0067159f23e5e9e4b3564d48c1564f11" kind="function"><name>move</name></member>
     <member refid="classants_1_1Ant_1a3a636b900b6fdbed032e3a635495a4c4" kind="function"><name>random_move</name></member>
-    <member refid="classants_1_1Ant_1a216ebc2ce2dfeb88d6bbc714bc50ecb5" kind="function"><name>reduce_home_scent</name></member>
-    <member refid="classants_1_1Ant_1a285d1e406b6d2cc67779e873e879feb0" kind="function"><name>reduce_food_scent</name></member>
+    <member refid="classants_1_1Ant_1a0f92c3c4a37d6c3998bc71fc0a6b9cee" kind="function"><name>reduce_home_scent_strength</name></member>
+    <member refid="classants_1_1Ant_1a1d51e32dc22891ded9f02ffc71e612cd" kind="function"><name>reduce_food_scent_strength</name></member>
     <member refid="classants_1_1Ant_1a445ec1d1f8e4cb539c4f66fafa129131" kind="function"><name>turn</name></member>
     <member refid="classants_1_1Ant_1a95585d833c74c56155a0d79394d511cc" kind="function"><name>render</name></member>
+    <member refid="classants_1_1Ant_1a10dc42722864d5850912dd34242d5cf8" kind="function"><name>get_nest_id</name></member>
     <member refid="classants_1_1Ant_1a2e60480b7534b107e12d7f23fd06d5f1" kind="function"><name>here</name></member>
     <member refid="classants_1_1Ant_1a192f8411faa05c48db8db99d033f5d15" kind="function"><name>behind</name></member>
     <member refid="classants_1_1Ant_1ac2c8f048d99cd48a5829ddf7ff4a708a" kind="function"><name>ahead</name></member>
     <member refid="classants_1_1Ant_1a2dbb07eefeecbc51d257f81fb0ba1c71" kind="function"><name>ahead_left</name></member>
     <member refid="classants_1_1Ant_1ad7a5311d831e8bcc07061e6a12edad8c" kind="function"><name>ahead_right</name></member>
     <member refid="classants_1_1Ant_1af9af7f8a5c766021ef0f68171d09abca" kind="function"><name>locate_food_nearby</name></member>
+    <member refid="classants_1_1Ant_1aeec9c17184393435fd4d4936b6f2736a" kind="function"><name>is_enemy</name></member>
     <member refid="classants_1_1Ant_1a5795d0898e3d0d020a0a0a626a5ef7b0" kind="function"><name>locate_home_nearby</name></member>
     <member refid="classants_1_1Ant_1a81a141f3417ddb32b8d1abbd95bbc477" kind="function"><name>locate_home_scent_nearby</name></member>
-    <member refid="classants_1_1Ant_1a97ffad1c0e634f38585e7913908e9524" kind="function"><name>locate_food_scent_nearby</name></member>
-    <member refid="classants_1_1Ant_1a164a2a76f1779462fe81e8f169a92a93" kind="function"><name>rank_by_food_scent</name></member>
     <member refid="classants_1_1Ant_1a6f3e3bd98a5f382098cdc1c02e1e2fd0" kind="function"><name>rank_by_home_scent</name></member>
     <member refid="classants_1_1Ant_1ae85884312b4aa10f965b84535bed37fc" kind="function"><name>drop_food</name></member>
+    <member refid="classants_1_1Ant_1accd1fa305032e848021a4d8b90f3f8ce" kind="function"><name>take_food</name></member>
     <member refid="classants_1_1Ant_1a41de1c29941a444dab25a88cbc3a881d" kind="function"><name>has_food</name></member>
+    <member refid="classants_1_1Ant_1ae90d1356ca3370e47c24c5fe63ebfeaf" kind="function"><name>set_food_scent_strength</name></member>
+    <member refid="classants_1_1Ant_1ae8234d6ecb9f7666e255ffa8a978355c" kind="function"><name>set_home_scent_strength</name></member>
+    <member refid="classants_1_1Ant_1a89ad26b1d79990f95979464bbd3bf9b8" kind="function"><name>reduce_health</name></member>
+    <member refid="classants_1_1Ant_1a218d9a25e9df83abf85ff596c214075c" kind="function"><name>is_dead</name></member>
+    <member refid="classants_1_1Ant_1a78620c709fca31c9a0b2994534082bdc" kind="function"><name>is_alive</name></member>
+    <member refid="classants_1_1Ant_1a16d8e187423f707e067fe2d562100437" kind="function"><name>is_hungry</name></member>
     <member refid="classants_1_1Ant_1a9e4bf6309b80ab33bd628f6e7d78d013" kind="function"><name>__nonzero__</name></member>
   </compound>
   <compound refid="classworld_1_1Cell" kind="class"><name>world::Cell</name>
@@ -44,19 +54,28 @@
     <member refid="classworld_1_1Cell_1a52af74786918c6c3f4d1d0b0f44aecb8" kind="function"><name>add_home_scent</name></member>
     <member refid="classworld_1_1Cell_1a773c26b2353ffaede745ee726d2e256d" kind="function"><name>add_food_scent</name></member>
     <member refid="classworld_1_1Cell_1ace4b7ca65667e6dcecb3c43e850c3568" kind="function"><name>get_food</name></member>
+    <member refid="classworld_1_1Cell_1ae69e7bafa4825b0e208d3bb74c25fe91" kind="function"><name>get_food_scent</name></member>
+    <member refid="classworld_1_1Cell_1aac71d7cc30cb979617b1ec8d9f4d9b26" kind="function"><name>get_home_scent</name></member>
     <member refid="classworld_1_1Cell_1a890e2dc899a32ef86c131a98879e9023" kind="function"><name>is_obstacle</name></member>
     <member refid="classworld_1_1Cell_1a441597e0ea2cff7fce907a12fd8216fa" kind="function"><name>is_home</name></member>
+    <member refid="classworld_1_1Cell_1a1a209720a46e372099e2a301f7e0f6e6" kind="function"><name>is_own_home</name></member>
+    <member refid="classworld_1_1Cell_1ad242f10cc8c92971200dd9c8bcf5297b" kind="function"><name>is_enemy_home</name></member>
     <member refid="classworld_1_1Cell_1a90eabca5d79eef89b2ae4f677a88a93b" kind="function"><name>is_food</name></member>
     <member refid="classworld_1_1Cell_1a98e3cac3c42374693afe0aded7a1e06c" kind="function"><name>has_ant</name></member>
     <member refid="classworld_1_1Cell_1a1097df1a6fe0131898377358017fe7bc" kind="function"><name>has_food</name></member>
     <member refid="classworld_1_1Cell_1adb830df07e437189375efa6c9ad4981e" kind="function"><name>make_home</name></member>
     <member refid="classworld_1_1Cell_1a63164a3e74888a97b07ee8e06c633c2a" kind="function"><name>make_obstacle</name></member>
+    <member refid="classworld_1_1Cell_1aed89295fdffe763b9d651b9def6ca4e8" kind="function"><name>remove_obstacle</name></member>
     <member refid="classworld_1_1Cell_1add0fb2c9e6c963d012cf7e65008b8947" kind="function"><name>evaporate_scent</name></member>
+    <member refid="classworld_1_1Cell_1aa564ee06853b2db81faa0da4d07e66af" kind="function"><name>nearby</name></member>
+    <member refid="classworld_1_1Cell_1a05eb363f384507bcca4ab3f9680ba8a9" kind="function"><name>get_max_home_scent</name></member>
+    <member refid="classworld_1_1Cell_1a7562d15f3a8d223f445a67b89ad60f07" kind="function"><name>get_max_food_scent</name></member>
     <member refid="classworld_1_1Cell_1a11f263897c7a04ae900af84d30a30c56" kind="function"><name>render</name></member>
   </compound>
   <compound refid="classtask__manager_1_1DropFood" kind="class"><name>task_manager::DropFood</name>
     <member refid="classtask__manager_1_1DropFood_1a9c3891af721254b73254732f0cb18f59" kind="variable"><name>new_task</name></member>
     <member refid="classtask__manager_1_1DropFood_1a0f759e307357de441edd8465313ca4e8" kind="function"><name>__init__</name></member>
+    <member refid="classtask__manager_1_1DropFood_1ab086df733d469229b17fdc652155aa3d" kind="function"><name>start_task</name></member>
     <member refid="classtask__manager_1_1DropFood_1a82661a2394895191b28bb7ac1aeb5bf4" kind="function"><name>perform_task</name></member>
     <member refid="classtask__manager_1_1DropFood_1aedccf366d55d4b081239ff27b72d896d" kind="function"><name>end_task</name></member>
   </compound>
@@ -73,6 +92,10 @@
     <member refid="classtask__manager_1_1Explore_1ae95cc7a4676c07732fcf0faed752959c" kind="function"><name>__init__</name></member>
     <member refid="classtask__manager_1_1Explore_1a8ba5647950e170022bec93bc73c4a8de" kind="function"><name>perform_task</name></member>
   </compound>
+  <compound refid="classtask__manager_1_1FindFood" kind="class"><name>task_manager::FindFood</name>
+    <member refid="classtask__manager_1_1FindFood_1abf53da166a9a36fbab4ce1c87fa93694" kind="function"><name>__init__</name></member>
+    <member refid="classtask__manager_1_1FindFood_1aab9303f02e5e7d4884228e1fe5f6142c" kind="function"><name>perform_task</name></member>
+  </compound>
   <compound refid="classtask__manager_1_1FollowFoodTrail" kind="class"><name>task_manager::FollowFoodTrail</name>
     <member refid="classtask__manager_1_1FollowFoodTrail_1aefc8c49492622a4e4fa61279fd52ed12" kind="variable"><name>new_task</name></member>
     <member refid="classtask__manager_1_1FollowFoodTrail_1a6af05bfd09141281c9943c8f01a0896b" kind="function"><name>__init__</name></member>
@@ -85,14 +108,46 @@
     <member refid="classtask__manager_1_1FollowHomeTrail_1a0ffd4aabfafcfead05a02e149e5fab91" kind="function"><name>start_task</name></member>
     <member refid="classtask__manager_1_1FollowHomeTrail_1ae4386ef7470e20e3f42fab9fc65b70cb" kind="function"><name>perform_task</name></member>
   </compound>
+  <compound refid="classtask__manager_1_1GuardNest" kind="class"><name>task_manager::GuardNest</name>
+    <member refid="classtask__manager_1_1GuardNest_1ada22ecced047079d5f4d98a0b86a2d0e" kind="variable"><name>new_task</name></member>
+    <member refid="classtask__manager_1_1GuardNest_1ac1b98762825c860890caff5649269cb1" kind="function"><name>__init__</name></member>
+    <member refid="classtask__manager_1_1GuardNest_1a44493cf7d0653d2b548040a5857ef330" kind="function"><name>start_task</name></member>
+    <member refid="classtask__manager_1_1GuardNest_1a18003edc3f1e2fca7bfe34cf078e96f8" kind="function"><name>perform_task</name></member>
+  </compound>
+  <compound refid="classworld_1_1Nest" kind="class"><name>world::Nest</name>
+    <member refid="classworld_1_1Nest_1a2ab2394f7ded6041e64cfea7390519c3" kind="variable"><name>id</name></member>
+    <member refid="classworld_1_1Nest_1a779ec4ef0582e917964de4efaedaef84" kind="variable"><name>size</name></member>
+    <member refid="classworld_1_1Nest_1a624fe0079926173a6356a3d59410dcf3" kind="variable"><name>world</name></member>
+    <member refid="classworld_1_1Nest_1aa41cdaa8399fe934d89f5573ff804cbc" kind="variable"><name>ant_count</name></member>
+    <member refid="classworld_1_1Nest_1a1d943529c7685aa0cadeb43f9891ff03" kind="variable"><name>image</name></member>
+    <member refid="classworld_1_1Nest_1a76e2fb1c7adfc7b4843bd9a1491c67f7" kind="function"><name>__init__</name></member>
+    <member refid="classworld_1_1Nest_1a91914c56d2849f47dfd2b2ad97996fb6" kind="function"><name>set_image</name></member>
+    <member refid="classworld_1_1Nest_1a4a57d2cea404003ee77306758e9da3e1" kind="function"><name>mark_home</name></member>
+    <member refid="classworld_1_1Nest_1a756db917e2fa8aeb72c5277637822a53" kind="function"><name>spawn_ants</name></member>
+    <member refid="classworld_1_1Nest_1a0b76a02840f15fe7909859d523736a58" kind="function"><name>add_new_ant</name></member>
+    <member refid="classworld_1_1Nest_1ac845bc370bbb778a45a360145a48be61" kind="function"><name>add_new_ant_randomly</name></member>
+  </compound>
+  <compound refid="classtask__manager_1_1ProduceAnts" kind="class"><name>task_manager::ProduceAnts</name>
+    <member refid="classtask__manager_1_1ProduceAnts_1a52f38a28435526dc06a11cd23916ee4b" kind="variable"><name>new_task</name></member>
+    <member refid="classtask__manager_1_1ProduceAnts_1ab154b2db66b66e0fc43d3ef5094bf73e" kind="function"><name>__init__</name></member>
+    <member refid="classtask__manager_1_1ProduceAnts_1aa1636ae28589d29d45d83dd71b2dccbb" kind="function"><name>perform_task</name></member>
+  </compound>
   <compound refid="classants_1_1QueenAnt" kind="class"><name>ants::QueenAnt</name>
+    <member refid="classants_1_1QueenAnt_1adb02e07e568bf5cf90408cb641cb5b57" kind="variable"><name>health</name></member>
     <member refid="classants_1_1QueenAnt_1aea3ff8fa90122567905806f675eb9472" kind="function"><name>__init__</name></member>
+  </compound>
+  <compound refid="classtask__manager_1_1ReturnHome" kind="class"><name>task_manager::ReturnHome</name>
+    <member refid="classtask__manager_1_1ReturnHome_1afd37383d07987cb20f716cfe86b7b957" kind="variable"><name>new_task</name></member>
+    <member refid="classtask__manager_1_1ReturnHome_1ada66b785625008db20221e1b53d419f6" kind="function"><name>__init__</name></member>
+    <member refid="classtask__manager_1_1ReturnHome_1a8201892f7668c2ca1e7c08f2a51c4309" kind="function"><name>start_task</name></member>
+    <member refid="classtask__manager_1_1ReturnHome_1ab9d2b69cbefdeaf308df564c13f5aac2" kind="function"><name>perform_task</name></member>
   </compound>
   <compound refid="classcontroller_1_1Simulation" kind="class"><name>controller::Simulation</name>
     <member refid="classcontroller_1_1Simulation_1a21dd9474d46d4afa868c0bd60cea128b" kind="variable"><name>clock</name></member>
     <member refid="classcontroller_1_1Simulation_1a2bc2a4bb3e974bc7b73be75b49701d9f" kind="variable"><name>framerate</name></member>
     <member refid="classcontroller_1_1Simulation_1af13461f42bfe6ca017f59e13e57c354e" kind="variable"><name>images</name></member>
     <member refid="classcontroller_1_1Simulation_1a35d0ffc695295c3b509bd5bc2bdbac9b" kind="variable"><name>quit</name></member>
+    <member refid="classcontroller_1_1Simulation_1a8acaf6508b8b61e163656195706d9025" kind="variable"><name>pause</name></member>
     <member refid="classcontroller_1_1Simulation_1a5d368ffc3eee12c8c36839ee5bce3644" kind="variable"><name>settings</name></member>
     <member refid="classcontroller_1_1Simulation_1a2ba0c3cf1949a98dd920f6097953c1f5" kind="variable"><name>world</name></member>
     <member refid="classcontroller_1_1Simulation_1a0d3a98e6f630a62f18aa5c0c35846381" kind="function"><name>__init__</name></member>
@@ -100,6 +155,14 @@
     <member refid="classcontroller_1_1Simulation_1a4cbf2928d3f930f4b8cad9c0e64c2524" kind="function"><name>run</name></member>
     <member refid="classcontroller_1_1Simulation_1ad86d932f45e2b80ec5336da7c6e6e085" kind="function"><name>main_loop</name></member>
     <member refid="classcontroller_1_1Simulation_1ad3eb13a30931a88958e3c0c7b5b545a5" kind="function"><name>handle_events</name></member>
+    <member refid="classcontroller_1_1Simulation_1a247d22a52798856055de287bd13a6cda" kind="function"><name>handle_keyboard_events</name></member>
+    <member refid="classcontroller_1_1Simulation_1ad459f264509c14b43f23894dc35d6656" kind="function"><name>handle_general_events</name></member>
+    <member refid="classcontroller_1_1Simulation_1aa43d3916e7ff0513f950439d7ae8b5b7" kind="function"><name>handle_mouse_events</name></member>
+  </compound>
+  <compound refid="classants_1_1SoldierAnt" kind="class"><name>ants::SoldierAnt</name>
+    <member refid="classants_1_1SoldierAnt_1adaaa2dc645cd3f4c190a86caa7e18f35" kind="function"><name>__init__</name></member>
+    <member refid="classants_1_1SoldierAnt_1aa3d00e2aca5711f0b5784fd2ec0f4989" kind="function"><name>get_enemy_ant_nearby</name></member>
+    <member refid="classants_1_1SoldierAnt_1a66062d822fc415e73332f7b13cf853c8" kind="function"><name>attack</name></member>
   </compound>
   <compound refid="classtask__manager_1_1TakeFood" kind="class"><name>task_manager::TakeFood</name>
     <member refid="classtask__manager_1_1TakeFood_1a592252f7a2b882cf283c9da9cbab07a2" kind="variable"><name>new_task</name></member>
@@ -127,26 +190,32 @@
   </compound>
   <compound refid="classants_1_1WorkerAnt" kind="class"><name>ants::WorkerAnt</name>
     <member refid="classants_1_1WorkerAnt_1a82e7d37f66c81e029cad6038d6515056" kind="function"><name>__init__</name></member>
+    <member refid="classants_1_1WorkerAnt_1a3a0836d96b5fe9eba56e9d2d59b555cc" kind="function"><name>locate_food_scent_nearby</name></member>
+    <member refid="classants_1_1WorkerAnt_1a65ef16439f2ff5d217e1e443d57b65d1" kind="function"><name>rank_by_food_scent</name></member>
   </compound>
   <compound refid="classworld_1_1World" kind="class"><name>world::World</name>
+    <member refid="classworld_1_1World_1a41e0f9d00bb365408abee5a084bdce24" kind="variable"><name>settings</name></member>
     <member refid="classworld_1_1World_1a5ace9de2d4cd40bbb013db9712f4ef34" kind="variable"><name>width</name></member>
     <member refid="classworld_1_1World_1acfdba03fac144372fcc56922a1a339a2" kind="variable"><name>height</name></member>
     <member refid="classworld_1_1World_1ae1d7a76e88da46ba689ac807d6a9a961" kind="variable"><name>cell_size</name></member>
     <member refid="classworld_1_1World_1a9388f4c8146cbf9983f4a42c3015b61a" kind="variable"><name>images</name></member>
-    <member refid="classworld_1_1World_1a41e0f9d00bb365408abee5a084bdce24" kind="variable"><name>settings</name></member>
     <member refid="classworld_1_1World_1a6b3bb67973002c5018e11031462c31eb" kind="variable"><name>canvas</name></member>
     <member refid="classworld_1_1World_1a2314ff704272429f24c5d1f731ce7e8d" kind="variable"><name>cells</name></member>
     <member refid="classworld_1_1World_1a93d8708ed00be71dfd78cb42767529ce" kind="variable"><name>counter</name></member>
     <member refid="classworld_1_1World_1aff3d808329d4220a8bd5e917c151c14a" kind="variable"><name>ants</name></member>
+    <member refid="classworld_1_1World_1af8524470ea81aa32b4c4045f4d5768e7" kind="variable"><name>nests</name></member>
     <member refid="classworld_1_1World_1a4351253668240be9d3a0d5bc2f1aa18f" kind="function"><name>__init__</name></member>
     <member refid="classworld_1_1World_1ad12e75d551845a567951b885d204153d" kind="function"><name>__getitem__</name></member>
     <member refid="classworld_1_1World_1add7ffc7d3af488f4ed006a401b842ca1" kind="function"><name>convert_images</name></member>
     <member refid="classworld_1_1World_1a254dbfa03188d38b7e822c1a2e20a568" kind="function"><name>advance</name></member>
-    <member refid="classworld_1_1World_1aaf7c311b1dbcac59ccff5e0319e14692" kind="function"><name>spawn_ants</name></member>
+    <member refid="classworld_1_1World_1a83af04b7168b479b93ef75b1a9fb8dc2" kind="function"><name>add_ant</name></member>
     <member refid="classworld_1_1World_1af83c041eb0a9fee93eae12bb24038b0a" kind="function"><name>spawn_foodsource</name></member>
-    <member refid="classworld_1_1World_1a1dd90d1ccaa88b5e9bfdceed9dd65de6" kind="function"><name>create_home</name></member>
+    <member refid="classworld_1_1World_1aa0e6994339219d9e933edc9bcb0c8eb5" kind="function"><name>spawn_colonies</name></member>
+    <member refid="classworld_1_1World_1a71b1d7a0d1b22365b4d8ed2ac6a72b98" kind="function"><name>get_ant_count</name></member>
+    <member refid="classworld_1_1World_1a85d9fcbadcac5428c6f4207404221826" kind="function"><name>create_walls</name></member>
     <member refid="classworld_1_1World_1a40aafbcc96e8592e314cf08068aba5f5" kind="function"><name>render</name></member>
     <member refid="classworld_1_1World_1a45f0825ea2f6b659d376fbc859aa208a" kind="function"><name>evaporate_scent</name></member>
+    <member refid="classworld_1_1World_1ad2b1f49767a4d6eae2291b1ff48c9b0d" kind="function"><name>remove_dead_ants</name></member>
   </compound>
   <compound refid="namespaceants" kind="namespace"><name>ants</name>
   </compound>
@@ -154,6 +223,8 @@
     <member refid="namespaceconstants_1ac910045b50610ec197515a3635d8d037" kind="variable"><name>DIRECTIONS</name></member>
     <member refid="namespaceconstants_1aa1f49ae50d4547cd3b9f4801d04f5830" kind="variable"><name>WIDTH</name></member>
     <member refid="namespaceconstants_1a581305cb095bf2d8826a12abef66a15e" kind="variable"><name>HEIGHT</name></member>
+    <member refid="namespaceconstants_1ab7ba6a498f408091781f6f90a0446bcc" kind="variable"><name>WHITE</name></member>
+    <member refid="namespaceconstants_1a71ba084102da630a352232ea121e0e95" kind="variable"><name>GREEN</name></member>
   </compound>
   <compound refid="namespacecontroller" kind="namespace"><name>controller</name>
   </compound>

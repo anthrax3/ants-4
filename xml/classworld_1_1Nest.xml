@@ -1,0 +1,212 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classworld_1_1Nest" kind="class" prot="public">
+    <compoundname>world::Nest</compoundname>
+    <basecompoundref refid="classdisplay_1_1Entity" prot="public" virt="non-virtual">display.Entity</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classworld_1_1Nest_1a2ab2394f7ded6041e64cfea7390519c3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>world.Nest::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="218" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classworld_1_1Nest_1a779ec4ef0582e917964de4efaedaef84" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>world.Nest::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="219" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classworld_1_1Nest_1a624fe0079926173a6356a3d59410dcf3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>world.Nest::world</definition>
+        <argsstring></argsstring>
+        <name>world</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="220" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classworld_1_1Nest_1aa41cdaa8399fe934d89f5573ff804cbc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>world.Nest::ant_count</definition>
+        <argsstring></argsstring>
+        <name>ant_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="221" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classworld_1_1Nest_1a1d943529c7685aa0cadeb43f9891ff03" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>world.Nest::image</definition>
+        <argsstring></argsstring>
+        <name>image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="231" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classworld_1_1Nest_1a76e2fb1c7adfc7b4843bd9a1491c67f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def world.Nest.__init__</definition>
+        <argsstring></argsstring>
+        <name>__init__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="217" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="217" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="classworld_1_1Nest_1a91914c56d2849f47dfd2b2ad97996fb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def world.Nest.set_image</definition>
+        <argsstring></argsstring>
+        <name>set_image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="227" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="227" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="classworld_1_1Nest_1a4a57d2cea404003ee77306758e9da3e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def world.Nest.mark_home</definition>
+        <argsstring></argsstring>
+        <name>mark_home</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Converts the cell at its location to its nest
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="235" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="235" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="classworld_1_1Nest_1a756db917e2fa8aeb72c5277637822a53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def world.Nest.spawn_ants</definition>
+        <argsstring></argsstring>
+        <name>spawn_ants</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates instances of ants and adds them into the world
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="247" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="247" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="classworld_1_1Nest_1a0b76a02840f15fe7909859d523736a58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def world.Nest.add_new_ant</definition>
+        <argsstring></argsstring>
+        <name>add_new_ant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="255" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="255" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="classworld_1_1Nest_1ac845bc370bbb778a45a360145a48be61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def world.Nest.add_new_ant_randomly</definition>
+        <argsstring></argsstring>
+        <name>add_new_ant_randomly</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="263" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="263" bodyend="274"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Encapsulates a colony of ants
+</verbatim> </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="189">
+        <label>world.Nest</label>
+        <link refid="classworld_1_1Nest"/>
+        <childnode refid="190" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="191">
+        <label>object</label>
+      </node>
+      <node id="190">
+        <label>display.Entity</label>
+        <link refid="classdisplay_1_1Entity"/>
+        <childnode refid="191" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="192">
+        <label>world.Nest</label>
+        <link refid="classworld_1_1Nest"/>
+        <childnode refid="193" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="194">
+        <label>object</label>
+      </node>
+      <node id="193">
+        <label>display.Entity</label>
+        <link refid="classdisplay_1_1Entity"/>
+        <childnode refid="194" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="213" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="213" bodyend="275"/>
+    <listofallmembers>
+      <member refid="classworld_1_1Nest_1a76e2fb1c7adfc7b4843bd9a1491c67f7" prot="public" virt="non-virtual"><scope>world::Nest</scope><name>__init__</name></member>
+      <member refid="classdisplay_1_1Entity_1a10294b5b8a8fa95f95f29aaf521efd56" prot="public" virt="non-virtual" ambiguityscope="display::Entity."><scope>world::Nest</scope><name>__init__</name></member>
+      <member refid="classworld_1_1Nest_1a0b76a02840f15fe7909859d523736a58" prot="public" virt="non-virtual"><scope>world::Nest</scope><name>add_new_ant</name></member>
+      <member refid="classworld_1_1Nest_1ac845bc370bbb778a45a360145a48be61" prot="public" virt="non-virtual"><scope>world::Nest</scope><name>add_new_ant_randomly</name></member>
+      <member refid="classworld_1_1Nest_1aa41cdaa8399fe934d89f5573ff804cbc" prot="public" virt="non-virtual"><scope>world::Nest</scope><name>ant_count</name></member>
+      <member refid="classworld_1_1Nest_1a2ab2394f7ded6041e64cfea7390519c3" prot="public" virt="non-virtual"><scope>world::Nest</scope><name>id</name></member>
+      <member refid="classworld_1_1Nest_1a1d943529c7685aa0cadeb43f9891ff03" prot="public" virt="non-virtual"><scope>world::Nest</scope><name>image</name></member>
+      <member refid="classdisplay_1_1Entity_1ae2a1114b0c54ef7eb43c2bd6cd097258" prot="public" virt="non-virtual"><scope>world::Nest</scope><name>location</name></member>
+      <member refid="classworld_1_1Nest_1a4a57d2cea404003ee77306758e9da3e1" prot="public" virt="non-virtual"><scope>world::Nest</scope><name>mark_home</name></member>
+      <member refid="classdisplay_1_1Entity_1abbea5f77f08ce3347010d9c452440737" prot="public" virt="non-virtual"><scope>world::Nest</scope><name>render</name></member>
+      <member refid="classworld_1_1Nest_1a91914c56d2849f47dfd2b2ad97996fb6" prot="public" virt="non-virtual"><scope>world::Nest</scope><name>set_image</name></member>
+      <member refid="classworld_1_1Nest_1a779ec4ef0582e917964de4efaedaef84" prot="public" virt="non-virtual"><scope>world::Nest</scope><name>size</name></member>
+      <member refid="classworld_1_1Nest_1a756db917e2fa8aeb72c5277637822a53" prot="public" virt="non-virtual"><scope>world::Nest</scope><name>spawn_ants</name></member>
+      <member refid="classworld_1_1Nest_1a624fe0079926173a6356a3d59410dcf3" prot="public" virt="non-virtual"><scope>world::Nest</scope><name>world</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

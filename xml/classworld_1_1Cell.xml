@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="11" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="11" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="13" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="13" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classworld_1_1Cell_1a401fde7236825c1843dad8764c2fb4a8" prot="public" static="no" mutable="no">
         <type></type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="12" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="12" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="14" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="14" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classworld_1_1Cell_1a0ef4adaadea1ccdcd1b61c70e242aa4a" prot="public" static="no" mutable="no">
         <type></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="13" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="13" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="15" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="15" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classworld_1_1Cell_1acec0cb9d8a7eb92bedf71dc57641efbe" prot="public" static="no" mutable="no">
         <type></type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="14" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="14" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="16" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classworld_1_1Cell_1abfd9b278ac86f77970b7766a7c2e3231" prot="public" static="no" mutable="no">
         <type></type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="15" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="15" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="17" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classworld_1_1Cell_1a9baf3378be8090bf1faf1b19b9aa5fd3" prot="public" static="no" mutable="no">
         <type></type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="16" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="16" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="18" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="18" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -95,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="10" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="10" bodyend="18"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="12" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="12" bodyend="20"/>
       </memberdef>
       <memberdef kind="function" id="classworld_1_1Cell_1a3d9725f56b584acd9f75728f364975b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -103,12 +103,20 @@
         <argsstring></argsstring>
         <name>add_food</name>
         <briefdescription>
-        </briefdescription>
+<para>Adds food to the cell. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of food to be added </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="19" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="19" bodyend="21"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="23" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="23" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="classworld_1_1Cell_1a52af74786918c6c3f4d1d0b0f44aecb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -116,12 +124,28 @@
         <argsstring></argsstring>
         <name>add_home_scent</name>
         <briefdescription>
-        </briefdescription>
+<para>Adds home scent to the cell. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of scent to add </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the nest the ant belongs to <verbatim>adds home scent for the particular ant colony (depending on the id)
+</verbatim> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="22" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="22" bodyend="24"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="30" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="30" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="classworld_1_1Cell_1a773c26b2353ffaede745ee726d2e256d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -129,12 +153,27 @@
         <argsstring></argsstring>
         <name>add_food_scent</name>
         <briefdescription>
-        </briefdescription>
+<para>Adds food scent to the cell. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of scent to add </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the nest the ant belongs to </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="25" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="25" bodyend="27"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="45" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="45" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="classworld_1_1Cell_1ace4b7ca65667e6dcecb3c43e850c3568" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -142,12 +181,63 @@
         <argsstring></argsstring>
         <name>get_food</name>
         <briefdescription>
-        </briefdescription>
+<para>Gets food from the cell. </para>        </briefdescription>
         <detaileddescription>
-<para><verbatim>Get &quot;amt&quot; amount of food if available else returns whatever food is available</verbatim> </para>        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of food taken Returns an amount of food if available </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="28" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="28" bodyend="37"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="57" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="57" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classworld_1_1Cell_1ae69e7bafa4825b0e208d3bb74c25fe91" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def world.Cell.get_food_scent</definition>
+        <argsstring></argsstring>
+        <name>get_food_scent</name>
+        <briefdescription>
+<para>Get the amount of food scent in the cell. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the nest the ant belongs to </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="68" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="68" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="classworld_1_1Cell_1aac71d7cc30cb979617b1ec8d9f4d9b26" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def world.Cell.get_home_scent</definition>
+        <argsstring></argsstring>
+        <name>get_home_scent</name>
+        <briefdescription>
+<para>Get the amount of home scent in the cell. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the nest the ant belongs to <verbatim>get home scent for the colony given by id
+</verbatim> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="73" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="73" bodyend="78"/>
       </memberdef>
       <memberdef kind="function" id="classworld_1_1Cell_1a890e2dc899a32ef86c131a98879e9023" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -157,10 +247,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><verbatim>Returns wheather the cell is a obstacle or not
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="38" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="38" bodyend="40"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="79" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="79" bodyend="84"/>
       </memberdef>
       <memberdef kind="function" id="classworld_1_1Cell_1a441597e0ea2cff7fce907a12fd8216fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -170,10 +261,54 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><verbatim>Returns wheather the cell is a home or not
+(independent of which colony the ant belongs)
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="41" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="41" bodyend="43"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="85" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="85" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="classworld_1_1Cell_1a1a209720a46e372099e2a301f7e0f6e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def world.Cell.is_own_home</definition>
+        <argsstring></argsstring>
+        <name>is_own_home</name>
+        <briefdescription>
+<para>Checks if the cell is home cell of the ant. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the nest the ant belongs to </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="94" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="94" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="classworld_1_1Cell_1ad242f10cc8c92971200dd9c8bcf5297b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def world.Cell.is_enemy_home</definition>
+        <argsstring></argsstring>
+        <name>is_enemy_home</name>
+        <briefdescription>
+<para>Checks if the home cell is of the enemy ants. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the nest the ant belongs to </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="99" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="99" bodyend="101"/>
       </memberdef>
       <memberdef kind="function" id="classworld_1_1Cell_1a90eabca5d79eef89b2ae4f677a88a93b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -181,12 +316,20 @@
         <argsstring></argsstring>
         <name>is_food</name>
         <briefdescription>
-        </briefdescription>
+<para>Checks if the cell has food (but should not be its own home) </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the nest the ant belongs to </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="44" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="44" bodyend="46"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="104" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="104" bodyend="106"/>
       </memberdef>
       <memberdef kind="function" id="classworld_1_1Cell_1a98e3cac3c42374693afe0aded7a1e06c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -196,10 +339,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><verbatim>Check if the particular cell has an ant
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="47" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="47" bodyend="49"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="107" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="107" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="classworld_1_1Cell_1a1097df1a6fe0131898377358017fe7bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -209,10 +353,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><verbatim>Checks if the cell has food
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="50" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="50" bodyend="52"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="113" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="113" bodyend="118"/>
       </memberdef>
       <memberdef kind="function" id="classworld_1_1Cell_1adb830df07e437189375efa6c9ad4981e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -220,12 +365,20 @@
         <argsstring></argsstring>
         <name>make_home</name>
         <briefdescription>
-        </briefdescription>
+<para>Convert the cell into a home cell. </para>        </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The id of the nest </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="53" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="53" bodyend="55"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="121" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="121" bodyend="124"/>
       </memberdef>
       <memberdef kind="function" id="classworld_1_1Cell_1a63164a3e74888a97b07ee8e06c633c2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -235,10 +388,25 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-        </detaileddescription>
+<para><verbatim>Convert the cell into an obstacle if the cell is empty
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="56" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="56" bodyend="58"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="125" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="125" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classworld_1_1Cell_1aed89295fdffe763b9d651b9def6ca4e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def world.Cell.remove_obstacle</definition>
+        <argsstring></argsstring>
+        <name>remove_obstacle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Removes obstacle from the cell
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="137" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="137" bodyend="143"/>
       </memberdef>
       <memberdef kind="function" id="classworld_1_1Cell_1add0fb2c9e6c963d012cf7e65008b8947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -246,12 +414,64 @@
         <argsstring></argsstring>
         <name>evaporate_scent</name>
         <briefdescription>
-        </briefdescription>
+<para>Evaporates the scent. </para>        </briefdescription>
         <detaileddescription>
-<para><verbatim>Evaporates scent ( decay law )</verbatim> </para>        </detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The rate at which evporation happens Follows the decay law </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="59" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="59" bodyend="67"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="147" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="147" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classworld_1_1Cell_1aa564ee06853b2db81faa0da4d07e66af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def world.Cell.nearby</definition>
+        <argsstring></argsstring>
+        <name>nearby</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns all nearby 8 cells
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="160" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="160" bodyend="170"/>
+      </memberdef>
+      <memberdef kind="function" id="classworld_1_1Cell_1a05eb363f384507bcca4ab3f9680ba8a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def world.Cell.get_max_home_scent</definition>
+        <argsstring></argsstring>
+        <name>get_max_home_scent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Get the maximum home scent values amongst
+the scents of all colonies
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="171" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="171" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="classworld_1_1Cell_1a7562d15f3a8d223f445a67b89ad60f07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def world.Cell.get_max_food_scent</definition>
+        <argsstring></argsstring>
+        <name>get_max_food_scent</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Get the maximum food scent values amongst
+the scents of all colonies
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="179" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="179" bodyend="186"/>
       </memberdef>
       <memberdef kind="function" id="classworld_1_1Cell_1a11f263897c7a04ae900af84d30a30c56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -261,56 +481,59 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Changes &quot;index&quot; to render the cell according to what it represents 
+<para><verbatim>Extends the base class method
+Changes &quot;index&quot; to render the cell according to what it represents 
 (home, food, etc) and calls the super class
 Also renders scent levels with transparency depending on its strength
 </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="68" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="68" bodyend="95"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="187" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="187" bodyend="212"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><verbatim>Data containers for each location in World</verbatim> </para>    </detaileddescription>
+<para><verbatim>Data containers for each location in World
+</verbatim> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="93">
+      <node id="139">
         <label>object</label>
       </node>
-      <node id="91">
+      <node id="137">
         <label>world.Cell</label>
         <link refid="classworld_1_1Cell"/>
-        <childnode refid="92" relation="public-inheritance">
+        <childnode refid="138" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="92">
+      <node id="138">
         <label>display.Entity</label>
         <link refid="classdisplay_1_1Entity"/>
-        <childnode refid="93" relation="public-inheritance">
+        <childnode refid="139" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="96">
+      <node id="142">
         <label>object</label>
       </node>
-      <node id="94">
+      <node id="140">
         <label>world.Cell</label>
         <link refid="classworld_1_1Cell"/>
-        <childnode refid="95" relation="public-inheritance">
+        <childnode refid="141" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="95">
+      <node id="141">
         <label>display.Entity</label>
         <link refid="classdisplay_1_1Entity"/>
-        <childnode refid="96" relation="public-inheritance">
+        <childnode refid="142" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/acer/Ubuntu One/eclipse/ants/world.py" line="8" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/world.py" bodystart="8" bodyend="96"/>
+    <location file="/home/acer/Dropbox/eclipse/ants/world.py" line="8" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/world.py" bodystart="8" bodyend="213"/>
     <listofallmembers>
       <member refid="classworld_1_1Cell_1a3dd387b6af13f7450acb97fb40c13a0e" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>__init__</name></member>
+      <member refid="classdisplay_1_1Entity_1a10294b5b8a8fa95f95f29aaf521efd56" prot="public" virt="non-virtual" ambiguityscope="display::Entity."><scope>world::Cell</scope><name>__init__</name></member>
       <member refid="classworld_1_1Cell_1a3d9725f56b584acd9f75728f364975b0" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>add_food</name></member>
       <member refid="classworld_1_1Cell_1a773c26b2353ffaede745ee726d2e256d" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>add_food_scent</name></member>
       <member refid="classworld_1_1Cell_1a52af74786918c6c3f4d1d0b0f44aecb8" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>add_home_scent</name></member>
@@ -319,18 +542,26 @@ Also renders scent levels with transparency depending on its strength
       <member refid="classworld_1_1Cell_1a401fde7236825c1843dad8764c2fb4a8" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>food</name></member>
       <member refid="classworld_1_1Cell_1acec0cb9d8a7eb92bedf71dc57641efbe" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>food_scent</name></member>
       <member refid="classworld_1_1Cell_1ace4b7ca65667e6dcecb3c43e850c3568" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>get_food</name></member>
+      <member refid="classworld_1_1Cell_1ae69e7bafa4825b0e208d3bb74c25fe91" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>get_food_scent</name></member>
+      <member refid="classworld_1_1Cell_1aac71d7cc30cb979617b1ec8d9f4d9b26" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>get_home_scent</name></member>
+      <member refid="classworld_1_1Cell_1a7562d15f3a8d223f445a67b89ad60f07" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>get_max_food_scent</name></member>
+      <member refid="classworld_1_1Cell_1a05eb363f384507bcca4ab3f9680ba8a9" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>get_max_home_scent</name></member>
       <member refid="classworld_1_1Cell_1a98e3cac3c42374693afe0aded7a1e06c" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>has_ant</name></member>
       <member refid="classworld_1_1Cell_1a1097df1a6fe0131898377358017fe7bc" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>has_food</name></member>
       <member refid="classworld_1_1Cell_1a9baf3378be8090bf1faf1b19b9aa5fd3" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>home</name></member>
       <member refid="classworld_1_1Cell_1a0ef4adaadea1ccdcd1b61c70e242aa4a" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>home_scent</name></member>
       <member refid="classdisplay_1_1Entity_1a244569c285ad924e6200d4c1c8b4639c" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>image</name></member>
+      <member refid="classworld_1_1Cell_1ad242f10cc8c92971200dd9c8bcf5297b" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>is_enemy_home</name></member>
       <member refid="classworld_1_1Cell_1a90eabca5d79eef89b2ae4f677a88a93b" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>is_food</name></member>
       <member refid="classworld_1_1Cell_1a441597e0ea2cff7fce907a12fd8216fa" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>is_home</name></member>
       <member refid="classworld_1_1Cell_1a890e2dc899a32ef86c131a98879e9023" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>is_obstacle</name></member>
+      <member refid="classworld_1_1Cell_1a1a209720a46e372099e2a301f7e0f6e6" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>is_own_home</name></member>
       <member refid="classdisplay_1_1Entity_1ae2a1114b0c54ef7eb43c2bd6cd097258" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>location</name></member>
       <member refid="classworld_1_1Cell_1adb830df07e437189375efa6c9ad4981e" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>make_home</name></member>
       <member refid="classworld_1_1Cell_1a63164a3e74888a97b07ee8e06c633c2a" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>make_obstacle</name></member>
+      <member refid="classworld_1_1Cell_1aa564ee06853b2db81faa0da4d07e66af" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>nearby</name></member>
       <member refid="classworld_1_1Cell_1aeaf17388b8c9000fe612ab043418825c" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>obstacle</name></member>
+      <member refid="classworld_1_1Cell_1aed89295fdffe763b9d651b9def6ca4e8" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>remove_obstacle</name></member>
       <member refid="classworld_1_1Cell_1a11f263897c7a04ae900af84d30a30c56" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>render</name></member>
       <member refid="classdisplay_1_1Entity_1abbea5f77f08ce3347010d9c452440737" prot="public" virt="non-virtual" ambiguityscope="display::Entity."><scope>world::Cell</scope><name>render</name></member>
       <member refid="classdisplay_1_1Entity_1aa56fd9b8bb6c9510f24ea13be8c6a218" prot="public" virt="non-virtual"><scope>world::Cell</scope><name>size</name></member>

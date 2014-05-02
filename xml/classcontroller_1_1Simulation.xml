@@ -14,7 +14,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/controller.py" line="14" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/controller.py" bodystart="14" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/controller.py" line="14" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/controller.py" bodystart="14" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcontroller_1_1Simulation_1a2bc2a4bb3e974bc7b73be75b49701d9f" prot="public" static="no" mutable="no">
         <type></type>
@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/controller.py" line="15" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/controller.py" bodystart="15" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/controller.py" line="15" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/controller.py" bodystart="15" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcontroller_1_1Simulation_1af13461f42bfe6ca017f59e13e57c354e" prot="public" static="no" mutable="no">
         <type></type>
@@ -40,7 +40,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/controller.py" line="16" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/controller.py" bodystart="16" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/controller.py" line="16" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/controller.py" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcontroller_1_1Simulation_1a35d0ffc695295c3b509bd5bc2bdbac9b" prot="public" static="no" mutable="no">
         <type></type>
@@ -53,7 +53,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/controller.py" line="18" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/controller.py" bodystart="18" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/controller.py" line="18" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/controller.py" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classcontroller_1_1Simulation_1a8acaf6508b8b61e163656195706d9025" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>controller.Simulation::pause</definition>
+        <argsstring></argsstring>
+        <name>pause</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/controller.py" line="19" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/controller.py" bodystart="19" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcontroller_1_1Simulation_1a5d368ffc3eee12c8c36839ee5bce3644" prot="public" static="no" mutable="no">
         <type></type>
@@ -66,7 +79,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/controller.py" line="29" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/controller.py" bodystart="29" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/controller.py" line="30" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/controller.py" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classcontroller_1_1Simulation_1a2ba0c3cf1949a98dd920f6097953c1f5" prot="public" static="no" mutable="no">
         <type></type>
@@ -79,7 +92,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/controller.py" line="35" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/controller.py" bodystart="35" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/controller.py" line="37" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/controller.py" bodystart="37" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -94,7 +107,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/controller.py" line="13" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/controller.py" bodystart="13" bodyend="36"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/controller.py" line="13" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/controller.py" bodystart="13" bodyend="38"/>
       </memberdef>
       <memberdef kind="function" id="classcontroller_1_1Simulation_1a91674f018c921725aa36ec25396a7304" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -104,10 +117,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Loads an image</verbatim> </para>        </detaileddescription>
+<para><verbatim>Loads an image
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/controller.py" line="37" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/controller.py" bodystart="37" bodyend="40"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/controller.py" line="39" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/controller.py" bodystart="39" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="classcontroller_1_1Simulation_1a4cbf2928d3f930f4b8cad9c0e64c2524" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -117,10 +131,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Runs the main loop till the user quits</verbatim> </para>        </detaileddescription>
+<para><verbatim>Runs the main loop till the user quits
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/controller.py" line="41" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/controller.py" bodystart="41" bodyend="45"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/controller.py" line="45" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/controller.py" bodystart="45" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="classcontroller_1_1Simulation_1ad86d932f45e2b80ec5336da7c6e6e085" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -137,7 +152,7 @@
 </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/controller.py" line="46" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/controller.py" bodystart="46" bodyend="58"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/controller.py" line="52" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/controller.py" bodystart="52" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="classcontroller_1_1Simulation_1ad3eb13a30931a88958e3c0c7b5b545a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -147,37 +162,84 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Handles all keyboard, mouse and events like QUIT, etc</verbatim> </para>        </detaileddescription>
+<para><verbatim>Handles all keyboard, mouse and events like QUIT, etc
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/controller.py" line="59" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/controller.py" bodystart="59" bodyend="66"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/controller.py" line="66" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/controller.py" bodystart="66" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classcontroller_1_1Simulation_1a247d22a52798856055de287bd13a6cda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def controller.Simulation.handle_keyboard_events</definition>
+        <argsstring></argsstring>
+        <name>handle_keyboard_events</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>set quit as true if user presses ESCAPE key
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/controller.py" line="74" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/controller.py" bodystart="74" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classcontroller_1_1Simulation_1ad459f264509c14b43f23894dc35d6656" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def controller.Simulation.handle_general_events</definition>
+        <argsstring></argsstring>
+        <name>handle_general_events</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>set quit true if user clicks the close button
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/controller.py" line="82" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/controller.py" bodystart="82" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classcontroller_1_1Simulation_1aa43d3916e7ff0513f950439d7ae8b5b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def controller.Simulation.handle_mouse_events</definition>
+        <argsstring></argsstring>
+        <name>handle_mouse_events</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>- Creates obstacles on left clicks
+- Removes obstacles on right clicks
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/controller.py" line="90" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/controller.py" bodystart="90" bodyend="103"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
 <para><verbatim>Controls the simulation
-
     - Runs the main loop
     - Detects mouse, keyboard and other events
     - Loads the necessary images
-    - Controls the framerate of the smiulation
+    - Controls the framerate of the simulation
 </verbatim> </para>    </detaileddescription>
     <collaborationgraph>
-      <node id="138">
+      <node id="216">
         <label>controller.Simulation</label>
         <link refid="classcontroller_1_1Simulation"/>
       </node>
     </collaborationgraph>
-    <location file="/home/acer/Ubuntu One/eclipse/ants/controller.py" line="5" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/controller.py" bodystart="5" bodyend="66"/>
+    <location file="/home/acer/Dropbox/eclipse/ants/controller.py" line="5" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/controller.py" bodystart="5" bodyend="103"/>
     <listofallmembers>
       <member refid="classcontroller_1_1Simulation_1a0d3a98e6f630a62f18aa5c0c35846381" prot="public" virt="non-virtual"><scope>controller::Simulation</scope><name>__init__</name></member>
       <member refid="classcontroller_1_1Simulation_1a91674f018c921725aa36ec25396a7304" prot="public" virt="non-virtual"><scope>controller::Simulation</scope><name>add_image</name></member>
       <member refid="classcontroller_1_1Simulation_1a21dd9474d46d4afa868c0bd60cea128b" prot="public" virt="non-virtual"><scope>controller::Simulation</scope><name>clock</name></member>
       <member refid="classcontroller_1_1Simulation_1a2bc2a4bb3e974bc7b73be75b49701d9f" prot="public" virt="non-virtual"><scope>controller::Simulation</scope><name>framerate</name></member>
       <member refid="classcontroller_1_1Simulation_1ad3eb13a30931a88958e3c0c7b5b545a5" prot="public" virt="non-virtual"><scope>controller::Simulation</scope><name>handle_events</name></member>
+      <member refid="classcontroller_1_1Simulation_1ad459f264509c14b43f23894dc35d6656" prot="public" virt="non-virtual"><scope>controller::Simulation</scope><name>handle_general_events</name></member>
+      <member refid="classcontroller_1_1Simulation_1a247d22a52798856055de287bd13a6cda" prot="public" virt="non-virtual"><scope>controller::Simulation</scope><name>handle_keyboard_events</name></member>
+      <member refid="classcontroller_1_1Simulation_1aa43d3916e7ff0513f950439d7ae8b5b7" prot="public" virt="non-virtual"><scope>controller::Simulation</scope><name>handle_mouse_events</name></member>
       <member refid="classcontroller_1_1Simulation_1af13461f42bfe6ca017f59e13e57c354e" prot="public" virt="non-virtual"><scope>controller::Simulation</scope><name>images</name></member>
       <member refid="classcontroller_1_1Simulation_1ad86d932f45e2b80ec5336da7c6e6e085" prot="public" virt="non-virtual"><scope>controller::Simulation</scope><name>main_loop</name></member>
+      <member refid="classcontroller_1_1Simulation_1a8acaf6508b8b61e163656195706d9025" prot="public" virt="non-virtual"><scope>controller::Simulation</scope><name>pause</name></member>
       <member refid="classcontroller_1_1Simulation_1a35d0ffc695295c3b509bd5bc2bdbac9b" prot="public" virt="non-virtual"><scope>controller::Simulation</scope><name>quit</name></member>
       <member refid="classcontroller_1_1Simulation_1a4cbf2928d3f930f4b8cad9c0e64c2524" prot="public" virt="non-virtual"><scope>controller::Simulation</scope><name>run</name></member>
       <member refid="classcontroller_1_1Simulation_1a5d368ffc3eee12c8c36839ee5bce3644" prot="public" virt="non-virtual"><scope>controller::Simulation</scope><name>settings</name></member>

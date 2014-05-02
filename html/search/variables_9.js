@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quit',['quit',['../classcontroller_1_1Simulation.html#a35d0ffc695295c3b509bd5bc2bdbac9b',1,'controller::Simulation']]]
+  ['obstacle',['obstacle',['../classworld_1_1Cell.html#aeaf17388b8c9000fe612ab043418825c',1,'world::Cell']]]
 ];

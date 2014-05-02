@@ -4,6 +4,7 @@
     <compoundname>ants::Ant</compoundname>
     <basecompoundref refid="classdisplay_1_1Entity" prot="public" virt="non-virtual">display.Entity</basecompoundref>
     <derivedcompoundref refid="classants_1_1QueenAnt" prot="public" virt="non-virtual">ants.QueenAnt</derivedcompoundref>
+    <derivedcompoundref refid="classants_1_1SoldierAnt" prot="public" virt="non-virtual">ants.SoldierAnt</derivedcompoundref>
     <derivedcompoundref refid="classants_1_1WorkerAnt" prot="public" virt="non-virtual">ants.WorkerAnt</derivedcompoundref>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="classants_1_1Ant_1a55f64c7cafb3806bdcfda42586adbff5" prot="public" static="no" mutable="no">
@@ -17,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="10" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="10" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="14" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="14" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classants_1_1Ant_1adf5f970b6b5e8472f42275114eeac779" prot="public" static="no" mutable="no">
         <type></type>
@@ -30,7 +31,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="11" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="11" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="15" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classants_1_1Ant_1acaafd510ade5c38719b8082027162132" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ants.Ant::nest</definition>
+        <argsstring></argsstring>
+        <name>nest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="16" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classants_1_1Ant_1ae26b7ffd236a83d8d5c96ec6ec07b4bb" prot="public" static="no" mutable="no">
         <type></type>
@@ -43,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="12" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="12" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="17" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="17" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classants_1_1Ant_1ae7de139b6f5bdb8d4ab42755c405ef5d" prot="public" static="no" mutable="no">
         <type></type>
@@ -56,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="13" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="13" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="18" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classants_1_1Ant_1afcfbbf8bd338401378d25c512204eb91" prot="public" static="no" mutable="no">
         <type></type>
@@ -69,7 +83,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="14" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="14" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="19" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classants_1_1Ant_1aa147562276c788d4533ab63ac44d96a6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>ants.Ant::health</definition>
+        <argsstring></argsstring>
+        <name>health</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="20" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="20" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classants_1_1Ant_1ad7fb2ac4566880fdacfd7bf7f4ec1109" prot="public" static="no" mutable="no">
         <type></type>
@@ -82,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="15" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="15" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="21" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classants_1_1Ant_1a7885f0124adf5b10fd6fa5e8ac47edb9" prot="public" static="no" mutable="no">
         <type></type>
@@ -95,7 +122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="16" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="16" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="22" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classants_1_1Ant_1a80e2218dcfabbd9ef4d83638dd20d943" prot="public" static="no" mutable="no">
         <type></type>
@@ -108,7 +135,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="18" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="18" bodyend="-1"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="24" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="24" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -123,7 +150,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="8" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="8" bodyend="19"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="12" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="12" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a5ee52d730c2bcbd0cfd0a8cf8d9206c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.get_location</definition>
+        <argsstring></argsstring>
+        <name>get_location</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="26" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="26" bodyend="28"/>
       </memberdef>
       <memberdef kind="function" id="classants_1_1Ant_1a2ddd97dadaa5d24c459b0117dc6e1190" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -134,10 +174,11 @@
         </briefdescription>
         <detaileddescription>
 <para><verbatim>Returns location of neighbouring cell in a direction 
-relative to the ant direction</verbatim> </para>        </detaileddescription>
+relative to the ant direction
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="20" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="20" bodyend="26"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="29" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="29" bodyend="37"/>
       </memberdef>
       <memberdef kind="function" id="classants_1_1Ant_1a0067159f23e5e9e4b3564d48c1564f11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -147,14 +188,15 @@ relative to the ant direction</verbatim> </para>        </detaileddescription>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Move the ant by a unit,
-Leave a scent trail,
+<para><verbatim>Moves the ant by a unit if the next cell is empty,
+otherwise turn by an unit
+It also leaves a scent trail,
 remove the ant from its old cell, and
 update the current cell ant with itself
 </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="27" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="27" bodyend="40"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="38" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="38" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="classants_1_1Ant_1a3a636b900b6fdbed032e3a635495a4c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -164,36 +206,39 @@ update the current cell ant with itself
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Ant makes a move forward or turns randomly</verbatim> </para>        </detaileddescription>
+<para><verbatim>Ant makes a move forward or turns randomly
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="41" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="41" bodyend="47"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="60" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="60" bodyend="68"/>
       </memberdef>
-      <memberdef kind="function" id="classants_1_1Ant_1a216ebc2ce2dfeb88d6bbc714bc50ecb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classants_1_1Ant_1a0f92c3c4a37d6c3998bc71fc0a6b9cee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def ants.Ant.reduce_home_scent</definition>
+        <definition>def ants.Ant.reduce_home_scent_strength</definition>
         <argsstring></argsstring>
-        <name>reduce_home_scent</name>
+        <name>reduce_home_scent_strength</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Reduce home scent by &apos;amt&apos;</verbatim> </para>        </detaileddescription>
+<para><verbatim>Reduce home scent by &apos;amt&apos;
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="48" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="48" bodyend="52"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="69" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="69" bodyend="75"/>
       </memberdef>
-      <memberdef kind="function" id="classants_1_1Ant_1a285d1e406b6d2cc67779e873e879feb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classants_1_1Ant_1a1d51e32dc22891ded9f02ffc71e612cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
-        <definition>def ants.Ant.reduce_food_scent</definition>
+        <definition>def ants.Ant.reduce_food_scent_strength</definition>
         <argsstring></argsstring>
-        <name>reduce_food_scent</name>
+        <name>reduce_food_scent_strength</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Reduce food scent by &apos;amt&apos;</verbatim> </para>        </detaileddescription>
+<para><verbatim>Reduce food scent by &apos;amt&apos;
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="53" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="53" bodyend="57"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="76" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="76" bodyend="82"/>
       </memberdef>
       <memberdef kind="function" id="classants_1_1Ant_1a445ec1d1f8e4cb539c4f66fafa129131" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -203,10 +248,11 @@ update the current cell ant with itself
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Changes direction n times</verbatim> </para>        </detaileddescription>
+<para><verbatim>Changes direction n times
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="58" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="58" bodyend="61"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="83" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="83" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="classants_1_1Ant_1a95585d833c74c56155a0d79394d511cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -216,10 +262,25 @@ update the current cell ant with itself
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>Render itself</verbatim> </para>        </detaileddescription>
+<para><verbatim>Render itself
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="62" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="62" bodyend="68"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="89" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="89" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a10dc42722864d5850912dd34242d5cf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.get_nest_id</definition>
+        <argsstring></argsstring>
+        <name>get_nest_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns the id of the nest it belongs to
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="99" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="99" bodyend="104"/>
       </memberdef>
       <memberdef kind="function" id="classants_1_1Ant_1a2e60480b7534b107e12d7f23fd06d5f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -229,10 +290,11 @@ update the current cell ant with itself
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>The cell it is standing on</verbatim> </para>        </detaileddescription>
+<para><verbatim>The cell it is standing on
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="69" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="69" bodyend="72"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="105" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="105" bodyend="110"/>
       </memberdef>
       <memberdef kind="function" id="classants_1_1Ant_1a192f8411faa05c48db8db99d033f5d15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -242,10 +304,11 @@ update the current cell ant with itself
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>The cell just behind</verbatim> </para>        </detaileddescription>
+<para><verbatim>The cell just behind
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="73" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="73" bodyend="76"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="111" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="111" bodyend="116"/>
       </memberdef>
       <memberdef kind="function" id="classants_1_1Ant_1ac2c8f048d99cd48a5829ddf7ff4a708a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -255,10 +318,11 @@ update the current cell ant with itself
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>The cell just ahead</verbatim> </para>        </detaileddescription>
+<para><verbatim>The cell just ahead
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="77" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="77" bodyend="80"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="117" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="117" bodyend="122"/>
       </memberdef>
       <memberdef kind="function" id="classants_1_1Ant_1a2dbb07eefeecbc51d257f81fb0ba1c71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -268,10 +332,11 @@ update the current cell ant with itself
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>The cell just ahead-left</verbatim> </para>        </detaileddescription>
+<para><verbatim>The cell just ahead-left
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="81" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="81" bodyend="84"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="123" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="123" bodyend="128"/>
       </memberdef>
       <memberdef kind="function" id="classants_1_1Ant_1ad7a5311d831e8bcc07061e6a12edad8c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -281,10 +346,11 @@ update the current cell ant with itself
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para><verbatim>The cell just ahead-right</verbatim> </para>        </detaileddescription>
+<para><verbatim>The cell just ahead-right
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="85" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="85" bodyend="88"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="129" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="129" bodyend="134"/>
       </memberdef>
       <memberdef kind="function" id="classants_1_1Ant_1af9af7f8a5c766021ef0f68171d09abca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -295,10 +361,32 @@ update the current cell ant with itself
         </briefdescription>
         <detaileddescription>
 <para><verbatim>Locate all sources nearby and return any one randomly
-return None if no food source is found</verbatim> </para>        </detaileddescription>
+return None if no food source is found
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="89" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="89" bodyend="104"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="135" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="135" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1aeec9c17184393435fd4d4936b6f2736a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.is_enemy</definition>
+        <argsstring></argsstring>
+        <name>is_enemy</name>
+        <briefdescription>
+<para>Returns true if the ant passed is an enemy. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ant</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The other ant </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="155" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="155" bodyend="157"/>
       </memberdef>
       <memberdef kind="function" id="classants_1_1Ant_1a5795d0898e3d0d020a0a0a626a5ef7b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -309,10 +397,11 @@ return None if no food source is found</verbatim> </para>        </detaileddescr
         </briefdescription>
         <detaileddescription>
 <para><verbatim>Locate home cell nearby and return any one randomly
-return None if not found</verbatim> </para>        </detaileddescription>
+return None if not found
+</verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="105" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="105" bodyend="120"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="158" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="158" bodyend="175"/>
       </memberdef>
       <memberdef kind="function" id="classants_1_1Ant_1a81a141f3417ddb32b8d1abbd95bbc477" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -328,39 +417,7 @@ return None if not found
 </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="121" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="121" bodyend="139"/>
-      </memberdef>
-      <memberdef kind="function" id="classants_1_1Ant_1a97ffad1c0e634f38585e7913908e9524" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>def</type>
-        <definition>def ants.Ant.locate_food_scent_nearby</definition>
-        <argsstring></argsstring>
-        <name>locate_food_scent_nearby</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para><verbatim>Scan the 5 directions near the direction of the ant for food scent and
-return one random direction
-return None if not found
-</verbatim> </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="140" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="140" bodyend="158"/>
-      </memberdef>
-      <memberdef kind="function" id="classants_1_1Ant_1a164a2a76f1779462fe81e8f169a92a93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>def</type>
-        <definition>def ants.Ant.rank_by_food_scent</definition>
-        <argsstring></argsstring>
-        <name>rank_by_food_scent</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-<para><verbatim>Scan the 5 directions near the direction of the ant for food scent and
-return the direction with the strongest scent
-return None if not found
-</verbatim> </para>        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="159" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="159" bodyend="172"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="176" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="176" bodyend="195"/>
       </memberdef>
       <memberdef kind="function" id="classants_1_1Ant_1a6f3e3bd98a5f382098cdc1c02e1e2fd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -376,7 +433,7 @@ return None if not found
 </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="173" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="173" bodyend="186"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="196" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="196" bodyend="213"/>
       </memberdef>
       <memberdef kind="function" id="classants_1_1Ant_1ae85884312b4aa10f965b84535bed37fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -391,7 +448,28 @@ Update the food values of the home cell it reached
 </verbatim> </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="187" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="187" bodyend="193"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="214" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="214" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1accd1fa305032e848021a4d8b90f3f8ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.take_food</definition>
+        <argsstring></argsstring>
+        <name>take_food</name>
+        <briefdescription>
+<para>carry half the food and increase health by half the amount </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of food </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="226" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="226" bodyend="229"/>
       </memberdef>
       <memberdef kind="function" id="classants_1_1Ant_1a41de1c29941a444dab25a88cbc3a881d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -401,10 +479,97 @@ Update the food values of the home cell it reached
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para><verbatim>Checks if the ant has food_scent
+</verbatim> </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="230" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="230" bodyend="235"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1ae90d1356ca3370e47c24c5fe63ebfeaf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.set_food_scent_strength</definition>
+        <argsstring></argsstring>
+        <name>set_food_scent_strength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="194" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="194" bodyend="196"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="236" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="236" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1ae8234d6ecb9f7666e255ffa8a978355c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.set_home_scent_strength</definition>
+        <argsstring></argsstring>
+        <name>set_home_scent_strength</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="239" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="239" bodyend="241"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a89ad26b1d79990f95979464bbd3bf9b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.reduce_health</definition>
+        <argsstring></argsstring>
+        <name>reduce_health</name>
+        <briefdescription>
+<para>Reduces the health of the ant. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The amount of health to reduce </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="244" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="244" bodyend="246"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a218d9a25e9df83abf85ff596c214075c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.is_dead</definition>
+        <argsstring></argsstring>
+        <name>is_dead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="247" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="247" bodyend="249"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a78620c709fca31c9a0b2994534082bdc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.is_alive</definition>
+        <argsstring></argsstring>
+        <name>is_alive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="250" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="250" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classants_1_1Ant_1a16d8e187423f707e067fe2d562100437" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def ants.Ant.is_hungry</definition>
+        <argsstring></argsstring>
+        <name>is_hungry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="253" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="253" bodyend="255"/>
       </memberdef>
       <memberdef kind="function" id="classants_1_1Ant_1a9e4bf6309b80ab33bd628f6e7d78d013" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -417,62 +582,70 @@ Update the food values of the home cell it reached
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="197" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="197" bodyend="200"/>
+        <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="256" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="256" bodyend="259"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><verbatim>A virtual base class for Ants</verbatim> </para>    </detaileddescription>
+<para><verbatim>A virtual base class for Ants
+</verbatim> </para>    </detaileddescription>
     <inheritancegraph>
-      <node id="87">
+      <node id="132">
+        <label>ants.SoldierAnt</label>
+        <link refid="classants_1_1SoldierAnt"/>
+        <childnode refid="128" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="133">
         <label>ants.WorkerAnt</label>
         <link refid="classants_1_1WorkerAnt"/>
-        <childnode refid="83" relation="public-inheritance">
+        <childnode refid="128" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="86">
+      <node id="131">
         <label>ants.QueenAnt</label>
         <link refid="classants_1_1QueenAnt"/>
-        <childnode refid="83" relation="public-inheritance">
+        <childnode refid="128" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="85">
+      <node id="130">
         <label>object</label>
       </node>
-      <node id="84">
+      <node id="129">
         <label>display.Entity</label>
         <link refid="classdisplay_1_1Entity"/>
-        <childnode refid="85" relation="public-inheritance">
+        <childnode refid="130" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="83">
+      <node id="128">
         <label>ants.Ant</label>
         <link refid="classants_1_1Ant"/>
-        <childnode refid="84" relation="public-inheritance">
+        <childnode refid="129" relation="public-inheritance">
         </childnode>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="90">
+      <node id="136">
         <label>object</label>
       </node>
-      <node id="89">
+      <node id="135">
         <label>display.Entity</label>
         <link refid="classdisplay_1_1Entity"/>
-        <childnode refid="90" relation="public-inheritance">
+        <childnode refid="136" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="88">
+      <node id="134">
         <label>ants.Ant</label>
         <link refid="classants_1_1Ant"/>
-        <childnode refid="89" relation="public-inheritance">
+        <childnode refid="135" relation="public-inheritance">
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/acer/Ubuntu One/eclipse/ants/ants.py" line="6" column="1" bodyfile="/home/acer/Ubuntu One/eclipse/ants/ants.py" bodystart="6" bodyend="201"/>
+    <location file="/home/acer/Dropbox/eclipse/ants/ants.py" line="8" column="1" bodyfile="/home/acer/Dropbox/eclipse/ants/ants.py" bodystart="8" bodyend="260"/>
     <listofallmembers>
       <member refid="classants_1_1Ant_1a0fa15b6ba2860b445d390c07bc11d4e2" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>__init__</name></member>
+      <member refid="classdisplay_1_1Entity_1a10294b5b8a8fa95f95f29aaf521efd56" prot="public" virt="non-virtual" ambiguityscope="display::Entity."><scope>ants::Ant</scope><name>__init__</name></member>
       <member refid="classants_1_1Ant_1a9e4bf6309b80ab33bd628f6e7d78d013" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>__nonzero__</name></member>
       <member refid="classants_1_1Ant_1ac2c8f048d99cd48a5829ddf7ff4a708a" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>ahead</name></member>
       <member refid="classants_1_1Ant_1a2dbb07eefeecbc51d257f81fb0ba1c71" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>ahead_left</name></member>
@@ -482,25 +655,35 @@ Update the food values of the home cell it reached
       <member refid="classants_1_1Ant_1ae85884312b4aa10f965b84535bed37fc" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>drop_food</name></member>
       <member refid="classants_1_1Ant_1afcfbbf8bd338401378d25c512204eb91" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>food</name></member>
       <member refid="classants_1_1Ant_1ad7fb2ac4566880fdacfd7bf7f4ec1109" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>food_scent_strength</name></member>
+      <member refid="classants_1_1Ant_1a5ee52d730c2bcbd0cfd0a8cf8d9206c6" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>get_location</name></member>
+      <member refid="classants_1_1Ant_1a10dc42722864d5850912dd34242d5cf8" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>get_nest_id</name></member>
       <member refid="classants_1_1Ant_1a41de1c29941a444dab25a88cbc3a881d" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>has_food</name></member>
+      <member refid="classants_1_1Ant_1aa147562276c788d4533ab63ac44d96a6" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>health</name></member>
       <member refid="classants_1_1Ant_1a2e60480b7534b107e12d7f23fd06d5f1" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>here</name></member>
       <member refid="classants_1_1Ant_1a7885f0124adf5b10fd6fa5e8ac47edb9" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>home_scent_strength</name></member>
       <member refid="classants_1_1Ant_1adf5f970b6b5e8472f42275114eeac779" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>image</name></member>
+      <member refid="classants_1_1Ant_1a78620c709fca31c9a0b2994534082bdc" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>is_alive</name></member>
+      <member refid="classants_1_1Ant_1a218d9a25e9df83abf85ff596c214075c" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>is_dead</name></member>
+      <member refid="classants_1_1Ant_1aeec9c17184393435fd4d4936b6f2736a" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>is_enemy</name></member>
+      <member refid="classants_1_1Ant_1a16d8e187423f707e067fe2d562100437" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>is_hungry</name></member>
       <member refid="classants_1_1Ant_1af9af7f8a5c766021ef0f68171d09abca" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>locate_food_nearby</name></member>
-      <member refid="classants_1_1Ant_1a97ffad1c0e634f38585e7913908e9524" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>locate_food_scent_nearby</name></member>
       <member refid="classants_1_1Ant_1a5795d0898e3d0d020a0a0a626a5ef7b0" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>locate_home_nearby</name></member>
       <member refid="classants_1_1Ant_1a81a141f3417ddb32b8d1abbd95bbc477" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>locate_home_scent_nearby</name></member>
       <member refid="classants_1_1Ant_1ae7de139b6f5bdb8d4ab42755c405ef5d" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>location</name></member>
       <member refid="classants_1_1Ant_1a0067159f23e5e9e4b3564d48c1564f11" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>move</name></member>
       <member refid="classants_1_1Ant_1a2ddd97dadaa5d24c459b0117dc6e1190" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>neighbour</name></member>
+      <member refid="classants_1_1Ant_1acaafd510ade5c38719b8082027162132" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>nest</name></member>
       <member refid="classants_1_1Ant_1a3a636b900b6fdbed032e3a635495a4c4" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>random_move</name></member>
-      <member refid="classants_1_1Ant_1a164a2a76f1779462fe81e8f169a92a93" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>rank_by_food_scent</name></member>
       <member refid="classants_1_1Ant_1a6f3e3bd98a5f382098cdc1c02e1e2fd0" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>rank_by_home_scent</name></member>
-      <member refid="classants_1_1Ant_1a285d1e406b6d2cc67779e873e879feb0" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>reduce_food_scent</name></member>
-      <member refid="classants_1_1Ant_1a216ebc2ce2dfeb88d6bbc714bc50ecb5" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>reduce_home_scent</name></member>
+      <member refid="classants_1_1Ant_1a1d51e32dc22891ded9f02ffc71e612cd" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>reduce_food_scent_strength</name></member>
+      <member refid="classants_1_1Ant_1a89ad26b1d79990f95979464bbd3bf9b8" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>reduce_health</name></member>
+      <member refid="classants_1_1Ant_1a0f92c3c4a37d6c3998bc71fc0a6b9cee" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>reduce_home_scent_strength</name></member>
       <member refid="classants_1_1Ant_1a95585d833c74c56155a0d79394d511cc" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>render</name></member>
       <member refid="classdisplay_1_1Entity_1abbea5f77f08ce3347010d9c452440737" prot="public" virt="non-virtual" ambiguityscope="display::Entity."><scope>ants::Ant</scope><name>render</name></member>
+      <member refid="classants_1_1Ant_1ae90d1356ca3370e47c24c5fe63ebfeaf" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>set_food_scent_strength</name></member>
+      <member refid="classants_1_1Ant_1ae8234d6ecb9f7666e255ffa8a978355c" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>set_home_scent_strength</name></member>
       <member refid="classdisplay_1_1Entity_1aa56fd9b8bb6c9510f24ea13be8c6a218" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>size</name></member>
+      <member refid="classants_1_1Ant_1accd1fa305032e848021a4d8b90f3f8ce" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>take_food</name></member>
       <member refid="classants_1_1Ant_1a80e2218dcfabbd9ef4d83638dd20d943" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>task_manager</name></member>
       <member refid="classants_1_1Ant_1a445ec1d1f8e4cb539c4f66fafa129131" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>turn</name></member>
       <member refid="classants_1_1Ant_1a55f64c7cafb3806bdcfda42586adbff5" prot="public" virt="non-virtual"><scope>ants::Ant</scope><name>world</name></member>
